@@ -12,9 +12,11 @@
 		2254D1F41F4D9DE800B450E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2254D1F21F4D9DE800B450E5 /* Main.storyboard */; };
 		2254D1F61F4D9DE800B450E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2254D1F51F4D9DE800B450E5 /* Assets.xcassets */; };
 		2254D1F91F4D9DE800B450E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2254D1F71F4D9DE800B450E5 /* LaunchScreen.storyboard */; };
+		CD8764E7C2AB785005D2FD85 /* Pods_GymApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69A6B931EF179A21EC452B37 /* Pods_GymApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1589CA062CD932DCF7340299 /* Pods-GymApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GymApp/Pods-GymApp.debug.xcconfig"; sourceTree = "<group>"; };
 		2254D1EB1F4D9DE800B450E5 /* GymApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2254D1EE1F4D9DE800B450E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2254D1F01F4D9DE800B450E5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		2254D1F51F4D9DE800B450E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2254D1F81F4D9DE800B450E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2254D1FA1F4D9DE800B450E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69A6B931EF179A21EC452B37 /* Pods_GymApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GymApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B348DB9CDAA1BBD84B0B507A /* Pods-GymApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-GymApp/Pods-GymApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD8764E7C2AB785005D2FD85 /* Pods_GymApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				2254D1ED1F4D9DE800B450E5 /* GymApp */,
 				2254D1EC1F4D9DE800B450E5 /* Products */,
+				DB6BDFECE62B1537A583C8B2 /* Pods */,
+				5DBAA7A69E0C6E7E91D9F1F1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = GymApp;
 			sourceTree = "<group>";
 		};
+		5DBAA7A69E0C6E7E91D9F1F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				69A6B931EF179A21EC452B37 /* Pods_GymApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB6BDFECE62B1537A583C8B2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1589CA062CD932DCF7340299 /* Pods-GymApp.debug.xcconfig */,
+				B348DB9CDAA1BBD84B0B507A /* Pods-GymApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2254D1FD1F4D9DE800B450E5 /* Build configuration list for PBXNativeTarget "GymApp" */;
 			buildPhases = (
+				A4BCEC2DECFFE84626C39CFC /* [CP] Check Pods Manifest.lock */,
 				2254D1E71F4D9DE800B450E5 /* Sources */,
 				2254D1E81F4D9DE800B450E5 /* Frameworks */,
 				2254D1E91F4D9DE800B450E5 /* Resources */,
+				0F41D2ACE65093FC347700B4 /* [CP] Embed Pods Frameworks */,
+				E0E8BDCE9B2FBF7154DB415D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +123,7 @@
 				TargetAttributes = {
 					2254D1EA1F4D9DE800B450E5 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = F7CXK2PKWD;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -130,6 +158,66 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0F41D2ACE65093FC347700B4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GymApp/Pods-GymApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/JSONHelper/JSONHelper.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSONHelper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GymApp/Pods-GymApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4BCEC2DECFFE84626C39CFC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GymApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0E8BDCE9B2FBF7154DB415D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GymApp/Pods-GymApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2254D1E71F4D9DE800B450E5 /* Sources */ = {
@@ -258,8 +346,10 @@
 		};
 		2254D1FE1F4D9DE800B450E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1589CA062CD932DCF7340299 /* Pods-GymApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F7CXK2PKWD;
 				INFOPLIST_FILE = GymApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.3codegeeks.GymApp;
@@ -270,8 +360,10 @@
 		};
 		2254D1FF1F4D9DE800B450E5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B348DB9CDAA1BBD84B0B507A /* Pods-GymApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F7CXK2PKWD;
 				INFOPLIST_FILE = GymApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.3codegeeks.GymApp;
@@ -299,6 +391,7 @@
 				2254D1FF1F4D9DE800B450E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
