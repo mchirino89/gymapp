@@ -15,6 +15,7 @@
 		22638C701F4E39B600079818 /* MuscleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22638C6F1F4E39B600079818 /* MuscleViewCell.swift */; };
 		22638C721F4E42AC00079818 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22638C711F4E42AC00079818 /* Constants.swift */; };
 		22638C771F4E7CB900079818 /* RoutineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22638C761F4E7CB900079818 /* RoutineController.swift */; };
+		22638C791F4F1C7200079818 /* LaunchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22638C781F4F1C7200079818 /* LaunchController.swift */; };
 		CD8764E7C2AB785005D2FD85 /* Pods_GymApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69A6B931EF179A21EC452B37 /* Pods_GymApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		22638C6F1F4E39B600079818 /* MuscleViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MuscleViewCell.swift; sourceTree = "<group>"; };
 		22638C711F4E42AC00079818 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		22638C761F4E7CB900079818 /* RoutineController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutineController.swift; sourceTree = "<group>"; };
+		22638C781F4F1C7200079818 /* LaunchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchController.swift; sourceTree = "<group>"; };
 		69A6B931EF179A21EC452B37 /* Pods_GymApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GymApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B348DB9CDAA1BBD84B0B507A /* Pods-GymApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-GymApp/Pods-GymApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +75,7 @@
 				22638C6E1F4E38E000079818 /* UI */,
 				22638C731F4E492D00079818 /* Config */,
 				22638C761F4E7CB900079818 /* RoutineController.swift */,
+				22638C781F4F1C7200079818 /* LaunchController.swift */,
 			);
 			path = GymApp;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				22638C701F4E39B600079818 /* MuscleViewCell.swift in Sources */,
 				22638C721F4E42AC00079818 /* Constants.swift in Sources */,
 				2254D1F11F4D9DE800B450E5 /* MuscleController.swift in Sources */,
+				22638C791F4F1C7200079818 /* LaunchController.swift in Sources */,
 				2254D1EF1F4D9DE800B450E5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

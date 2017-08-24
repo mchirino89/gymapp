@@ -37,7 +37,7 @@
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="25"/>
                     </tabBarItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Uig-dc-HFd">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Uig-dc-HFd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -182,7 +182,7 @@
             <objects>
                 <navigationController id="riG-cO-xcO" userLabel="Root routine" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="if_organizer_1118206" selectedImage="if_organizer_1118206" id="B00-W2-SS2"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="QGn-O7-YMC">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QGn-O7-YMC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
