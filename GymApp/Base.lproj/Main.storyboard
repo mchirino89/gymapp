@@ -6,7 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -33,10 +33,20 @@
         <scene sceneID="SdI-UL-aib">
             <objects>
                 <navigationController id="hrr-am-GeH" userLabel="Root muscles" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Muscles" image="if_dumbbell_1118213" selectedImage="if_dumbbell_1118213" id="dBa-0W-La5"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Uig-dc-HFd">
+                    <tabBarItem key="tabBarItem" title="" image="if_dumbbell_1118213" selectedImage="if_dumbbell_1118213" id="dBa-0W-La5">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="25"/>
+                    </tabBarItem>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Uig-dc-HFd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="28"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="1" vertical="1"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="w88-78-r6J" kind="relationship" relationship="rootViewController" id="cbp-3m-wT2"/>
@@ -49,7 +59,7 @@
         <!--Muscles-->
         <scene sceneID="71b-Gu-XLC">
             <objects>
-                <viewController id="w88-78-r6J" userLabel="Muscles" sceneMemberID="viewController">
+                <viewController id="w88-78-r6J" userLabel="Muscles" customClass="MuscleController" customModule="GymApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Q2f-AX-QQS"/>
                         <viewControllerLayoutGuide type="bottom" id="cZU-eQ-YJI"/>
@@ -58,61 +68,75 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="routine" translatesAutoresizingMaskIntoConstraints="NO" id="NZW-Qz-W67">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="muscle" translatesAutoresizingMaskIntoConstraints="NO" id="NZW-Qz-W67">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fFv-vG-Dqr">
-                                <rect key="frame" x="-0.5" y="-0.5" width="375" height="667"/>
-                                <subviews>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ugo-vh-HUd">
-                                        <rect key="frame" x="0.0" y="63" width="375" height="604"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="McZ-ss-kQb">
-                                            <size key="itemSize" width="174" height="154"/>
-                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        </collectionViewFlowLayout>
-                                        <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gl5-aR-YW3">
-                                                <rect key="frame" x="0.0" y="0.0" width="174" height="154"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                    <rect key="frame" x="0.0" y="0.0" width="174" height="154"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </view>
-                                            </collectionViewCell>
-                                        </cells>
-                                    </collectionView>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ugo-vh-HUd">
+                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="McZ-ss-kQb">
+                                    <size key="itemSize" width="174" height="154"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="muscleCell" id="gl5-aR-YW3" customClass="MuscleViewCell" customModule="GymApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="174" height="154"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="174" height="154"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shoulders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uzl-0y-NFw">
+                                                    <rect key="frame" x="0.0" y="57.5" width="174" height="38.5"/>
+                                                    <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="24"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" white="0.66666666666666663" alpha="0.42832298801369861" colorSpace="calibratedWhite"/>
+                                                    <size key="shadowOffset" width="2" height="2"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="uzl-0y-NFw" firstAttribute="width" secondItem="gl5-aR-YW3" secondAttribute="width" id="Owo-TP-w0b"/>
+                                            <constraint firstItem="uzl-0y-NFw" firstAttribute="centerX" secondItem="gl5-aR-YW3" secondAttribute="centerX" id="QhU-lg-OgB"/>
+                                            <constraint firstItem="uzl-0y-NFw" firstAttribute="centerY" secondItem="gl5-aR-YW3" secondAttribute="centerY" id="f9K-Vm-TWw"/>
+                                            <constraint firstItem="uzl-0y-NFw" firstAttribute="height" secondItem="gl5-aR-YW3" secondAttribute="height" multiplier="0.25" id="kbu-EG-D2o"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="muscleLabel" destination="uzl-0y-NFw" id="Ggf-6R-0NR"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="w88-78-r6J" id="T9k-Vp-Svi"/>
+                                    <outlet property="delegate" destination="w88-78-r6J" id="7rm-Ay-NED"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="ugo-vh-HUd" firstAttribute="width" secondItem="bzd-6l-DyR" secondAttribute="width" id="B8c-xD-FCC"/>
+                            <constraint firstItem="ugo-vh-HUd" firstAttribute="centerX" secondItem="NZW-Qz-W67" secondAttribute="centerX" id="4CM-6e-03l"/>
+                            <constraint firstItem="ugo-vh-HUd" firstAttribute="height" secondItem="NZW-Qz-W67" secondAttribute="height" multiplier="0.85" id="FJG-lp-xeP"/>
                             <constraint firstItem="NZW-Qz-W67" firstAttribute="centerX" secondItem="bzd-6l-DyR" secondAttribute="centerX" id="MZ2-8H-tnd"/>
+                            <constraint firstItem="cZU-eQ-YJI" firstAttribute="top" secondItem="ugo-vh-HUd" secondAttribute="bottom" id="Pgv-Ga-dbe"/>
                             <constraint firstItem="NZW-Qz-W67" firstAttribute="width" secondItem="bzd-6l-DyR" secondAttribute="width" id="Q3C-7o-eff"/>
-                            <constraint firstItem="fFv-vG-Dqr" firstAttribute="width" secondItem="NZW-Qz-W67" secondAttribute="width" id="Z1f-aL-89Z"/>
-                            <constraint firstItem="fFv-vG-Dqr" firstAttribute="centerY" secondItem="NZW-Qz-W67" secondAttribute="centerY" id="f0f-6u-bKB"/>
-                            <constraint firstItem="fFv-vG-Dqr" firstAttribute="centerX" secondItem="NZW-Qz-W67" secondAttribute="centerX" id="giK-ka-U2p"/>
-                            <constraint firstItem="fFv-vG-Dqr" firstAttribute="height" secondItem="NZW-Qz-W67" secondAttribute="height" id="mAv-Yc-XDM"/>
+                            <constraint firstItem="ugo-vh-HUd" firstAttribute="leading" secondItem="NZW-Qz-W67" secondAttribute="leading" id="du9-2i-0mF"/>
                             <constraint firstItem="NZW-Qz-W67" firstAttribute="centerY" secondItem="bzd-6l-DyR" secondAttribute="centerY" id="tLw-aM-nCX"/>
-                            <constraint firstItem="cZU-eQ-YJI" firstAttribute="top" secondItem="ugo-vh-HUd" secondAttribute="bottom" constant="0.5" id="uqB-Vz-Aiw"/>
-                            <constraint firstItem="ugo-vh-HUd" firstAttribute="top" secondItem="Q2f-AX-QQS" secondAttribute="bottom" constant="-1.5" id="uwt-qS-Lzb"/>
-                            <constraint firstItem="ugo-vh-HUd" firstAttribute="leading" secondItem="bzd-6l-DyR" secondAttribute="leadingMargin" constant="-16.5" id="wqf-6r-0CU"/>
                             <constraint firstItem="NZW-Qz-W67" firstAttribute="height" secondItem="bzd-6l-DyR" secondAttribute="height" id="z1D-kl-rzX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Muscles" id="qFh-bn-tZ4"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="BCO-RW-R6g" kind="show" id="ytr-9Q-XEl"/>
+                        <outlet property="muscleCollectionView" destination="ugo-vh-HUd" id="YD8-tg-hDJ"/>
+                        <segue destination="BCO-RW-R6g" kind="show" identifier="muscleDetailsSegue" id="ytr-9Q-XEl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nZI-2O-G1u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1674.4000000000001" y="-457.42128935532236"/>
+            <point key="canvasLocation" x="-1674" y="-457"/>
         </scene>
         <!--Listing-->
         <scene sceneID="2Uf-f1-4Xz">
@@ -128,7 +152,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="MBB-fV-NY0" kind="show" id="sfw-kR-qd2"/>
+                        <segue destination="MBB-fV-NY0" kind="show" identifier="specificDetailSegue" id="sfw-kR-qd2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hs5-ps-rf5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -157,10 +181,16 @@
         <scene sceneID="IMF-oy-I7p">
             <objects>
                 <navigationController id="riG-cO-xcO" userLabel="Root routine" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Routines" image="if_organizer_1118206" selectedImage="if_organizer_1118206" id="B00-W2-SS2"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QGn-O7-YMC">
+                    <tabBarItem key="tabBarItem" title="" image="if_organizer_1118206" selectedImage="if_organizer_1118206" id="B00-W2-SS2"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="QGn-O7-YMC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="28"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="1" vertical="1"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="YDn-r9-EWD" kind="relationship" relationship="rootViewController" id="n1t-h7-Kxo"/>
@@ -173,7 +203,7 @@
         <!--Routine view-->
         <scene sceneID="TgR-M3-Zi3">
             <objects>
-                <viewController id="YDn-r9-EWD" userLabel="Routine view" sceneMemberID="viewController">
+                <viewController id="YDn-r9-EWD" userLabel="Routine view" customClass="RoutineController" customModule="GymApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fog-tC-Aj1"/>
                         <viewControllerLayoutGuide type="bottom" id="hdS-2z-6kV"/>
@@ -181,12 +211,23 @@
                     <view key="view" contentMode="scaleToFill" id="46X-lw-4Uy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="routine" translatesAutoresizingMaskIntoConstraints="NO" id="MKp-H2-7Dn">
+                                <rect key="frame" x="0.0" y="-67" width="375" height="734"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MKp-H2-7Dn" firstAttribute="width" secondItem="46X-lw-4Uy" secondAttribute="width" id="249-jr-06j"/>
+                            <constraint firstItem="MKp-H2-7Dn" firstAttribute="centerX" secondItem="46X-lw-4Uy" secondAttribute="centerX" id="Iad-nx-EbH"/>
+                            <constraint firstItem="MKp-H2-7Dn" firstAttribute="centerY" secondItem="46X-lw-4Uy" secondAttribute="centerY" multiplier="0.9" id="WgF-4p-Dqe"/>
+                            <constraint firstItem="MKp-H2-7Dn" firstAttribute="height" secondItem="46X-lw-4Uy" secondAttribute="height" multiplier="1.1" id="Ywx-Xu-eNL"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="5cY-hf-4Mm"/>
+                    <navigationItem key="navigationItem" title="Routines" id="5cY-hf-4Mm"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="BCO-RW-R6g" kind="show" id="CU9-m5-LQL"/>
+                        <segue destination="BCO-RW-R6g" kind="show" identifier="routinesDetailesSegue" id="CU9-m5-LQL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vW3-kn-REL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -197,7 +238,7 @@
         <scene sceneID="9TY-bX-1ex">
             <objects>
                 <navigationController id="WJj-sW-n9x" userLabel="Root profile" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" image="if_Resume_Female_2316249" selectedImage="if_Resume_Female_2316249" id="uaw-yJ-TmI"/>
+                    <tabBarItem key="tabBarItem" title="" image="if_Resume_Female_2316249" selectedImage="if_Resume_Female_2316249" id="uaw-yJ-TmI"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zea-8z-V6N">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -232,10 +273,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="if_Resume_Female_2316249" width="16" height="16"/>
-        <image name="if_dumbbell_1118213" width="16" height="16"/>
-        <image name="if_organizer_1118206" width="16" height="16"/>
-        <image name="routine" width="218" height="524"/>
+        <image name="if_Resume_Female_2316249" width="32" height="32"/>
+        <image name="if_dumbbell_1118213" width="32" height="32"/>
+        <image name="if_organizer_1118206" width="32" height="32"/>
+        <image name="muscle" width="218" height="524"/>
+        <image name="routine" width="260" height="468"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ytr-9Q-XEl"/>
