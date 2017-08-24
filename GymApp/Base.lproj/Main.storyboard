@@ -149,7 +149,18 @@
                     <view key="view" contentMode="scaleToFill" id="me1-A4-ria">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="list" translatesAutoresizingMaskIntoConstraints="NO" id="J2W-ix-g4I">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="J2W-ix-g4I" firstAttribute="centerY" secondItem="me1-A4-ria" secondAttribute="centerY" id="9Gk-RD-spn"/>
+                            <constraint firstItem="J2W-ix-g4I" firstAttribute="width" secondItem="me1-A4-ria" secondAttribute="width" id="Bnr-VN-LJT"/>
+                            <constraint firstItem="J2W-ix-g4I" firstAttribute="height" secondItem="me1-A4-ria" secondAttribute="height" id="LPG-PK-CI4"/>
+                            <constraint firstItem="J2W-ix-g4I" firstAttribute="centerX" secondItem="me1-A4-ria" secondAttribute="centerX" id="Rjo-fe-oYw"/>
+                        </constraints>
                     </view>
                     <connections>
                         <segue destination="MBB-fV-NY0" kind="show" identifier="specificDetailSegue" id="sfw-kR-qd2"/>
@@ -170,7 +181,18 @@
                     <view key="view" contentMode="scaleToFill" id="LYo-8g-C53">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="details" translatesAutoresizingMaskIntoConstraints="NO" id="BKQ-2x-tas">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BKQ-2x-tas" firstAttribute="centerY" secondItem="LYo-8g-C53" secondAttribute="centerY" id="5kt-ya-nGq"/>
+                            <constraint firstItem="BKQ-2x-tas" firstAttribute="width" secondItem="LYo-8g-C53" secondAttribute="width" id="MDN-9V-Pu4"/>
+                            <constraint firstItem="BKQ-2x-tas" firstAttribute="centerX" secondItem="LYo-8g-C53" secondAttribute="centerX" id="T9D-Aa-dEm"/>
+                            <constraint firstItem="BKQ-2x-tas" firstAttribute="height" secondItem="LYo-8g-C53" secondAttribute="height" id="ySI-D5-wwC"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n1I-KX-giG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -242,6 +264,12 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zea-8z-V6N">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="28"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="1" vertical="1"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="uJf-lP-LZH" kind="relationship" relationship="rootViewController" id="Bzh-W4-kfX"/>
@@ -262,9 +290,20 @@
                     <view key="view" contentMode="scaleToFill" id="MFa-tE-DEE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="mEW-Ks-sjj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mEW-Ks-sjj" firstAttribute="height" secondItem="MFa-tE-DEE" secondAttribute="height" id="ASm-Ja-xSR"/>
+                            <constraint firstItem="mEW-Ks-sjj" firstAttribute="centerY" secondItem="MFa-tE-DEE" secondAttribute="centerY" id="MwG-oC-Hz2"/>
+                            <constraint firstItem="mEW-Ks-sjj" firstAttribute="width" secondItem="MFa-tE-DEE" secondAttribute="width" id="Z9Q-bl-4SC"/>
+                            <constraint firstItem="mEW-Ks-sjj" firstAttribute="centerX" secondItem="MFa-tE-DEE" secondAttribute="centerX" id="lH3-ke-VDA"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="MHm-rH-QUs"/>
+                    <navigationItem key="navigationItem" title="Profile" id="MHm-rH-QUs"/>
                     <nil key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="849-q3-Vdg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -273,13 +312,16 @@
         </scene>
     </scenes>
     <resources>
+        <image name="details" width="286" height="451"/>
         <image name="if_Resume_Female_2316249" width="32" height="32"/>
         <image name="if_dumbbell_1118213" width="32" height="32"/>
         <image name="if_organizer_1118206" width="32" height="32"/>
+        <image name="list" width="398" height="602"/>
         <image name="muscle" width="218" height="524"/>
+        <image name="profile" width="294" height="441"/>
         <image name="routine" width="260" height="468"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ytr-9Q-XEl"/>
+        <segue reference="CU9-m5-LQL"/>
     </inferredMetricsTieBreakers>
 </document>
