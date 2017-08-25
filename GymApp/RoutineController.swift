@@ -13,5 +13,6 @@ class RoutineController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigationBar(navigationController)
+        customBackButton(navigationItem)
     }
 }

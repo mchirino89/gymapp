@@ -1,5 +1,5 @@
 //
-//  LaunchController.swift
+//  ProfileController.swift
 //  GymApp
 //
 //  Created by Mauricio Chirino on 24/8/17.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-class LaunchController: UIViewController {
+class ProfileController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setNavigationBar(navigationController)
     }
+
 }

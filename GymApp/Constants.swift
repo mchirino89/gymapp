@@ -21,14 +21,14 @@ struct Constants {
     struct URL {}
     
     struct Storyboard {
-        static let locationSegue = "locationSegue"
-        static let photoCell = "photoCell"
-        static let fullScreenSegue = "fullImageSegue"
+        static let cellId = "detailCell"
+        static let exerciseListSegue = "muscleDetailsSegue"
+        static let exerciseDetailSegue = "specificDetailSegue"
+        static let routineDetailSegue = "routinesDetailesSegue"
     }
     
     struct UIElements {
         static let title = "Gym App"
-        static let customTitleFont = "MarkerFelt-Thin"
     }
     
     struct ErrorMessages {
@@ -48,15 +48,25 @@ struct Constants {
     struct Utilities {}
     
     struct MuscleView {
-        static let muscleCellId = "muscleCell"
         static let title = "Muscles"
     }
     
+    struct ExerciseView {
+        static let title = "Exercises"
+    }
+    
+    struct DetailView {
+        static let title = "Details"
+    }
 }
 
 func setNavigationBar(_ navigationController: UINavigationController?) {
     navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
     navigationController?.navigationBar.shadowImage = UIImage()
+}
+
+func customBackButton(_ navigationItem: UINavigationItem) {
+    navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 }
 
 func getPopupAlert(message: String, title: String = Constants.ErrorMessages.popupTitle, buttonText: String = Constants.ErrorMessages.popupButton) -> UIAlertController {
