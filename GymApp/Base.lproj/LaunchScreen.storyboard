@@ -21,9 +21,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="launchImage" translatesAutoresizingMaskIntoConstraints="NO" id="aGi-45-vEK">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GymApp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSg-gZ-UNb">
                                 <rect key="frame" x="-0.5" y="595" width="375" height="52"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="50"/>
@@ -32,14 +29,17 @@
                                 <color key="shadowColor" red="0.072506152093410492" green="0.31110423803329468" blue="0.42977190017700195" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="launchImage" translatesAutoresizingMaskIntoConstraints="NO" id="aGi-45-vEK">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="sSg-gZ-UNb" secondAttribute="bottom" constant="20" id="2Tn-LT-Oq5"/>
                             <constraint firstItem="aGi-45-vEK" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Jyb-cP-VQ4"/>
-                            <constraint firstItem="aGi-45-vEK" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" id="SYg-Ra-Hyq"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="aGi-45-vEK" secondAttribute="bottom" id="MyE-b6-Dkw"/>
+                            <constraint firstItem="aGi-45-vEK" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="TY0-me-ysa"/>
                             <constraint firstItem="aGi-45-vEK" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="XJ2-Xh-PN2"/>
-                            <constraint firstItem="aGi-45-vEK" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="lRb-Wa-fpE"/>
                             <constraint firstItem="sSg-gZ-UNb" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="yVu-Zb-oOx"/>
                             <constraint firstItem="sSg-gZ-UNb" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="zFt-cY-dez"/>
                         </constraints>

@@ -11,6 +11,7 @@ import UIKit
 class ListController: UIViewController {
     
     @IBOutlet weak var listCollectionView: UICollectionView!
+    @IBOutlet weak var backgroundImageView: UIImageView!
     var kindOfList = 0
     var dataId:Int?
     let muscleLabel = ["Abs", "Arms", "Back", "Calves", "Chest", "Legs", "Shoulders"]
@@ -18,7 +19,6 @@ class ListController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Data id received: ", dataId ?? "No data yet")
         title = kindOfList == 0 ? Constants.MuscleView.title : Constants.ExerciseView.title
         setCollectionLayout()
         setNavigationBar(navigationController)

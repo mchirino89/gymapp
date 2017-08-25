@@ -13,7 +13,6 @@ class ListViewCell: UICollectionViewCell {
     var idForCell:Int?
     func setDetailLabelWithAnimation(_ musclaName: String, _ idForCell: Int) {
         self.idForCell = idForCell
-        print(idForCell)
         detailLabel.text = musclaName
         detailLabel.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
         UIView.animate(withDuration: 0.9, animations: {

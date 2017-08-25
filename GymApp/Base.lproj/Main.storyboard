@@ -14,6 +14,7 @@
         <scene sceneID="j3I-L1-SEg">
             <objects>
                 <tabBarController id="efE-5b-2gS" userLabel="Root tab" sceneMemberID="viewController">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" itemPositioning="centered" id="Z9b-K5-95m">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -35,11 +36,9 @@
         <scene sceneID="SdI-UL-aib">
             <objects>
                 <navigationController id="hrr-am-GeH" userLabel="Root muscles" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="if_dumbbell_1118213" selectedImage="if_dumbbell_1118213" id="dBa-0W-La5">
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="25"/>
-                    </tabBarItem>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" backIndicatorImage="backHand" backIndicatorTransitionMaskImage="backHand" id="Uig-dc-HFd">
+                    <tabBarItem key="tabBarItem" title="Muscles" image="if_dumbbell_1118213" selectedImage="if_dumbbell_1118213" id="dBa-0W-La5"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="backHand" backIndicatorTransitionMaskImage="backHand" id="Uig-dc-HFd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -117,7 +116,7 @@
                                 </connections>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ugo-vh-HUd" firstAttribute="centerX" secondItem="NZW-Qz-W67" secondAttribute="centerX" id="4CM-6e-03l"/>
                             <constraint firstItem="NZW-Qz-W67" firstAttribute="centerX" secondItem="bzd-6l-DyR" secondAttribute="centerX" id="MZ2-8H-tnd"/>
@@ -130,8 +129,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Muscles" id="qFh-bn-tZ4"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="backgroundImageView" destination="NZW-Qz-W67" id="hm3-ow-rPK"/>
                         <outlet property="listCollectionView" destination="ugo-vh-HUd" id="huT-w3-klY"/>
                         <segue destination="BCO-RW-R6g" kind="show" identifier="muscleDetailsSegue" id="ytr-9Q-XEl"/>
                     </connections>
@@ -197,7 +198,7 @@
                                 </connections>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="qOo-FS-x4x" firstAttribute="leading" secondItem="me1-A4-ria" secondAttribute="leading" id="0DZ-BU-5U8"/>
                             <constraint firstItem="J2W-ix-g4I" firstAttribute="centerY" secondItem="me1-A4-ria" secondAttribute="centerY" id="9Gk-RD-spn"/>
@@ -209,7 +210,9 @@
                             <constraint firstItem="qOo-FS-x4x" firstAttribute="top" secondItem="Dkf-dA-1ar" secondAttribute="bottom" id="kri-wR-vCg"/>
                         </constraints>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
+                        <outlet property="backgroundImageView" destination="J2W-ix-g4I" id="srl-os-e5q"/>
                         <outlet property="listCollectionView" destination="qOo-FS-x4x" id="6MT-85-Wsv"/>
                         <segue destination="MBB-fV-NY0" kind="show" identifier="specificDetailSegue" id="sfw-kR-qd2"/>
                     </connections>
@@ -242,6 +245,7 @@
                             <constraint firstItem="BKQ-2x-tas" firstAttribute="height" secondItem="LYo-8g-C53" secondAttribute="height" id="ySI-D5-wwC"/>
                         </constraints>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n1I-KX-giG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -251,7 +255,7 @@
         <scene sceneID="IMF-oy-I7p">
             <objects>
                 <navigationController id="riG-cO-xcO" userLabel="Root routine" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="if_organizer_1118206" selectedImage="if_organizer_1118206" id="B00-W2-SS2"/>
+                    <tabBarItem key="tabBarItem" title="Routines" image="if_organizer_1118206" selectedImage="if_organizer_1118206" id="B00-W2-SS2"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" backIndicatorImage="backHand" backIndicatorTransitionMaskImage="backHand" id="QGn-O7-YMC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -308,7 +312,7 @@
         <scene sceneID="9TY-bX-1ex">
             <objects>
                 <navigationController id="WJj-sW-n9x" userLabel="Root profile" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="if_Resume_Female_2316249" selectedImage="if_Resume_Female_2316249" id="uaw-yJ-TmI"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="if_Resume_Female_2316249" selectedImage="if_Resume_Female_2316249" id="uaw-yJ-TmI"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" backIndicatorImage="backHand" backIndicatorTransitionMaskImage="backHand" id="Zea-8z-V6N">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
