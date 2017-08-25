@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -71,39 +72,63 @@
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="muscle" translatesAutoresizingMaskIntoConstraints="NO" id="NZW-Qz-W67">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ugo-vh-HUd">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="McZ-ss-kQb">
-                                    <size key="itemSize" width="174" height="154"/>
+                                    <size key="itemSize" width="155" height="146"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="detailCell" id="gl5-aR-YW3" customClass="ListViewCell" customModule="GymApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="174" height="154"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="155" height="146"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="174" height="154"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="155" height="146"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shoulders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uzl-0y-NFw">
-                                                    <rect key="frame" x="0.0" y="57.5" width="174" height="38.5"/>
-                                                    <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="24"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                    <color key="shadowColor" white="0.66666666666666663" alpha="0.42832298801369861" colorSpace="calibratedWhite"/>
-                                                    <size key="shadowOffset" width="2" height="2"/>
-                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchImage" translatesAutoresizingMaskIntoConstraints="NO" id="cc5-4M-KBI">
+                                                    <rect key="frame" x="0.0" y="16" width="155" height="86"/>
+                                                </imageView>
+                                                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CYR-ch-g4o">
+                                                    <rect key="frame" x="0.0" y="102" width="155" height="36"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="NJg-zQ-Gw9">
+                                                        <rect key="frame" x="0.0" y="0.0" width="155" height="36"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <subviews>
+                                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shoulders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uzl-0y-NFw">
+                                                                <rect key="frame" x="16" y="0.0" width="124" height="36"/>
+                                                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="22"/>
+                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <color key="shadowColor" white="0.66666666666666663" alpha="0.42832298801369861" colorSpace="calibratedWhite"/>
+                                                                <size key="shadowOffset" width="2" height="2"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="uzl-0y-NFw" firstAttribute="width" secondItem="NJg-zQ-Gw9" secondAttribute="width" multiplier="0.8" id="Gwu-hw-7Vg"/>
+                                                            <constraint firstItem="uzl-0y-NFw" firstAttribute="height" secondItem="NJg-zQ-Gw9" secondAttribute="height" id="KpS-nf-oL0"/>
+                                                            <constraint firstItem="uzl-0y-NFw" firstAttribute="centerY" secondItem="NJg-zQ-Gw9" secondAttribute="centerY" id="eWj-B9-XdI"/>
+                                                            <constraint firstItem="uzl-0y-NFw" firstAttribute="centerX" secondItem="NJg-zQ-Gw9" secondAttribute="centerX" id="xwt-jl-LH4"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <blurEffect style="light"/>
+                                                </visualEffectView>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="uzl-0y-NFw" firstAttribute="width" secondItem="gl5-aR-YW3" secondAttribute="width" id="Owo-TP-w0b"/>
-                                            <constraint firstItem="uzl-0y-NFw" firstAttribute="centerX" secondItem="gl5-aR-YW3" secondAttribute="centerX" id="QhU-lg-OgB"/>
-                                            <constraint firstItem="uzl-0y-NFw" firstAttribute="centerY" secondItem="gl5-aR-YW3" secondAttribute="centerY" id="f9K-Vm-TWw"/>
-                                            <constraint firstItem="uzl-0y-NFw" firstAttribute="height" secondItem="gl5-aR-YW3" secondAttribute="height" multiplier="0.25" id="kbu-EG-D2o"/>
+                                            <constraint firstItem="cc5-4M-KBI" firstAttribute="centerX" secondItem="gl5-aR-YW3" secondAttribute="centerX" id="0Gn-wb-Glc"/>
+                                            <constraint firstItem="cc5-4M-KBI" firstAttribute="width" secondItem="gl5-aR-YW3" secondAttribute="width" id="E10-XM-UCu"/>
+                                            <constraint firstItem="cc5-4M-KBI" firstAttribute="top" secondItem="gl5-aR-YW3" secondAttribute="top" constant="16" id="E6q-c3-Xyh"/>
+                                            <constraint firstItem="CYR-ch-g4o" firstAttribute="height" secondItem="gl5-aR-YW3" secondAttribute="height" multiplier="0.25" id="OT3-u2-Yr7"/>
+                                            <constraint firstItem="CYR-ch-g4o" firstAttribute="centerX" secondItem="gl5-aR-YW3" secondAttribute="centerX" id="RAp-rC-ruo"/>
+                                            <constraint firstItem="cc5-4M-KBI" firstAttribute="bottom" secondItem="CYR-ch-g4o" secondAttribute="top" id="fY1-2h-DZx"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="CYR-ch-g4o" secondAttribute="bottom" id="gRL-SV-0pQ"/>
+                                            <constraint firstItem="CYR-ch-g4o" firstAttribute="width" secondItem="gl5-aR-YW3" secondAttribute="width" id="yBP-su-Dgb"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="detailLabel" destination="uzl-0y-NFw" id="iJf-6M-fFV"/>
@@ -116,7 +141,7 @@
                                 </connections>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ugo-vh-HUd" firstAttribute="centerX" secondItem="NZW-Qz-W67" secondAttribute="centerX" id="4CM-6e-03l"/>
                             <constraint firstItem="NZW-Qz-W67" firstAttribute="centerX" secondItem="bzd-6l-DyR" secondAttribute="centerX" id="MZ2-8H-tnd"/>
@@ -139,7 +164,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nZI-2O-G1u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1674" y="-457"/>
+            <point key="canvasLocation" x="-1676.25" y="-458.45070422535213"/>
         </scene>
         <!--Listing-->
         <scene sceneID="2Uf-f1-4Xz">
@@ -174,7 +199,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dumbells" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ofy-zT-iip">
-                                                    <rect key="frame" x="22" y="42.5" width="132" height="84"/>
+                                                    <rect key="frame" x="22" y="42" width="132" height="84"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -256,7 +281,7 @@
             <objects>
                 <navigationController id="riG-cO-xcO" userLabel="Root routine" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Routines" image="if_organizer_1118206" selectedImage="if_organizer_1118206" id="B00-W2-SS2"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" backIndicatorImage="backHand" backIndicatorTransitionMaskImage="backHand" id="QGn-O7-YMC">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="backHand" backIndicatorTransitionMaskImage="backHand" id="QGn-O7-YMC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
@@ -287,7 +312,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="routine" translatesAutoresizingMaskIntoConstraints="NO" id="MKp-H2-7Dn">
-                                <rect key="frame" x="0.0" y="-67" width="375" height="734"/>
+                                <rect key="frame" x="0.0" y="-66.5" width="375" height="733.5"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -313,7 +338,7 @@
             <objects>
                 <navigationController id="WJj-sW-n9x" userLabel="Root profile" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" image="if_Resume_Female_2316249" selectedImage="if_Resume_Female_2316249" id="uaw-yJ-TmI"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" backIndicatorImage="backHand" backIndicatorTransitionMaskImage="backHand" id="Zea-8z-V6N">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="backHand" backIndicatorTransitionMaskImage="backHand" id="Zea-8z-V6N">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
@@ -369,6 +394,7 @@
         <image name="if_Resume_Female_2316249" width="32" height="32"/>
         <image name="if_dumbbell_1118213" width="32" height="32"/>
         <image name="if_organizer_1118206" width="32" height="32"/>
+        <image name="launchImage" width="335" height="653"/>
         <image name="list" width="398" height="602"/>
         <image name="muscle" width="218" height="524"/>
         <image name="profile" width="294" height="441"/>

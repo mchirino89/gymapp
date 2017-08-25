@@ -47,6 +47,7 @@ extension ListController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.Storyboard.cellId, for: indexPath) as! ListViewCell
         cell.setDetailLabelWithAnimation(kindOfList == 0 ? muscleLabel[indexPath.row] : exerciseLabel[indexPath.row], indexPath.row|indexPath.section)
+//        cell.bounds.size.width *= 0.9
         return cell
     }
     
@@ -58,7 +59,7 @@ extension ListController: UICollectionViewDataSource, UICollectionViewDelegate {
     func setCollectionLayout() {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        layout.itemSize = CGSize(width: view.bounds.width / 2, height: view.bounds.width / 3)
+        layout.itemSize = CGSize(width: (view.bounds.width / 2) - 5, height: view.bounds.height / 4.8)
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
         listCollectionView.collectionViewLayout = layout
