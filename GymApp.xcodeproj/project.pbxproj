@@ -12,11 +12,13 @@
 		2254D1EF1F4D9DE800B450E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2254D1EE1F4D9DE800B450E5 /* AppDelegate.swift */; };
 		2254D1F11F4D9DE800B450E5 /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2254D1F01F4D9DE800B450E5 /* ListController.swift */; };
 		2254D1F41F4D9DE800B450E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2254D1F21F4D9DE800B450E5 /* Main.storyboard */; };
-		2254D1F61F4D9DE800B450E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2254D1F51F4D9DE800B450E5 /* Assets.xcassets */; };
 		2254D1F91F4D9DE800B450E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2254D1F71F4D9DE800B450E5 /* LaunchScreen.storyboard */; };
 		22638C701F4E39B600079818 /* ListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22638C6F1F4E39B600079818 /* ListViewCell.swift */; };
 		22638C721F4E42AC00079818 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22638C711F4E42AC00079818 /* Constants.swift */; };
 		22638C771F4E7CB900079818 /* RoutineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22638C761F4E7CB900079818 /* RoutineController.swift */; };
+		228529BA1F5313FA00F9DFD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 228529B91F5313FA00F9DFD9 /* Assets.xcassets */; };
+		228529BD1F534E5400F9DFD9 /* Textfields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228529BC1F534E5400F9DFD9 /* Textfields.swift */; };
+		228529BF1F534E8600F9DFD9 /* Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228529BE1F534E8600F9DFD9 /* Picker.swift */; };
 		CD8764E7C2AB785005D2FD85 /* Pods_GymApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69A6B931EF179A21EC452B37 /* Pods_GymApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,12 +30,14 @@
 		2254D1EE1F4D9DE800B450E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2254D1F01F4D9DE800B450E5 /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
 		2254D1F31F4D9DE800B450E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2254D1F51F4D9DE800B450E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2254D1F81F4D9DE800B450E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2254D1FA1F4D9DE800B450E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22638C6F1F4E39B600079818 /* ListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewCell.swift; sourceTree = "<group>"; };
 		22638C711F4E42AC00079818 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		22638C761F4E7CB900079818 /* RoutineController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutineController.swift; sourceTree = "<group>"; };
+		228529B91F5313FA00F9DFD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		228529BC1F534E5400F9DFD9 /* Textfields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Textfields.swift; sourceTree = "<group>"; };
+		228529BE1F534E8600F9DFD9 /* Picker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Picker.swift; sourceTree = "<group>"; };
 		69A6B931EF179A21EC452B37 /* Pods_GymApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GymApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B348DB9CDAA1BBD84B0B507A /* Pods-GymApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-GymApp/Pods-GymApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,10 +86,10 @@
 		22638C6E1F4E38E000079818 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				228529B91F5313FA00F9DFD9 /* Assets.xcassets */,
 				22638C6F1F4E39B600079818 /* ListViewCell.swift */,
 				2254D1F21F4D9DE800B450E5 /* Main.storyboard */,
 				2254D1F71F4D9DE800B450E5 /* LaunchScreen.storyboard */,
-				2254D1F51F4D9DE800B450E5 /* Assets.xcassets */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -104,10 +108,20 @@
 			children = (
 				2254D1F01F4D9DE800B450E5 /* ListController.swift */,
 				22638C761F4E7CB900079818 /* RoutineController.swift */,
-				222B44B11F4F8341008E17A8 /* ProfileController.swift */,
+				228529BB1F534E2700F9DFD9 /* Profile */,
 				222B44B51F4F9A1A008E17A8 /* DetailController.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		228529BB1F534E2700F9DFD9 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				222B44B11F4F8341008E17A8 /* ProfileController.swift */,
+				228529BC1F534E5400F9DFD9 /* Textfields.swift */,
+				228529BE1F534E8600F9DFD9 /* Picker.swift */,
+			);
+			name = Profile;
 			sourceTree = "<group>";
 		};
 		5DBAA7A69E0C6E7E91D9F1F1 /* Frameworks */ = {
@@ -191,7 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2254D1F91F4D9DE800B450E5 /* LaunchScreen.storyboard in Resources */,
-				2254D1F61F4D9DE800B450E5 /* Assets.xcassets in Resources */,
+				228529BA1F5313FA00F9DFD9 /* Assets.xcassets in Resources */,
 				2254D1F41F4D9DE800B450E5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,6 +284,8 @@
 				2254D1F11F4D9DE800B450E5 /* ListController.swift in Sources */,
 				2254D1EF1F4D9DE800B450E5 /* AppDelegate.swift in Sources */,
 				222B44B21F4F8341008E17A8 /* ProfileController.swift in Sources */,
+				228529BF1F534E8600F9DFD9 /* Picker.swift in Sources */,
+				228529BD1F534E5400F9DFD9 /* Textfields.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
