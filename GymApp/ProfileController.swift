@@ -43,7 +43,4 @@ class ProfileController: UIViewController {
             self.view.sendSubview(toBack: self.genderVisualEffectView)
         })
     }
-    
-    @IBAction func nameAction() {
-    }
 }

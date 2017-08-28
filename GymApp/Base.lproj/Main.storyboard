@@ -419,7 +419,6 @@
                                         <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="25"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="light" returnKeyType="done"/>
                                         <connections>
-                                            <action selector="nameAction" destination="uJf-lP-LZH" eventType="touchUpInside" id="io5-dc-UhD"/>
                                             <outlet property="delegate" destination="uJf-lP-LZH" id="kk8-qS-tx6"/>
                                         </connections>
                                     </textField>
@@ -483,7 +482,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Enter weigth" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W8R-Ta-cof">
-                                                        <rect key="frame" x="187.5" y="16" width="187.5" height="23"/>
+                                                        <rect key="frame" x="187.5" y="0.0" width="187.5" height="55"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="light" returnKeyType="done"/>
