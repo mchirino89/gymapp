@@ -29,6 +29,9 @@ struct Constants {
     
     struct UIElements {
         static let title = "Gym App"
+        static let genders = ["Male", "Female"]
+        static let appFont = "Copperplate"
+        static let regularFontSize = 25
     }
     
     struct ErrorMessages {
@@ -38,6 +41,8 @@ struct Constants {
         static let generic = "There was an error with your request: "
         static let popupTitle = "Oops!"
         static let popupButton = "Ok"
+        static let wrongImageFormat = "There was an error retrieving the selected image from the Library"
+        static let noProfilePlaceholder = "There aren't any profile images placeholders"
     }
     
     struct UIMessages {

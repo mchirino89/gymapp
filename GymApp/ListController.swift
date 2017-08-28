@@ -47,7 +47,6 @@ extension ListController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.Storyboard.cellId, for: indexPath) as! ListViewCell
         cell.setDetailLabelWithAnimation(kindOfList == 0 ? muscleLabel[indexPath.row] : exerciseLabel[indexPath.row], indexPath.row|indexPath.section)
-//        cell.bounds.size.width *= 0.9
         return cell
     }
     
