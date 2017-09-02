@@ -9,7 +9,10 @@
 import UIKit
 
 class ProfileController: UIViewController {
+    @IBOutlet weak var ageTextField: UITextField!
     @IBOutlet var genderPickerView: UIPickerView!
+    @IBOutlet weak var weightTextField: UITextField!
+    @IBOutlet weak var heightTextField: UITextField!
     @IBOutlet weak var genderVisualEffectView: UIVisualEffectView!
     @IBOutlet weak var profileImageButton: UIButton!
     @IBOutlet weak var genderButton: UIButton!
@@ -17,7 +20,7 @@ class ProfileController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        profileImageButton.layer.cornerRadius = view.frame.width / 2
+        profileImageButton.layer.cornerRadius = view.frame.width * 0.325
         setNavigationBar(navigationController)
         profileImagePicker.delegate = self
     }

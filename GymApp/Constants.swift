@@ -43,6 +43,7 @@ struct Constants {
         static let popupButton = "Ok"
         static let wrongImageFormat = "There was an error retrieving the selected image from the Library"
         static let noProfilePlaceholder = "There aren't any profile images placeholders"
+        static let tabItemError = "Unable to access first item in tab"
     }
     
     struct UIMessages {
@@ -62,6 +63,10 @@ struct Constants {
     
     struct DetailView {
         static let title = "Details"
+    }
+    
+    struct RegularExpressions {
+        static let age = "[0-9]"
     }
 }
 

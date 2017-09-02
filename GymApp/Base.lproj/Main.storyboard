@@ -15,7 +15,7 @@
         <!--Root tab-->
         <scene sceneID="j3I-L1-SEg">
             <objects>
-                <tabBarController id="efE-5b-2gS" userLabel="Root tab" sceneMemberID="viewController">
+                <tabBarController id="efE-5b-2gS" userLabel="Root tab" customClass="MainController" customModule="GymApp" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" itemPositioning="centered" id="Z9b-K5-95m">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
@@ -482,7 +482,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Enter weigth" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W8R-Ta-cof">
-                                                        <rect key="frame" x="187.5" y="0.0" width="187.5" height="55"/>
+                                                        <rect key="frame" x="187.5" y="16" width="187.5" height="23"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="light" returnKeyType="done"/>
@@ -534,7 +534,7 @@
                                     <constraint firstItem="0fs-ve-xnX" firstAttribute="height" secondItem="4wM-Hr-Mbq" secondAttribute="height" multiplier="0.2" id="OI0-oU-s8l"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="dcI-8K-Us8">
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="dcI-8K-Us8">
                                 <rect key="frame" x="66" y="96" width="244" height="244"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="dcI-8K-Us8" secondAttribute="height" multiplier="1:1" id="CCd-QC-65h"/>
@@ -575,10 +575,13 @@
                     <navigationItem key="navigationItem" title="Profile" id="MHm-rH-QUs"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="ageTextField" destination="wSr-Lc-BVc" id="6RM-QJ-iz6"/>
                         <outlet property="genderButton" destination="6LI-lx-nau" id="iKF-3W-TQe"/>
                         <outlet property="genderPickerView" destination="3GD-Pp-2a4" id="wnJ-11-IHM"/>
                         <outlet property="genderVisualEffectView" destination="Nvb-VL-Xk7" id="wei-c6-5qf"/>
+                        <outlet property="heightTextField" destination="DYl-y9-WuU" id="4lh-FI-uKh"/>
                         <outlet property="profileImageButton" destination="dcI-8K-Us8" id="4z9-r6-Kon"/>
+                        <outlet property="weightTextField" destination="W8R-Ta-cof" id="4Ta-ov-MgP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="849-q3-Vdg" userLabel="First Responder" sceneMemberID="firstResponder"/>

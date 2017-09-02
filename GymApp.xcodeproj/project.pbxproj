@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		222B44B21F4F8341008E17A8 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222B44B11F4F8341008E17A8 /* ProfileController.swift */; };
 		222B44B61F4F9A1A008E17A8 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222B44B51F4F9A1A008E17A8 /* DetailController.swift */; };
+		224DB08E1F56DBB800628A15 /* ExercisesImages.json in Resources */ = {isa = PBXBuildFile; fileRef = 224DB08D1F56DBB800628A15 /* ExercisesImages.json */; };
 		2254D1EF1F4D9DE800B450E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2254D1EE1F4D9DE800B450E5 /* AppDelegate.swift */; };
 		2254D1F11F4D9DE800B450E5 /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2254D1F01F4D9DE800B450E5 /* ListController.swift */; };
 		2254D1F41F4D9DE800B450E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2254D1F21F4D9DE800B450E5 /* Main.storyboard */; };
 		2254D1F91F4D9DE800B450E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2254D1F71F4D9DE800B450E5 /* LaunchScreen.storyboard */; };
+		225E1FC81F557122000217C3 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225E1FC71F557122000217C3 /* MainController.swift */; };
 		22638C701F4E39B600079818 /* ListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22638C6F1F4E39B600079818 /* ListViewCell.swift */; };
 		22638C721F4E42AC00079818 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22638C711F4E42AC00079818 /* Constants.swift */; };
 		22638C771F4E7CB900079818 /* RoutineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22638C761F4E7CB900079818 /* RoutineController.swift */; };
@@ -27,12 +29,14 @@
 		1589CA062CD932DCF7340299 /* Pods-GymApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GymApp/Pods-GymApp.debug.xcconfig"; sourceTree = "<group>"; };
 		222B44B11F4F8341008E17A8 /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		222B44B51F4F9A1A008E17A8 /* DetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
+		224DB08D1F56DBB800628A15 /* ExercisesImages.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ExercisesImages.json; sourceTree = "<group>"; };
 		2254D1EB1F4D9DE800B450E5 /* GymApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2254D1EE1F4D9DE800B450E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2254D1F01F4D9DE800B450E5 /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
 		2254D1F31F4D9DE800B450E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2254D1F81F4D9DE800B450E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2254D1FA1F4D9DE800B450E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		225E1FC71F557122000217C3 /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		22638C6F1F4E39B600079818 /* ListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewCell.swift; sourceTree = "<group>"; };
 		22638C711F4E42AC00079818 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		22638C761F4E7CB900079818 /* RoutineController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutineController.swift; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 		22638C731F4E492D00079818 /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				224DB08D1F56DBB800628A15 /* ExercisesImages.json */,
 				2254D1FA1F4D9DE800B450E5 /* Info.plist */,
 				22638C711F4E42AC00079818 /* Constants.swift */,
 			);
@@ -112,6 +117,7 @@
 				22638C761F4E7CB900079818 /* RoutineController.swift */,
 				228529BB1F534E2700F9DFD9 /* Profile */,
 				222B44B51F4F9A1A008E17A8 /* DetailController.swift */,
+				225E1FC71F557122000217C3 /* MainController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -208,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2254D1F91F4D9DE800B450E5 /* LaunchScreen.storyboard in Resources */,
+				224DB08E1F56DBB800628A15 /* ExercisesImages.json in Resources */,
 				228529BA1F5313FA00F9DFD9 /* Assets.xcassets in Resources */,
 				2254D1F41F4D9DE800B450E5 /* Main.storyboard in Resources */,
 			);
@@ -287,6 +294,7 @@
 				22638C721F4E42AC00079818 /* Constants.swift in Sources */,
 				2254D1F11F4D9DE800B450E5 /* ListController.swift in Sources */,
 				2254D1EF1F4D9DE800B450E5 /* AppDelegate.swift in Sources */,
+				225E1FC81F557122000217C3 /* MainController.swift in Sources */,
 				222B44B21F4F8341008E17A8 /* ProfileController.swift in Sources */,
 				228529BF1F534E8600F9DFD9 /* Picker.swift in Sources */,
 				228529BD1F534E5400F9DFD9 /* Textfields.swift in Sources */,
