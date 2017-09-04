@@ -9,6 +9,7 @@
 import UIKit
 
 class RoutineController: UIViewController {
+    @IBOutlet weak var routineTableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()

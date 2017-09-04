@@ -25,6 +25,7 @@ struct Constants {
         static let exerciseListSegue = "muscleDetailsSegue"
         static let exerciseDetailSegue = "specificDetailSegue"
         static let routineDetailSegue = "routinesDetailesSegue"
+        static let routineCell = "routineCell"
     }
     
     struct UIElements {

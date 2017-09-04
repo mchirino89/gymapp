@@ -40,12 +40,12 @@
                 <navigationController id="hrr-am-GeH" userLabel="Root muscles" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Muscles" image="if_dumbbell_1118213" selectedImage="if_dumbbell_1118213" id="dBa-0W-La5"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="backHand" backIndicatorTransitionMaskImage="backHand" id="Uig-dc-HFd">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" backIndicatorImage="backHand" backIndicatorTransitionMaskImage="backHand" id="Uig-dc-HFd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="28"/>
+                            <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="30"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="textShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <offsetWrapper key="textShadowOffset" horizontal="1" vertical="1"/>
@@ -282,11 +282,11 @@
             <objects>
                 <navigationController id="riG-cO-xcO" userLabel="Root routine" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Routines" image="if_organizer_1118206" selectedImage="if_organizer_1118206" id="B00-W2-SS2"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="backHand" backIndicatorTransitionMaskImage="backHand" id="QGn-O7-YMC">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" backIndicatorImage="backHand" backIndicatorTransitionMaskImage="backHand" id="QGn-O7-YMC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="28"/>
+                            <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="30"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="textShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <offsetWrapper key="textShadowOffset" horizontal="1" vertical="1"/>
@@ -315,35 +315,89 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="routine" translatesAutoresizingMaskIntoConstraints="NO" id="MKp-H2-7Dn">
                                 <rect key="frame" x="0.0" y="-66.5" width="375" height="733.5"/>
                             </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jpi-uD-P63">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationWidth="0.0" reuseIdentifier="routineCell" rowHeight="75" id="Zf1-Dg-0w8" customClass="RoutineViewCell" customModule="GymApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="75"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zf1-Dg-0w8" id="G51-VM-ANy">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="details" translatesAutoresizingMaskIntoConstraints="NO" id="0ln-39-eXM">
+                                                    <rect key="frame" x="14.5" y="7.5" width="346.5" height="60"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Back and shoulders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="DAA-sr-DNK">
+                                                    <rect key="frame" x="14.5" y="8.5" width="346.5" height="59.5"/>
+                                                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="28"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" red="0.79208946229999999" green="0.79220157859999996" blue="0.79205411670000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <size key="shadowOffset" width="1" height="0.0"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="DAA-sr-DNK" firstAttribute="centerX" secondItem="0ln-39-eXM" secondAttribute="centerX" id="4D8-UQ-dtv"/>
+                                                <constraint firstItem="DAA-sr-DNK" firstAttribute="height" secondItem="0ln-39-eXM" secondAttribute="height" id="Kmh-hc-8eP"/>
+                                                <constraint firstItem="DAA-sr-DNK" firstAttribute="centerY" secondItem="0ln-39-eXM" secondAttribute="centerY" id="bIF-Vt-avj"/>
+                                                <constraint firstItem="DAA-sr-DNK" firstAttribute="width" secondItem="0ln-39-eXM" secondAttribute="width" id="oWN-Fu-ram"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="0ln-39-eXM" firstAttribute="height" secondItem="Zf1-Dg-0w8" secondAttribute="height" multiplier="0.8" id="3If-Z6-7O0"/>
+                                            <constraint firstItem="0ln-39-eXM" firstAttribute="width" secondItem="Zf1-Dg-0w8" secondAttribute="width" multiplier="0.925" id="C5Z-bH-hjF"/>
+                                            <constraint firstItem="0ln-39-eXM" firstAttribute="centerX" secondItem="Zf1-Dg-0w8" secondAttribute="centerX" id="fX8-Ve-Y7x"/>
+                                            <constraint firstItem="0ln-39-eXM" firstAttribute="centerY" secondItem="Zf1-Dg-0w8" secondAttribute="centerY" id="h5t-Zx-bJV"/>
+                                        </constraints>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <connections>
+                                            <outlet property="backgroundImageView" destination="0ln-39-eXM" id="sVT-F1-Svm"/>
+                                            <outlet property="routineLabel" destination="DAA-sr-DNK" id="ZoA-xp-Qfi"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="YDn-r9-EWD" id="r07-f5-b1K"/>
+                                    <outlet property="delegate" destination="YDn-r9-EWD" id="9GX-Lf-s7D"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="MKp-H2-7Dn" firstAttribute="width" secondItem="46X-lw-4Uy" secondAttribute="width" id="249-jr-06j"/>
+                            <constraint firstItem="Jpi-uD-P63" firstAttribute="top" secondItem="fog-tC-Aj1" secondAttribute="bottom" id="Bwh-xA-ygA"/>
+                            <constraint firstItem="Jpi-uD-P63" firstAttribute="leading" secondItem="46X-lw-4Uy" secondAttribute="leading" id="H8v-3z-qGU"/>
                             <constraint firstItem="MKp-H2-7Dn" firstAttribute="centerX" secondItem="46X-lw-4Uy" secondAttribute="centerX" id="Iad-nx-EbH"/>
                             <constraint firstItem="MKp-H2-7Dn" firstAttribute="centerY" secondItem="46X-lw-4Uy" secondAttribute="centerY" multiplier="0.9" id="WgF-4p-Dqe"/>
                             <constraint firstItem="MKp-H2-7Dn" firstAttribute="height" secondItem="46X-lw-4Uy" secondAttribute="height" multiplier="1.1" id="Ywx-Xu-eNL"/>
+                            <constraint firstAttribute="trailing" secondItem="Jpi-uD-P63" secondAttribute="trailing" id="kS7-ao-Iil"/>
+                            <constraint firstItem="hdS-2z-6kV" firstAttribute="top" secondItem="Jpi-uD-P63" secondAttribute="bottom" id="lum-ur-iR4"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Routines" id="5cY-hf-4Mm"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="routineTableView" destination="Jpi-uD-P63" id="o6z-6q-lgA"/>
                         <segue destination="BCO-RW-R6g" kind="show" identifier="routinesDetailesSegue" id="CU9-m5-LQL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vW3-kn-REL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-594" y="-457"/>
+            <point key="canvasLocation" x="-594.39999999999998" y="-457.42128935532236"/>
         </scene>
         <!--Root profile-->
         <scene sceneID="9TY-bX-1ex">
             <objects>
                 <navigationController id="WJj-sW-n9x" userLabel="Root profile" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" image="if_Resume_Female_2316249" selectedImage="if_Resume_Female_2316249" id="uaw-yJ-TmI"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="backHand" backIndicatorTransitionMaskImage="backHand" id="Zea-8z-V6N">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" backIndicatorImage="backHand" backIndicatorTransitionMaskImage="backHand" id="Zea-8z-V6N">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="28"/>
+                            <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="30"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="textShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <offsetWrapper key="textShadowOffset" horizontal="1" vertical="1"/>
@@ -476,7 +530,7 @@
                                                 <rect key="frame" x="0.0" y="138" width="375" height="55"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Weight" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUe-tn-t1S">
-                                                        <rect key="frame" x="0.0" y="16.5" width="187.5" height="22.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="55"/>
                                                         <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -603,6 +657,6 @@
         <image name="routine" width="260" height="468"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ytr-9Q-XEl"/>
+        <segue reference="CU9-m5-LQL"/>
     </inferredMetricsTieBreakers>
 </document>
