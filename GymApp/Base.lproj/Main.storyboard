@@ -62,7 +62,7 @@
         <!--Muscles-->
         <scene sceneID="71b-Gu-XLC">
             <objects>
-                <viewController id="w88-78-r6J" userLabel="Muscles" customClass="ListController" customModule="GymApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="w88-78-r6J" userLabel="Muscles" customClass="ExerciseController" customModule="GymApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Q2f-AX-QQS"/>
                         <viewControllerLayoutGuide type="bottom" id="cZU-eQ-YJI"/>
@@ -93,16 +93,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchImage" translatesAutoresizingMaskIntoConstraints="NO" id="cc5-4M-KBI">
-                                                    <rect key="frame" x="0.0" y="16" width="155" height="86"/>
+                                                    <rect key="frame" x="4" y="16" width="147.5" height="86"/>
                                                 </imageView>
                                                 <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CYR-ch-g4o">
-                                                    <rect key="frame" x="0.0" y="102" width="155" height="36"/>
+                                                    <rect key="frame" x="4" y="102" width="147.5" height="36"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="NJg-zQ-Gw9">
-                                                        <rect key="frame" x="0.0" y="0.0" width="155" height="36"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="147.5" height="36"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <subviews>
                                                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shoulders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uzl-0y-NFw">
-                                                                <rect key="frame" x="16" y="0.0" width="124" height="36"/>
+                                                                <rect key="frame" x="15" y="0.0" width="118" height="36"/>
                                                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="22"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -123,13 +123,13 @@
                                         </view>
                                         <constraints>
                                             <constraint firstItem="cc5-4M-KBI" firstAttribute="centerX" secondItem="gl5-aR-YW3" secondAttribute="centerX" id="0Gn-wb-Glc"/>
-                                            <constraint firstItem="cc5-4M-KBI" firstAttribute="width" secondItem="gl5-aR-YW3" secondAttribute="width" id="E10-XM-UCu"/>
+                                            <constraint firstItem="cc5-4M-KBI" firstAttribute="width" secondItem="gl5-aR-YW3" secondAttribute="width" multiplier="0.95" id="E10-XM-UCu"/>
                                             <constraint firstItem="cc5-4M-KBI" firstAttribute="top" secondItem="gl5-aR-YW3" secondAttribute="top" constant="16" id="E6q-c3-Xyh"/>
                                             <constraint firstItem="CYR-ch-g4o" firstAttribute="height" secondItem="gl5-aR-YW3" secondAttribute="height" multiplier="0.25" id="OT3-u2-Yr7"/>
                                             <constraint firstItem="CYR-ch-g4o" firstAttribute="centerX" secondItem="gl5-aR-YW3" secondAttribute="centerX" id="RAp-rC-ruo"/>
                                             <constraint firstItem="cc5-4M-KBI" firstAttribute="bottom" secondItem="CYR-ch-g4o" secondAttribute="top" id="fY1-2h-DZx"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="CYR-ch-g4o" secondAttribute="bottom" id="gRL-SV-0pQ"/>
-                                            <constraint firstItem="CYR-ch-g4o" firstAttribute="width" secondItem="gl5-aR-YW3" secondAttribute="width" id="yBP-su-Dgb"/>
+                                            <constraint firstItem="CYR-ch-g4o" firstAttribute="width" secondItem="gl5-aR-YW3" secondAttribute="width" multiplier="0.95" id="yBP-su-Dgb"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="detailLabel" destination="uzl-0y-NFw" id="iJf-6M-fFV"/>
@@ -170,7 +170,7 @@
         <!--Listing-->
         <scene sceneID="2Uf-f1-4Xz">
             <objects>
-                <viewController id="BCO-RW-R6g" userLabel="Listing" customClass="ListController" customModule="GymApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BCO-RW-R6g" userLabel="Listing" customClass="ExerciseController" customModule="GymApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Dkf-dA-1ar"/>
                         <viewControllerLayoutGuide type="bottom" id="Tme-oT-Dvp"/>
@@ -657,6 +657,6 @@
         <image name="routine" width="260" height="468"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="CU9-m5-LQL"/>
+        <segue reference="ytr-9Q-XEl"/>
     </inferredMetricsTieBreakers>
 </document>
