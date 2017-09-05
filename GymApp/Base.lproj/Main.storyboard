@@ -264,7 +264,7 @@
         <!--Detailed-->
         <scene sceneID="XLx-ko-tyI">
             <objects>
-                <viewController id="MBB-fV-NY0" userLabel="Detailed" customClass="DetailController" customModule="GymApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="MBB-fV-NY0" userLabel="Detailed" customClass="DetailController" customModule="GymApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="495-6f-cNS"/>
                         <viewControllerLayoutGuide type="bottom" id="dFH-kJ-oTE"/>
@@ -276,20 +276,117 @@
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="details" translatesAutoresizingMaskIntoConstraints="NO" id="BKQ-2x-tas">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Female" translatesAutoresizingMaskIntoConstraints="NO" id="LbW-qA-TAs">
+                                <rect key="frame" x="65.5" y="96" width="244" height="244"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="LbW-qA-TAs" secondAttribute="height" multiplier="1:1" id="j6L-l6-fML"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="French Press (skullcrusher) SZ-bar" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="none" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CBC-Xc-Q2C">
+                                <rect key="frame" x="37" y="348" width="300" height="33.5"/>
+                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qef-cw-YBP">
+                                <rect key="frame" x="16" y="389.5" width="343" height="237.5"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="CS2-Cl-xQf">
+                                    <rect key="frame" x="0.0" y="0.0" width="343" height="238"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZ1-3G-Cue">
+                                            <rect key="frame" x="13" y="8.5" width="317" height="220.5"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis accumsan dui. Nullam augue tellus, accumsan hendrerit auctor quis, commodo id dui. Sed porttitor, dolor a finibus posuere, lacus lacus fringilla elit, sed auctor felis neque nec eros. Morbi tempus turpis id sem lacinia, at pharetra orci tempus. Etiam sit amet ullamcorper libero, et rhoncus erat. Nunc egestas tortor a ligula laoreet faucibus. Ut ullamcorper tortor eu pharetra vulputate. Nunc congue vitae nisi eu tincidunt.
+
+Maecenas ac cursus tortor, at lobortis odio. Nunc posuere augue non risus efficitur, sit amet lobortis orci gravida. Aenean vitae viverra sem, sed posuere neque. Aliquam in orci rhoncus, ultrices mauris elementum, convallis eros. Praesent semper pellentesque purus. Vestibulum mattis at eros a dignissim. Sed commodo ligula ut nulla volutpat, sed tincidunt quam finibus. Praesent sit amet nisl mattis, volutpat tortor non, condimentum erat. Fusce urna nisl, tincidunt ac sem at, porttitor tincidunt urna. Proin eu lectus aliquam, laoreet eros at, vestibulum nibh. Nam aliquam, est quis commodo pulvinar, justo tellus venenatis nibh, vitae elementum ipsum lorem vitae mi. Integer interdum ipsum et eros ornare tincidunt.
+
+Aliquam consectetur lacus quam, a mattis risus porta ac. Sed auctor nibh vel metus elementum, quis accumsan odio vehicula. Suspendisse ultricies dui vitae tortor bibendum ornare. Proin eget velit ac ipsum auctor bibendum. Phasellus varius semper sodales. Proin ultrices tincidunt ante, vel elementum tortor commodo a. Curabitur risus tortor, viverra in pellentesque non, suscipit ac nisi. Proin tempor sodales sapien, eu lacinia dui scelerisque eu. Phasellus eget volutpat lectus. Maecenas hendrerit accumsan mi sed malesuada. Fusce sit amet imperdiet nisi.
+
+Phasellus imperdiet quam sit amet arcu malesuada lacinia. Suspendisse laoreet ipsum et sagittis mollis. Aenean vitae interdum quam, ac congue ex. Quisque eleifend lobortis tortor id dignissim. Nulla convallis vitae urna sed euismod. Pellentesque maximus arcu et purus venenatis, at blandit erat consequat. In enim purus, tristique ut quam congue, venenatis varius ante. Aliquam erat volutpat. Cras quis orci in dui tempus blandit. Mauris finibus a leo id sollicitudin.
+
+Mauris malesuada nisi eu lacus tempor efficitur. Suspendisse eget felis rhoncus, aliquet sem sed, condimentum sem. Integer auctor lobortis condimentum. Pellentesque tempus augue a pharetra bibendum. Sed in eleifend ex, eu auctor nibh. Phasellus enim purus, volutpat eget ante eget, volutpat condimentum orci. Sed cursus elit vitae feugiat congue. Ut non placerat felis. Fusce gravida a felis ut condimentum. Aenean in est eget quam placerat semper sit amet at lacus. Ut luctus mi sit amet augue ullamcorper, non ornare nunc imperdiet.</mutableString>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="16"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="MBB-fV-NY0" id="PMa-Fu-6c4"/>
+                                            </connections>
+                                        </textView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="uZ1-3G-Cue" firstAttribute="height" secondItem="CS2-Cl-xQf" secondAttribute="height" multiplier="0.925" id="2Pc-KO-bo4"/>
+                                        <constraint firstItem="uZ1-3G-Cue" firstAttribute="width" secondItem="CS2-Cl-xQf" secondAttribute="width" multiplier="0.925" id="Fga-T6-u7Q"/>
+                                        <constraint firstItem="uZ1-3G-Cue" firstAttribute="centerX" secondItem="CS2-Cl-xQf" secondAttribute="centerX" id="ajl-Sr-7Ui"/>
+                                        <constraint firstItem="uZ1-3G-Cue" firstAttribute="centerY" secondItem="CS2-Cl-xQf" secondAttribute="centerY" id="ngF-NV-3sL"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vZU-5I-hvP" customClass="ButtonStyle" customModule="GymApp" customModuleProvider="target">
+                                <rect key="frame" x="305" y="591" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vZU-5I-hvP" secondAttribute="height" multiplier="1:1" id="FPS-al-r0W"/>
+                                    <constraint firstAttribute="width" constant="60" id="mKk-Lb-6uX"/>
+                                </constraints>
+                                <state key="normal" image="nut"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="0.41317958047945208" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.66666666666666663" alpha="0.41376819349315069" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Qef-cw-YBP" firstAttribute="width" secondItem="LYo-8g-C53" secondAttribute="width" constant="-32" id="0ie-yz-zFh"/>
                             <constraint firstItem="BKQ-2x-tas" firstAttribute="centerY" secondItem="LYo-8g-C53" secondAttribute="centerY" id="5kt-ya-nGq"/>
+                            <constraint firstAttribute="trailing" secondItem="vZU-5I-hvP" secondAttribute="trailing" constant="10" id="Ei8-2z-cNl"/>
+                            <constraint firstItem="LbW-qA-TAs" firstAttribute="top" secondItem="495-6f-cNS" secondAttribute="bottom" multiplier="1.5" id="JGo-4i-djK"/>
                             <constraint firstItem="BKQ-2x-tas" firstAttribute="width" secondItem="LYo-8g-C53" secondAttribute="width" id="MDN-9V-Pu4"/>
+                            <constraint firstItem="CBC-Xc-Q2C" firstAttribute="centerX" secondItem="BKQ-2x-tas" secondAttribute="centerX" id="MV3-rp-YVW"/>
+                            <constraint firstItem="dFH-kJ-oTE" firstAttribute="top" secondItem="Qef-cw-YBP" secondAttribute="bottom" constant="40" id="PDU-Zz-IOa"/>
                             <constraint firstItem="BKQ-2x-tas" firstAttribute="centerX" secondItem="LYo-8g-C53" secondAttribute="centerX" id="T9D-Aa-dEm"/>
+                            <constraint firstItem="CBC-Xc-Q2C" firstAttribute="height" secondItem="BKQ-2x-tas" secondAttribute="height" multiplier="0.05" id="Zqs-Fa-raH"/>
+                            <constraint firstItem="LbW-qA-TAs" firstAttribute="width" secondItem="LYo-8g-C53" secondAttribute="width" multiplier="0.65" id="cKQ-Kh-ZqO"/>
+                            <constraint firstItem="Qef-cw-YBP" firstAttribute="top" secondItem="CBC-Xc-Q2C" secondAttribute="bottom" constant="8" id="evt-F7-PRH"/>
+                            <constraint firstItem="LbW-qA-TAs" firstAttribute="centerX" secondItem="LYo-8g-C53" secondAttribute="centerX" id="lbs-zw-2aQ"/>
+                            <constraint firstItem="LbW-qA-TAs" firstAttribute="bottom" secondItem="CBC-Xc-Q2C" secondAttribute="top" constant="-8" id="p7b-gD-Jqm"/>
+                            <constraint firstItem="Qef-cw-YBP" firstAttribute="centerX" secondItem="LYo-8g-C53" secondAttribute="centerX" id="wpD-vv-ysy"/>
                             <constraint firstItem="BKQ-2x-tas" firstAttribute="height" secondItem="LYo-8g-C53" secondAttribute="height" id="ySI-D5-wwC"/>
+                            <constraint firstItem="dFH-kJ-oTE" firstAttribute="top" secondItem="vZU-5I-hvP" secondAttribute="bottom" constant="16" id="zbA-C0-zdJ"/>
+                            <constraint firstItem="CBC-Xc-Q2C" firstAttribute="width" secondItem="BKQ-2x-tas" secondAttribute="width" multiplier="0.8" id="zy1-kR-olW"/>
                         </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="configExerciseButton" destination="vZU-5I-hvP" id="2Tc-U2-DiY"/>
+                        <outlet property="exerciseDescriptionTextView" destination="uZ1-3G-Cue" id="8yF-CE-I7c"/>
+                        <outlet property="exerciseImageView" destination="LbW-qA-TAs" id="3e8-RK-hAG"/>
+                        <outlet property="exerciseNameLabel" destination="CBC-Xc-Q2C" id="igY-Z6-fz4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n1I-KX-giG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-594" y="1284"/>
+            <point key="canvasLocation" x="-594.39999999999998" y="1283.2083958020989"/>
         </scene>
         <!--Root routine-->
         <scene sceneID="IMF-oy-I7p">
@@ -658,6 +755,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Female" width="80" height="80"/>
         <image name="Male" width="80" height="80"/>
         <image name="backHand" width="32" height="32"/>
         <image name="details" width="286" height="451"/>
@@ -667,6 +765,7 @@
         <image name="launchImage" width="335" height="653"/>
         <image name="list" width="398" height="602"/>
         <image name="muscle" width="218" height="524"/>
+        <image name="nut" width="64" height="64"/>
         <image name="profile" width="294" height="441"/>
         <image name="routine" width="260" height="468"/>
     </resources>

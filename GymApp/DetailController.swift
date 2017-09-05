@@ -10,9 +10,19 @@ import UIKit
 
 class DetailController: UIViewController {
 
+    @IBOutlet weak var exerciseImageView: UIImageView!
+    @IBOutlet weak var exerciseNameLabel: UILabel!
+    @IBOutlet weak var exerciseDescriptionTextView: UITextView!
+    @IBOutlet weak var configExerciseButton: ButtonStyle!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = Constants.DetailView.title
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        exerciseDescriptionTextView.scrollRangeToVisible(NSMakeRange(0, 0))
     }
 
 }
