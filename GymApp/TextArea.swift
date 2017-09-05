@@ -12,19 +12,24 @@ extension DetailController: UITextViewDelegate {
 
     // Used for fading out floating config button
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        UIView.animate(withDuration: 0.15, animations: {
-            self.configExerciseButton.alpha = 0.25
-        }, completion: { _ in
-            self.configExerciseButton.isEnabled = false
-        })
+        enableExerciseConfiguration(isEnable: false)
+    }
+    
+    // Used for fading in floating config button
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        enableExerciseConfiguration(isEnable: !scrollView.isDecelerating)
     }
     
     // Used for fading in floating config button
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        enableExerciseConfiguration(isEnable: true)
+    }
+    
+    private func enableExerciseConfiguration(isEnable: Bool) {
         UIView.animate(withDuration: 0.15, animations: {
-            self.configExerciseButton.alpha = 1
+            self.configExerciseButton.alpha = isEnable ? 1 : 0.25
         }, completion: { _ in
-            self.configExerciseButton.isEnabled = true
+            self.configExerciseButton.isEnabled = isEnable
         })
     }
     
