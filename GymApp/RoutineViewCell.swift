@@ -12,6 +12,7 @@ class RoutineViewCell: UITableViewCell {
 
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var routineLabel: UILabel!
+    var idForRoutine:Int?
     
     override func awakeFromNib() {
         super.awakeFromNib()

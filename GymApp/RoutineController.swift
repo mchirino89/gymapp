@@ -16,4 +16,10 @@ class RoutineController: UIViewController {
         setNavigationBar(navigationController)
         customBackButton(navigationItem)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let exerciseView = segue.destination as? ExerciseController else { return }
+        exerciseView.kindOfList = 1
+        exerciseView.dataId = sender as? Int
+    }
 }
