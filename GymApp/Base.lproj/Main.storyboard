@@ -98,7 +98,7 @@
                                                 <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CYR-ch-g4o">
                                                     <rect key="frame" x="4" y="102" width="147.5" height="36"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="NJg-zQ-Gw9">
-                                                        <rect key="frame" x="0.0" y="0.0" width="147.5" height="36"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="147" height="36"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <subviews>
                                                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shoulders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uzl-0y-NFw">
@@ -183,7 +183,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qOo-FS-x4x">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="4" y="64" width="367.5" height="603"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="AKB-pw-XKH">
                                     <size key="itemSize" width="176" height="168"/>
@@ -199,19 +199,33 @@
                                             <rect key="frame" x="0.0" y="0.0" width="176" height="168"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dumbells" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ofy-zT-iip">
-                                                    <rect key="frame" x="22" y="42" width="132" height="84"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aLs-u7-Zw3">
+                                                    <rect key="frame" x="4.5" y="21" width="167" height="126"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="iF2-Pl-WdI">
+                                                        <rect key="frame" x="0.0" y="0.0" width="167" height="126"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="French Press (skullcrusher) SZ-bar" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ofy-zT-iip">
+                                                                <rect key="frame" x="2" y="2" width="163" height="122"/>
+                                                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="18"/>
+                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </view>
+                                                    <blurEffect style="dark"/>
+                                                </visualEffectView>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="Ofy-zT-iip" firstAttribute="width" secondItem="3wX-Ie-63M" secondAttribute="width" multiplier="0.75" id="8Gd-Sr-bxg"/>
-                                            <constraint firstItem="Ofy-zT-iip" firstAttribute="centerY" secondItem="3wX-Ie-63M" secondAttribute="centerY" id="DN9-Yz-1FF"/>
-                                            <constraint firstItem="Ofy-zT-iip" firstAttribute="centerX" secondItem="3wX-Ie-63M" secondAttribute="centerX" id="JK3-27-UIq"/>
-                                            <constraint firstItem="Ofy-zT-iip" firstAttribute="height" secondItem="3wX-Ie-63M" secondAttribute="height" multiplier="0.5" id="M2A-vU-VWg"/>
+                                            <constraint firstItem="Ofy-zT-iip" firstAttribute="centerX" secondItem="3wX-Ie-63M" secondAttribute="centerX" id="1ax-vh-FuV"/>
+                                            <constraint firstItem="aLs-u7-Zw3" firstAttribute="centerX" secondItem="3wX-Ie-63M" secondAttribute="centerX" id="1c7-Ah-MCK"/>
+                                            <constraint firstItem="aLs-u7-Zw3" firstAttribute="width" secondItem="3wX-Ie-63M" secondAttribute="width" multiplier="0.95" id="75u-NJ-vTs"/>
+                                            <constraint firstItem="Ofy-zT-iip" firstAttribute="centerY" secondItem="3wX-Ie-63M" secondAttribute="centerY" id="97W-Nu-Z7S"/>
+                                            <constraint firstItem="Ofy-zT-iip" firstAttribute="width" secondItem="3wX-Ie-63M" secondAttribute="width" multiplier="0.925" id="Iak-df-yOD"/>
+                                            <constraint firstItem="aLs-u7-Zw3" firstAttribute="height" secondItem="3wX-Ie-63M" secondAttribute="height" multiplier="0.75" id="Pxj-28-d4M"/>
+                                            <constraint firstItem="aLs-u7-Zw3" firstAttribute="centerY" secondItem="3wX-Ie-63M" secondAttribute="centerY" id="gSD-23-mgp"/>
+                                            <constraint firstItem="Ofy-zT-iip" firstAttribute="height" secondItem="3wX-Ie-63M" secondAttribute="height" multiplier="0.725" id="uaD-bO-dZn"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="detailLabel" destination="Ofy-zT-iip" id="n9h-Bv-jMH"/>
@@ -226,13 +240,13 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="qOo-FS-x4x" firstAttribute="leading" secondItem="me1-A4-ria" secondAttribute="leading" id="0DZ-BU-5U8"/>
                             <constraint firstItem="J2W-ix-g4I" firstAttribute="centerY" secondItem="me1-A4-ria" secondAttribute="centerY" id="9Gk-RD-spn"/>
                             <constraint firstItem="J2W-ix-g4I" firstAttribute="width" secondItem="me1-A4-ria" secondAttribute="width" id="Bnr-VN-LJT"/>
                             <constraint firstItem="Tme-oT-Dvp" firstAttribute="top" secondItem="qOo-FS-x4x" secondAttribute="bottom" id="HpC-91-uYV"/>
                             <constraint firstItem="J2W-ix-g4I" firstAttribute="height" secondItem="me1-A4-ria" secondAttribute="height" id="LPG-PK-CI4"/>
-                            <constraint firstItem="qOo-FS-x4x" firstAttribute="width" secondItem="me1-A4-ria" secondAttribute="width" id="Mkb-JP-HtK"/>
+                            <constraint firstItem="qOo-FS-x4x" firstAttribute="width" secondItem="me1-A4-ria" secondAttribute="width" multiplier="0.98" id="Mkb-JP-HtK"/>
                             <constraint firstItem="J2W-ix-g4I" firstAttribute="centerX" secondItem="me1-A4-ria" secondAttribute="centerX" id="Rjo-fe-oYw"/>
+                            <constraint firstItem="qOo-FS-x4x" firstAttribute="centerX" secondItem="me1-A4-ria" secondAttribute="centerX" id="T3i-IT-QXD"/>
                             <constraint firstItem="qOo-FS-x4x" firstAttribute="top" secondItem="Dkf-dA-1ar" secondAttribute="bottom" id="kri-wR-vCg"/>
                         </constraints>
                     </view>
