@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Moya.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-GymApp.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -29,10 +34,25 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Result.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>226288CBC911AEA20377ED4CF51F79C9</key>
+		<key>0C95F7AE6501381AD206120487C601AD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1C37510D3BADB0FEB2AFE88F555DFBFD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2A49CDF170582DDCC6CA9F39A493BE27</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -42,17 +62,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>719A87F07A66C171F1ABA5DE722A2D2B</key>
+		<key>3671F0D9A9A1BAFC18432DD7C78BF990</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7474A86533136ADF7C2A515898F120F6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DB41236E7A76B9B0069F7B197F59C0C5</key>
 		<dict>
 			<key>primary</key>
 			<true/>

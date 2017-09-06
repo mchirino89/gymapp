@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="efE-5b-2gS">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -40,7 +36,7 @@
                 <navigationController id="hrr-am-GeH" userLabel="Root muscles" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Muscles" image="if_dumbbell_1118213" selectedImage="if_dumbbell_1118213" id="dBa-0W-La5"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" backIndicatorImage="backHand" backIndicatorTransitionMaskImage="backHand" id="Uig-dc-HFd">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="backHand" backIndicatorTransitionMaskImage="backHand" id="Uig-dc-HFd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -68,15 +64,15 @@
                         <viewControllerLayoutGuide type="bottom" id="cZU-eQ-YJI"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bzd-6l-DyR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="muscle" translatesAutoresizingMaskIntoConstraints="NO" id="NZW-Qz-W67">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ugo-vh-HUd">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="McZ-ss-kQb">
                                     <size key="itemSize" width="155" height="146"/>
@@ -98,7 +94,7 @@
                                                 <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CYR-ch-g4o">
                                                     <rect key="frame" x="4" y="102" width="147.5" height="36"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="NJg-zQ-Gw9">
-                                                        <rect key="frame" x="0.0" y="0.0" width="147" height="36"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="147.5" height="36"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <subviews>
                                                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shoulders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uzl-0y-NFw">
@@ -176,14 +172,14 @@
                         <viewControllerLayoutGuide type="bottom" id="Tme-oT-Dvp"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="me1-A4-ria">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="list" translatesAutoresizingMaskIntoConstraints="NO" id="J2W-ix-g4I">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qOo-FS-x4x">
-                                <rect key="frame" x="4" y="64" width="367.5" height="603"/>
+                                <rect key="frame" x="6" y="64" width="588" height="536"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="AKB-pw-XKH">
                                     <size key="itemSize" width="176" height="168"/>
@@ -270,34 +266,34 @@
                         <viewControllerLayoutGuide type="bottom" id="dFH-kJ-oTE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="LYo-8g-C53">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="details" translatesAutoresizingMaskIntoConstraints="NO" id="BKQ-2x-tas">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Female" translatesAutoresizingMaskIntoConstraints="NO" id="LbW-qA-TAs">
-                                <rect key="frame" x="65.5" y="96" width="244" height="244"/>
+                                <rect key="frame" x="105" y="96" width="390" height="390"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="LbW-qA-TAs" secondAttribute="height" multiplier="1:1" id="j6L-l6-fML"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="French Press (skullcrusher) SZ-bar" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="none" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CBC-Xc-Q2C">
-                                <rect key="frame" x="37" y="348" width="300" height="33.5"/>
+                                <rect key="frame" x="59.5" y="494" width="480" height="30"/>
                                 <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qef-cw-YBP">
-                                <rect key="frame" x="16" y="389.5" width="343" height="237.5"/>
+                                <rect key="frame" x="16" y="532" width="568" height="28"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="CS2-Cl-xQf">
-                                    <rect key="frame" x="0.0" y="0.0" width="343" height="238"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="568" height="28"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZ1-3G-Cue">
-                                            <rect key="frame" x="13" y="8.5" width="317" height="220.5"/>
+                                            <rect key="frame" x="21.5" y="1" width="525" height="26.5"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis accumsan dui. Nullam augue tellus, accumsan hendrerit auctor quis, commodo id dui. Sed porttitor, dolor a finibus posuere, lacus lacus fringilla elit, sed auctor felis neque nec eros. Morbi tempus turpis id sem lacinia, at pharetra orci tempus. Etiam sit amet ullamcorper libero, et rhoncus erat. Nunc egestas tortor a ligula laoreet faucibus. Ut ullamcorper tortor eu pharetra vulputate. Nunc congue vitae nisi eu tincidunt.
+                                            <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis accumsan dui. Nullam augue tellus, accumsan hendrerit auctor quis, commodo id dui. Sed porttitor, dolor a finibus posuere, lacus lacus fringilla elit, sed auctor felis neque nec eros. Morbi tempus turpis id sem lacinia, at pharetra orci tempus. Etiam sit amet ullamcorper libero, et rhoncus erat. Nunc egestas tortor a ligula laoreet faucibus. Ut ullamcorper tortor eu pharetra vulputate. Nunc congue vitae nisi eu tincidunt.
 
 Maecenas ac cursus tortor, at lobortis odio. Nunc posuere augue non risus efficitur, sit amet lobortis orci gravida. Aenean vitae viverra sem, sed posuere neque. Aliquam in orci rhoncus, ultrices mauris elementum, convallis eros. Praesent semper pellentesque purus. Vestibulum mattis at eros a dignissim. Sed commodo ligula ut nulla volutpat, sed tincidunt quam finibus. Praesent sit amet nisl mattis, volutpat tortor non, condimentum erat. Fusce urna nisl, tincidunt ac sem at, porttitor tincidunt urna. Proin eu lectus aliquam, laoreet eros at, vestibulum nibh. Nam aliquam, est quis commodo pulvinar, justo tellus venenatis nibh, vitae elementum ipsum lorem vitae mi. Integer interdum ipsum et eros ornare tincidunt.
 
@@ -305,7 +301,7 @@ Aliquam consectetur lacus quam, a mattis risus porta ac. Sed auctor nibh vel met
 
 Phasellus imperdiet quam sit amet arcu malesuada lacinia. Suspendisse laoreet ipsum et sagittis mollis. Aenean vitae interdum quam, ac congue ex. Quisque eleifend lobortis tortor id dignissim. Nulla convallis vitae urna sed euismod. Pellentesque maximus arcu et purus venenatis, at blandit erat consequat. In enim purus, tristique ut quam congue, venenatis varius ante. Aliquam erat volutpat. Cras quis orci in dui tempus blandit. Mauris finibus a leo id sollicitudin.
 
-Mauris malesuada nisi eu lacus tempor efficitur. Suspendisse eget felis rhoncus, aliquet sem sed, condimentum sem. Integer auctor lobortis condimentum. Pellentesque tempus augue a pharetra bibendum. Sed in eleifend ex, eu auctor nibh. Phasellus enim purus, volutpat eget ante eget, volutpat condimentum orci. Sed cursus elit vitae feugiat congue. Ut non placerat felis. Fusce gravida a felis ut condimentum. Aenean in est eget quam placerat semper sit amet at lacus. Ut luctus mi sit amet augue ullamcorper, non ornare nunc imperdiet.</mutableString>
+Mauris malesuada nisi eu lacus tempor efficitur. Suspendisse eget felis rhoncus, aliquet sem sed, condimentum sem. Integer auctor lobortis condimentum. Pellentesque tempus augue a pharetra bibendum. Sed in eleifend ex, eu auctor nibh. Phasellus enim purus, volutpat eget ante eget, volutpat condimentum orci. Sed cursus elit vitae feugiat congue. Ut non placerat felis. Fusce gravida a felis ut condimentum. Aenean in est eget quam placerat semper sit amet at lacus. Ut luctus mi sit amet augue ullamcorper, non ornare nunc imperdiet.</string>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="16"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no"/>
@@ -324,7 +320,7 @@ Mauris malesuada nisi eu lacus tempor efficitur. Suspendisse eget felis rhoncus,
                                 <blurEffect style="dark"/>
                             </visualEffectView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vZU-5I-hvP" customClass="ButtonStyle" customModule="GymApp" customModuleProvider="target">
-                                <rect key="frame" x="305" y="591" width="60" height="60"/>
+                                <rect key="frame" x="530" y="524" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="vZU-5I-hvP" secondAttribute="height" multiplier="1:1" id="FPS-al-r0W"/>
                                     <constraint firstAttribute="width" constant="60" id="mKk-Lb-6uX"/>
@@ -393,7 +389,7 @@ Mauris malesuada nisi eu lacus tempor efficitur. Suspendisse eget felis rhoncus,
             <objects>
                 <navigationController id="riG-cO-xcO" userLabel="Root routine" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Routines" image="if_organizer_1118206" selectedImage="if_organizer_1118206" id="B00-W2-SS2"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" backIndicatorImage="backHand" backIndicatorTransitionMaskImage="backHand" id="QGn-O7-YMC">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="backHand" backIndicatorTransitionMaskImage="backHand" id="QGn-O7-YMC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -421,28 +417,28 @@ Mauris malesuada nisi eu lacus tempor efficitur. Suspendisse eget felis rhoncus,
                         <viewControllerLayoutGuide type="bottom" id="hdS-2z-6kV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="46X-lw-4Uy">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="routine" translatesAutoresizingMaskIntoConstraints="NO" id="MKp-H2-7Dn">
-                                <rect key="frame" x="0.0" y="-66.5" width="375" height="733.5"/>
+                                <rect key="frame" x="0.0" y="-60" width="600" height="660"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jpi-uD-P63">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationWidth="0.0" reuseIdentifier="routineCell" rowHeight="75" id="Zf1-Dg-0w8" customClass="RoutineViewCell" customModule="GymApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="75"/>
+                                        <rect key="frame" x="0.0" y="28" width="600" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zf1-Dg-0w8" id="G51-VM-ANy">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="75"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="details" translatesAutoresizingMaskIntoConstraints="NO" id="0ln-39-eXM">
-                                                    <rect key="frame" x="14.5" y="7.5" width="346.5" height="60"/>
+                                                    <rect key="frame" x="22.5" y="7.5" width="555" height="60"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Back and shoulders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="DAA-sr-DNK">
-                                                    <rect key="frame" x="14.5" y="8.5" width="346.5" height="59.5"/>
+                                                    <rect key="frame" x="22.5" y="8.5" width="555" height="59.5"/>
                                                     <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="28"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -505,7 +501,7 @@ Mauris malesuada nisi eu lacus tempor efficitur. Suspendisse eget felis rhoncus,
             <objects>
                 <navigationController id="WJj-sW-n9x" userLabel="Root profile" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" image="if_Resume_Female_2316249" selectedImage="if_Resume_Female_2316249" id="uaw-yJ-TmI"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" backIndicatorImage="backHand" backIndicatorTransitionMaskImage="backHand" id="Zea-8z-V6N">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="backHand" backIndicatorTransitionMaskImage="backHand" id="Zea-8z-V6N">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
@@ -532,17 +528,17 @@ Mauris malesuada nisi eu lacus tempor efficitur. Suspendisse eget felis rhoncus,
                         <viewControllerLayoutGuide type="bottom" id="UtV-rc-I2T"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="MFa-tE-DEE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <visualEffectView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nvb-VL-Xk7">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="8TC-kp-L8U">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3GD-Pp-2a4">
-                                            <rect key="frame" x="0.0" y="284" width="375" height="100"/>
+                                            <rect key="frame" x="0.0" y="255" width="600" height="90"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
@@ -551,7 +547,7 @@ Mauris malesuada nisi eu lacus tempor efficitur. Suspendisse eget felis rhoncus,
                                             </connections>
                                         </pickerView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65z-GZ-Hor">
-                                            <rect key="frame" x="162.5" y="426" width="50" height="50"/>
+                                            <rect key="frame" x="275" y="387" width="50" height="50"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="Be4-v4-m0m"/>
                                                 <constraint firstAttribute="width" secondItem="65z-GZ-Hor" secondAttribute="height" multiplier="1:1" id="PCC-Z2-wH1"/>
@@ -573,13 +569,13 @@ Mauris malesuada nisi eu lacus tempor efficitur. Suspendisse eget felis rhoncus,
                                 <blurEffect style="light"/>
                             </visualEffectView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="mEW-Ks-sjj" userLabel="profileBackground">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4wM-Hr-Mbq">
-                                <rect key="frame" x="0.0" y="356.5" width="375" height="310.5"/>
+                                <rect key="frame" x="0.0" y="510" width="600" height="90"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="John Doe" placeholder="Full name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0fs-ve-xnX">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="62.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="18"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="25"/>
@@ -589,19 +585,19 @@ Mauris malesuada nisi eu lacus tempor efficitur. Suspendisse eget felis rhoncus,
                                         </connections>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KUP-Uz-Gxb">
-                                        <rect key="frame" x="0.0" y="62.5" width="375" height="248"/>
+                                        <rect key="frame" x="0.0" y="18" width="600" height="72"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KGV-iw-INa">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="83"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="24.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Gender" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rRP-6k-AXh">
-                                                        <rect key="frame" x="0.0" y="30.5" width="187.5" height="22.5"/>
+                                                        <rect key="frame" x="0.0" y="1" width="300" height="22.5"/>
                                                         <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6LI-lx-nau">
-                                                        <rect key="frame" x="187.5" y="24" width="187.5" height="35"/>
+                                                        <rect key="frame" x="300" y="0.0" width="300" height="24.5"/>
                                                         <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
                                                         <state key="normal" title="Your gender">
                                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -614,16 +610,16 @@ Mauris malesuada nisi eu lacus tempor efficitur. Suspendisse eget felis rhoncus,
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Szk-bo-NFQ">
-                                                <rect key="frame" x="0.0" y="83" width="375" height="55"/>
+                                                <rect key="frame" x="0.0" y="24.5" width="600" height="15.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Age" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGK-P3-92Y">
-                                                        <rect key="frame" x="0.0" y="16.5" width="187.5" height="22.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="15.5"/>
                                                         <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Enter age" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wSr-Lc-BVc">
-                                                        <rect key="frame" x="187.5" y="16" width="187.5" height="23"/>
+                                                        <rect key="frame" x="300" y="0.0" width="300" height="15.5"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="light" returnKeyType="done"/>
@@ -639,16 +635,16 @@ Mauris malesuada nisi eu lacus tempor efficitur. Suspendisse eget felis rhoncus,
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MEL-CZ-w29">
-                                                <rect key="frame" x="0.0" y="138" width="375" height="55"/>
+                                                <rect key="frame" x="0.0" y="40" width="600" height="16"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Weight" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUe-tn-t1S">
-                                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="55"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="16"/>
                                                         <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Enter weigth" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W8R-Ta-cof">
-                                                        <rect key="frame" x="187.5" y="16" width="187.5" height="23"/>
+                                                        <rect key="frame" x="300" y="0.0" width="300" height="16"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="light" returnKeyType="done"/>
@@ -664,16 +660,16 @@ Mauris malesuada nisi eu lacus tempor efficitur. Suspendisse eget felis rhoncus,
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="idi-W3-nbS">
-                                                <rect key="frame" x="0.0" y="193" width="375" height="55"/>
+                                                <rect key="frame" x="0.0" y="56" width="600" height="16"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Height" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="do8-0E-e0M">
-                                                        <rect key="frame" x="0.0" y="16.5" width="187.5" height="22.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="16"/>
                                                         <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Enter heigth" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DYl-y9-WuU">
-                                                        <rect key="frame" x="187.5" y="16" width="187.5" height="23"/>
+                                                        <rect key="frame" x="300" y="0.0" width="300" height="16"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="light" returnKeyType="done"/>
@@ -701,7 +697,7 @@ Mauris malesuada nisi eu lacus tempor efficitur. Suspendisse eget felis rhoncus,
                                 </constraints>
                             </stackView>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="dcI-8K-Us8">
-                                <rect key="frame" x="66" y="96" width="244" height="244"/>
+                                <rect key="frame" x="105" y="96" width="390" height="390"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="dcI-8K-Us8" secondAttribute="height" multiplier="1:1" id="CCd-QC-65h"/>
                                 </constraints>
