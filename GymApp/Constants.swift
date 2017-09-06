@@ -10,15 +10,23 @@ import UIKit
 
 struct Constants {
     
-    struct APIConfiguration {}
+    struct APIConfiguration {
+        static let rootURL = "https://wger.de/api/v2"
+    }
     
-    struct ParameterKey {}
+    struct ParameterKey {
+        static let contentType = "Content-type"
+    }
     
-    struct ParameterValue {}
+    struct ParameterValue {
+        static let contentType = "application/json"
+    }
     
     struct JSONResponseKey {}
     
-    struct URL {}
+    struct Path {
+        static let exerciseGroup = "/exercisecategory"
+    }
     
     struct Storyboard {
         static let cellId = "detailCell"
@@ -69,7 +77,7 @@ struct Constants {
     }
     
     struct RegularExpressions {
-        static let age = "[0-9]"
+        static let age = "[0-9]+"
     }
 }
 

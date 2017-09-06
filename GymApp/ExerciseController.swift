@@ -23,6 +23,26 @@ class ExerciseController: UIViewController {
         setCollectionLayout()
         setNavigationBar(navigationController)
         customBackButton(navigationItem)
+        Singleton.provider.request(.muscleGroup, completion: {
+            result in
+            print(result.description)
+            print(result.value ?? "no value")
+            print(result.value?.data ?? "no data")
+            switch result {
+                case .success:
+                    let data = result.value?.data
+                    let statusCode = result.value?.statusCode
+                    print(data as Any)
+                    print(statusCode ?? 0)
+                case let .failure(error):
+                    print(error.errorDescription as Any)
+                    print(error.failureReason as Any)
+                    print(error.response as Any)
+                    print(error.helpAnchor as Any)
+                    print(error.localizedDescription as Any)
+                    print(error.recoverySuggestion as Any)
+                }
+        })
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
