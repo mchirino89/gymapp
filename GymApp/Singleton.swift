@@ -11,8 +11,4 @@ import Moya
 class Singleton {
     static let provider = MoyaProvider<Services>()
     private init() {}
-    
-    func JSONResponse(kindOfService: Services, completion: (_ response: AnyObject?) ->()) -> Cancellable {
-        <#function body#>
-    }
 }

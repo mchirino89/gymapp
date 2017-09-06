@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Moya
 
 struct Constants {
     
@@ -102,4 +103,31 @@ func questionPopup(title: String, message: String, style: UIAlertControllerStyle
     questionAlert.addAction(logOutAction)
     questionAlert.addAction(UIAlertAction(title: Constants.UIMessages.negative, style: .default))
     return questionAlert
+}
+
+func JSONResponse(kindOfService: Services, completion: @escaping (_ response: AnyObject?) ->()) -> Cancellable {
+    return Singleton.provider.request(kindOfService, completion: { data in
+        switch data {
+        case let .success(moyaResponse):
+            do {
+                let _ = try moyaResponse.filterSuccessfulStatusCodes()
+                do {
+                    let JSONdata = try moyaResponse.mapJSON()
+                    completion(JSONdata as AnyObject)
+                    print("\(kindOfService.path) loaded")
+                } catch {
+                    print("Something went wrong mapping \(kindOfService.path) JSON request")
+                    print("Error code: ", moyaResponse.statusCode)
+                }
+            } catch {
+                print("Something went wrong on \(kindOfService.path) request, code: ", data.value!.statusCode)
+            }
+        case let .failure(error):
+            // If failure isn't caused by manual call cancellation
+            if error._code != 5 {
+                print(error._code)
+                print(error)
+            }
+        }
+    })
 }
