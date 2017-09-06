@@ -31,8 +31,10 @@ struct Constants {
     struct UIElements {
         static let title = "Gym App"
         static let genders = ["Male", "Female"]
+        static let placeholderNames = ["John Doe", "Jane Doe"]
         static let appFont = "Copperplate"
         static let regularFontSize = 25
+        static let animationDuration = 0.25
     }
     
     struct ErrorMessages {

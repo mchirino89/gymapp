@@ -26,7 +26,7 @@ extension DetailController: UITextViewDelegate {
     }
     
     private func enableExerciseConfiguration(isEnable: Bool) {
-        UIView.animate(withDuration: 0.15, animations: {
+        UIView.animate(withDuration: Constants.UIElements.animationDuration, animations: {
             self.configExerciseButton.alpha = isEnable ? 1 : 0.25
         }, completion: { _ in
             self.configExerciseButton.isEnabled = isEnable

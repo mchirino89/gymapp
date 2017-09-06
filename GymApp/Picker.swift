@@ -25,6 +25,7 @@ extension ProfileController: UIPickerViewDelegate, UIPickerViewDataSource {
         }
         if profileImage == #imageLiteral(resourceName: "Male") || profileImage == #imageLiteral(resourceName: "Female") {
             profileImageButton.setBackgroundImage(UIImage(named: Constants.UIElements.genders[row]), for: .normal)
+            nameTextField.text = Constants.UIElements.placeholderNames[row]
         }
     }
     
