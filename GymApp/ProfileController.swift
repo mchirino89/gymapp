@@ -35,6 +35,18 @@ class ProfileController: UIViewController {
         super.viewWillDisappear(animated)
     }
     
+    func setPlaceholderProfileImage() {
+        let row = genderPickerView.selectedRow(inComponent: 0)
+        guard let profileImage = profileImageButton.backgroundImage(for: .normal) else {
+            print(Constants.ErrorMessages.noProfilePlaceholder)
+            return
+        }
+        if profileImage == #imageLiteral(resourceName: "Male") || profileImage == #imageLiteral(resourceName: "Female") {
+            profileImageButton.setBackgroundImage(UIImage(named: Constants.UIElements.genders[row]), for: .normal)
+            nameTextField.placeholder = Constants.UIElements.placeholderNames[row]
+        }
+    }
+    
     //# Keyboard events and handling
     
     func keyboardWillShow(_ notification:Notification) {
@@ -74,6 +86,7 @@ class ProfileController: UIViewController {
     }
     
     @IBAction func okButton() {
+        setPlaceholderProfileImage()
         genderButton.setTitle(Constants.UIElements.genders[genderPickerView.selectedRow(inComponent: 0)], for: .normal)
         UIView.animate(withDuration: Constants.UIElements.animationDuration, animations: {
             self.genderVisualEffectView.alpha = 0

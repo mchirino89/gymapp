@@ -18,17 +18,6 @@ extension ProfileController: UIPickerViewDelegate, UIPickerViewDataSource {
         return 1
     }
     
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        guard let profileImage = profileImageButton.backgroundImage(for: .normal) else {
-            print(Constants.ErrorMessages.noProfilePlaceholder)
-            return
-        }
-        if profileImage == #imageLiteral(resourceName: "Male") || profileImage == #imageLiteral(resourceName: "Female") {
-            profileImageButton.setBackgroundImage(UIImage(named: Constants.UIElements.genders[row]), for: .normal)
-            nameTextField.text = Constants.UIElements.placeholderNames[row]
-        }
-    }
-    
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         var genderLabel = view as! UILabel!
         if genderLabel == nil {
