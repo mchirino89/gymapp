@@ -20,17 +20,18 @@ extension ExerciseController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return kindOfList == 0 ? muscleLabel.count : exerciseLabel.count
+        return muscleGroupList ? muscleGroupDataSource?.result?.count ?? 0 : exerciseLabel.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.Storyboard.cellId, for: indexPath) as! ListViewCell
-        cell.setDetailLabelWithAnimation(kindOfList == 0 ? muscleLabel[indexPath.row] : exerciseLabel[indexPath.row], indexPath.row|indexPath.section)
+        
+        cell.setDetailLabelWithAnimation(muscleGroupList ? muscleGroupDataSource!.result![indexPath.row].name! : exerciseLabel[indexPath.row], muscleGroupList ? [muscleGroupDataSource!.result![indexPath.row].id!] : [indexPath.row|indexPath.section])
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as! ListViewCell
-        performSegue(withIdentifier: kindOfList == 0 ? Constants.Storyboard.exerciseListSegue : Constants.Storyboard.exerciseDetailSegue, sender: cell.idForCell)
+        performSegue(withIdentifier: muscleGroupList ? Constants.Storyboard.exerciseListSegue : Constants.Storyboard.exerciseDetailSegue, sender: cell.referenceIds)
     }
 }

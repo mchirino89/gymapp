@@ -141,14 +141,19 @@
                                     <outlet property="delegate" destination="w88-78-r6J" id="7rm-Ay-NED"/>
                                 </connections>
                             </collectionView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="1UM-Rr-6bC">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ugo-vh-HUd" firstAttribute="centerX" secondItem="NZW-Qz-W67" secondAttribute="centerX" id="4CM-6e-03l"/>
+                            <constraint firstItem="1UM-Rr-6bC" firstAttribute="centerX" secondItem="bzd-6l-DyR" secondAttribute="centerX" id="LDL-Xg-Fdy"/>
                             <constraint firstItem="NZW-Qz-W67" firstAttribute="centerX" secondItem="bzd-6l-DyR" secondAttribute="centerX" id="MZ2-8H-tnd"/>
                             <constraint firstItem="cZU-eQ-YJI" firstAttribute="top" secondItem="ugo-vh-HUd" secondAttribute="bottom" id="Pgv-Ga-dbe"/>
                             <constraint firstItem="NZW-Qz-W67" firstAttribute="width" secondItem="bzd-6l-DyR" secondAttribute="width" id="Q3C-7o-eff"/>
                             <constraint firstItem="ugo-vh-HUd" firstAttribute="leading" secondItem="NZW-Qz-W67" secondAttribute="leading" id="du9-2i-0mF"/>
+                            <constraint firstItem="1UM-Rr-6bC" firstAttribute="centerY" secondItem="bzd-6l-DyR" secondAttribute="centerY" id="ge6-5a-TMz"/>
                             <constraint firstItem="ugo-vh-HUd" firstAttribute="top" secondItem="Q2f-AX-QQS" secondAttribute="bottom" id="tK0-BS-FB0"/>
                             <constraint firstItem="NZW-Qz-W67" firstAttribute="centerY" secondItem="bzd-6l-DyR" secondAttribute="centerY" id="tLw-aM-nCX"/>
                             <constraint firstItem="NZW-Qz-W67" firstAttribute="height" secondItem="bzd-6l-DyR" secondAttribute="height" id="z1D-kl-rzX"/>
@@ -159,6 +164,7 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="backgroundImageView" destination="NZW-Qz-W67" id="hm3-ow-rPK"/>
+                        <outlet property="exerciseListActivityIndicator" destination="1UM-Rr-6bC" id="MZE-sI-Xsq"/>
                         <outlet property="listCollectionView" destination="ugo-vh-HUd" id="huT-w3-klY"/>
                         <segue destination="BCO-RW-R6g" kind="show" identifier="muscleDetailsSegue" id="ytr-9Q-XEl"/>
                     </connections>
@@ -237,22 +243,28 @@
                                     <outlet property="delegate" destination="BCO-RW-R6g" id="QEB-7C-qCF"/>
                                 </connections>
                             </collectionView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="hf0-5v-vh2">
+                                <rect key="frame" x="169" y="315.5" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="J2W-ix-g4I" firstAttribute="centerY" secondItem="me1-A4-ria" secondAttribute="centerY" id="9Gk-RD-spn"/>
                             <constraint firstItem="J2W-ix-g4I" firstAttribute="width" secondItem="me1-A4-ria" secondAttribute="width" id="Bnr-VN-LJT"/>
                             <constraint firstItem="Tme-oT-Dvp" firstAttribute="top" secondItem="qOo-FS-x4x" secondAttribute="bottom" id="HpC-91-uYV"/>
+                            <constraint firstItem="hf0-5v-vh2" firstAttribute="centerY" secondItem="me1-A4-ria" secondAttribute="centerY" id="JR5-PS-hUO"/>
                             <constraint firstItem="J2W-ix-g4I" firstAttribute="height" secondItem="me1-A4-ria" secondAttribute="height" id="LPG-PK-CI4"/>
                             <constraint firstItem="qOo-FS-x4x" firstAttribute="width" secondItem="me1-A4-ria" secondAttribute="width" multiplier="0.98" id="Mkb-JP-HtK"/>
                             <constraint firstItem="J2W-ix-g4I" firstAttribute="centerX" secondItem="me1-A4-ria" secondAttribute="centerX" id="Rjo-fe-oYw"/>
                             <constraint firstItem="qOo-FS-x4x" firstAttribute="centerX" secondItem="me1-A4-ria" secondAttribute="centerX" id="T3i-IT-QXD"/>
                             <constraint firstItem="qOo-FS-x4x" firstAttribute="top" secondItem="Dkf-dA-1ar" secondAttribute="bottom" id="kri-wR-vCg"/>
+                            <constraint firstItem="hf0-5v-vh2" firstAttribute="centerX" secondItem="me1-A4-ria" secondAttribute="centerX" id="xv3-ew-f9h"/>
                         </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="backgroundImageView" destination="J2W-ix-g4I" id="srl-os-e5q"/>
+                        <outlet property="exerciseListActivityIndicator" destination="hf0-5v-vh2" id="trt-bC-49b"/>
                         <outlet property="listCollectionView" destination="qOo-FS-x4x" id="6MT-85-Wsv"/>
                         <segue destination="MBB-fV-NY0" kind="show" identifier="specificDetailSegue" id="sfw-kR-qd2"/>
                     </connections>
@@ -767,6 +779,6 @@ Mauris malesuada nisi eu lacus tempor efficitur. Suspendisse eget felis rhoncus,
         <image name="routine" width="260" height="468"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="CU9-m5-LQL"/>
+        <segue reference="ytr-9Q-XEl"/>
     </inferredMetricsTieBreakers>
 </document>

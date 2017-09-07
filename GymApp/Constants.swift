@@ -23,7 +23,13 @@ struct Constants {
         static let contentType = "application/json"
     }
     
-    struct JSONResponseKey {}
+    struct JSONResponseKey {
+        static let results = "results"
+        struct exerciseCategory {
+            static let id = "id"
+            static let name = "name"
+        }
+    }
     
     struct Path {
         static let exerciseGroup = "/exercisecategory"

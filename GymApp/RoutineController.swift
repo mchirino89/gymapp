@@ -19,7 +19,7 @@ class RoutineController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let exerciseView = segue.destination as? ExerciseController else { return }
-        exerciseView.kindOfList = 1
-        exerciseView.dataId = sender as? Int
+        exerciseView.muscleGroupList = false
+        exerciseView.dataId.append((sender as? Int) ?? 0)
     }
 }
