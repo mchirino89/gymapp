@@ -13,7 +13,7 @@ extension ExerciseController: UICollectionViewDataSource, UICollectionViewDelega
     func setCollectionLayout() {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        layout.itemSize = CGSize(width: (view.bounds.width / 2) - 5, height: view.bounds.height / 4.75)
+        layout.itemSize = CGSize(width: (view.bounds.width / 2) - 2, height: view.bounds.height / 4.75)
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
         listCollectionView.collectionViewLayout = layout
