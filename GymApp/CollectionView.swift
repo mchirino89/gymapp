@@ -20,18 +20,18 @@ extension ExerciseController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return muscleGroupList ? muscleGroupDataSource?.result?.count ?? 0 : exerciseLabel.count
+        return muscleGroupDataSource?.result?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.Storyboard.cellId, for: indexPath) as! ListViewCell
-        
-        cell.setDetailLabelWithAnimation(muscleGroupList ? muscleGroupDataSource!.result![indexPath.row].name! : exerciseLabel[indexPath.row], muscleGroupList ? [muscleGroupDataSource!.result![indexPath.row].id!] : [indexPath.row|indexPath.section])
+        // Cell can refer either to a muscle group (abs, arms, legs, etc) or a specific exercise for a previous selected muscle group/routine (squat, push press, crunches, etc)
+        cell.setDetailLabelWithAnimation(muscleGroupDataSource!.result![indexPath.row].name!, [muscleGroupDataSource!.result![indexPath.row].id!])
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as! ListViewCell
-        performSegue(withIdentifier: muscleGroupList ? Constants.Storyboard.exerciseListSegue : Constants.Storyboard.exerciseDetailSegue, sender: cell.referenceIds)
+        performSegue(withIdentifier: muscleGroupList ? Constants.Storyboard.exerciseListSegue : Constants.Storyboard.exerciseDetailSegue, sender: cell.referenceIds.first)
     }
 }

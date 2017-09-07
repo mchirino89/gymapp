@@ -17,22 +17,33 @@ struct Constants {
     
     struct ParameterKey {
         static let contentType = "Content-type"
+        static let status = "status"
+        static let language = "language"
+        static let category = "category"
     }
     
     struct ParameterValue {
         static let contentType = "application/json"
+        static let status = 2
+        static let language = 2
     }
     
     struct JSONResponseKey {
         static let results = "results"
+        
         struct exerciseCategory {
             static let id = "id"
             static let name = "name"
+        }
+        
+        struct exercises {
+            static let description = "description"
         }
     }
     
     struct Path {
         static let exerciseGroup = "/exercisecategory"
+        static let exerciseList = "/exercise"
     }
     
     struct Storyboard {

@@ -14,6 +14,8 @@ extension Services: TargetType {
         switch self {
         case .muscleGroup:
             return .requestPlain
+        case .exerciseGroup(let id):
+            return .requestParameters(parameters: [Constants.ParameterKey.language: Constants.ParameterValue.language, Constants.ParameterKey.status: Constants.ParameterValue.status, Constants.ParameterKey.category: id], encoding: URLEncoding.queryString)
         }
     }
 
@@ -28,6 +30,8 @@ extension Services: TargetType {
         switch self {
         case .muscleGroup:
             return Constants.Path.exerciseGroup
+        case .exerciseGroup(_):
+            return Constants.Path.exerciseList
         }
     }
     
