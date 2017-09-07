@@ -292,7 +292,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Female" translatesAutoresizingMaskIntoConstraints="NO" id="LbW-qA-TAs">
-                                <rect key="frame" x="79.5" y="80" width="216" height="216"/>
+                                <rect key="frame" x="79.5" y="80" width="216" height="215.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="LbW-qA-TAs" secondAttribute="height" multiplier="1:1" id="j6L-l6-fML"/>
                                 </constraints>
@@ -301,32 +301,47 @@
                                 <rect key="frame" x="168.5" y="169.5" width="37" height="37"/>
                                 <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </activityIndicatorView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="French Press (skullcrusher) SZ-bar" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="none" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CBC-Xc-Q2C">
-                                <rect key="frame" x="37" y="304" width="300" height="33"/>
-                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="French Press (skullcrusher) SZ-bar" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="CBC-Xc-Q2C">
+                                <rect key="frame" x="32.5" y="303.5" width="309" height="50"/>
+                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Sli-aO-9Cw">
+                                <rect key="frame" x="19" y="361.5" width="337.5" height="133.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main muscle: Rectus abdominis" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3uf-NC-Byo">
+                                        <rect key="frame" x="0.0" y="0.0" width="337.5" height="33.5"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Secondary muscles: Serratus anterior" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="LXA-cZ-bSs">
+                                        <rect key="frame" x="0.0" y="33.5" width="337.5" height="66.5"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Equipment: Bench and Gym mat " lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="u71-lP-gd8">
+                                        <rect key="frame" x="0.0" y="100" width="337.5" height="33.5"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qef-cw-YBP">
-                                <rect key="frame" x="16" y="345" width="343" height="300"/>
+                                <rect key="frame" x="0.0" y="503" width="375" height="142"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="CS2-Cl-xQf">
-                                    <rect key="frame" x="0.0" y="0.0" width="343" height="300"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="142"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZ1-3G-Cue">
-                                            <rect key="frame" x="13" y="12" width="317" height="277.5"/>
+                                            <rect key="frame" x="14.5" y="5" width="346.5" height="132"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis accumsan dui. Nullam augue tellus, accumsan hendrerit auctor quis, commodo id dui. Sed porttitor, dolor a finibus posuere, lacus lacus fringilla elit, sed auctor felis neque nec eros. Morbi tempus turpis id sem lacinia, at pharetra orci tempus. Etiam sit amet ullamcorper libero, et rhoncus erat. Nunc egestas tortor a ligula laoreet faucibus. Ut ullamcorper tortor eu pharetra vulputate. Nunc congue vitae nisi eu tincidunt.
-
-Maecenas ac cursus tortor, at lobortis odio. Nunc posuere augue non risus efficitur, sit amet lobortis orci gravida. Aenean vitae viverra sem, sed posuere neque. Aliquam in orci rhoncus, ultrices mauris elementum, convallis eros. Praesent semper pellentesque purus. Vestibulum mattis at eros a dignissim. Sed commodo ligula ut nulla volutpat, sed tincidunt quam finibus. Praesent sit amet nisl mattis, volutpat tortor non, condimentum erat. Fusce urna nisl, tincidunt ac sem at, porttitor tincidunt urna. Proin eu lectus aliquam, laoreet eros at, vestibulum nibh. Nam aliquam, est quis commodo pulvinar, justo tellus venenatis nibh, vitae elementum ipsum lorem vitae mi. Integer interdum ipsum et eros ornare tincidunt.
-
-Aliquam consectetur lacus quam, a mattis risus porta ac. Sed auctor nibh vel metus elementum, quis accumsan odio vehicula. Suspendisse ultricies dui vitae tortor bibendum ornare. Proin eget velit ac ipsum auctor bibendum. Phasellus varius semper sodales. Proin ultrices tincidunt ante, vel elementum tortor commodo a. Curabitur risus tortor, viverra in pellentesque non, suscipit ac nisi. Proin tempor sodales sapien, eu lacinia dui scelerisque eu. Phasellus eget volutpat lectus. Maecenas hendrerit accumsan mi sed malesuada. Fusce sit amet imperdiet nisi.
-
-Phasellus imperdiet quam sit amet arcu malesuada lacinia. Suspendisse laoreet ipsum et sagittis mollis. Aenean vitae interdum quam, ac congue ex. Quisque eleifend lobortis tortor id dignissim. Nulla convallis vitae urna sed euismod. Pellentesque maximus arcu et purus venenatis, at blandit erat consequat. In enim purus, tristique ut quam congue, venenatis varius ante. Aliquam erat volutpat. Cras quis orci in dui tempus blandit. Mauris finibus a leo id sollicitudin.
-
-Mauris malesuada nisi eu lacus tempor efficitur. Suspendisse eget felis rhoncus, aliquet sem sed, condimentum sem. Integer auctor lobortis condimentum. Pellentesque tempus augue a pharetra bibendum. Sed in eleifend ex, eu auctor nibh. Phasellus enim purus, volutpat eget ante eget, volutpat condimentum orci. Sed cursus elit vitae feugiat congue. Ut non placerat felis. Fusce gravida a felis ut condimentum. Aenean in est eget quam placerat semper sit amet at lacus. Ut luctus mi sit amet augue ullamcorper, non ornare nunc imperdiet.</string>
+                                            <string key="text">Lay down on your back a soft surface, the feet are on the floor. Ask a partner or use some other help (barbell, etc.) to keep them fixed, your hands are behind your head. From this position move your upper body up till your head or elbows touch your knees. Do this movement by rolling up your back.</string>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="16"/>
+                                            <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="18"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no"/>
                                             <connections>
                                                 <outlet property="delegate" destination="MBB-fV-NY0" id="PMa-Fu-6c4"/>
@@ -376,25 +391,29 @@ Mauris malesuada nisi eu lacus tempor efficitur. Suspendisse eget felis rhoncus,
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Qef-cw-YBP" firstAttribute="width" secondItem="LYo-8g-C53" secondAttribute="width" constant="-32" id="0ie-yz-zFh"/>
+                            <constraint firstItem="Qef-cw-YBP" firstAttribute="width" secondItem="LYo-8g-C53" secondAttribute="width" id="0ie-yz-zFh"/>
                             <constraint firstItem="fle-ty-KFZ" firstAttribute="centerX" secondItem="LbW-qA-TAs" secondAttribute="centerX" id="2vK-Nl-r4q"/>
                             <constraint firstItem="BKQ-2x-tas" firstAttribute="centerY" secondItem="LYo-8g-C53" secondAttribute="centerY" id="5kt-ya-nGq"/>
+                            <constraint firstItem="Sli-aO-9Cw" firstAttribute="top" secondItem="CBC-Xc-Q2C" secondAttribute="bottom" constant="8" id="8YW-rS-K6r"/>
                             <constraint firstAttribute="trailing" secondItem="vZU-5I-hvP" secondAttribute="trailing" constant="10" id="Ei8-2z-cNl"/>
                             <constraint firstItem="LbW-qA-TAs" firstAttribute="top" secondItem="495-6f-cNS" secondAttribute="bottom" multiplier="1.25" id="JGo-4i-djK"/>
+                            <constraint firstItem="Sli-aO-9Cw" firstAttribute="height" secondItem="LYo-8g-C53" secondAttribute="height" multiplier="0.2" id="KSJ-iL-g8X"/>
                             <constraint firstItem="BKQ-2x-tas" firstAttribute="width" secondItem="LYo-8g-C53" secondAttribute="width" id="MDN-9V-Pu4"/>
                             <constraint firstItem="CBC-Xc-Q2C" firstAttribute="centerX" secondItem="BKQ-2x-tas" secondAttribute="centerX" id="MV3-rp-YVW"/>
                             <constraint firstItem="dFH-kJ-oTE" firstAttribute="top" secondItem="Qef-cw-YBP" secondAttribute="bottom" constant="22" id="PDU-Zz-IOa"/>
+                            <constraint firstItem="Sli-aO-9Cw" firstAttribute="centerX" secondItem="LYo-8g-C53" secondAttribute="centerX" id="RJN-Iw-YiO"/>
                             <constraint firstItem="fle-ty-KFZ" firstAttribute="centerY" secondItem="LbW-qA-TAs" secondAttribute="centerY" id="Swb-ac-FGf"/>
                             <constraint firstItem="BKQ-2x-tas" firstAttribute="centerX" secondItem="LYo-8g-C53" secondAttribute="centerX" id="T9D-Aa-dEm"/>
-                            <constraint firstItem="CBC-Xc-Q2C" firstAttribute="height" secondItem="BKQ-2x-tas" secondAttribute="height" multiplier="0.05" id="Zqs-Fa-raH"/>
+                            <constraint firstItem="CBC-Xc-Q2C" firstAttribute="height" secondItem="BKQ-2x-tas" secondAttribute="height" multiplier="0.075" id="Zqs-Fa-raH"/>
+                            <constraint firstItem="Sli-aO-9Cw" firstAttribute="width" secondItem="LYo-8g-C53" secondAttribute="width" multiplier="0.9" id="bdb-0Q-4xb"/>
                             <constraint firstItem="LbW-qA-TAs" firstAttribute="width" secondItem="LYo-8g-C53" secondAttribute="width" multiplier="0.575" id="cKQ-Kh-ZqO"/>
-                            <constraint firstItem="Qef-cw-YBP" firstAttribute="top" secondItem="CBC-Xc-Q2C" secondAttribute="bottom" constant="8" id="evt-F7-PRH"/>
                             <constraint firstItem="LbW-qA-TAs" firstAttribute="centerX" secondItem="LYo-8g-C53" secondAttribute="centerX" id="lbs-zw-2aQ"/>
+                            <constraint firstItem="Sli-aO-9Cw" firstAttribute="bottom" secondItem="Qef-cw-YBP" secondAttribute="top" constant="-8" id="n0Q-rw-Ow8"/>
                             <constraint firstItem="LbW-qA-TAs" firstAttribute="bottom" secondItem="CBC-Xc-Q2C" secondAttribute="top" constant="-8" id="p7b-gD-Jqm"/>
                             <constraint firstItem="Qef-cw-YBP" firstAttribute="centerX" secondItem="LYo-8g-C53" secondAttribute="centerX" id="wpD-vv-ysy"/>
                             <constraint firstItem="BKQ-2x-tas" firstAttribute="height" secondItem="LYo-8g-C53" secondAttribute="height" id="ySI-D5-wwC"/>
                             <constraint firstItem="dFH-kJ-oTE" firstAttribute="top" secondItem="vZU-5I-hvP" secondAttribute="bottom" constant="12" id="zbA-C0-zdJ"/>
-                            <constraint firstItem="CBC-Xc-Q2C" firstAttribute="width" secondItem="BKQ-2x-tas" secondAttribute="width" multiplier="0.8" id="zy1-kR-olW"/>
+                            <constraint firstItem="CBC-Xc-Q2C" firstAttribute="width" secondItem="BKQ-2x-tas" secondAttribute="width" multiplier="0.825" id="zy1-kR-olW"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">

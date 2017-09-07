@@ -8,6 +8,7 @@
 
 import UIKit
 import JSONHelper
+import Moya
 
 class ExerciseController: UIViewController {
     
@@ -20,6 +21,7 @@ class ExerciseController: UIViewController {
     var dataId:[Int] = []
     var viewTitle:String?
     var muscleGroupDataSource:ExerciseGroupList?
+    var APIcall:Cancellable?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +31,15 @@ class ExerciseController: UIViewController {
         setNavigationBar(navigationController)
         customBackButton(navigationItem)
         loadList()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        guard let _ = APIcall, let dataSource = muscleGroupDataSource else {
+            
+            return
+        }
+        dat
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -46,11 +57,12 @@ class ExerciseController: UIViewController {
     
     private func loadList() {
         exerciseListActivityIndicator.startAnimating()
-        DispatchQueue.global(qos: .userInteractive).async { [unowned self] _ in
-            let _ = JSONResponse(kindOfService: self.muscleGroupList ? .muscleGroup : .exerciseGroup(id: self.dataId.first!), completion: { (JSONdata) in
-                self.muscleGroupDataSource <-- JSONdata
+        DispatchQueue.global(qos: .userInteractive).async { [weak self] _ in
+            guard let view = self else { return }
+            view.APIcall = JSONResponse(kindOfService: view.muscleGroupList ? .muscleGroup : .exerciseGroup(id: view.dataId.first!), completion: { (JSONdata) in
+                view.muscleGroupDataSource <-- JSONdata
                 DispatchQueue.main.async {
-                    self.refreshList()
+                    view.refreshList()
                 }
             })
         }
