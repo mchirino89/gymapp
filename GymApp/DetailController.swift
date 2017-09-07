@@ -15,6 +15,8 @@ class DetailController: UIViewController {
     @IBOutlet weak var exerciseDescriptionTextView: UITextView!
     @IBOutlet weak var configExerciseButton: ButtonStyle!
     
+    var exerciseId:Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = Constants.DetailView.title

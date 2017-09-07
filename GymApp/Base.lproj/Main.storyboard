@@ -292,29 +292,29 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Female" translatesAutoresizingMaskIntoConstraints="NO" id="LbW-qA-TAs">
-                                <rect key="frame" x="65.5" y="80" width="244" height="244"/>
+                                <rect key="frame" x="79.5" y="80" width="216" height="216"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="LbW-qA-TAs" secondAttribute="height" multiplier="1:1" id="j6L-l6-fML"/>
                                 </constraints>
                             </imageView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="fle-ty-KFZ">
-                                <rect key="frame" x="168.5" y="183.5" width="37" height="37"/>
+                                <rect key="frame" x="168.5" y="169.5" width="37" height="37"/>
                                 <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="French Press (skullcrusher) SZ-bar" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="none" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CBC-Xc-Q2C">
-                                <rect key="frame" x="37" y="332" width="300" height="33"/>
+                                <rect key="frame" x="37" y="304" width="300" height="33"/>
                                 <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qef-cw-YBP">
-                                <rect key="frame" x="16" y="373" width="343" height="254"/>
+                                <rect key="frame" x="16" y="345" width="343" height="300"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="CS2-Cl-xQf">
-                                    <rect key="frame" x="0.0" y="0.0" width="343" height="254"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="343" height="300"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZ1-3G-Cue">
-                                            <rect key="frame" x="13" y="9.5" width="317" height="235.5"/>
+                                            <rect key="frame" x="13" y="12" width="317" height="277.5"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis accumsan dui. Nullam augue tellus, accumsan hendrerit auctor quis, commodo id dui. Sed porttitor, dolor a finibus posuere, lacus lacus fringilla elit, sed auctor felis neque nec eros. Morbi tempus turpis id sem lacinia, at pharetra orci tempus. Etiam sit amet ullamcorper libero, et rhoncus erat. Nunc egestas tortor a ligula laoreet faucibus. Ut ullamcorper tortor eu pharetra vulputate. Nunc congue vitae nisi eu tincidunt.
 
@@ -343,7 +343,7 @@ Mauris malesuada nisi eu lacus tempor efficitur. Suspendisse eget felis rhoncus,
                                 <blurEffect style="dark"/>
                             </visualEffectView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vZU-5I-hvP" customClass="ButtonStyle" customModule="GymApp" customModuleProvider="target">
-                                <rect key="frame" x="305" y="591" width="60" height="60"/>
+                                <rect key="frame" x="305" y="595" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="vZU-5I-hvP" secondAttribute="height" multiplier="1:1" id="FPS-al-r0W"/>
                                     <constraint firstAttribute="width" constant="60" id="mKk-Lb-6uX"/>
@@ -383,17 +383,17 @@ Mauris malesuada nisi eu lacus tempor efficitur. Suspendisse eget felis rhoncus,
                             <constraint firstItem="LbW-qA-TAs" firstAttribute="top" secondItem="495-6f-cNS" secondAttribute="bottom" multiplier="1.25" id="JGo-4i-djK"/>
                             <constraint firstItem="BKQ-2x-tas" firstAttribute="width" secondItem="LYo-8g-C53" secondAttribute="width" id="MDN-9V-Pu4"/>
                             <constraint firstItem="CBC-Xc-Q2C" firstAttribute="centerX" secondItem="BKQ-2x-tas" secondAttribute="centerX" id="MV3-rp-YVW"/>
-                            <constraint firstItem="dFH-kJ-oTE" firstAttribute="top" secondItem="Qef-cw-YBP" secondAttribute="bottom" constant="40" id="PDU-Zz-IOa"/>
+                            <constraint firstItem="dFH-kJ-oTE" firstAttribute="top" secondItem="Qef-cw-YBP" secondAttribute="bottom" constant="22" id="PDU-Zz-IOa"/>
                             <constraint firstItem="fle-ty-KFZ" firstAttribute="centerY" secondItem="LbW-qA-TAs" secondAttribute="centerY" id="Swb-ac-FGf"/>
                             <constraint firstItem="BKQ-2x-tas" firstAttribute="centerX" secondItem="LYo-8g-C53" secondAttribute="centerX" id="T9D-Aa-dEm"/>
                             <constraint firstItem="CBC-Xc-Q2C" firstAttribute="height" secondItem="BKQ-2x-tas" secondAttribute="height" multiplier="0.05" id="Zqs-Fa-raH"/>
-                            <constraint firstItem="LbW-qA-TAs" firstAttribute="width" secondItem="LYo-8g-C53" secondAttribute="width" multiplier="0.65" id="cKQ-Kh-ZqO"/>
+                            <constraint firstItem="LbW-qA-TAs" firstAttribute="width" secondItem="LYo-8g-C53" secondAttribute="width" multiplier="0.575" id="cKQ-Kh-ZqO"/>
                             <constraint firstItem="Qef-cw-YBP" firstAttribute="top" secondItem="CBC-Xc-Q2C" secondAttribute="bottom" constant="8" id="evt-F7-PRH"/>
                             <constraint firstItem="LbW-qA-TAs" firstAttribute="centerX" secondItem="LYo-8g-C53" secondAttribute="centerX" id="lbs-zw-2aQ"/>
                             <constraint firstItem="LbW-qA-TAs" firstAttribute="bottom" secondItem="CBC-Xc-Q2C" secondAttribute="top" constant="-8" id="p7b-gD-Jqm"/>
                             <constraint firstItem="Qef-cw-YBP" firstAttribute="centerX" secondItem="LYo-8g-C53" secondAttribute="centerX" id="wpD-vv-ysy"/>
                             <constraint firstItem="BKQ-2x-tas" firstAttribute="height" secondItem="LYo-8g-C53" secondAttribute="height" id="ySI-D5-wwC"/>
-                            <constraint firstItem="dFH-kJ-oTE" firstAttribute="top" secondItem="vZU-5I-hvP" secondAttribute="bottom" constant="16" id="zbA-C0-zdJ"/>
+                            <constraint firstItem="dFH-kJ-oTE" firstAttribute="top" secondItem="vZU-5I-hvP" secondAttribute="bottom" constant="12" id="zbA-C0-zdJ"/>
                             <constraint firstItem="CBC-Xc-Q2C" firstAttribute="width" secondItem="BKQ-2x-tas" secondAttribute="width" multiplier="0.8" id="zy1-kR-olW"/>
                         </constraints>
                         <variation key="default">
