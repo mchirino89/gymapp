@@ -180,8 +180,14 @@
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="list" translatesAutoresizingMaskIntoConstraints="NO" id="J2W-ix-g4I">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For: Shoulders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vYj-YY-U5N">
+                                <rect key="frame" x="0.5" y="64" width="375" height="50"/>
+                                <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qOo-FS-x4x">
-                                <rect key="frame" x="0.5" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="114" width="375" height="553"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="AKB-pw-XKH">
                                     <size key="itemSize" width="175" height="159"/>
@@ -241,15 +247,19 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="vYj-YY-U5N" firstAttribute="width" secondItem="me1-A4-ria" secondAttribute="width" id="2i5-Q6-d4i"/>
                             <constraint firstItem="J2W-ix-g4I" firstAttribute="centerY" secondItem="me1-A4-ria" secondAttribute="centerY" id="9Gk-RD-spn"/>
+                            <constraint firstItem="vYj-YY-U5N" firstAttribute="top" secondItem="Dkf-dA-1ar" secondAttribute="bottom" id="ADn-6G-NWU"/>
                             <constraint firstItem="J2W-ix-g4I" firstAttribute="width" secondItem="me1-A4-ria" secondAttribute="width" id="Bnr-VN-LJT"/>
+                            <constraint firstItem="qOo-FS-x4x" firstAttribute="top" secondItem="vYj-YY-U5N" secondAttribute="bottom" id="Hmc-Kd-9jX"/>
                             <constraint firstItem="Tme-oT-Dvp" firstAttribute="top" secondItem="qOo-FS-x4x" secondAttribute="bottom" id="HpC-91-uYV"/>
+                            <constraint firstItem="vYj-YY-U5N" firstAttribute="centerX" secondItem="me1-A4-ria" secondAttribute="centerX" id="I4b-wW-QlO"/>
                             <constraint firstItem="hf0-5v-vh2" firstAttribute="centerY" secondItem="me1-A4-ria" secondAttribute="centerY" id="JR5-PS-hUO"/>
                             <constraint firstItem="J2W-ix-g4I" firstAttribute="height" secondItem="me1-A4-ria" secondAttribute="height" id="LPG-PK-CI4"/>
                             <constraint firstItem="qOo-FS-x4x" firstAttribute="width" secondItem="me1-A4-ria" secondAttribute="width" id="Mkb-JP-HtK"/>
                             <constraint firstItem="J2W-ix-g4I" firstAttribute="centerX" secondItem="me1-A4-ria" secondAttribute="centerX" id="Rjo-fe-oYw"/>
                             <constraint firstItem="qOo-FS-x4x" firstAttribute="centerX" secondItem="me1-A4-ria" secondAttribute="centerX" id="T3i-IT-QXD"/>
-                            <constraint firstItem="qOo-FS-x4x" firstAttribute="top" secondItem="Dkf-dA-1ar" secondAttribute="bottom" id="kri-wR-vCg"/>
+                            <constraint firstItem="vYj-YY-U5N" firstAttribute="height" secondItem="me1-A4-ria" secondAttribute="height" multiplier="0.075" id="gXc-Fa-etT"/>
                             <constraint firstItem="hf0-5v-vh2" firstAttribute="centerX" secondItem="me1-A4-ria" secondAttribute="centerX" id="xv3-ew-f9h"/>
                         </constraints>
                     </view>
@@ -257,6 +267,7 @@
                     <connections>
                         <outlet property="backgroundImageView" destination="J2W-ix-g4I" id="srl-os-e5q"/>
                         <outlet property="exerciseListActivityIndicator" destination="hf0-5v-vh2" id="trt-bC-49b"/>
+                        <outlet property="exerciseTagLabel" destination="vYj-YY-U5N" id="hOU-0L-BuU"/>
                         <outlet property="listCollectionView" destination="qOo-FS-x4x" id="6MT-85-Wsv"/>
                         <segue destination="MBB-fV-NY0" kind="show" identifier="specificDetailSegue" id="sfw-kR-qd2"/>
                     </connections>
@@ -286,6 +297,10 @@
                                     <constraint firstAttribute="width" secondItem="LbW-qA-TAs" secondAttribute="height" multiplier="1:1" id="j6L-l6-fML"/>
                                 </constraints>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="fle-ty-KFZ">
+                                <rect key="frame" x="168.5" y="183.5" width="37" height="37"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="French Press (skullcrusher) SZ-bar" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="none" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CBC-Xc-Q2C">
                                 <rect key="frame" x="37" y="332" width="300" height="33"/>
                                 <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="25"/>
@@ -327,7 +342,7 @@ Mauris malesuada nisi eu lacus tempor efficitur. Suspendisse eget felis rhoncus,
                                 </view>
                                 <blurEffect style="dark"/>
                             </visualEffectView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vZU-5I-hvP" customClass="ButtonStyle" customModule="GymApp" customModuleProvider="target">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vZU-5I-hvP" customClass="ButtonStyle" customModule="GymApp" customModuleProvider="target">
                                 <rect key="frame" x="305" y="591" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="vZU-5I-hvP" secondAttribute="height" multiplier="1:1" id="FPS-al-r0W"/>
@@ -362,12 +377,14 @@ Mauris malesuada nisi eu lacus tempor efficitur. Suspendisse eget felis rhoncus,
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Qef-cw-YBP" firstAttribute="width" secondItem="LYo-8g-C53" secondAttribute="width" constant="-32" id="0ie-yz-zFh"/>
+                            <constraint firstItem="fle-ty-KFZ" firstAttribute="centerX" secondItem="LbW-qA-TAs" secondAttribute="centerX" id="2vK-Nl-r4q"/>
                             <constraint firstItem="BKQ-2x-tas" firstAttribute="centerY" secondItem="LYo-8g-C53" secondAttribute="centerY" id="5kt-ya-nGq"/>
                             <constraint firstAttribute="trailing" secondItem="vZU-5I-hvP" secondAttribute="trailing" constant="10" id="Ei8-2z-cNl"/>
                             <constraint firstItem="LbW-qA-TAs" firstAttribute="top" secondItem="495-6f-cNS" secondAttribute="bottom" multiplier="1.25" id="JGo-4i-djK"/>
                             <constraint firstItem="BKQ-2x-tas" firstAttribute="width" secondItem="LYo-8g-C53" secondAttribute="width" id="MDN-9V-Pu4"/>
                             <constraint firstItem="CBC-Xc-Q2C" firstAttribute="centerX" secondItem="BKQ-2x-tas" secondAttribute="centerX" id="MV3-rp-YVW"/>
                             <constraint firstItem="dFH-kJ-oTE" firstAttribute="top" secondItem="Qef-cw-YBP" secondAttribute="bottom" constant="40" id="PDU-Zz-IOa"/>
+                            <constraint firstItem="fle-ty-KFZ" firstAttribute="centerY" secondItem="LbW-qA-TAs" secondAttribute="centerY" id="Swb-ac-FGf"/>
                             <constraint firstItem="BKQ-2x-tas" firstAttribute="centerX" secondItem="LYo-8g-C53" secondAttribute="centerX" id="T9D-Aa-dEm"/>
                             <constraint firstItem="CBC-Xc-Q2C" firstAttribute="height" secondItem="BKQ-2x-tas" secondAttribute="height" multiplier="0.05" id="Zqs-Fa-raH"/>
                             <constraint firstItem="LbW-qA-TAs" firstAttribute="width" secondItem="LYo-8g-C53" secondAttribute="width" multiplier="0.65" id="cKQ-Kh-ZqO"/>

@@ -32,6 +32,6 @@ extension ExerciseController: UICollectionViewDataSource, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as! ListViewCell
-        performSegue(withIdentifier: muscleGroupList ? Constants.Storyboard.exerciseListSegue : Constants.Storyboard.exerciseDetailSegue, sender: cell.referenceIds.first)
+        performSegue(withIdentifier: muscleGroupList ? Constants.Storyboard.exerciseListSegue : Constants.Storyboard.exerciseDetailSegue, sender: [cell.referenceIds.first as Any, cell.detailLabel.text as Any])
     }
 }

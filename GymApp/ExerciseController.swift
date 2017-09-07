@@ -14,14 +14,17 @@ class ExerciseController: UIViewController {
     @IBOutlet weak var listCollectionView: UICollectionView!
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var exerciseListActivityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var exerciseTagLabel: UILabel?
     
     var muscleGroupList = true
     var dataId:[Int] = []
+    var viewTitle:String?
     var muscleGroupDataSource:ExerciseGroupList?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = muscleGroupList ? Constants.MuscleView.title : Constants.ExerciseView.title
+        exerciseTagLabel?.text = "For: \(viewTitle ?? Constants.UIElements.exerciseGenericTag)"
         setCollectionLayout()
         setNavigationBar(navigationController)
         customBackButton(navigationItem)
@@ -31,9 +34,10 @@ class ExerciseController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // From muscles to exercises per muscle
         if segue.destination.isKind(of: ExerciseController.self) {
-            guard let destination = segue.destination as? ExerciseController else { return }
+            guard let destination = segue.destination as? ExerciseController, let sentParameters = sender as? [Any] else { return }
             destination.muscleGroupList = false
-            destination.dataId.append((sender as? Int) ?? 0)
+            destination.dataId.append((sentParameters.first as? Int) ?? 0)
+            destination.viewTitle = sentParameters.last as? String
         } else { // From exercises per muscle to exercise details
             guard let destination = segue.destination as? DetailController else { return }
             destination.exerciseId = (sender as? Int) ?? 0

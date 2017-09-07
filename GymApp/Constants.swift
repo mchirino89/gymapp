@@ -61,6 +61,7 @@ struct Constants {
         static let appFont = "Copperplate"
         static let regularFontSize = 25
         static let animationDuration = 0.25
+        static let exerciseGenericTag = "General exercise"
     }
     
     struct ErrorMessages {
