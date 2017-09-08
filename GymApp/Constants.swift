@@ -11,6 +11,12 @@ import Moya
 
 struct Constants {
     
+    enum kindOfResult: Int {
+        case mainMuscle = 1
+        case secondaryMuscles
+        case equipment
+    }
+    
     struct APIConfiguration {
         static let rootURL = "https://wger.de/api/v2"
     }
@@ -38,6 +44,9 @@ struct Constants {
         
         struct exercises {
             static let description = "description"
+            static let mainMuscle = "muscles"
+            static let secondaryMuscles = "muscles_secondary"
+            static let neededEquipment = "equipment"
         }
     }
     
@@ -63,6 +72,8 @@ struct Constants {
         static let regularFontSize = 25
         static let animationDuration = 0.3
         static let exerciseGenericTag = "General exercise"
+        static let nonApplicable = "N/A"
+        static let connector = " and "
     }
     
     struct ErrorMessages {

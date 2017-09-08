@@ -8,7 +8,6 @@
 
 import UIKit
 import JSONHelper
-import Moya
 
 class ExerciseController: UIViewController {
     
@@ -20,7 +19,7 @@ class ExerciseController: UIViewController {
     var muscleGroupList = true
     var dataId:[Int] = []
     var viewTitle:String?
-    var muscleGroupDataSource:ExerciseGroupList?
+    var muscleGroupDataSource:ResultList?
     
     override func viewDidLoad() {
         super.viewDidLoad()

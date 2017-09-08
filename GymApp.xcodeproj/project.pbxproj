@@ -15,10 +15,9 @@
 		2213F75A1F6097A500213D31 /* Definitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2213F7591F6097A500213D31 /* Definitions.swift */; };
 		2213F75C1F6099B500213D31 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2213F75B1F6099B500213D31 /* Config.swift */; };
 		2213F7601F60A23200213D31 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2213F75F1F60A23200213D31 /* Singleton.swift */; };
-		2213F7621F616F9100213D31 /* ExerciseGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2213F7611F616F9100213D31 /* ExerciseGroup.swift */; };
-		2213F7641F6175A600213D31 /* ExerciseGroupList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2213F7631F6175A600213D31 /* ExerciseGroupList.swift */; };
+		2213F7621F616F9100213D31 /* ResultDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2213F7611F616F9100213D31 /* ResultDetails.swift */; };
+		2213F7641F6175A600213D31 /* ResultList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2213F7631F6175A600213D31 /* ResultList.swift */; };
 		2213F7661F61853900213D31 /* ExerciseDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2213F7651F61853900213D31 /* ExerciseDetails.swift */; };
-		2213F7681F6243D700213D31 /* Muscle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2213F7671F6243D700213D31 /* Muscle.swift */; };
 		222B44B21F4F8341008E17A8 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222B44B11F4F8341008E17A8 /* ProfileController.swift */; };
 		222B44B61F4F9A1A008E17A8 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222B44B51F4F9A1A008E17A8 /* DetailController.swift */; };
 		224DB08E1F56DBB800628A15 /* ExercisesImages.json in Resources */ = {isa = PBXBuildFile; fileRef = 224DB08D1F56DBB800628A15 /* ExercisesImages.json */; };
@@ -47,10 +46,9 @@
 		2213F7591F6097A500213D31 /* Definitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Definitions.swift; sourceTree = "<group>"; };
 		2213F75B1F6099B500213D31 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		2213F75F1F60A23200213D31 /* Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
-		2213F7611F616F9100213D31 /* ExerciseGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseGroup.swift; sourceTree = "<group>"; };
-		2213F7631F6175A600213D31 /* ExerciseGroupList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseGroupList.swift; sourceTree = "<group>"; };
+		2213F7611F616F9100213D31 /* ResultDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultDetails.swift; sourceTree = "<group>"; };
+		2213F7631F6175A600213D31 /* ResultList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultList.swift; sourceTree = "<group>"; };
 		2213F7651F61853900213D31 /* ExerciseDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseDetails.swift; sourceTree = "<group>"; };
-		2213F7671F6243D700213D31 /* Muscle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Muscle.swift; sourceTree = "<group>"; };
 		222B44B11F4F8341008E17A8 /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		222B44B51F4F9A1A008E17A8 /* DetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		224DB08D1F56DBB800628A15 /* ExercisesImages.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ExercisesImages.json; sourceTree = "<group>"; };
@@ -141,10 +139,9 @@
 		2213F7581F60978500213D31 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				2213F7611F616F9100213D31 /* ExerciseGroup.swift */,
-				2213F7631F6175A600213D31 /* ExerciseGroupList.swift */,
+				2213F7631F6175A600213D31 /* ResultList.swift */,
+				2213F7611F616F9100213D31 /* ResultDetails.swift */,
 				2213F7651F61853900213D31 /* ExerciseDetails.swift */,
-				2213F7671F6243D700213D31 /* Muscle.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -394,15 +391,14 @@
 				2213F75A1F6097A500213D31 /* Definitions.swift in Sources */,
 				22638C771F4E7CB900079818 /* RoutineController.swift in Sources */,
 				2213F7601F60A23200213D31 /* Singleton.swift in Sources */,
-				2213F7621F616F9100213D31 /* ExerciseGroup.swift in Sources */,
-				2213F7641F6175A600213D31 /* ExerciseGroupList.swift in Sources */,
+				2213F7621F616F9100213D31 /* ResultDetails.swift in Sources */,
+				2213F7641F6175A600213D31 /* ResultList.swift in Sources */,
 				222B44B61F4F9A1A008E17A8 /* DetailController.swift in Sources */,
 				2213F7661F61853900213D31 /* ExerciseDetails.swift in Sources */,
 				2213F74E1F5DECA800213D31 /* CollectionView.swift in Sources */,
 				22638C701F4E39B600079818 /* ListViewCell.swift in Sources */,
 				228529C11F53AEFF00F9DFD9 /* ProfileImage.swift in Sources */,
 				22638C721F4E42AC00079818 /* Constants.swift in Sources */,
-				2213F7681F6243D700213D31 /* Muscle.swift in Sources */,
 				2213F75C1F6099B500213D31 /* Config.swift in Sources */,
 				2213F7491F5DE54600213D31 /* RoutineViewCell.swift in Sources */,
 				2213F7521F5EE0F100213D31 /* TextArea.swift in Sources */,

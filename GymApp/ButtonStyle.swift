@@ -46,10 +46,4 @@ import UIKit
             return layer.shadowOffset = shadowOffset
         }
     }
-    
-    @IBInspectable var shadowColor: CGColor = UIColor.clear.cgColor {
-        didSet {
-            return layer.shadowColor = shadowColor
-        }
-    }
 }

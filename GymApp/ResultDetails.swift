@@ -1,5 +1,5 @@
 //
-//  ExerciseGroup.swift
+//  ResultDetails.swift
 //  GymApp
 //
 //  Created by Mauricio Chirino on 7/9/17.
@@ -8,7 +8,7 @@
 
 import JSONHelper
 
-class ExerciseGroup: Deserializable {
+class ResultDetails: Deserializable {
     
     private(set) var id: Int?
     private(set) var name: String?
