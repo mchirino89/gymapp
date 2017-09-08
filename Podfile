@@ -3,7 +3,7 @@ platform :ios, '10.0'
 
 target 'GymApp' do
   use_frameworks!
-  pod 'RealmSwift'
   pod 'JSONHelper'
   pod 'Moya'
+  pod 'RealmSwift'
 end

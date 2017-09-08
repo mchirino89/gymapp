@@ -14,7 +14,7 @@
         <!--Root tab-->
         <scene sceneID="j3I-L1-SEg">
             <objects>
-                <tabBarController id="efE-5b-2gS" userLabel="Root tab" customClass="MainController" customModule="GymApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="efE-5b-2gS" userLabel="Root tab" customClass="TabsController" customModule="GymApp" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" itemPositioning="centered" id="Z9b-K5-95m">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>

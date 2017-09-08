@@ -27,7 +27,7 @@
 		2254D1F11F4D9DE800B450E5 /* ExerciseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2254D1F01F4D9DE800B450E5 /* ExerciseController.swift */; };
 		2254D1F41F4D9DE800B450E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2254D1F21F4D9DE800B450E5 /* Main.storyboard */; };
 		2254D1F91F4D9DE800B450E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2254D1F71F4D9DE800B450E5 /* LaunchScreen.storyboard */; };
-		225E1FC81F557122000217C3 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225E1FC71F557122000217C3 /* MainController.swift */; };
+		225E1FC81F557122000217C3 /* TabsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225E1FC71F557122000217C3 /* TabsController.swift */; };
 		22638C701F4E39B600079818 /* ListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22638C6F1F4E39B600079818 /* ListViewCell.swift */; };
 		22638C721F4E42AC00079818 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22638C711F4E42AC00079818 /* Constants.swift */; };
 		22638C771F4E7CB900079818 /* RoutineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22638C761F4E7CB900079818 /* RoutineController.swift */; };
@@ -62,7 +62,7 @@
 		2254D1F31F4D9DE800B450E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2254D1F81F4D9DE800B450E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2254D1FA1F4D9DE800B450E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		225E1FC71F557122000217C3 /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		225E1FC71F557122000217C3 /* TabsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabsController.swift; sourceTree = "<group>"; };
 		22638C6F1F4E39B600079818 /* ListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewCell.swift; sourceTree = "<group>"; };
 		22638C711F4E42AC00079818 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		22638C761F4E7CB900079818 /* RoutineController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutineController.swift; sourceTree = "<group>"; };
@@ -216,7 +216,7 @@
 		22638C7A1F4F81A100079818 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				225E1FC71F557122000217C3 /* MainController.swift */,
+				225E1FC71F557122000217C3 /* TabsController.swift */,
 				2213F74F1F5DED1500213D31 /* Exercise */,
 				2213F74C1F5DE5EB00213D31 /* Routine */,
 				228529BB1F534E2700F9DFD9 /* Profile */,
@@ -413,7 +413,7 @@
 				2213F7561F5EF56600213D31 /* ButtonStyle.swift in Sources */,
 				222FF4C81F62673A0011A523 /* ExerciseImage.swift in Sources */,
 				2254D1EF1F4D9DE800B450E5 /* AppDelegate.swift in Sources */,
-				225E1FC81F557122000217C3 /* MainController.swift in Sources */,
+				225E1FC81F557122000217C3 /* TabsController.swift in Sources */,
 				222B44B21F4F8341008E17A8 /* ProfileController.swift in Sources */,
 				2213F74B1F5DE5CC00213D31 /* TableView.swift in Sources */,
 				228529BF1F534E8600F9DFD9 /* Picker.swift in Sources */,

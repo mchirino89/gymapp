@@ -1,5 +1,5 @@
 //
-//  MainController.swift
+//  TabsController.swift
 //  GymApp
 //
 //  Created by Mauricio Chirino on 29/8/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainController: UITabBarController {
+class TabsController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
