@@ -11,13 +11,15 @@ import UIKit
 extension RoutineController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return dataSources.names.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Storyboard.routineCell) as? RoutineViewCell else {
             return UITableViewCell(style: .default, reuseIdentifier: Constants.Storyboard.routineCell)
         }
+        cell.routineLabel.text = dataSources.names[indexPath.row]
+        cell.backgroundImageView.image = dataSources.images[indexPath.row]
         return cell
     }
     

@@ -9,8 +9,10 @@
 import UIKit
 
 final class RoutineController: UIViewController {
+    
     @IBOutlet weak var routineTableView: UITableView!
-
+    let dataSources:Routines = Routines()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigationBar(navigationController)
