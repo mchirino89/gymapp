@@ -580,43 +580,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <visualEffectView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nvb-VL-Xk7">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="8TC-kp-L8U">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3GD-Pp-2a4">
-                                            <rect key="frame" x="0.0" y="283.5" width="375" height="100"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <connections>
-                                                <outlet property="dataSource" destination="uJf-lP-LZH" id="Qgu-Ra-nwu"/>
-                                                <outlet property="delegate" destination="uJf-lP-LZH" id="sel-KP-PNb"/>
-                                            </connections>
-                                        </pickerView>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65z-GZ-Hor">
-                                            <rect key="frame" x="162.5" y="425.5" width="50" height="50"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="50" id="Be4-v4-m0m"/>
-                                                <constraint firstAttribute="width" secondItem="65z-GZ-Hor" secondAttribute="height" multiplier="1:1" id="PCC-Z2-wH1"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
-                                            <state key="normal" title="Ok">
-                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="okButton" destination="uJf-lP-LZH" eventType="touchUpInside" id="IKm-Du-29B"/>
-                                            </connections>
-                                        </button>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="65z-GZ-Hor" firstAttribute="centerX" secondItem="3GD-Pp-2a4" secondAttribute="centerX" id="IgX-7s-uiK"/>
-                                        <constraint firstItem="65z-GZ-Hor" firstAttribute="top" secondItem="3GD-Pp-2a4" secondAttribute="bottom" constant="42" id="K8s-ud-Z4N"/>
-                                    </constraints>
-                                </view>
-                                <blurEffect style="light"/>
-                            </visualEffectView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="mEW-Ks-sjj" userLabel="profileBackground">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
@@ -674,7 +637,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Szk-bo-NFQ">
-                                        <rect key="frame" x="0.0" y="65" width="375" height="65"/>
+                                        <rect key="frame" x="0.0" y="65" width="375" height="65.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Age" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGK-P3-92Y">
                                                 <rect key="frame" x="0.0" y="21.5" width="187.5" height="22.5"/>
@@ -699,7 +662,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MEL-CZ-w29">
-                                        <rect key="frame" x="0.0" y="130" width="375" height="65.5"/>
+                                        <rect key="frame" x="0.0" y="130.5" width="375" height="65"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Weight" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUe-tn-t1S">
                                                 <rect key="frame" x="0.0" y="21.5" width="187.5" height="22.5"/>
@@ -750,6 +713,43 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nvb-VL-Xk7">
+                                <rect key="frame" x="0.0" y="1000" width="375" height="667"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="8TC-kp-L8U">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3GD-Pp-2a4">
+                                            <rect key="frame" x="0.0" y="-716.5" width="375" height="100"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <outlet property="dataSource" destination="uJf-lP-LZH" id="Qgu-Ra-nwu"/>
+                                                <outlet property="delegate" destination="uJf-lP-LZH" id="sel-KP-PNb"/>
+                                            </connections>
+                                        </pickerView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65z-GZ-Hor">
+                                            <rect key="frame" x="162.5" y="-574.5" width="50" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="Be4-v4-m0m"/>
+                                                <constraint firstAttribute="width" secondItem="65z-GZ-Hor" secondAttribute="height" multiplier="1:1" id="PCC-Z2-wH1"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
+                                            <state key="normal" title="Ok">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="okButton" destination="uJf-lP-LZH" eventType="touchUpInside" id="IKm-Du-29B"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="65z-GZ-Hor" firstAttribute="centerX" secondItem="3GD-Pp-2a4" secondAttribute="centerX" id="IgX-7s-uiK"/>
+                                        <constraint firstItem="65z-GZ-Hor" firstAttribute="top" secondItem="3GD-Pp-2a4" secondAttribute="bottom" constant="42" id="K8s-ud-Z4N"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -773,7 +773,7 @@
                             <constraint firstItem="0fs-ve-xnX" firstAttribute="width" secondItem="dcI-8K-Us8" secondAttribute="width" id="r8h-vQ-r0x"/>
                             <constraint firstItem="0fs-ve-xnX" firstAttribute="centerX" secondItem="MFa-tE-DEE" secondAttribute="centerX" id="rMi-ke-sil"/>
                             <constraint firstItem="Nvb-VL-Xk7" firstAttribute="centerX" secondItem="MFa-tE-DEE" secondAttribute="centerX" id="rdM-FF-ZfX"/>
-                            <constraint firstItem="Nvb-VL-Xk7" firstAttribute="centerY" secondItem="MFa-tE-DEE" secondAttribute="centerY" id="sXr-Vp-acW"/>
+                            <constraint firstItem="Nvb-VL-Xk7" firstAttribute="centerY" secondItem="MFa-tE-DEE" secondAttribute="centerY" constant="1000" id="sXr-Vp-acW"/>
                             <constraint firstItem="dcI-8K-Us8" firstAttribute="top" secondItem="ckk-eR-wL9" secondAttribute="bottom" multiplier="1.5" id="t8i-9P-1JY"/>
                             <constraint firstItem="dcI-8K-Us8" firstAttribute="centerX" secondItem="MFa-tE-DEE" secondAttribute="centerX" id="tKf-Mu-Xkv"/>
                         </constraints>
@@ -784,6 +784,7 @@
                         <outlet property="ageTextField" destination="wSr-Lc-BVc" id="6RM-QJ-iz6"/>
                         <outlet property="genderButton" destination="6LI-lx-nau" id="iKF-3W-TQe"/>
                         <outlet property="genderPickerView" destination="3GD-Pp-2a4" id="wnJ-11-IHM"/>
+                        <outlet property="genderVerticalLayoutConstraint" destination="sXr-Vp-acW" id="c84-1U-Bjd"/>
                         <outlet property="genderVisualEffectView" destination="Nvb-VL-Xk7" id="wei-c6-5qf"/>
                         <outlet property="heightTextField" destination="DYl-y9-WuU" id="4lh-FI-uKh"/>
                         <outlet property="nameTextField" destination="0fs-ve-xnX" id="gux-Xd-ARK"/>

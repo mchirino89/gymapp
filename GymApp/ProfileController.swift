@@ -18,6 +18,7 @@ class ProfileController: UIViewController {
     @IBOutlet weak var profileImageButton: UIButton!
     @IBOutlet weak var genderButton: UIButton!
     let profileImagePicker = UIImagePickerController()
+    @IBOutlet weak var genderVerticalLayoutConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,19 +80,18 @@ class ProfileController: UIViewController {
 
     @IBAction func pickGenderAction() {
         dismissKeyboardAction()
-        view.bringSubview(toFront: genderVisualEffectView)
+        genderVerticalLayoutConstraint.constant = 0
         UIView.animate(withDuration: Constants.UIElements.animationDuration, animations: {
-            self.genderVisualEffectView.alpha = 1
+            self.view.layoutIfNeeded()
         })
     }
     
     @IBAction func okButton() {
         setPlaceholderProfileImage()
         genderButton.setTitle(Constants.UIElements.genders[genderPickerView.selectedRow(inComponent: 0)], for: .normal)
+        genderVerticalLayoutConstraint.constant = 1000
         UIView.animate(withDuration: Constants.UIElements.animationDuration, animations: {
-            self.genderVisualEffectView.alpha = 0
-        }, completion: { _ in
-            self.view.sendSubview(toBack: self.genderVisualEffectView)
+            self.view.layoutIfNeeded()
         })
     }
 }
