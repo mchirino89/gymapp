@@ -44,6 +44,7 @@ struct Constants {
     struct Path {
         static let exerciseGroup = "/exercisecategory"
         static let exerciseList = "/exercise"
+        static let exerciseDetails = "/exerciseinfo/"
     }
     
     struct Storyboard {

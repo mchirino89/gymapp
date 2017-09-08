@@ -41,8 +41,9 @@ class ExerciseController: UIViewController {
             destination.dataId.append((sentParameters.first as? Int) ?? 0)
             destination.viewTitle = sentParameters.last as? String
         } else { // From exercises per muscle to exercise details
-            guard let destination = segue.destination as? DetailController else { return }
-            destination.exerciseId = (sender as? Int) ?? 0
+            guard let destination = segue.destination as? DetailController, let sentParameters = sender as? [Any] else { return }
+            destination.exerciseId = (sentParameters.first as? Int) ?? 0
+            destination.exerciseName = (sentParameters.last as? String) ?? Constants.UIElements.exerciseGenericTag
         }
     }
     

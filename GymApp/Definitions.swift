@@ -11,4 +11,5 @@ import Moya
 enum Services {
     case muscleGroup
     case exerciseGroup(id: Int)
+    case exerciseDetails(id: Int)
 }

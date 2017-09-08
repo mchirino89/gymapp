@@ -16,15 +16,16 @@ class DetailController: UIViewController {
     @IBOutlet weak var configExerciseButton: ButtonStyle!
     
     var exerciseId:Int = 0
+    var exerciseName:String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = Constants.DetailView.title
+        exerciseNameLabel.text = exerciseName
+        JSONResponse(kindOfService: .exerciseDetails(id: exerciseId), completion: {
+            (JSONdata) in
+            print(JSONdata ?? "No JSON data")
+        })
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        exerciseDescriptionTextView.scrollRangeToVisible(NSMakeRange(0, 0))
-    }
-
 }
