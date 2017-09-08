@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileController: UIViewController {
+final class ProfileController: UIViewController {
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var ageTextField: UITextField!

@@ -8,7 +8,7 @@
 
 import JSONHelper
 
-class ExerciseDetails: Deserializable {
+final class ExerciseDetails: Deserializable {
     
     private(set) var category:ResultDetails?
     private(set) var muscles:ResultList?

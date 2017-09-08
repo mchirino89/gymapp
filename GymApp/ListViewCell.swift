@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ListViewCell: UICollectionViewCell {
+final class ListViewCell: UICollectionViewCell {
     @IBOutlet weak var detailLabel: UILabel!
     var referenceIds:[Int] = []
     func setDetailLabelWithAnimation(_ musclaName: String, _ referenceIds: [Int]) {

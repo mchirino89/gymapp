@@ -8,7 +8,7 @@
 
 import Moya
 
-class Singleton {
+final class Singleton {
     static let provider = MoyaProvider<Services>()
     private init() {}
 }

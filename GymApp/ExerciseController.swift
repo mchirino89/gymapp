@@ -9,7 +9,7 @@
 import UIKit
 import JSONHelper
 
-class ExerciseController: UIViewController {
+final class ExerciseController: UIViewController {
     
     @IBOutlet weak var listCollectionView: UICollectionView!
     @IBOutlet weak var backgroundImageView: UIImageView!

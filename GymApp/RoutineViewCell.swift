@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RoutineViewCell: UITableViewCell {
+final class RoutineViewCell: UITableViewCell {
 
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var routineLabel: UILabel!

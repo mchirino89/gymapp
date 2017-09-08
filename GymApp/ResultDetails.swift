@@ -8,7 +8,7 @@
 
 import JSONHelper
 
-class ResultDetails: Deserializable {
+final class ResultDetails: Deserializable {
     
     private(set) var id: Int?
     private(set) var name: String?
