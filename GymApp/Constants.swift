@@ -142,10 +142,15 @@ func JSONResponse(kindOfService: Services, completion: @escaping (_ response: An
             }
         case let .failure(error):
             // If failure isn't caused by manual call cancellation
-            if error._code != 5 {
+            if error._code != 4 {
                 print(error._code)
                 print(error)
             }
         }
     })
+}
+
+func cleanNetwork(APICall: Cancellable?) {
+    guard let APIrequest = APICall else { return }
+    APIrequest.cancel()
 }

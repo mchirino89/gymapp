@@ -21,25 +21,17 @@ class ExerciseController: UIViewController {
     var dataId:[Int] = []
     var viewTitle:String?
     var muscleGroupDataSource:ExerciseGroupList?
-    var APIcall:Cancellable?
+    var APICall:Cancellable?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = muscleGroupList ? Constants.MuscleView.title : Constants.ExerciseView.title
-        exerciseTagLabel?.text = "For: \(viewTitle ?? Constants.UIElements.exerciseGenericTag)"
         setCollectionLayout()
         setNavigationBar(navigationController)
         customBackButton(navigationItem)
         loadList()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        guard let _ = APIcall, let dataSource = muscleGroupDataSource else {
-            
-            return
-        }
-        dat
+        guard let exerciseTag = exerciseTagLabel else { return }
+        exerciseTag.text = "For: \(viewTitle ?? Constants.UIElements.exerciseGenericTag)"
+        title = Constants.ExerciseView.title
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -55,11 +47,12 @@ class ExerciseController: UIViewController {
         }
     }
     
+    //
     private func loadList() {
         exerciseListActivityIndicator.startAnimating()
         DispatchQueue.global(qos: .userInteractive).async { [weak self] _ in
             guard let view = self else { return }
-            view.APIcall = JSONResponse(kindOfService: view.muscleGroupList ? .muscleGroup : .exerciseGroup(id: view.dataId.first!), completion: { (JSONdata) in
+            view.APICall = JSONResponse(kindOfService: view.muscleGroupList ? .muscleGroup : .exerciseGroup(id: view.dataId.first!), completion: { (JSONdata) in
                 view.muscleGroupDataSource <-- JSONdata
                 DispatchQueue.main.async {
                     view.refreshList()
