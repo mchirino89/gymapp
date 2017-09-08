@@ -149,8 +149,3 @@ func JSONResponse(kindOfService: Services, completion: @escaping (_ response: An
         }
     })
 }
-
-func cleanNetwork(APICall: Cancellable?) {
-    guard let APIrequest = APICall else { return }
-    APIrequest.cancel()
-}
