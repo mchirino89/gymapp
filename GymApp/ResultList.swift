@@ -8,7 +8,7 @@
 
 import JSONHelper
 
-class ResultList: Deserializable {
+final class ResultList: Deserializable {
     
     private(set) var result:[ResultDetails]?
     
@@ -16,7 +16,7 @@ class ResultList: Deserializable {
         result <-- dictionary[Constants.JSONResponseKey.results]
     }
     
-    required init(dictionary: [String : Any], kindOfResult: Int = 0) {
+    required init(dictionary: [String : Any], kindOfResult: Int) {
         switch kindOfResult {
         case 1:
             result <-- dictionary[Constants.JSONResponseKey.exercises.mainMuscle]

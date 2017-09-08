@@ -12,4 +12,5 @@ enum Services {
     case muscleGroup
     case exerciseGroup(id: Int)
     case exerciseDetails(id: Int)
+    case exerciseImage(id: Int)
 }

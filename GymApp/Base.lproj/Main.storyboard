@@ -288,18 +288,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="details" translatesAutoresizingMaskIntoConstraints="NO" id="BKQ-2x-tas">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.34999999999999998" contentMode="scaleToFill" image="details" translatesAutoresizingMaskIntoConstraints="NO" id="BKQ-2x-tas">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Female" translatesAutoresizingMaskIntoConstraints="NO" id="LbW-qA-TAs">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dumbbell" translatesAutoresizingMaskIntoConstraints="NO" id="LbW-qA-TAs">
                                 <rect key="frame" x="79.5" y="80" width="216" height="216"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="LbW-qA-TAs" secondAttribute="height" multiplier="1:1" id="j6L-l6-fML"/>
                                 </constraints>
                             </imageView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="fle-ty-KFZ">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="fle-ty-KFZ">
                                 <rect key="frame" x="168.5" y="170" width="37" height="37"/>
-                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="color" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="French Press (skullcrusher) SZ-bar" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="CBC-Xc-Q2C">
                                 <rect key="frame" x="32.5" y="304" width="309" height="50"/>
@@ -422,7 +424,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstItem="Qef-cw-YBP" firstAttribute="width" secondItem="LYo-8g-C53" secondAttribute="width" id="0ie-yz-zFh"/>
                             <constraint firstItem="fle-ty-KFZ" firstAttribute="centerX" secondItem="LbW-qA-TAs" secondAttribute="centerX" id="2vK-Nl-r4q"/>
@@ -465,6 +467,7 @@
                         <outlet property="exerciseDescriptionTextView" destination="uZ1-3G-Cue" id="8yF-CE-I7c"/>
                         <outlet property="exerciseImageView" destination="LbW-qA-TAs" id="3e8-RK-hAG"/>
                         <outlet property="exerciseNameLabel" destination="CBC-Xc-Q2C" id="igY-Z6-fz4"/>
+                        <outlet property="imageActivityIndicator" destination="fle-ty-KFZ" id="vSQ-Cr-dE2"/>
                         <outlet property="loadingVisualEffectView" destination="nTX-XG-JEu" id="t6i-gI-1kg"/>
                         <outlet property="mainMuscleLabel" destination="3uf-NC-Byo" id="Y7y-rc-VWE"/>
                         <outlet property="secondaryMusclesLabel" destination="LXA-cZ-bSs" id="lHw-1o-FSQ"/>
@@ -838,10 +841,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Female" width="80" height="80"/>
         <image name="Male" width="80" height="80"/>
         <image name="backHand" width="24" height="24"/>
         <image name="details" width="286" height="451"/>
+        <image name="dumbbell" width="134" height="134"/>
         <image name="if_Resume_Female_2316249" width="32" height="32"/>
         <image name="if_dumbbell_1118213" width="32" height="32"/>
         <image name="if_organizer_1118206" width="32" height="32"/>

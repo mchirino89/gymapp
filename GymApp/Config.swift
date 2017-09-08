@@ -12,7 +12,7 @@ extension Services: TargetType {
     /// The type of HTTP task to be performed.
     var task: Task {
         switch self {
-        case .muscleGroup, .exerciseDetails(_):
+        case .muscleGroup, .exerciseDetails(_), .exerciseImage(_):
             return .requestPlain
         case .exerciseGroup(let id):
             return .requestParameters(parameters: [Constants.ParameterKey.language: Constants.ParameterValue.language, Constants.ParameterKey.status: Constants.ParameterValue.status, Constants.ParameterKey.category: id], encoding: URLEncoding.queryString)
@@ -34,6 +34,8 @@ extension Services: TargetType {
             return Constants.Path.exerciseList
         case .exerciseDetails(let id):
             return Constants.Path.exerciseDetails + String(id)
+        case .exerciseImage(let id):
+            return Constants.Path.exerciseImage + String(id) + Constants.Path.exerciseImageSize
         }
     }
     

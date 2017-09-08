@@ -8,8 +8,9 @@
 
 import UIKit
 import JSONHelper
+import Moya
 
-class DetailController: UIViewController {
+final class DetailController: UIViewController {
 
     @IBOutlet weak var exerciseImageView: UIImageView!
     @IBOutlet weak var exerciseNameLabel: UILabel!
@@ -20,10 +21,13 @@ class DetailController: UIViewController {
     @IBOutlet weak var secondaryMusclesLabel: UILabel!
     @IBOutlet weak var equipmentLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var imageActivityIndicator: UIActivityIndicatorView!
     
     var exerciseId:Int = 0
     var exerciseName:String = ""
     var exerciseInfo:ExerciseDetails?
+    var exerciseImage:ExerciseImageInfo?
+//    let imageGetter = MoyaProvider<
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +45,27 @@ class DetailController: UIViewController {
                     view.equipmentLabel.text?.append(view.makeListSentence(list: view.exerciseInfo?.equipment?.result))
                     view.loadingVisualEffectView.isHidden = true
                 }
+            })
+            JSONResponse(kindOfService: .exerciseImage(id: view.exerciseId), completion: { (JSONdata) in
+                view.exerciseImage <-- JSONdata
+                guard let imageURL = view.exerciseImage?.info?.url else {
+                    DispatchQueue.main.async {
+                        view.imageActivityIndicator.stopAnimating()
+                    }
+                    return
+                }
+                let imageRequest = Singleton.provider.manager.request(URL(string: imageURL)!)
+                imageRequest.responseData(completionHandler: { (requestData) in
+                    guard let imageData = requestData.data else {
+                        print("No image data")
+                        view.imageActivityIndicator.stopAnimating()
+                        return
+                    }
+                    DispatchQueue.main.async {
+                        view.imageActivityIndicator.stopAnimating()
+                        view.exerciseImageView.image = UIImage(data: imageData)
+                    }
+                }).resume()
             })
         }
     }

@@ -47,6 +47,8 @@ struct Constants {
             static let mainMuscle = "muscles"
             static let secondaryMuscles = "muscles_secondary"
             static let neededEquipment = "equipment"
+            static let imageJSON = "medium_cropped"
+            static let imageURL = "url"
         }
     }
     
@@ -54,6 +56,8 @@ struct Constants {
         static let exerciseGroup = "/exercisecategory"
         static let exerciseList = "/exercise"
         static let exerciseDetails = "/exerciseinfo/"
+        static let exerciseImage = "/exerciseimage/"
+        static let exerciseImageSize = "/thumbnails"
     }
     
     struct Storyboard {
@@ -137,6 +141,7 @@ func questionPopup(title: String, message: String, style: UIAlertControllerStyle
 
 func JSONResponse(kindOfService: Services, completion: @escaping (_ response: AnyObject?) ->()) {
     Singleton.provider.request(kindOfService, completion: { data in
+        print(kindOfService.baseURL.absoluteString+kindOfService.path)
         switch data {
         case let .success(moyaResponse):
             do {
@@ -147,6 +152,7 @@ func JSONResponse(kindOfService: Services, completion: @escaping (_ response: An
                     print("\(kindOfService.path) loaded")
                 } catch {
                     print("Something went wrong mapping \(kindOfService.path) JSON request")
+                    print(data.debugDescription)
                     print("Error code: ", moyaResponse.statusCode)
                 }
             } catch {
