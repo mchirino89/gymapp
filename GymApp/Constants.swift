@@ -75,6 +75,7 @@ struct Constants {
         static let appFont = "Copperplate"
         static let regularFontSize = 25
         static let animationDuration = 0.3
+        static let exerciseGIF = 2
         static let exerciseGenericTag = "General exercise"
         static let nonApplicable = "N/A"
         static let connector = " and "
@@ -90,6 +91,9 @@ struct Constants {
         static let wrongImageFormat = "There was an error retrieving the selected image from the Library"
         static let noProfilePlaceholder = "There aren't any profile images placeholders"
         static let tabItemError = "Unable to access first item in tab"
+        static let noImage = "No image data"
+        static let noJSONfile = "No JSON file in specified route"
+        static let invalidJSON = "Misformatted JSON file"
     }
     
     struct UIMessages {
@@ -97,7 +101,12 @@ struct Constants {
         static let negative = "No"
     }
     
-    struct Utilities {}
+    struct Utilities {
+        struct JSON {
+            static let fileName = "ExercisesImages"
+            static let fileExtension = "json"
+        }
+    }
     
     struct MuscleView {
         static let title = "Muscles"

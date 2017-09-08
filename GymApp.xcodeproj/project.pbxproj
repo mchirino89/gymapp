@@ -20,9 +20,7 @@
 		2213F7661F61853900213D31 /* ExerciseDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2213F7651F61853900213D31 /* ExerciseDetails.swift */; };
 		222B44B21F4F8341008E17A8 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222B44B11F4F8341008E17A8 /* ProfileController.swift */; };
 		222B44B61F4F9A1A008E17A8 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222B44B51F4F9A1A008E17A8 /* DetailController.swift */; };
-		222FF4C61F6265780011A523 /* ExerciseImageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222FF4C51F6265780011A523 /* ExerciseImageInfo.swift */; };
-		222FF4C81F62673A0011A523 /* ExerciseImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222FF4C71F62673A0011A523 /* ExerciseImage.swift */; };
-		224DB08E1F56DBB800628A15 /* ExercisesImages.json in Resources */ = {isa = PBXBuildFile; fileRef = 224DB08D1F56DBB800628A15 /* ExercisesImages.json */; };
+		222FF4D01F62E6600011A523 /* ExercisesImages.json in Resources */ = {isa = PBXBuildFile; fileRef = 222FF4CF1F62E6600011A523 /* ExercisesImages.json */; };
 		2254D1EF1F4D9DE800B450E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2254D1EE1F4D9DE800B450E5 /* AppDelegate.swift */; };
 		2254D1F11F4D9DE800B450E5 /* ExerciseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2254D1F01F4D9DE800B450E5 /* ExerciseController.swift */; };
 		2254D1F41F4D9DE800B450E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2254D1F21F4D9DE800B450E5 /* Main.storyboard */; };
@@ -53,9 +51,7 @@
 		2213F7651F61853900213D31 /* ExerciseDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseDetails.swift; sourceTree = "<group>"; };
 		222B44B11F4F8341008E17A8 /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		222B44B51F4F9A1A008E17A8 /* DetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
-		222FF4C51F6265780011A523 /* ExerciseImageInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseImageInfo.swift; sourceTree = "<group>"; };
-		222FF4C71F62673A0011A523 /* ExerciseImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseImage.swift; sourceTree = "<group>"; };
-		224DB08D1F56DBB800628A15 /* ExercisesImages.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ExercisesImages.json; sourceTree = "<group>"; };
+		222FF4CF1F62E6600011A523 /* ExercisesImages.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ExercisesImages.json; sourceTree = "<group>"; };
 		2254D1EB1F4D9DE800B450E5 /* GymApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2254D1EE1F4D9DE800B450E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2254D1F01F4D9DE800B450E5 /* ExerciseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseController.swift; sourceTree = "<group>"; };
@@ -143,11 +139,10 @@
 		2213F7581F60978500213D31 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				222FF4CF1F62E6600011A523 /* ExercisesImages.json */,
 				2213F7631F6175A600213D31 /* ResultList.swift */,
 				2213F7611F616F9100213D31 /* ResultDetails.swift */,
 				2213F7651F61853900213D31 /* ExerciseDetails.swift */,
-				222FF4C51F6265780011A523 /* ExerciseImageInfo.swift */,
-				222FF4C71F62673A0011A523 /* ExerciseImage.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -205,7 +200,6 @@
 		22638C731F4E492D00079818 /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				224DB08D1F56DBB800628A15 /* ExercisesImages.json */,
 				2254D1FA1F4D9DE800B450E5 /* Info.plist */,
 				22638C711F4E42AC00079818 /* Constants.swift */,
 				2213F75F1F60A23200213D31 /* Singleton.swift */,
@@ -317,7 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2254D1F91F4D9DE800B450E5 /* LaunchScreen.storyboard in Resources */,
-				224DB08E1F56DBB800628A15 /* ExercisesImages.json in Resources */,
+				222FF4D01F62E6600011A523 /* ExercisesImages.json in Resources */,
 				228529BA1F5313FA00F9DFD9 /* Assets.xcassets in Resources */,
 				2254D1F41F4D9DE800B450E5 /* Main.storyboard in Resources */,
 			);
@@ -409,9 +403,7 @@
 				2213F7491F5DE54600213D31 /* RoutineViewCell.swift in Sources */,
 				2213F7521F5EE0F100213D31 /* TextArea.swift in Sources */,
 				2254D1F11F4D9DE800B450E5 /* ExerciseController.swift in Sources */,
-				222FF4C61F6265780011A523 /* ExerciseImageInfo.swift in Sources */,
 				2213F7561F5EF56600213D31 /* ButtonStyle.swift in Sources */,
-				222FF4C81F62673A0011A523 /* ExerciseImage.swift in Sources */,
 				2254D1EF1F4D9DE800B450E5 /* AppDelegate.swift in Sources */,
 				225E1FC81F557122000217C3 /* TabsController.swift in Sources */,
 				222B44B21F4F8341008E17A8 /* ProfileController.swift in Sources */,

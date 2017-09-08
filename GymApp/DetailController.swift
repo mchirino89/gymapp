@@ -26,13 +26,14 @@ final class DetailController: UIViewController {
     var exerciseId:Int = 0
     var exerciseName:String = ""
     var exerciseInfo:ExerciseDetails?
-    var exerciseImage:ExerciseImageInfo?
-//    let imageGetter = MoyaProvider<
+    var exerciseImageDictionary:ResultList?
+    var exerciseImages:[UIImage] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = Constants.DetailView.title
         exerciseNameLabel.text = exerciseName
+        readJSONlist()
         DispatchQueue.global(qos: .userInteractive).async { [weak self] in
             guard let view = self else { return }
             JSONResponse(kindOfService: .exerciseDetails(id: view.exerciseId), completion: { (JSONdata) in
@@ -45,27 +46,6 @@ final class DetailController: UIViewController {
                     view.equipmentLabel.text?.append(view.makeListSentence(list: view.exerciseInfo?.equipment?.result))
                     view.loadingVisualEffectView.isHidden = true
                 }
-            })
-            JSONResponse(kindOfService: .exerciseImage(id: view.exerciseId), completion: { (JSONdata) in
-                view.exerciseImage <-- JSONdata
-                guard let imageURL = view.exerciseImage?.info?.url else {
-                    DispatchQueue.main.async {
-                        view.imageActivityIndicator.stopAnimating()
-                    }
-                    return
-                }
-                let imageRequest = Singleton.provider.manager.request(URL(string: imageURL)!)
-                imageRequest.responseData(completionHandler: { (requestData) in
-                    guard let imageData = requestData.data else {
-                        print("No image data")
-                        view.imageActivityIndicator.stopAnimating()
-                        return
-                    }
-                    DispatchQueue.main.async {
-                        view.imageActivityIndicator.stopAnimating()
-                        view.exerciseImageView.image = UIImage(data: imageData)
-                    }
-                }).resume()
             })
         }
     }
@@ -93,4 +73,55 @@ final class DetailController: UIViewController {
         }
     }
     
+    private func readJSONlist() {
+        do {
+            if let file = Bundle.main.url(forResource: Constants.Utilities.JSON.fileName, withExtension: Constants.Utilities.JSON.fileExtension) {
+                let data = try Data(contentsOf: file)
+                let json = try JSONSerialization.jsonObject(with: data, options: [])
+                if let object = json as? [String: Any] {
+                    exerciseImageDictionary <-- object
+                    let _ = exerciseImageDictionary?.result?
+                        .filter({ $0.id == exerciseId })
+                        .map {
+                            setExerciseImage(sourceURL: $0.name!)
+                    }
+                } else {
+                    print(Constants.ErrorMessages.invalidJSON)
+                }
+            } else {
+                print(Constants.ErrorMessages.noJSONfile)
+            }
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    private func setExerciseImage(sourceURL: String) {
+        let imageRequest = Singleton.provider.manager.request(URL(string: sourceURL)!)
+        imageRequest.responseData(completionHandler: { [weak self] (requestData) in
+            guard let view = self else { return }
+            guard let imageData = requestData.data else {
+                print(Constants.ErrorMessages.noImage)
+                return
+            }
+            view.exerciseImages.append(UIImage(data: imageData)!)
+            view.generateExerciseGIF(Constants.UIElements.exerciseGIF)
+        }).resume()
+    }
+    
+    func generateExerciseGIF(_ delayInSeconds : Int) {
+        if delayInSeconds > 0 && exerciseImages.count > 1 {
+            imageActivityIndicator.stopAnimating()
+            exerciseImageView.image = exerciseImageView.image == exerciseImages.first! ? exerciseImages.last! : exerciseImages.first!
+            let delayInNanoSeconds = UInt64(delayInSeconds) * NSEC_PER_SEC
+            let time = DispatchTime.now() + Double(Int64(delayInNanoSeconds)) / Double(NSEC_PER_SEC)
+            DispatchQueue.main.asyncAfter(deadline: time) { [weak self] in
+                guard let view = self else { return }
+                view.generateExerciseGIF(delayInSeconds)
+            }
+        } else if exerciseImages.count == 1 {
+            exerciseImageView.image = exerciseImages.first!
+        }
+        imageActivityIndicator.stopAnimating()
+    }
 }
