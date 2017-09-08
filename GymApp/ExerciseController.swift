@@ -21,7 +21,6 @@ class ExerciseController: UIViewController {
     var dataId:[Int] = []
     var viewTitle:String?
     var muscleGroupDataSource:ExerciseGroupList?
-    var APICall:Cancellable?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,7 +51,7 @@ class ExerciseController: UIViewController {
         exerciseListActivityIndicator.startAnimating()
         DispatchQueue.global(qos: .userInteractive).async { [weak self] _ in
             guard let view = self else { return }
-            view.APICall = JSONResponse(kindOfService: view.muscleGroupList ? .muscleGroup : .exerciseGroup(id: view.dataId.first!), completion: { (JSONdata) in
+            JSONResponse(kindOfService: view.muscleGroupList ? .muscleGroup : .exerciseGroup(id: view.dataId.first!), completion: { (JSONdata) in
                 view.muscleGroupDataSource <-- JSONdata
                 DispatchQueue.main.async {
                     view.refreshList()

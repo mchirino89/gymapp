@@ -123,8 +123,8 @@ func questionPopup(title: String, message: String, style: UIAlertControllerStyle
     return questionAlert
 }
 
-func JSONResponse(kindOfService: Services, completion: @escaping (_ response: AnyObject?) ->()) -> Cancellable {
-    return Singleton.provider.request(kindOfService, completion: { data in
+func JSONResponse(kindOfService: Services, completion: @escaping (_ response: AnyObject?) ->()) {
+    Singleton.provider.request(kindOfService, completion: { data in
         switch data {
         case let .success(moyaResponse):
             do {
