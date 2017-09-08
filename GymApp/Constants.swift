@@ -60,7 +60,7 @@ struct Constants {
         static let placeholderNames = ["John Doe", "Jane Doe"]
         static let appFont = "Copperplate"
         static let regularFontSize = 25
-        static let animationDuration = 0.25
+        static let animationDuration = 0.3
         static let exerciseGenericTag = "General exercise"
     }
     

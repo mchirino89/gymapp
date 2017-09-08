@@ -9,16 +9,17 @@
 import UIKit
 
 class ProfileController: UIViewController {
+    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var ageTextField: UITextField!
     @IBOutlet var genderPickerView: UIPickerView!
     @IBOutlet weak var weightTextField: UITextField!
     @IBOutlet weak var heightTextField: UITextField!
-    @IBOutlet weak var genderVisualEffectView: UIVisualEffectView!
     @IBOutlet weak var profileImageButton: UIButton!
     @IBOutlet weak var genderButton: UIButton!
-    let profileImagePicker = UIImagePickerController()
     @IBOutlet weak var genderVerticalLayoutConstraint: NSLayoutConstraint!
+    
+    let profileImagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +27,6 @@ class ProfileController: UIViewController {
         setNavigationBar(navigationController)
         profileImagePicker.delegate = self
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: .UIKeyboardWillShow, object: nil)
-        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: .UIKeyboardWillHide, object: nil)
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismissKeyboardAction)))
     }
@@ -80,18 +80,18 @@ class ProfileController: UIViewController {
 
     @IBAction func pickGenderAction() {
         dismissKeyboardAction()
-        genderVerticalLayoutConstraint.constant = 0
-        UIView.animate(withDuration: Constants.UIElements.animationDuration, animations: {
-            self.view.layoutIfNeeded()
-        })
+        genderViewAnimation(showingPicker: true)
     }
     
     @IBAction func okButton() {
         setPlaceholderProfileImage()
         genderButton.setTitle(Constants.UIElements.genders[genderPickerView.selectedRow(inComponent: 0)], for: .normal)
-        genderVerticalLayoutConstraint.constant = 1000
-        UIView.animate(withDuration: Constants.UIElements.animationDuration, animations: {
-            self.view.layoutIfNeeded()
-        })
+        genderViewAnimation(showingPicker: false)
+    }
+    
+    private func genderViewAnimation(showingPicker: Bool) {
+        genderVerticalLayoutConstraint.constant = showingPicker ? 0 : 1000
+        UIView.animate(withDuration: Constants.UIElements.animationDuration, animations: { self.view.layoutIfNeeded() }
+        )
     }
 }

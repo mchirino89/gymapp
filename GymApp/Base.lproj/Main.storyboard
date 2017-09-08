@@ -785,7 +785,6 @@
                         <outlet property="genderButton" destination="6LI-lx-nau" id="iKF-3W-TQe"/>
                         <outlet property="genderPickerView" destination="3GD-Pp-2a4" id="wnJ-11-IHM"/>
                         <outlet property="genderVerticalLayoutConstraint" destination="sXr-Vp-acW" id="c84-1U-Bjd"/>
-                        <outlet property="genderVisualEffectView" destination="Nvb-VL-Xk7" id="wei-c6-5qf"/>
                         <outlet property="heightTextField" destination="DYl-y9-WuU" id="4lh-FI-uKh"/>
                         <outlet property="nameTextField" destination="0fs-ve-xnX" id="gux-Xd-ARK"/>
                         <outlet property="profileImageButton" destination="dcI-8K-Us8" id="4z9-r6-Kon"/>
