@@ -10,8 +10,8 @@ import UIKit
 
 final class ListViewCell: UICollectionViewCell {
     @IBOutlet weak var detailLabel: UILabel!
-    var referenceIds:[Int] = []
-    func setDetailLabelWithAnimation(_ musclaName: String, _ referenceIds: [Int]) {
+    var referenceIds:Int = 0
+    func setDetailLabelWithAnimation(_ musclaName: String, _ referenceIds: Int) {
         self.referenceIds = referenceIds
         detailLabel.text = musclaName
         detailLabel.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)

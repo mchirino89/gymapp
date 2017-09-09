@@ -16,8 +16,8 @@ final class ExerciseController: UIViewController {
     @IBOutlet weak var exerciseListActivityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var exerciseTagLabel: UILabel?
     
-    var muscleGroupList = true
-    var dataId:[Int] = []
+    var muscleGroupList = 0
+    var dataId:Int = 0
     var viewTitle:String?
     var muscleGroupDataSource:ResultList?
     
@@ -26,7 +26,9 @@ final class ExerciseController: UIViewController {
         setCollectionLayout()
         setNavigationBar(navigationController)
         customBackButton(navigationItem)
-        loadList()
+        if muscleGroupList < 2 {
+            loadList()
+        }
         guard let exerciseTag = exerciseTagLabel else { return }
         exerciseTag.text = "For: \(viewTitle ?? Constants.UIElements.exerciseGenericTag)"
         title = Constants.ExerciseView.title
@@ -36,8 +38,8 @@ final class ExerciseController: UIViewController {
         // From muscles to exercises per muscle
         if segue.destination.isKind(of: ExerciseController.self) {
             guard let destination = segue.destination as? ExerciseController, let sentParameters = sender as? [Any] else { return }
-            destination.muscleGroupList = false
-            destination.dataId.append((sentParameters.first as? Int) ?? 0)
+            destination.muscleGroupList = 1
+            destination.dataId = sentParameters.first as? Int ?? 0
             destination.viewTitle = sentParameters.last as? String
         } else { // From exercises per muscle to exercise details
             guard let destination = segue.destination as? DetailController, let sentParameters = sender as? [Any] else { return }
@@ -51,7 +53,7 @@ final class ExerciseController: UIViewController {
         exerciseListActivityIndicator.startAnimating()
         DispatchQueue.global(qos: .userInteractive).async { [weak self] _ in
             guard let view = self else { return }
-            JSONResponse(kindOfService: view.muscleGroupList ? .muscleGroup : .exerciseGroup(id: view.dataId.first!), completion: { (JSONdata) in
+            JSONResponse(kindOfService: view.muscleGroupList == 0 ? .muscleGroup : .exerciseGroup(id: view.dataId), completion: { (JSONdata) in
                 view.muscleGroupDataSource <-- JSONdata
                 DispatchQueue.main.async {
                     view.refreshList()

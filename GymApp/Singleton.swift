@@ -10,5 +10,6 @@ import Moya
 
 final class Singleton {
     static let provider = MoyaProvider<Services>()
+    static let dataSources:Routines = Routines()
     private init() {}
 }

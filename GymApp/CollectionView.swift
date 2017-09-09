@@ -20,18 +20,22 @@ extension ExerciseController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return muscleGroupDataSource?.result?.count ?? 0
+        return muscleGroupList < 2 ? (muscleGroupDataSource?.result?.count ?? 0) : Singleton.dataSources.custom.first!.exercises.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.Storyboard.cellId, for: indexPath) as! ListViewCell
         // Cell can refer either to a muscle group (abs, arms, legs, etc) or a specific exercise for a previous selected muscle group/routine (squat, push press, crunches, etc)
-        cell.setDetailLabelWithAnimation(muscleGroupDataSource!.result![indexPath.row].name!, [muscleGroupDataSource!.result![indexPath.row].id!])
+        if muscleGroupList < 2 {
+            cell.setDetailLabelWithAnimation(muscleGroupDataSource!.result![indexPath.row].name!, muscleGroupDataSource!.result![indexPath.row].id!)
+        } else {
+            cell.setDetailLabelWithAnimation(Singleton.dataSources.custom.first!.exercises[indexPath.row].name, Singleton.dataSources.custom.first!.exercises[indexPath.row].id)
+        }
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as! ListViewCell
-        performSegue(withIdentifier: muscleGroupList ? Constants.Storyboard.exerciseListSegue : Constants.Storyboard.exerciseDetailSegue, sender: [cell.referenceIds.first as Any, cell.detailLabel.text as Any])
+        performSegue(withIdentifier: muscleGroupList == 0 ? Constants.Storyboard.exerciseListSegue : Constants.Storyboard.exerciseDetailSegue, sender: [cell.referenceIds as Any, cell.detailLabel.text as Any])
     }
 }

@@ -11,7 +11,6 @@ import UIKit
 final class RoutineController: UIViewController {
     
     @IBOutlet weak var routineTableView: UITableView!
-    let dataSources:Routines = Routines()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +20,8 @@ final class RoutineController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let exerciseView = segue.destination as? ExerciseController else { return }
-        exerciseView.muscleGroupList = false
-        exerciseView.dataId.append((sender as? Int) ?? 0)
+        exerciseView.muscleGroupList = 2
+        exerciseView.dataId = sender as? Int ?? 0
+        exerciseView.viewTitle = Singleton.dataSources.names.first!
     }
 }
