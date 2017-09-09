@@ -114,6 +114,11 @@
                                                         </constraints>
                                                     </view>
                                                     <blurEffect style="light"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <integer key="value" value="4"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </visualEffectView>
                                             </subviews>
                                         </view>
@@ -133,19 +138,40 @@
                                     <outlet property="delegate" destination="w88-78-r6J" id="7rm-Ay-NED"/>
                                 </connections>
                             </collectionView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="1UM-Rr-6bC">
-                                <rect key="frame" x="169" y="315" width="37" height="37"/>
-                            </activityIndicatorView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GaX-2A-GJC">
+                                <rect key="frame" x="150" y="296" width="75" height="75"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="NWU-Sa-E5Y">
+                                    <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="0Eh-AR-7xb">
+                                            <rect key="frame" x="19" y="19" width="37" height="37"/>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="0Eh-AR-7xb" firstAttribute="centerX" secondItem="NWU-Sa-E5Y" secondAttribute="centerX" id="0i3-nG-2OP"/>
+                                        <constraint firstItem="0Eh-AR-7xb" firstAttribute="centerY" secondItem="NWU-Sa-E5Y" secondAttribute="centerY" id="NMF-Wb-Fz4"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ugo-vh-HUd" firstAttribute="centerX" secondItem="NZW-Qz-W67" secondAttribute="centerX" id="4CM-6e-03l"/>
-                            <constraint firstItem="1UM-Rr-6bC" firstAttribute="centerX" secondItem="bzd-6l-DyR" secondAttribute="centerX" id="LDL-Xg-Fdy"/>
+                            <constraint firstItem="GaX-2A-GJC" firstAttribute="width" secondItem="bzd-6l-DyR" secondAttribute="width" multiplier="0.2" id="Bi7-cC-JEq"/>
+                            <constraint firstItem="GaX-2A-GJC" firstAttribute="width" secondItem="GaX-2A-GJC" secondAttribute="height" multiplier="1:1" id="IVc-fB-caG"/>
                             <constraint firstItem="NZW-Qz-W67" firstAttribute="centerX" secondItem="bzd-6l-DyR" secondAttribute="centerX" id="MZ2-8H-tnd"/>
                             <constraint firstItem="cZU-eQ-YJI" firstAttribute="top" secondItem="ugo-vh-HUd" secondAttribute="bottom" id="Pgv-Ga-dbe"/>
                             <constraint firstItem="NZW-Qz-W67" firstAttribute="width" secondItem="bzd-6l-DyR" secondAttribute="width" id="Q3C-7o-eff"/>
                             <constraint firstItem="ugo-vh-HUd" firstAttribute="leading" secondItem="NZW-Qz-W67" secondAttribute="leading" id="du9-2i-0mF"/>
-                            <constraint firstItem="1UM-Rr-6bC" firstAttribute="centerY" secondItem="bzd-6l-DyR" secondAttribute="centerY" id="ge6-5a-TMz"/>
+                            <constraint firstItem="GaX-2A-GJC" firstAttribute="centerX" secondItem="bzd-6l-DyR" secondAttribute="centerX" id="lBw-3e-IwD"/>
+                            <constraint firstItem="GaX-2A-GJC" firstAttribute="centerY" secondItem="bzd-6l-DyR" secondAttribute="centerY" id="m0k-Ap-rmz"/>
                             <constraint firstItem="ugo-vh-HUd" firstAttribute="top" secondItem="Q2f-AX-QQS" secondAttribute="bottom" id="tK0-BS-FB0"/>
                             <constraint firstItem="NZW-Qz-W67" firstAttribute="centerY" secondItem="bzd-6l-DyR" secondAttribute="centerY" id="tLw-aM-nCX"/>
                             <constraint firstItem="NZW-Qz-W67" firstAttribute="height" secondItem="bzd-6l-DyR" secondAttribute="height" id="z1D-kl-rzX"/>
@@ -156,8 +182,8 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="backgroundImageView" destination="NZW-Qz-W67" id="hm3-ow-rPK"/>
-                        <outlet property="exerciseListActivityIndicator" destination="1UM-Rr-6bC" id="MZE-sI-Xsq"/>
                         <outlet property="listCollectionView" destination="ugo-vh-HUd" id="huT-w3-klY"/>
+                        <outlet property="refreshListVisualEffect" destination="GaX-2A-GJC" id="9GP-LS-f6w"/>
                         <segue destination="BCO-RW-R6g" kind="show" identifier="muscleDetailsSegue" id="ytr-9Q-XEl"/>
                     </connections>
                 </viewController>
@@ -218,6 +244,11 @@
                                                         </subviews>
                                                     </view>
                                                     <blurEffect style="dark"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <integer key="value" value="4"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </visualEffectView>
                                             </subviews>
                                         </view>
@@ -241,34 +272,57 @@
                                     <outlet property="delegate" destination="BCO-RW-R6g" id="QEB-7C-qCF"/>
                                 </connections>
                             </collectionView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="hf0-5v-vh2">
-                                <rect key="frame" x="169" y="315" width="37" height="37"/>
-                            </activityIndicatorView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dax-Kg-dJn">
+                                <rect key="frame" x="149.5" y="295.5" width="75" height="75"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ODh-JG-V0S">
+                                    <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="hf0-5v-vh2">
+                                            <rect key="frame" x="19" y="19" width="37" height="37"/>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="hf0-5v-vh2" firstAttribute="centerX" secondItem="ODh-JG-V0S" secondAttribute="centerX" id="PEa-iM-paD"/>
+                                        <constraint firstItem="hf0-5v-vh2" firstAttribute="centerY" secondItem="ODh-JG-V0S" secondAttribute="centerY" id="zeQ-eq-I4Q"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Dax-Kg-dJn" secondAttribute="height" multiplier="1:1" id="wfG-LL-SHO"/>
+                                </constraints>
+                                <blurEffect style="light"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="vYj-YY-U5N" firstAttribute="width" secondItem="me1-A4-ria" secondAttribute="width" id="2i5-Q6-d4i"/>
+                            <constraint firstItem="Dax-Kg-dJn" firstAttribute="centerY" secondItem="me1-A4-ria" secondAttribute="centerY" id="9Fp-t7-PEt"/>
                             <constraint firstItem="J2W-ix-g4I" firstAttribute="centerY" secondItem="me1-A4-ria" secondAttribute="centerY" id="9Gk-RD-spn"/>
                             <constraint firstItem="vYj-YY-U5N" firstAttribute="top" secondItem="Dkf-dA-1ar" secondAttribute="bottom" id="ADn-6G-NWU"/>
                             <constraint firstItem="J2W-ix-g4I" firstAttribute="width" secondItem="me1-A4-ria" secondAttribute="width" id="Bnr-VN-LJT"/>
+                            <constraint firstItem="Dax-Kg-dJn" firstAttribute="width" secondItem="me1-A4-ria" secondAttribute="width" multiplier="0.2" id="Dko-wd-Zok"/>
                             <constraint firstItem="qOo-FS-x4x" firstAttribute="top" secondItem="vYj-YY-U5N" secondAttribute="bottom" id="Hmc-Kd-9jX"/>
                             <constraint firstItem="Tme-oT-Dvp" firstAttribute="top" secondItem="qOo-FS-x4x" secondAttribute="bottom" id="HpC-91-uYV"/>
                             <constraint firstItem="vYj-YY-U5N" firstAttribute="centerX" secondItem="me1-A4-ria" secondAttribute="centerX" id="I4b-wW-QlO"/>
-                            <constraint firstItem="hf0-5v-vh2" firstAttribute="centerY" secondItem="me1-A4-ria" secondAttribute="centerY" id="JR5-PS-hUO"/>
                             <constraint firstItem="J2W-ix-g4I" firstAttribute="height" secondItem="me1-A4-ria" secondAttribute="height" id="LPG-PK-CI4"/>
                             <constraint firstItem="qOo-FS-x4x" firstAttribute="width" secondItem="me1-A4-ria" secondAttribute="width" id="Mkb-JP-HtK"/>
                             <constraint firstItem="J2W-ix-g4I" firstAttribute="centerX" secondItem="me1-A4-ria" secondAttribute="centerX" id="Rjo-fe-oYw"/>
                             <constraint firstItem="qOo-FS-x4x" firstAttribute="centerX" secondItem="me1-A4-ria" secondAttribute="centerX" id="T3i-IT-QXD"/>
+                            <constraint firstItem="Dax-Kg-dJn" firstAttribute="centerX" secondItem="me1-A4-ria" secondAttribute="centerX" id="cWT-Xp-E1Y"/>
                             <constraint firstItem="vYj-YY-U5N" firstAttribute="height" secondItem="me1-A4-ria" secondAttribute="height" multiplier="0.075" id="gXc-Fa-etT"/>
-                            <constraint firstItem="hf0-5v-vh2" firstAttribute="centerX" secondItem="me1-A4-ria" secondAttribute="centerX" id="xv3-ew-f9h"/>
                         </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="backgroundImageView" destination="J2W-ix-g4I" id="srl-os-e5q"/>
-                        <outlet property="exerciseListActivityIndicator" destination="hf0-5v-vh2" id="trt-bC-49b"/>
                         <outlet property="exerciseTagLabel" destination="vYj-YY-U5N" id="hOU-0L-BuU"/>
                         <outlet property="listCollectionView" destination="qOo-FS-x4x" id="6MT-85-Wsv"/>
+                        <outlet property="refreshListVisualEffect" destination="Dax-Kg-dJn" id="xHb-8u-PSq"/>
                         <segue destination="MBB-fV-NY0" kind="show" identifier="specificDetailSegue" id="sfw-kR-qd2"/>
                     </connections>
                 </viewController>
@@ -323,13 +377,13 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main muscle: " lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3uf-NC-Byo">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main muscle: " lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3uf-NC-Byo">
                                         <rect key="frame" x="0.0" y="33.5" width="337.5" height="33.5"/>
                                         <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="19"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Secondary muscles: " lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="LXA-cZ-bSs">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Secondary muscles: " lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LXA-cZ-bSs">
                                         <rect key="frame" x="0.0" y="67" width="337.5" height="33"/>
                                         <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="19"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -633,7 +687,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="dcI-8K-Us8">
-                                <rect key="frame" x="65.5" y="96" width="244" height="244"/>
+                                <rect key="frame" x="65.5" y="80" width="244" height="244"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="dcI-8K-Us8" secondAttribute="height" multiplier="1:1" id="CCd-QC-65h"/>
                                 </constraints>
@@ -651,7 +705,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0fs-ve-xnX">
-                                <rect key="frame" x="65.5" y="340" width="244" height="66.5"/>
+                                <rect key="frame" x="65.5" y="324" width="244" height="66.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="25"/>
@@ -666,19 +720,19 @@
                                 </connections>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4wM-Hr-Mbq">
-                                <rect key="frame" x="0.0" y="406.5" width="375" height="260.5"/>
+                                <rect key="frame" x="0.0" y="390.5" width="375" height="276.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KGV-iw-INa">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Gender" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rRP-6k-AXh">
-                                                <rect key="frame" x="0.0" y="21.5" width="187.5" height="22.5"/>
+                                                <rect key="frame" x="0.0" y="23.5" width="187.5" height="22.5"/>
                                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6LI-lx-nau">
-                                                <rect key="frame" x="187.5" y="15" width="187.5" height="35"/>
+                                                <rect key="frame" x="187.5" y="17" width="187.5" height="35"/>
                                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
                                                 <state key="normal" title="Your gender">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -691,16 +745,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Szk-bo-NFQ">
-                                        <rect key="frame" x="0.0" y="65" width="375" height="65.5"/>
+                                        <rect key="frame" x="0.0" y="69" width="375" height="69.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Age" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGK-P3-92Y">
-                                                <rect key="frame" x="0.0" y="21.5" width="187.5" height="22.5"/>
+                                                <rect key="frame" x="0.0" y="23.5" width="187.5" height="22.5"/>
                                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Enter age" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wSr-Lc-BVc">
-                                                <rect key="frame" x="187.5" y="21" width="187.5" height="23"/>
+                                                <rect key="frame" x="187.5" y="23" width="187.5" height="23"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="light" returnKeyType="done"/>
@@ -716,16 +770,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MEL-CZ-w29">
-                                        <rect key="frame" x="0.0" y="130.5" width="375" height="65"/>
+                                        <rect key="frame" x="0.0" y="138.5" width="375" height="69"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Weight" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUe-tn-t1S">
-                                                <rect key="frame" x="0.0" y="21.5" width="187.5" height="22.5"/>
+                                                <rect key="frame" x="0.0" y="23.5" width="187.5" height="22.5"/>
                                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Enter weigth" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W8R-Ta-cof">
-                                                <rect key="frame" x="187.5" y="21.5" width="187.5" height="23"/>
+                                                <rect key="frame" x="187.5" y="23.5" width="187.5" height="23"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="light" returnKeyType="done"/>
@@ -741,16 +795,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="idi-W3-nbS">
-                                        <rect key="frame" x="0.0" y="195.5" width="375" height="65"/>
+                                        <rect key="frame" x="0.0" y="207.5" width="375" height="69"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Height" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="do8-0E-e0M">
-                                                <rect key="frame" x="0.0" y="21" width="187.5" height="22.5"/>
+                                                <rect key="frame" x="0.0" y="23" width="187.5" height="22.5"/>
                                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Enter heigth" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DYl-y9-WuU">
-                                                <rect key="frame" x="187.5" y="21" width="187.5" height="23"/>
+                                                <rect key="frame" x="187.5" y="23" width="187.5" height="23"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="light" returnKeyType="done"/>
@@ -828,7 +882,7 @@
                             <constraint firstItem="0fs-ve-xnX" firstAttribute="centerX" secondItem="MFa-tE-DEE" secondAttribute="centerX" id="rMi-ke-sil"/>
                             <constraint firstItem="Nvb-VL-Xk7" firstAttribute="centerX" secondItem="MFa-tE-DEE" secondAttribute="centerX" id="rdM-FF-ZfX"/>
                             <constraint firstItem="Nvb-VL-Xk7" firstAttribute="centerY" secondItem="MFa-tE-DEE" secondAttribute="centerY" constant="1000" id="sXr-Vp-acW"/>
-                            <constraint firstItem="dcI-8K-Us8" firstAttribute="top" secondItem="ckk-eR-wL9" secondAttribute="bottom" multiplier="1.5" id="t8i-9P-1JY"/>
+                            <constraint firstItem="dcI-8K-Us8" firstAttribute="top" secondItem="ckk-eR-wL9" secondAttribute="bottom" multiplier="1.25" id="t8i-9P-1JY"/>
                             <constraint firstItem="dcI-8K-Us8" firstAttribute="centerX" secondItem="MFa-tE-DEE" secondAttribute="centerX" id="tKf-Mu-Xkv"/>
                         </constraints>
                     </view>
@@ -866,6 +920,6 @@
         <image name="routine" width="260" height="468"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="CU9-m5-LQL"/>
+        <segue reference="ytr-9Q-XEl"/>
     </inferredMetricsTieBreakers>
 </document>

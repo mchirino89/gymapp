@@ -13,7 +13,7 @@ final class ExerciseController: UIViewController {
     
     @IBOutlet weak var listCollectionView: UICollectionView!
     @IBOutlet weak var backgroundImageView: UIImageView!
-    @IBOutlet weak var exerciseListActivityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var refreshListVisualEffect: UIVisualEffectView!
     @IBOutlet weak var exerciseTagLabel: UILabel?
     
     var muscleGroupList = 0
@@ -26,9 +26,7 @@ final class ExerciseController: UIViewController {
         setCollectionLayout()
         setNavigationBar(navigationController)
         customBackButton(navigationItem)
-        if muscleGroupList < 2 {
-            loadList()
-        }
+        muscleGroupList < 2 ? loadList() : viewLoader(false)
         guard let exerciseTag = exerciseTagLabel else { return }
         exerciseTag.text = "For: \(viewTitle ?? Constants.UIElements.exerciseGenericTag)"
         title = Constants.ExerciseView.title
@@ -48,9 +46,9 @@ final class ExerciseController: UIViewController {
         }
     }
     
-    //
+    // Deppending on which view this is called, the right endpoint for retrieving data will be called
     private func loadList() {
-        exerciseListActivityIndicator.startAnimating()
+        viewLoader(true)
         DispatchQueue.global(qos: .userInteractive).async { [weak self] _ in
             guard let view = self else { return }
             JSONResponse(kindOfService: view.muscleGroupList == 0 ? .muscleGroup : .exerciseGroup(id: view.dataId), completion: { (JSONdata) in
@@ -65,6 +63,11 @@ final class ExerciseController: UIViewController {
     // Refreshes collection view after API response
     private func refreshList() {
         listCollectionView.reloadData()
-        exerciseListActivityIndicator.stopAnimating()
+        viewLoader(false)
+    }
+    
+    // Hides/Shows vissual effect + activity indicator view
+    private func viewLoader(_ isVisible: Bool) {
+        refreshListVisualEffect.isHidden = !isVisible
     }
 }
