@@ -62,12 +62,12 @@ final class DetailController: UIViewController {
         default:
             var currentIndex = 0
             var sentence = ""
-            response.forEach { word in
+            let _ = response.map { word in
                 if currentIndex + 1 == response.count {
                     return
                 }
                 currentIndex += 1
-                sentence = word.name! + ", "
+                sentence.append(word.name! + ", ")
             }
             return sentence + Constants.UIElements.connector + response.last!.name!
         }
