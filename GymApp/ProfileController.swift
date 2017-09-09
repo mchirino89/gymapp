@@ -23,7 +23,6 @@ final class ProfileController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        profileImageButton.layer.cornerRadius = view.frame.width * 0.325
         setNavigationBar(navigationController)
         profileImagePicker.delegate = self
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: .UIKeyboardWillShow, object: nil)
