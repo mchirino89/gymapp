@@ -39,11 +39,11 @@ final class DetailController: UIViewController {
             JSONResponse(kindOfService: .exerciseDetails(id: view.exerciseId), completion: { (JSONdata) in
                 view.exerciseInfo <-- JSONdata
                 DispatchQueue.main.async {
-                    view.categoryLabel.text?.append(view.exerciseInfo!.category!.name!)
+                    view.categoryLabel.text? += view.exerciseInfo!.category!.name!
                     view.exerciseDescriptionTextView.text = view.exerciseInfo?.description
-                    view.mainMuscleLabel.text?.append(view.makeListSentence(list: view.exerciseInfo?.muscles?.result))
-                    view.secondaryMusclesLabel.text?.append(view.makeListSentence(list: view.exerciseInfo?.secondaryMuscles?.result))
-                    view.equipmentLabel.text?.append(view.makeListSentence(list: view.exerciseInfo?.equipment?.result))
+                    view.mainMuscleLabel.text? += view.makeListSentence(list: view.exerciseInfo?.muscles?.result)
+                    view.secondaryMusclesLabel.text? += view.makeListSentence(list: view.exerciseInfo?.secondaryMuscles?.result)
+                    view.equipmentLabel.text? += view.makeListSentence(list: view.exerciseInfo?.equipment?.result)
                     view.loadingVisualEffectView.isHidden = true
                 }
             })
@@ -97,16 +97,22 @@ final class DetailController: UIViewController {
     }
     
     private func setExerciseImage(sourceURL: String) {
-        let imageRequest = Singleton.provider.manager.request(URL(string: sourceURL)!)
-        imageRequest.responseData(completionHandler: { [weak self] (requestData) in
-            guard let view = self else { return }
-            guard let imageData = requestData.data else {
-                print(Constants.ErrorMessages.noImage)
-                return
-            }
-            view.exerciseImages.append(UIImage(data: imageData)!)
-            view.generateExerciseGIF(Constants.UIElements.exerciseGIF)
-        }).resume()
+        guard let storedImage = Singleton.imageCache.object(forKey: sourceURL as NSString) else {
+            let imageRequest = Singleton.provider.manager.request(URL(string: sourceURL)!)
+            imageRequest.responseData(completionHandler: { [weak self] (requestData) in
+                guard let view = self else { return }
+                guard let imageData = requestData.data else {
+                    print(Constants.ErrorMessages.noImage)
+                    return
+                }
+                view.exerciseImages.append(UIImage(data: imageData)!)
+                Singleton.imageCache.setObject(imageData as NSData, forKey: sourceURL as NSString)
+                view.generateExerciseGIF(Constants.UIElements.exerciseGIF)
+            }).resume()
+            return
+        }
+        exerciseImages.append(UIImage(data: storedImage as Data)!)
+        generateExerciseGIF(Constants.UIElements.exerciseGIF)
     }
     
     func generateExerciseGIF(_ delayInSeconds : Int) {

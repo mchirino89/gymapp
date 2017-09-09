@@ -11,5 +11,6 @@ import Moya
 final class Singleton {
     static let provider = MoyaProvider<Services>()
     static let dataSources:Routines = Routines()
+    static let imageCache = NSCache<NSString, NSData>()
     private init() {}
 }
