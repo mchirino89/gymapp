@@ -26,6 +26,7 @@ extension RoutineController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let routineCell = tableView.cellForRow(at: indexPath) as? RoutineViewCell else { return }
-        performSegue(withIdentifier: Constants.Storyboard.routineDetailSegue, sender: routineCell.idForRoutine)
+        
+        performSegue(withIdentifier: Constants.Storyboard.routineDetailSegue, sender: [routineCell.idForRoutine as Any, routineCell.routineLabel.text as Any])
     }
 }
