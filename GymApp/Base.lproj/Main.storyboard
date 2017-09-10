@@ -70,7 +70,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.75" contentMode="scaleToFill" image="muscle" translatesAutoresizingMaskIntoConstraints="NO" id="NZW-Qz-W67">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.75" contentMode="scaleToFill" image="routine" translatesAutoresizingMaskIntoConstraints="NO" id="NZW-Qz-W67">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
@@ -563,7 +563,7 @@
         <!--Routine view-->
         <scene sceneID="TgR-M3-Zi3">
             <objects>
-                <viewController id="YDn-r9-EWD" userLabel="Routine view" customClass="RoutineController" customModule="GymApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="YDn-r9-EWD" userLabel="Routine view" customClass="RoutineController" customModule="GymApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fog-tC-Aj1"/>
                         <viewControllerLayoutGuide type="bottom" id="hdS-2z-6kV"/>
@@ -572,9 +572,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="routine" translatesAutoresizingMaskIntoConstraints="NO" id="MKp-H2-7Dn">
-                                <rect key="frame" x="0.0" y="-66.5" width="375" height="733.5"/>
-                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="223" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jpi-uD-P63">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -625,14 +622,10 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="MKp-H2-7Dn" firstAttribute="width" secondItem="46X-lw-4Uy" secondAttribute="width" id="249-jr-06j"/>
                             <constraint firstItem="Jpi-uD-P63" firstAttribute="top" secondItem="fog-tC-Aj1" secondAttribute="bottom" id="Bwh-xA-ygA"/>
                             <constraint firstItem="Jpi-uD-P63" firstAttribute="leading" secondItem="46X-lw-4Uy" secondAttribute="leading" id="H8v-3z-qGU"/>
-                            <constraint firstItem="MKp-H2-7Dn" firstAttribute="centerX" secondItem="46X-lw-4Uy" secondAttribute="centerX" id="Iad-nx-EbH"/>
-                            <constraint firstItem="MKp-H2-7Dn" firstAttribute="centerY" secondItem="46X-lw-4Uy" secondAttribute="centerY" multiplier="0.9" id="WgF-4p-Dqe"/>
-                            <constraint firstItem="MKp-H2-7Dn" firstAttribute="height" secondItem="46X-lw-4Uy" secondAttribute="height" multiplier="1.1" id="Ywx-Xu-eNL"/>
                             <constraint firstAttribute="trailing" secondItem="Jpi-uD-P63" secondAttribute="trailing" id="kS7-ao-Iil"/>
                             <constraint firstItem="hdS-2z-6kV" firstAttribute="top" secondItem="Jpi-uD-P63" secondAttribute="bottom" id="lum-ur-iR4"/>
                         </constraints>
@@ -914,12 +907,11 @@
         <image name="if_dumbbell_1118213" width="32" height="32"/>
         <image name="if_organizer_1118206" width="32" height="32"/>
         <image name="list" width="398" height="602"/>
-        <image name="muscle" width="218" height="524"/>
         <image name="nut" width="64" height="64"/>
         <image name="profile" width="294" height="441"/>
         <image name="routine" width="260" height="468"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ytr-9Q-XEl"/>
+        <segue reference="CU9-m5-LQL"/>
     </inferredMetricsTieBreakers>
 </document>

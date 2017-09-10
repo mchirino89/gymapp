@@ -26,6 +26,7 @@ extension RoutineController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let routineCell = tableView.cellForRow(at: indexPath) as? RoutineViewCell else { return }
+        // Get all exercise that belongs to this routine via a predicate call to the realm database
         Singleton.selectedRoutine = Singleton.dataSource.objects(Exercise.self).filter("belongsTo == %@", routineDataSource[indexPath.row])
         performSegue(withIdentifier: Constants.Storyboard.routineDetailSegue, sender: [routineCell.idForRoutine as Any, routineCell.routineLabel.text as Any])
     }
