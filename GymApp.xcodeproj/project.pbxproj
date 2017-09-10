@@ -21,7 +21,6 @@
 		222B44B21F4F8341008E17A8 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222B44B11F4F8341008E17A8 /* ProfileController.swift */; };
 		222B44B61F4F9A1A008E17A8 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222B44B51F4F9A1A008E17A8 /* DetailController.swift */; };
 		222FF4D01F62E6600011A523 /* ExercisesImages.json in Resources */ = {isa = PBXBuildFile; fileRef = 222FF4CF1F62E6600011A523 /* ExercisesImages.json */; };
-		222FF4D61F6361C80011A523 /* Routines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222FF4D51F6361C80011A523 /* Routines.swift */; };
 		222FF4DA1F6480500011A523 /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222FF4D91F6480500011A523 /* Routine.swift */; };
 		222FF4DC1F64859A0011A523 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222FF4DB1F64859A0011A523 /* Exercise.swift */; };
 		222FF4DE1F6486820011A523 /* Muscle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222FF4DD1F6486820011A523 /* Muscle.swift */; };
@@ -57,7 +56,6 @@
 		222B44B11F4F8341008E17A8 /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		222B44B51F4F9A1A008E17A8 /* DetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		222FF4CF1F62E6600011A523 /* ExercisesImages.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ExercisesImages.json; sourceTree = "<group>"; };
-		222FF4D51F6361C80011A523 /* Routines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routines.swift; sourceTree = "<group>"; };
 		222FF4D91F6480500011A523 /* Routine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routine.swift; sourceTree = "<group>"; };
 		222FF4DB1F64859A0011A523 /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		222FF4DD1F6486820011A523 /* Muscle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Muscle.swift; sourceTree = "<group>"; };
@@ -153,7 +151,6 @@
 				2213F7631F6175A600213D31 /* ResultList.swift */,
 				2213F7611F616F9100213D31 /* ResultDetails.swift */,
 				2213F7651F61853900213D31 /* ExerciseDetails.swift */,
-				222FF4D51F6361C80011A523 /* Routines.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -423,7 +420,6 @@
 				22638C771F4E7CB900079818 /* RoutineController.swift in Sources */,
 				2213F7601F60A23200213D31 /* Singleton.swift in Sources */,
 				2213F7621F616F9100213D31 /* ResultDetails.swift in Sources */,
-				222FF4D61F6361C80011A523 /* Routines.swift in Sources */,
 				2213F7641F6175A600213D31 /* ResultList.swift in Sources */,
 				222B44B61F4F9A1A008E17A8 /* DetailController.swift in Sources */,
 				2213F7661F61853900213D31 /* ExerciseDetails.swift in Sources */,

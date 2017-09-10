@@ -16,6 +16,8 @@ class Exercise: Object {
     dynamic var secondaryMuscke = ""
     dynamic var equipment = ""
     dynamic var legend = ""
+    dynamic var belongsTo: Routine?
+//    let belongsTo = LinkingObjects(fromType: Routine.self, property: "exercises")
     
     convenience init(id: Int, name: String) {
         self.init()

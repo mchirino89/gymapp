@@ -10,10 +10,9 @@ import RealmSwift
 
 func preFillRealm() {
     do {
-        removeRealm()
+//        removeRealm()
         Singleton.dataSource = try Realm()
         print("Allocating memory for realm file")
-        
         let exercisesForRoutine = [
             ["Bench press", "Cable cross over", "Fly with cable", "Side to side push up", "Bent over barbell row", "Deadlifts", "Chin-ups", "Straight-arm pull down", "Butterfly reverse", "Facepull"],
             ["Hip raise, lying", "Prone scapular retraction - Arms at side", "Side dumbbell trunk flexion", "V-Bar Pulldown", "Rowing T-Bar", "Barbell ab rollout", "Hollow hold", "L hold", "Plank", "Splinter sit-ups"],
@@ -38,7 +37,9 @@ func preFillRealm() {
             ]
             for (i, routine) in customRoutines.enumerated() {
                 for (j, exerciseId) in idForRoutine[i].enumerated() {
-                    routine.exercises.append(Exercise(id: exerciseId, name: exercisesForRoutine[i][j]))
+                    let newExercise = Exercise(id: exerciseId, name: exercisesForRoutine[i][j])
+                    newExercise.belongsTo = routine
+                    routine.exercises.append(newExercise)
                 }
             }
             do {

@@ -12,7 +12,7 @@ import RealmSwift
 final class Singleton {
     static let provider = MoyaProvider<Services>()
     static let imageCache = NSCache<NSString, NSData>()
-    static let dataSources:Routines = Routines()
     static var dataSource:Realm!
+    static var selectedRoutine:Results<Exercise>?
     private init() {}
 }

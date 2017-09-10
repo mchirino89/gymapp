@@ -20,16 +20,16 @@ extension ExerciseController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return muscleGroupList < 2 ? (muscleGroupDataSource?.result?.count ?? 0) : Singleton.dataSources.custom.first!.exercises.count
+        return muscleGroupList < 2 ? (itemsDataSource?.result?.count ?? 0) : (Singleton.selectedRoutine?.count ?? 0)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.Storyboard.cellId, for: indexPath) as! ListViewCell
         // Cell can refer either to a muscle group (abs, arms, legs, etc) or a specific exercise for a previous selected muscle group/routine (squat, push press, crunches, etc)
         if muscleGroupList < 2 {
-            cell.setDetailLabelWithAnimation(muscleGroupDataSource!.result![indexPath.row].name!, muscleGroupDataSource!.result![indexPath.row].id!)
+            cell.setDetailLabelWithAnimation(itemsDataSource!.result![indexPath.row].name!, itemsDataSource!.result![indexPath.row].id!)
         } else {
-            cell.setDetailLabelWithAnimation(Singleton.dataSources.custom.first!.exercises[indexPath.row].name, Singleton.dataSources.custom.first!.exercises[indexPath.row].id)
+            cell.setDetailLabelWithAnimation(Singleton.selectedRoutine![indexPath.row].name, Singleton.selectedRoutine![indexPath.row].id)
         }
         return cell
     }

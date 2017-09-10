@@ -19,7 +19,7 @@ final class ExerciseController: UIViewController {
     var muscleGroupList = 0
     var dataId:Int = 0
     var viewTitle:String?
-    var muscleGroupDataSource:ResultList?
+    var itemsDataSource:ResultList?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,7 +52,7 @@ final class ExerciseController: UIViewController {
         DispatchQueue.global(qos: .userInteractive).async { [weak self] _ in
             guard let view = self else { return }
             JSONResponse(kindOfService: view.muscleGroupList == 0 ? .muscleGroup : .exerciseGroup(id: view.dataId), completion: { (JSONdata) in
-                view.muscleGroupDataSource <-- JSONdata
+                view.itemsDataSource <-- JSONdata
                 DispatchQueue.main.async {
                     view.refreshList()
                 }
