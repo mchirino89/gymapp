@@ -22,6 +22,10 @@
 		222B44B61F4F9A1A008E17A8 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222B44B51F4F9A1A008E17A8 /* DetailController.swift */; };
 		222FF4D01F62E6600011A523 /* ExercisesImages.json in Resources */ = {isa = PBXBuildFile; fileRef = 222FF4CF1F62E6600011A523 /* ExercisesImages.json */; };
 		222FF4D61F6361C80011A523 /* Routines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222FF4D51F6361C80011A523 /* Routines.swift */; };
+		222FF4DA1F6480500011A523 /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222FF4D91F6480500011A523 /* Routine.swift */; };
+		222FF4DC1F64859A0011A523 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222FF4DB1F64859A0011A523 /* Exercise.swift */; };
+		222FF4DE1F6486820011A523 /* Muscle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222FF4DD1F6486820011A523 /* Muscle.swift */; };
+		222FF4E11F64A58A0011A523 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222FF4E01F64A58A0011A523 /* Settings.swift */; };
 		2254D1EF1F4D9DE800B450E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2254D1EE1F4D9DE800B450E5 /* AppDelegate.swift */; };
 		2254D1F11F4D9DE800B450E5 /* ExerciseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2254D1F01F4D9DE800B450E5 /* ExerciseController.swift */; };
 		2254D1F41F4D9DE800B450E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2254D1F21F4D9DE800B450E5 /* Main.storyboard */; };
@@ -54,6 +58,10 @@
 		222B44B51F4F9A1A008E17A8 /* DetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		222FF4CF1F62E6600011A523 /* ExercisesImages.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ExercisesImages.json; sourceTree = "<group>"; };
 		222FF4D51F6361C80011A523 /* Routines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routines.swift; sourceTree = "<group>"; };
+		222FF4D91F6480500011A523 /* Routine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routine.swift; sourceTree = "<group>"; };
+		222FF4DB1F64859A0011A523 /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		222FF4DD1F6486820011A523 /* Muscle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Muscle.swift; sourceTree = "<group>"; };
+		222FF4E01F64A58A0011A523 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		2254D1EB1F4D9DE800B450E5 /* GymApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2254D1EE1F4D9DE800B450E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2254D1F01F4D9DE800B450E5 /* ExerciseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseController.swift; sourceTree = "<group>"; };
@@ -159,6 +167,25 @@
 			name = Moya;
 			sourceTree = "<group>";
 		};
+		222FF4D81F6480350011A523 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				222FF4E01F64A58A0011A523 /* Settings.swift */,
+				222FF4DF1F64A5720011A523 /* Models */,
+			);
+			name = Realm;
+			sourceTree = "<group>";
+		};
+		222FF4DF1F64A5720011A523 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				222FF4DB1F64859A0011A523 /* Exercise.swift */,
+				222FF4DD1F6486820011A523 /* Muscle.swift */,
+				222FF4D91F6480500011A523 /* Routine.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		2254D1E21F4D9DE800B450E5 = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +211,7 @@
 				22638C7A1F4F81A100079818 /* Controllers */,
 				22638C731F4E492D00079818 /* Config */,
 				2213F7571F60972500213D31 /* Network */,
+				222FF4D81F6480350011A523 /* Realm */,
 				22638C6E1F4E38E000079818 /* UI */,
 			);
 			path = GymApp;
@@ -399,12 +427,15 @@
 				2213F7641F6175A600213D31 /* ResultList.swift in Sources */,
 				222B44B61F4F9A1A008E17A8 /* DetailController.swift in Sources */,
 				2213F7661F61853900213D31 /* ExerciseDetails.swift in Sources */,
+				222FF4DE1F6486820011A523 /* Muscle.swift in Sources */,
 				2213F74E1F5DECA800213D31 /* CollectionView.swift in Sources */,
 				22638C701F4E39B600079818 /* ListViewCell.swift in Sources */,
+				222FF4DC1F64859A0011A523 /* Exercise.swift in Sources */,
 				228529C11F53AEFF00F9DFD9 /* ProfileImage.swift in Sources */,
 				22638C721F4E42AC00079818 /* Constants.swift in Sources */,
 				2213F75C1F6099B500213D31 /* Config.swift in Sources */,
 				2213F7491F5DE54600213D31 /* RoutineViewCell.swift in Sources */,
+				222FF4DA1F6480500011A523 /* Routine.swift in Sources */,
 				2213F7521F5EE0F100213D31 /* TextArea.swift in Sources */,
 				2254D1F11F4D9DE800B450E5 /* ExerciseController.swift in Sources */,
 				2213F7561F5EF56600213D31 /* ButtonStyle.swift in Sources */,
@@ -412,6 +443,7 @@
 				225E1FC81F557122000217C3 /* TabsController.swift in Sources */,
 				222B44B21F4F8341008E17A8 /* ProfileController.swift in Sources */,
 				2213F74B1F5DE5CC00213D31 /* TableView.swift in Sources */,
+				222FF4E11F64A58A0011A523 /* Settings.swift in Sources */,
 				228529BF1F534E8600F9DFD9 /* Picker.swift in Sources */,
 				228529BD1F534E5400F9DFD9 /* Textfields.swift in Sources */,
 			);

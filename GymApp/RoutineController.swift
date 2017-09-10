@@ -11,11 +11,13 @@ import UIKit
 final class RoutineController: UIViewController {
     
     @IBOutlet weak var routineTableView: UITableView!
+    var routineDataSource:[Routine] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigationBar(navigationController)
         customBackButton(navigationItem)
+        routineDataSource.append(contentsOf: Singleton.dataSource.objects(Routine.self))
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

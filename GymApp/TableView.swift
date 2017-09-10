@@ -11,15 +11,16 @@ import UIKit
 extension RoutineController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Singleton.dataSources.names.count
+        return routineDataSource.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Storyboard.routineCell) as? RoutineViewCell else {
             return UITableViewCell(style: .default, reuseIdentifier: Constants.Storyboard.routineCell)
         }
-        cell.routineLabel.text = Singleton.dataSources.names[indexPath.row]
-        cell.backgroundImageView.image = Singleton.dataSources.images[indexPath.row]
+        cell.routineLabel.text = routineDataSource[indexPath.row].name
+        cell.backgroundImageView.image = UIImage(named: routineDataSource[indexPath.row].imageName)
+        cell.idForRoutine = routineDataSource[indexPath.row].id
         return cell
     }
     

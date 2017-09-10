@@ -7,10 +7,12 @@
 //
 
 import Moya
+import RealmSwift
 
 final class Singleton {
     static let provider = MoyaProvider<Services>()
-    static let dataSources:Routines = Routines()
     static let imageCache = NSCache<NSString, NSData>()
+    static let dataSources:Routines = Routines()
+    static var dataSource:Realm!
     private init() {}
 }
