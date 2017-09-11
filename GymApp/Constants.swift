@@ -89,12 +89,18 @@ struct Constants {
     }
     
     struct Units {
-        static let topAge = 99
+        static let topAge = 100
         static let minAge = 18
-        static let topWeight = 300
+        static let topWeight = 301
         static let minWeight = 90
-        static let topFootHeight = 9
+        static let topFootHeight = 10
         static let minFootHeight = 3
+        static let age = " years"
+        static let weight = " pounds"
+        static let height = " feet"
+        static let inch = " inches"
+        static let heightSh = " ft "
+        static let inchSh = " in"
     }
     
     struct ErrorMessages {

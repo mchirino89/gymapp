@@ -30,27 +30,25 @@ extension ProfileController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
-//        print("Component: \(component): \(row)")
+        var pickerLabel = view as! UILabel!
+        if pickerLabel == nil {
+            pickerLabel = UILabel()
+        }
+        pickerLabel?.font = UIFont(name: Constants.UIElements.appFont, size: CGFloat(Constants.UIElements.regularFontSize))
+        pickerLabel?.textColor = UIColor.white
+        pickerLabel?.textAlignment = .center
         switch pickerKind {
             case Constants.pickerKind.gender.rawValue:
-                var genderLabel = view as! UILabel!
-                if genderLabel == nil {
-                    genderLabel = UILabel()
-                }
-                genderLabel?.font = UIFont(name: Constants.UIElements.appFont, size: CGFloat(Constants.UIElements.regularFontSize))
-                genderLabel?.textColor = UIColor.white
-                genderLabel?.textAlignment = .center
-                print(pickerView.numberOfComponents)
-                print(pickerView.numberOfRows(inComponent: 0))
-                genderLabel?.text = Constants.UIElements.genders[row]
-                return genderLabel!
-            case Constants.pickerKind.age.rawValue:
-                return UIView()
-            case Constants.pickerKind.weight.rawValue:
-                return UIView()
+                pickerLabel?.text = Constants.UIElements.genders[row]
+                break
+            case Constants.pickerKind.age.rawValue,
+                 Constants.pickerKind.weight.rawValue:
+                pickerLabel?.text = getPickerLabel(row: row)
+                break
             default: // height picker
-                return UIView()
+                pickerLabel?.text = getPickerLabel(row: row, component: component)
         }
+        return pickerLabel!
     }
     
     func pickerViewAnimation(showingPicker: Bool) {
@@ -68,6 +66,20 @@ extension ProfileController: UIPickerViewDelegate, UIPickerViewDataSource {
         if profileImage == #imageLiteral(resourceName: "Male") || profileImage == #imageLiteral(resourceName: "Female") {
             profileImageButton.setBackgroundImage(UIImage(named: Constants.UIElements.genders[row]), for: .normal)
             nameTextField.placeholder = Constants.UIElements.placeholderNames[row]
+        }
+    }
+    
+    func getPickerLabel(row: Int, component: Int = 0, shorten: Bool = false) -> String {
+        switch pickerKind {
+            case Constants.pickerKind.age.rawValue:
+                return String(Constants.Units.minAge + row) + Constants.Units.age
+            case Constants.pickerKind.weight.rawValue:
+                return String(Constants.Units.minWeight + row) + Constants.Units.weight
+            default: // height picker
+                if shorten == false {
+                    return component == 0 ? String(Constants.Units.minFootHeight + row) + Constants.Units.height : String(row + 1) + Constants.Units.inch
+                }
+                return component == 0 ? String(Constants.Units.minFootHeight + row) + Constants.Units.heightSh : String(row + 1) + Constants.Units.inchSh
         }
     }
 }

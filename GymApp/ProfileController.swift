@@ -52,10 +52,14 @@ final class ProfileController: UIViewController {
                 genderButton.setTitle(Constants.UIElements.genders[pickerView.selectedRow(inComponent: 0)], for: .normal)
                 break
             case Constants.pickerKind.age.rawValue:
+                ageButton.setTitle(getPickerLabel(row: pickerView.selectedRow(inComponent: 0)), for: .normal)
                 break
             case Constants.pickerKind.weight.rawValue:
+                weightButton.setTitle(getPickerLabel(row: pickerView.selectedRow(inComponent: 0)), for: .normal)
                 break
             default: // height picker
+                let shortenHeight = getPickerLabel(row: pickerView.selectedRow(inComponent: 0), component: 0, shorten: true) + getPickerLabel(row: pickerView.selectedRow(inComponent: 1), component: 1, shorten: true)
+                heightButton.setTitle(shortenHeight, for: .normal)
                 break
         }
         pickerViewAnimation(showingPicker: false)
