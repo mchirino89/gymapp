@@ -96,10 +96,14 @@ final class DetailController: UIViewController {
                 let json = try JSONSerialization.jsonObject(with: data, options: [])
                 if let object = json as? [String: Any] {
                     exerciseImageDictionary <-- object
-                    let _ = exerciseImageDictionary?.result?
+                    let imagesForExercise = exerciseImageDictionary?.result?
                         .filter({ $0.id == exerciseId })
                         .map {
                             setExerciseImage(sourceURL: $0.name!)
+                    }
+                    if imagesForExercise!.isEmpty {
+                        exerciseImageView.image = #imageLiteral(resourceName: "dumbbell")
+                        imageActivityIndicator.stopAnimating()
                     }
                 } else {
                     print(Constants.ErrorMessages.invalidJSON)
@@ -122,6 +126,7 @@ final class DetailController: UIViewController {
                     return
                 }
                 view.exerciseImages.append(UIImage(data: imageData)!)
+                view.exerciseImageView.backgroundColor = UIColor.white
                 Singleton.imageCache.setObject(imageData as NSData, forKey: sourceURL as NSString)
                 view.generateExerciseGIF(Constants.UIElements.exerciseGIF)
             }).resume()

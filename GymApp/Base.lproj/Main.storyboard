@@ -378,9 +378,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dumbbell" translatesAutoresizingMaskIntoConstraints="NO" id="LbW-qA-TAs">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LbW-qA-TAs">
                                 <rect key="frame" x="79.5" y="80" width="216" height="216"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="LbW-qA-TAs" secondAttribute="height" multiplier="1:1" id="j6L-l6-fML"/>
                                 </constraints>
@@ -942,7 +942,6 @@
         <image name="back" width="238" height="153"/>
         <image name="backHand" width="24" height="24"/>
         <image name="details" width="286" height="451"/>
-        <image name="dumbbell" width="134" height="134"/>
         <image name="if_Resume_Female_2316249" width="32" height="32"/>
         <image name="if_dumbbell_1118213" width="32" height="32"/>
         <image name="if_organizer_1118206" width="32" height="32"/>
