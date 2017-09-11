@@ -27,6 +27,7 @@ final class ProfileController: UIViewController {
         setNavigationBar(navigationController)
         profileImagePicker.delegate = self
         let userProfile = Singleton.dataSource.objects(Profile.self)
+        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismissKeyboardAction)))
         if !userProfile.isEmpty {
             guard let userInfo = userProfile.first else {
                 print(Constants.ErrorMessages.invalidUserInfo)
@@ -81,6 +82,10 @@ final class ProfileController: UIViewController {
         }
     }
     
+    func dismissKeyboardAction() {
+        view.endEditing(true)
+    }
+    
     @IBAction func imagePickerAction() {
         profileImagePicker.allowsEditing = false
         profileImagePicker.sourceType = .photoLibrary
@@ -88,6 +93,7 @@ final class ProfileController: UIViewController {
     }
 
     @IBAction func pickerAction(_ sender: UIButton) {
+        dismissKeyboardAction()
         pickerKind = sender.tag
         pickerView.reloadAllComponents()
         pickerViewAnimation(showingPicker: true)
