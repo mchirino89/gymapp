@@ -7,7 +7,6 @@
 //
 
 import RealmSwift
-import Realm
 
 class Routine: Object {
     dynamic var id = 0

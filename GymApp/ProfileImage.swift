@@ -13,6 +13,7 @@ extension ProfileController: UIImagePickerControllerDelegate, UINavigationContro
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             profileImageButton.setImage(pickedImage, for: .normal)
+            profileImageButton.setBackgroundImage(nil, for: .normal)
         } else {
             print(Constants.ErrorMessages.wrongImageFormat)
         }

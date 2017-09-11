@@ -86,6 +86,10 @@ struct Constants {
         static let exerciseGenericTag = "General exercise"
         static let nonApplicable = "N/A"
         static let connector = " and "
+        static let genderPlaceholder = "Your gender"
+        static let agePlaceholder = "Your age"
+        static let weightPlaceholder = "Your weight"
+        static let heightPlaceholder = "Your height"
     }
     
     struct Units {
@@ -116,6 +120,7 @@ struct Constants {
         static let noImage = "No image data"
         static let noJSONfile = "No JSON file in specified route"
         static let invalidJSON = "Misformatted JSON file"
+        static let invalidUserInfo = "Unable to retrieved previously stored user data"
     }
     
     struct UIMessages {

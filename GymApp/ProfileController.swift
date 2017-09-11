@@ -26,11 +26,59 @@ final class ProfileController: UIViewController {
         super.viewDidLoad()
         setNavigationBar(navigationController)
         profileImagePicker.delegate = self
+        let userProfile = Singleton.dataSource.objects(Profile.self)
+        if !userProfile.isEmpty {
+            guard let userInfo = userProfile.first else {
+                print(Constants.ErrorMessages.invalidUserInfo)
+                return
+            }
+            nameTextField.text = userInfo.name
+            if let profileImage = userInfo.image {
+                profileImageButton.setImage(UIImage(data: profileImage), for: .normal)
+            }
+            if let gender = userInfo.gender {
+                genderButton.setTitle(gender, for: .normal)
+            }
+            if let age = userInfo.age {
+                ageButton.setTitle(age, for: .normal)
+            }
+            if let weight = userInfo.weight {
+                weightButton.setTitle(weight, for: .normal)
+            }
+            if let height = userInfo.height {
+                heightButton.setTitle(height, for: .normal)
+            }
+        }
     }
     
     //# Save any changes in the profile in Realm
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        let updateProfile = Profile()
+        let profileImage = profileImageButton.currentBackgroundImage
+        updateProfile.name = nameTextField.text
+        if profileImage != #imageLiteral(resourceName: "Male") && profileImage != #imageLiteral(resourceName: "Female") {
+            updateProfile.image = UIImagePNGRepresentation(profileImageButton.currentImage!)
+        }
+        if genderButton.currentTitle != Constants.UIElements.genderPlaceholder {
+            updateProfile.gender = genderButton.currentTitle
+        }
+        if ageButton.currentTitle != Constants.UIElements.agePlaceholder {
+            updateProfile.age = ageButton.currentTitle
+        }
+        if weightButton.currentTitle != Constants.UIElements.weightPlaceholder {
+            updateProfile.weight = weightButton.currentTitle
+        }
+        if heightButton.currentTitle != Constants.UIElements.heightPlaceholder {
+            updateProfile.height = heightButton.currentTitle
+        }
+        do {
+            try Singleton.dataSource.write {
+                Singleton.dataSource.add(updateProfile, update: true)
+            }
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
     }
     
     @IBAction func imagePickerAction() {
