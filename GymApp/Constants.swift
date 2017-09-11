@@ -90,6 +90,7 @@ struct Constants {
         static let agePlaceholder = "Your age"
         static let weightPlaceholder = "Your weight"
         static let heightPlaceholder = "Your height"
+        static let reloadButton = "Refresh"
     }
     
     struct Units {

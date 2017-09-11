@@ -9,6 +9,7 @@
 import UIKit
 import JSONHelper
 import Moya
+import Alamofire
 
 final class DetailController: UIViewController {
 
@@ -22,7 +23,6 @@ final class DetailController: UIViewController {
     @IBOutlet weak var equipmentLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var imageActivityIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var loadAgainButton: UIButton!
     
     var exerciseId:Int = 0
     var exerciseName:String = ""
@@ -34,22 +34,24 @@ final class DetailController: UIViewController {
         super.viewDidLoad()
         title = Constants.DetailView.title
         exerciseNameLabel.text = exerciseName
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(rightButtonAction(sender:)))
         readJSONlist()
         loadDetails()
     }
     
-    @IBAction func loadAgainAction() {
+    func rightButtonAction(sender: UIBarButtonItem) {
         loadDetails()
     }
     
     private func loadDetails() {
+        reloadButton(isShowing: false)
         viewLoader(true)
         DispatchQueue.global(qos: .userInteractive).async { [weak self] in
             guard let view = self else { return }
             JSONResponse(kindOfService: .exerciseDetails(id: view.exerciseId), completion: { (JSONdata) in
                 guard let parsedData = JSONdata else {
                     // make visible "load again" button
-                    view.loadAgainButton.isHidden = false
+                    view.reloadButton(isShowing: true)
                     view.viewLoader(false)
                     return
                 }
@@ -64,6 +66,11 @@ final class DetailController: UIViewController {
                 }
             })
         }
+    }
+    
+    private func reloadButton(isShowing: Bool) {
+        navigationItem.rightBarButtonItem?.isEnabled = isShowing
+        navigationItem.rightBarButtonItem?.tintColor = isShowing ? UIColor.white : UIColor.clear
     }
     
     private func makeListSentence(list: [ResultDetails]?) -> String {
@@ -118,18 +125,22 @@ final class DetailController: UIViewController {
     
     private func setExerciseImage(sourceURL: String) {
         guard let storedImage = Singleton.imageCache.object(forKey: sourceURL as NSString) else {
-            let imageRequest = Singleton.provider.manager.request(URL(string: sourceURL)!)
-            imageRequest.responseData(completionHandler: { [weak self] (requestData) in
-                guard let view = self else { return }
-                guard let imageData = requestData.data else {
-                    print(Constants.ErrorMessages.noImage)
-                    return
-                }
-                view.exerciseImages.append(UIImage(data: imageData)!)
-                view.exerciseImageView.backgroundColor = UIColor.white
-                Singleton.imageCache.setObject(imageData as NSData, forKey: sourceURL as NSString)
-                view.generateExerciseGIF(Constants.UIElements.exerciseGIF)
-            }).resume()
+            if (NetworkReachabilityManager()?.isReachable)! {
+                let imageRequest = Singleton.provider.manager.request(URL(string: sourceURL)!)
+                imageRequest.responseData(completionHandler: { [weak self] (requestData) in
+                    guard let view = self else { return }
+                    guard let imageData = requestData.data else {
+                        print(Constants.ErrorMessages.noImage)
+                        return
+                    }
+                    view.exerciseImages.append(UIImage(data: imageData)!)
+                    view.exerciseImageView.backgroundColor = UIColor.white
+                    Singleton.imageCache.setObject(imageData as NSData, forKey: sourceURL as NSString)
+                    view.generateExerciseGIF(Constants.UIElements.exerciseGIF)
+                }).resume()
+            } else {
+                setDumbbellPlaceholder()
+            }
             return
         }
         exerciseImages.append(UIImage(data: storedImage as Data)!)
@@ -139,6 +150,11 @@ final class DetailController: UIViewController {
     // Hides/Shows vissual effect + activity indicator view
     private func viewLoader(_ isVisible: Bool) {
         loadingVisualEffectView.isHidden = !isVisible
+    }
+    
+    private func setDumbbellPlaceholder() {
+        exerciseImageView.image = #imageLiteral(resourceName: "dumbbell")
+        imageActivityIndicator.stopAnimating()
     }
     
     func generateExerciseGIF(_ delayInSeconds : Int) {
