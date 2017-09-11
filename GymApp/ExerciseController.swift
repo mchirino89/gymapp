@@ -15,6 +15,7 @@ final class ExerciseController: UIViewController {
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var refreshListVisualEffect: UIVisualEffectView!
     @IBOutlet weak var exerciseTagLabel: UILabel?
+    @IBOutlet weak var loadAgainButton: UIButton!
     
     var muscleGroupList = 0
     var dataId:Int = 0
@@ -46,13 +47,24 @@ final class ExerciseController: UIViewController {
         }
     }
     
+    @IBAction func loadAgainAction() {
+        loadList()
+    }
+    
     // Deppending on which view this is called, the right endpoint for retrieving data will be called
     private func loadList() {
+        loadAgainButton.isHidden = true
         viewLoader(true)
         DispatchQueue.global(qos: .userInteractive).async { [weak self] _ in
             guard let view = self else { return }
             JSONResponse(kindOfService: view.muscleGroupList == 0 ? .muscleGroup : .exerciseGroup(id: view.dataId), completion: { (JSONdata) in
-                view.itemsDataSource <-- JSONdata
+                guard let parsedData = JSONdata else {
+                    // make visible "load again" button
+                    view.loadAgainButton.isHidden = false
+                    view.viewLoader(false)
+                    return
+                }
+                view.itemsDataSource <-- parsedData
                 DispatchQueue.main.async {
                     view.refreshList()
                 }

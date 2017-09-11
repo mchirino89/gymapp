@@ -17,6 +17,13 @@ struct Constants {
         case equipment
     }
     
+    enum pickerKind: Int {
+        case gender = 1
+        case age
+        case weight
+        case height
+    }
+    
     struct APIConfiguration {
         static let rootURL = "https://wger.de/api/v2"
     }
@@ -119,10 +126,6 @@ struct Constants {
     struct DetailView {
         static let title = "Details"
     }
-    
-    struct RegularExpressions {
-        static let age = "[0-9]+"
-    }
 }
 
 func setNavigationBar(_ navigationController: UINavigationController?) {
@@ -150,7 +153,7 @@ func questionPopup(title: String, message: String, style: UIAlertControllerStyle
 
 func JSONResponse(kindOfService: Services, completion: @escaping (_ response: AnyObject?) ->()) {
     Singleton.provider.request(kindOfService, completion: { data in
-        print(kindOfService.baseURL.absoluteString+kindOfService.path)
+//        print(kindOfService.baseURL.absoluteString + kindOfService.path)
         switch data {
         case let .success(moyaResponse):
             do {
@@ -163,16 +166,33 @@ func JSONResponse(kindOfService: Services, completion: @escaping (_ response: An
                     print("Something went wrong mapping \(kindOfService.path) JSON request")
                     print(data.debugDescription)
                     print("Error code: ", moyaResponse.statusCode)
+                    failureInConnectionAlert(invalidCompletion: completion)
                 }
             } catch {
                 print("Something went wrong on \(kindOfService.path) request, code: ", data.value!.statusCode)
+                failureInConnectionAlert(invalidCompletion: completion)
             }
         case let .failure(error):
-            // If failure isn't caused by manual call cancellation
-            if error._code != 4 {
-                print(error._code)
-                print(error)
-            }
+            print(error._code)
+            print(error)
+            failureInConnectionAlert(invalidCompletion: completion)
         }
     })
+}
+
+func showLoadingButton() {
+    
+}
+
+private func failureInConnectionAlert(invalidCompletion: ((AnyObject?) -> Void)) {
+    if var topController = UIApplication.shared.keyWindow?.rootViewController {
+        while let presentedViewController = topController.presentedViewController {
+            topController = presentedViewController
+        }
+        invalidCompletion(nil)
+        topController.present(getPopupAlert(message: Constants.ErrorMessages.internetConnection), animated: true)
+    } else {
+        print("Impossible to access current view controller")
+    }
+    
 }

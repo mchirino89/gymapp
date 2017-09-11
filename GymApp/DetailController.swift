@@ -22,6 +22,7 @@ final class DetailController: UIViewController {
     @IBOutlet weak var equipmentLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var imageActivityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var loadAgainButton: UIButton!
     
     var exerciseId:Int = 0
     var exerciseName:String = ""
@@ -34,17 +35,32 @@ final class DetailController: UIViewController {
         title = Constants.DetailView.title
         exerciseNameLabel.text = exerciseName
         readJSONlist()
+        loadDetails()
+    }
+    
+    @IBAction func loadAgainAction() {
+        loadDetails()
+    }
+    
+    private func loadDetails() {
+        viewLoader(true)
         DispatchQueue.global(qos: .userInteractive).async { [weak self] in
             guard let view = self else { return }
             JSONResponse(kindOfService: .exerciseDetails(id: view.exerciseId), completion: { (JSONdata) in
-                view.exerciseInfo <-- JSONdata
+                guard let parsedData = JSONdata else {
+                    // make visible "load again" button
+                    view.loadAgainButton.isHidden = false
+                    view.viewLoader(false)
+                    return
+                }
+                view.exerciseInfo <-- parsedData
                 DispatchQueue.main.async {
                     view.categoryLabel.text? += view.exerciseInfo!.category!.name!
                     view.exerciseDescriptionTextView.text = view.exerciseInfo?.description
                     view.mainMuscleLabel.text? += view.makeListSentence(list: view.exerciseInfo?.muscles?.result)
                     view.secondaryMusclesLabel.text? += view.makeListSentence(list: view.exerciseInfo?.secondaryMuscles?.result)
                     view.equipmentLabel.text? += view.makeListSentence(list: view.exerciseInfo?.equipment?.result)
-                    view.loadingVisualEffectView.isHidden = true
+                    view.viewLoader(false)
                 }
             })
         }
@@ -113,6 +129,11 @@ final class DetailController: UIViewController {
         }
         exerciseImages.append(UIImage(data: storedImage as Data)!)
         generateExerciseGIF(Constants.UIElements.exerciseGIF)
+    }
+    
+    // Hides/Shows vissual effect + activity indicator view
+    private func viewLoader(_ isVisible: Bool) {
+        loadingVisualEffectView.isHidden = !isVisible
     }
     
     func generateExerciseGIF(_ delayInSeconds : Int) {

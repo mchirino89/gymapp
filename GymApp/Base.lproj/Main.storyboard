@@ -94,7 +94,7 @@
                                                 <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CYR-ch-g4o">
                                                     <rect key="frame" x="8" y="9.5" width="139.5" height="127.5"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="NJg-zQ-Gw9">
-                                                        <rect key="frame" x="0.0" y="0.0" width="139" height="128"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="139.5" height="127.5"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <subviews>
                                                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shoulders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uzl-0y-NFw">
@@ -138,6 +138,19 @@
                                     <outlet property="delegate" destination="w88-78-r6J" id="7rm-Ay-NED"/>
                                 </connections>
                             </collectionView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="hBQ-Kh-zIK">
+                                <rect key="frame" x="127.5" y="318" width="120" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="nb6-ke-69N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="18"/>
+                                <state key="normal" title="Click here to try again">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loadAgainAction" destination="w88-78-r6J" eventType="touchUpInside" id="XnP-Cs-dFE"/>
+                                </connections>
+                            </button>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GaX-2A-GJC">
                                 <rect key="frame" x="150" y="296" width="75" height="75"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="NWU-Sa-E5Y">
@@ -166,6 +179,7 @@
                             <constraint firstItem="ugo-vh-HUd" firstAttribute="centerX" secondItem="NZW-Qz-W67" secondAttribute="centerX" id="4CM-6e-03l"/>
                             <constraint firstItem="GaX-2A-GJC" firstAttribute="width" secondItem="bzd-6l-DyR" secondAttribute="width" multiplier="0.2" id="Bi7-cC-JEq"/>
                             <constraint firstItem="GaX-2A-GJC" firstAttribute="width" secondItem="GaX-2A-GJC" secondAttribute="height" multiplier="1:1" id="IVc-fB-caG"/>
+                            <constraint firstItem="hBQ-Kh-zIK" firstAttribute="centerY" secondItem="bzd-6l-DyR" secondAttribute="centerY" id="KDR-py-8vt"/>
                             <constraint firstItem="NZW-Qz-W67" firstAttribute="centerX" secondItem="bzd-6l-DyR" secondAttribute="centerX" id="MZ2-8H-tnd"/>
                             <constraint firstItem="cZU-eQ-YJI" firstAttribute="top" secondItem="ugo-vh-HUd" secondAttribute="bottom" id="Pgv-Ga-dbe"/>
                             <constraint firstItem="NZW-Qz-W67" firstAttribute="width" secondItem="bzd-6l-DyR" secondAttribute="width" id="Q3C-7o-eff"/>
@@ -174,6 +188,7 @@
                             <constraint firstItem="GaX-2A-GJC" firstAttribute="centerY" secondItem="bzd-6l-DyR" secondAttribute="centerY" id="m0k-Ap-rmz"/>
                             <constraint firstItem="ugo-vh-HUd" firstAttribute="top" secondItem="Q2f-AX-QQS" secondAttribute="bottom" id="tK0-BS-FB0"/>
                             <constraint firstItem="NZW-Qz-W67" firstAttribute="centerY" secondItem="bzd-6l-DyR" secondAttribute="centerY" id="tLw-aM-nCX"/>
+                            <constraint firstItem="hBQ-Kh-zIK" firstAttribute="centerX" secondItem="bzd-6l-DyR" secondAttribute="centerX" id="vmp-78-3fd"/>
                             <constraint firstItem="NZW-Qz-W67" firstAttribute="height" secondItem="bzd-6l-DyR" secondAttribute="height" id="z1D-kl-rzX"/>
                         </constraints>
                     </view>
@@ -183,13 +198,14 @@
                     <connections>
                         <outlet property="backgroundImageView" destination="NZW-Qz-W67" id="hm3-ow-rPK"/>
                         <outlet property="listCollectionView" destination="ugo-vh-HUd" id="huT-w3-klY"/>
+                        <outlet property="loadAgainButton" destination="hBQ-Kh-zIK" id="1lX-YQ-4VC"/>
                         <outlet property="refreshListVisualEffect" destination="GaX-2A-GJC" id="9GP-LS-f6w"/>
                         <segue destination="BCO-RW-R6g" kind="show" identifier="muscleDetailsSegue" id="ytr-9Q-XEl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nZI-2O-G1u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1676.25" y="-458.45070422535213"/>
+            <point key="canvasLocation" x="-1677.5999999999999" y="-459.22038980509751"/>
         </scene>
         <!--Listing-->
         <scene sceneID="2Uf-f1-4Xz">
@@ -273,7 +289,7 @@
                                 </connections>
                             </collectionView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dax-Kg-dJn">
-                                <rect key="frame" x="149.5" y="295.5" width="75" height="75"/>
+                                <rect key="frame" x="150" y="296" width="75" height="75"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ODh-JG-V0S">
                                     <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -297,6 +313,19 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </visualEffectView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="RxU-GT-UD1">
+                                <rect key="frame" x="127" y="318" width="120" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="jHj-Zx-JyA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="18"/>
+                                <state key="normal" title="Click here to try again">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loadAgainAction" destination="w88-78-r6J" eventType="touchUpInside" id="pjz-9y-a7R"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -311,10 +340,12 @@
                             <constraint firstItem="vYj-YY-U5N" firstAttribute="centerX" secondItem="me1-A4-ria" secondAttribute="centerX" id="I4b-wW-QlO"/>
                             <constraint firstItem="J2W-ix-g4I" firstAttribute="height" secondItem="me1-A4-ria" secondAttribute="height" id="LPG-PK-CI4"/>
                             <constraint firstItem="qOo-FS-x4x" firstAttribute="width" secondItem="me1-A4-ria" secondAttribute="width" id="Mkb-JP-HtK"/>
+                            <constraint firstItem="RxU-GT-UD1" firstAttribute="centerY" secondItem="me1-A4-ria" secondAttribute="centerY" id="Pzm-tW-AMC"/>
                             <constraint firstItem="J2W-ix-g4I" firstAttribute="centerX" secondItem="me1-A4-ria" secondAttribute="centerX" id="Rjo-fe-oYw"/>
                             <constraint firstItem="qOo-FS-x4x" firstAttribute="centerX" secondItem="me1-A4-ria" secondAttribute="centerX" id="T3i-IT-QXD"/>
                             <constraint firstItem="Dax-Kg-dJn" firstAttribute="centerX" secondItem="me1-A4-ria" secondAttribute="centerX" id="cWT-Xp-E1Y"/>
                             <constraint firstItem="vYj-YY-U5N" firstAttribute="height" secondItem="me1-A4-ria" secondAttribute="height" multiplier="0.075" id="gXc-Fa-etT"/>
+                            <constraint firstItem="RxU-GT-UD1" firstAttribute="centerX" secondItem="me1-A4-ria" secondAttribute="centerX" id="jvp-vB-8ZQ"/>
                         </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
@@ -322,6 +353,7 @@
                         <outlet property="backgroundImageView" destination="J2W-ix-g4I" id="srl-os-e5q"/>
                         <outlet property="exerciseTagLabel" destination="vYj-YY-U5N" id="hOU-0L-BuU"/>
                         <outlet property="listCollectionView" destination="qOo-FS-x4x" id="6MT-85-Wsv"/>
+                        <outlet property="loadAgainButton" destination="RxU-GT-UD1" id="2N0-i0-4NU"/>
                         <outlet property="refreshListVisualEffect" destination="Dax-Kg-dJn" id="xHb-8u-PSq"/>
                         <segue destination="MBB-fV-NY0" kind="show" identifier="specificDetailSegue" id="sfw-kR-qd2"/>
                     </connections>
@@ -347,7 +379,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dumbbell" translatesAutoresizingMaskIntoConstraints="NO" id="LbW-qA-TAs">
-                                <rect key="frame" x="79.5" y="80" width="216" height="215.5"/>
+                                <rect key="frame" x="79.5" y="80" width="216" height="216"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="LbW-qA-TAs" secondAttribute="height" multiplier="1:1" id="j6L-l6-fML"/>
@@ -359,17 +391,17 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="fle-ty-KFZ">
-                                <rect key="frame" x="168.5" y="170" width="37" height="37"/>
+                                <rect key="frame" x="168.5" y="169.5" width="37" height="37"/>
                                 <color key="color" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="French Press (skullcrusher) SZ-bar" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="CBC-Xc-Q2C">
-                                <rect key="frame" x="32.5" y="303.5" width="309" height="50"/>
+                                <rect key="frame" x="32.5" y="304" width="309" height="50"/>
                                 <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Sli-aO-9Cw">
-                                <rect key="frame" x="19" y="361.5" width="337.5" height="133.5"/>
+                                <rect key="frame" x="19" y="362" width="337.5" height="133.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category: " lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gws-Ex-jmU">
                                         <rect key="frame" x="0.0" y="0.0" width="337.5" height="33.5"/>
@@ -398,13 +430,13 @@
                                 </subviews>
                             </stackView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qef-cw-YBP">
-                                <rect key="frame" x="0.0" y="503" width="375" height="142"/>
+                                <rect key="frame" x="0.0" y="503.5" width="375" height="141.5"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="CS2-Cl-xQf">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="142"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="141.5"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZ1-3G-Cue">
-                                            <rect key="frame" x="14.5" y="1.5" width="346.5" height="138.5"/>
+                                            <rect key="frame" x="14.5" y="1.5" width="346.5" height="138"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="18"/>
@@ -424,13 +456,13 @@
                                 <blurEffect style="dark"/>
                             </visualEffectView>
                             <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nTX-XG-JEu">
-                                <rect key="frame" x="149.5" y="295.5" width="76" height="76"/>
+                                <rect key="frame" x="150" y="296" width="75" height="75"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Cmn-YM-3fM">
-                                    <rect key="frame" x="0.0" y="0.0" width="76" height="76"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="bAp-eX-5It">
-                                            <rect key="frame" x="19.5" y="19.5" width="37" height="37"/>
+                                            <rect key="frame" x="19" y="19" width="37" height="37"/>
                                             <color key="color" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </activityIndicatorView>
                                     </subviews>
@@ -454,6 +486,20 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </visualEffectView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="GOn-fv-euB">
+                                <rect key="frame" x="127" y="318" width="120" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="ERF-5L-VdJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="18"/>
+                                <state key="normal" title="Click here to try again">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loadAgainAction" destination="MBB-fV-NY0" eventType="touchUpInside" id="NVl-Sq-fzW"/>
+                                    <action selector="loadAgainAction" destination="w88-78-r6J" eventType="touchUpInside" id="tTA-RH-dBn"/>
+                                </connections>
+                            </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vZU-5I-hvP" customClass="ButtonStyle" customModule="GymApp" customModuleProvider="target">
                                 <rect key="frame" x="305" y="595" width="60" height="60"/>
                                 <constraints>
@@ -489,6 +535,7 @@
                             <constraint firstItem="fle-ty-KFZ" firstAttribute="centerX" secondItem="LbW-qA-TAs" secondAttribute="centerX" id="2vK-Nl-r4q"/>
                             <constraint firstItem="BKQ-2x-tas" firstAttribute="centerY" secondItem="LYo-8g-C53" secondAttribute="centerY" id="5kt-ya-nGq"/>
                             <constraint firstItem="Sli-aO-9Cw" firstAttribute="top" secondItem="CBC-Xc-Q2C" secondAttribute="bottom" constant="8" id="8YW-rS-K6r"/>
+                            <constraint firstItem="GOn-fv-euB" firstAttribute="centerX" secondItem="LYo-8g-C53" secondAttribute="centerX" id="Cmk-Hg-9LR"/>
                             <constraint firstItem="nTX-XG-JEu" firstAttribute="width" secondItem="LbW-qA-TAs" secondAttribute="width" multiplier="0.35" id="DlC-7B-tRU"/>
                             <constraint firstAttribute="trailing" secondItem="vZU-5I-hvP" secondAttribute="trailing" constant="10" id="Ei8-2z-cNl"/>
                             <constraint firstItem="nTX-XG-JEu" firstAttribute="centerX" secondItem="LYo-8g-C53" secondAttribute="centerX" id="Fes-m8-1m9"/>
@@ -506,6 +553,7 @@
                             <constraint firstItem="LbW-qA-TAs" firstAttribute="centerX" secondItem="LYo-8g-C53" secondAttribute="centerX" id="lbs-zw-2aQ"/>
                             <constraint firstItem="Sli-aO-9Cw" firstAttribute="bottom" secondItem="Qef-cw-YBP" secondAttribute="top" constant="-8" id="n0Q-rw-Ow8"/>
                             <constraint firstItem="LbW-qA-TAs" firstAttribute="bottom" secondItem="CBC-Xc-Q2C" secondAttribute="top" constant="-8" id="p7b-gD-Jqm"/>
+                            <constraint firstItem="GOn-fv-euB" firstAttribute="centerY" secondItem="LYo-8g-C53" secondAttribute="centerY" id="qfE-7v-4zv"/>
                             <constraint firstItem="nTX-XG-JEu" firstAttribute="centerY" secondItem="LYo-8g-C53" secondAttribute="centerY" id="uIP-PH-wH8"/>
                             <constraint firstItem="Qef-cw-YBP" firstAttribute="centerX" secondItem="LYo-8g-C53" secondAttribute="centerX" id="wpD-vv-ysy"/>
                             <constraint firstItem="BKQ-2x-tas" firstAttribute="height" secondItem="LYo-8g-C53" secondAttribute="height" id="ySI-D5-wwC"/>
@@ -527,6 +575,7 @@
                         <outlet property="exerciseImageView" destination="LbW-qA-TAs" id="3e8-RK-hAG"/>
                         <outlet property="exerciseNameLabel" destination="CBC-Xc-Q2C" id="igY-Z6-fz4"/>
                         <outlet property="imageActivityIndicator" destination="fle-ty-KFZ" id="vSQ-Cr-dE2"/>
+                        <outlet property="loadAgainButton" destination="GOn-fv-euB" id="cu5-V9-EzH"/>
                         <outlet property="loadingVisualEffectView" destination="nTX-XG-JEu" id="t6i-gI-1kg"/>
                         <outlet property="mainMuscleLabel" destination="3uf-NC-Byo" id="Y7y-rc-VWE"/>
                         <outlet property="secondaryMusclesLabel" destination="LXA-cZ-bSs" id="lHw-1o-FSQ"/>
@@ -724,7 +773,7 @@
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6LI-lx-nau">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6LI-lx-nau">
                                                 <rect key="frame" x="187.5" y="17" width="187.5" height="35"/>
                                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
                                                 <state key="normal" title="Your gender">
@@ -732,7 +781,7 @@
                                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="pickGenderAction" destination="uJf-lP-LZH" eventType="touchUpInside" id="fWt-Zg-8Cy"/>
+                                                    <action selector="pickerAction:" destination="uJf-lP-LZH" eventType="touchUpInside" id="1cN-kG-ZAl"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -746,20 +795,17 @@
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Enter age" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wSr-Lc-BVc">
-                                                <rect key="frame" x="187.5" y="23" width="187.5" height="23"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Krv-sb-QPv">
+                                                <rect key="frame" x="187.5" y="17" width="187.5" height="35"/>
                                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="light" returnKeyType="done"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
-                                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
+                                                <state key="normal" title="Your age">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </state>
                                                 <connections>
-                                                    <outlet property="delegate" destination="uJf-lP-LZH" id="zak-ts-nuf"/>
+                                                    <action selector="pickerAction:" destination="uJf-lP-LZH" eventType="touchUpInside" id="yAr-ro-wVg"/>
                                                 </connections>
-                                            </textField>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MEL-CZ-w29">
@@ -771,20 +817,17 @@
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Enter weigth" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W8R-Ta-cof">
-                                                <rect key="frame" x="187.5" y="23.5" width="187.5" height="23"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bhn-ei-bfC">
+                                                <rect key="frame" x="187.5" y="17.5" width="187.5" height="35"/>
                                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="light" returnKeyType="done"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
-                                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
+                                                <state key="normal" title="Your weight">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </state>
                                                 <connections>
-                                                    <outlet property="delegate" destination="uJf-lP-LZH" id="STm-0N-sya"/>
+                                                    <action selector="pickerAction:" destination="uJf-lP-LZH" eventType="touchUpInside" id="A5b-g3-Na1"/>
                                                 </connections>
-                                            </textField>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="idi-W3-nbS">
@@ -796,20 +839,17 @@
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Enter heigth" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DYl-y9-WuU">
-                                                <rect key="frame" x="187.5" y="23" width="187.5" height="23"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wCx-Tg-0P0">
+                                                <rect key="frame" x="187.5" y="17" width="187.5" height="35"/>
                                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="light" returnKeyType="done"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
-                                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
+                                                <state key="normal" title="Your height">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </state>
                                                 <connections>
-                                                    <outlet property="delegate" destination="uJf-lP-LZH" id="bCu-Cv-Wj7"/>
+                                                    <action selector="pickerAction:" destination="uJf-lP-LZH" eventType="touchUpInside" id="DHD-eQ-4D7"/>
                                                 </connections>
-                                            </textField>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -882,14 +922,14 @@
                     <navigationItem key="navigationItem" title="Profile" id="MHm-rH-QUs"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="ageTextField" destination="wSr-Lc-BVc" id="6RM-QJ-iz6"/>
+                        <outlet property="ageButton" destination="Krv-sb-QPv" id="Mrc-iR-0YT"/>
                         <outlet property="genderButton" destination="6LI-lx-nau" id="iKF-3W-TQe"/>
                         <outlet property="genderPickerView" destination="3GD-Pp-2a4" id="wnJ-11-IHM"/>
-                        <outlet property="genderVerticalLayoutConstraint" destination="sXr-Vp-acW" id="c84-1U-Bjd"/>
-                        <outlet property="heightTextField" destination="DYl-y9-WuU" id="4lh-FI-uKh"/>
+                        <outlet property="heightButton" destination="wCx-Tg-0P0" id="Rho-Xz-VEP"/>
                         <outlet property="nameTextField" destination="0fs-ve-xnX" id="gux-Xd-ARK"/>
+                        <outlet property="pickerVerticalLayoutConstraint" destination="sXr-Vp-acW" id="Q0y-wf-Wo6"/>
                         <outlet property="profileImageButton" destination="dcI-8K-Us8" id="4z9-r6-Kon"/>
-                        <outlet property="weightTextField" destination="W8R-Ta-cof" id="4Ta-ov-MgP"/>
+                        <outlet property="weightButton" destination="Bhn-ei-bfC" id="zwu-Jb-2VT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="849-q3-Vdg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -912,6 +952,6 @@
         <image name="routine" width="260" height="468"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="CU9-m5-LQL"/>
+        <segue reference="ytr-9Q-XEl"/>
     </inferredMetricsTieBreakers>
 </document>
