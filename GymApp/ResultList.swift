@@ -18,9 +18,9 @@ final class ResultList: Deserializable {
     
     required init(dictionary: [String : Any], kindOfResult: Int) {
         switch kindOfResult {
-        case 1:
+        case Constants.kindOfResult.mainMuscle.rawValue:
             result <-- dictionary[Constants.JSONResponseKey.exercises.mainMuscle]
-        case 2:
+        case Constants.kindOfResult.secondaryMuscles.rawValue:
             result <-- dictionary[Constants.JSONResponseKey.exercises.secondaryMuscles]
         default:
             result <-- dictionary[Constants.JSONResponseKey.exercises.neededEquipment]
