@@ -323,6 +323,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="loadAgainAction" destination="BCO-RW-R6g" eventType="touchUpInside" id="84P-3d-pCL"/>
                                     <action selector="loadAgainAction" destination="w88-78-r6J" eventType="touchUpInside" id="pjz-9y-a7R"/>
                                 </connections>
                             </button>
