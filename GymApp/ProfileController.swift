@@ -58,7 +58,7 @@ final class ProfileController: UIViewController {
         let profileImage = profileImageButton.currentBackgroundImage
         updateProfile.name = nameTextField.text
         if profileImage != #imageLiteral(resourceName: "Male") && profileImage != #imageLiteral(resourceName: "Female") {
-            updateProfile.image = UIImagePNGRepresentation(profileImageButton.currentImage!)
+            updateProfile.image = UIImageJPEGRepresentation(profileImageButton.currentImage!, 1)
         }
         if genderButton.currentTitle != Constants.UIElements.genderPlaceholder {
             updateProfile.gender = genderButton.currentTitle
