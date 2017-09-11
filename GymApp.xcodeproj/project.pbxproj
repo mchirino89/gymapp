@@ -34,7 +34,6 @@
 		22638C721F4E42AC00079818 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22638C711F4E42AC00079818 /* Constants.swift */; };
 		22638C771F4E7CB900079818 /* RoutineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22638C761F4E7CB900079818 /* RoutineController.swift */; };
 		228529BA1F5313FA00F9DFD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 228529B91F5313FA00F9DFD9 /* Assets.xcassets */; };
-		228529BD1F534E5400F9DFD9 /* Textfields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228529BC1F534E5400F9DFD9 /* Textfields.swift */; };
 		228529BF1F534E8600F9DFD9 /* Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228529BE1F534E8600F9DFD9 /* Picker.swift */; };
 		228529C11F53AEFF00F9DFD9 /* ProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228529C01F53AEFF00F9DFD9 /* ProfileImage.swift */; };
 		CD8764E7C2AB785005D2FD85 /* Pods_GymApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69A6B931EF179A21EC452B37 /* Pods_GymApp.framework */; };
@@ -71,7 +70,6 @@
 		22638C711F4E42AC00079818 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		22638C761F4E7CB900079818 /* RoutineController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutineController.swift; sourceTree = "<group>"; };
 		228529B91F5313FA00F9DFD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		228529BC1F534E5400F9DFD9 /* Textfields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Textfields.swift; sourceTree = "<group>"; };
 		228529BE1F534E8600F9DFD9 /* Picker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Picker.swift; sourceTree = "<group>"; };
 		228529C01F53AEFF00F9DFD9 /* ProfileImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileImage.swift; sourceTree = "<group>"; };
 		69A6B931EF179A21EC452B37 /* Pods_GymApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GymApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -251,7 +249,6 @@
 			isa = PBXGroup;
 			children = (
 				222B44B11F4F8341008E17A8 /* ProfileController.swift */,
-				228529BC1F534E5400F9DFD9 /* Textfields.swift */,
 				228529BE1F534E8600F9DFD9 /* Picker.swift */,
 				228529C01F53AEFF00F9DFD9 /* ProfileImage.swift */,
 			);
@@ -441,7 +438,6 @@
 				2213F74B1F5DE5CC00213D31 /* TableView.swift in Sources */,
 				222FF4E11F64A58A0011A523 /* Settings.swift in Sources */,
 				228529BF1F534E8600F9DFD9 /* Picker.swift in Sources */,
-				228529BD1F534E5400F9DFD9 /* Textfields.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -94,7 +94,7 @@
                                                 <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CYR-ch-g4o">
                                                     <rect key="frame" x="8" y="9.5" width="139.5" height="127.5"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="NJg-zQ-Gw9">
-                                                        <rect key="frame" x="0.0" y="0.0" width="139.5" height="127.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="139" height="128"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <subviews>
                                                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shoulders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uzl-0y-NFw">
@@ -432,7 +432,7 @@
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qef-cw-YBP">
                                 <rect key="frame" x="0.0" y="503.5" width="375" height="141.5"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="CS2-Cl-xQf">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="141.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="142"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZ1-3G-Cue">
@@ -924,10 +924,10 @@
                     <connections>
                         <outlet property="ageButton" destination="Krv-sb-QPv" id="Mrc-iR-0YT"/>
                         <outlet property="genderButton" destination="6LI-lx-nau" id="iKF-3W-TQe"/>
-                        <outlet property="genderPickerView" destination="3GD-Pp-2a4" id="wnJ-11-IHM"/>
                         <outlet property="heightButton" destination="wCx-Tg-0P0" id="Rho-Xz-VEP"/>
                         <outlet property="nameTextField" destination="0fs-ve-xnX" id="gux-Xd-ARK"/>
                         <outlet property="pickerVerticalLayoutConstraint" destination="sXr-Vp-acW" id="Q0y-wf-Wo6"/>
+                        <outlet property="pickerView" destination="3GD-Pp-2a4" id="oDI-YP-eDD"/>
                         <outlet property="profileImageButton" destination="dcI-8K-Us8" id="4z9-r6-Kon"/>
                         <outlet property="weightButton" destination="Bhn-ei-bfC" id="zwu-Jb-2VT"/>
                     </connections>

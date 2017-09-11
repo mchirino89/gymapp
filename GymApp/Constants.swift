@@ -88,6 +88,15 @@ struct Constants {
         static let connector = " and "
     }
     
+    struct Units {
+        static let topAge = 99
+        static let minAge = 18
+        static let topWeight = 300
+        static let minWeight = 90
+        static let topFootHeight = 9
+        static let minFootHeight = 3
+    }
+    
     struct ErrorMessages {
         static let internetConnection = "It seems you don't have an active internet connection right now. Make sure you do before you try again please"
         static let parsingJSON = "Could not parse the data as JSON: "
@@ -173,8 +182,7 @@ func JSONResponse(kindOfService: Services, completion: @escaping (_ response: An
                 failureInConnectionAlert(invalidCompletion: completion)
             }
         case let .failure(error):
-            print(error._code)
-            print(error)
+            print(error.localizedDescription)
             failureInConnectionAlert(invalidCompletion: completion)
         }
     })

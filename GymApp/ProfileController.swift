@@ -11,64 +11,26 @@ import UIKit
 final class ProfileController: UIViewController {
     
     @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var ageTextField: UITextField!
-    @IBOutlet var genderPickerView: UIPickerView!
-    @IBOutlet weak var weightTextField: UITextField!
-    @IBOutlet weak var heightTextField: UITextField!
+    @IBOutlet var pickerView: UIPickerView!
     @IBOutlet weak var profileImageButton: UIButton!
     @IBOutlet weak var genderButton: UIButton!
-    @IBOutlet weak var genderVerticalLayoutConstraint: NSLayoutConstraint!
+    @IBOutlet weak var ageButton: UIButton!
+    @IBOutlet weak var weightButton: UIButton!
+    @IBOutlet weak var heightButton: UIButton!
+    @IBOutlet weak var pickerVerticalLayoutConstraint: NSLayoutConstraint!
     
     let profileImagePicker = UIImagePickerController()
+    var pickerKind = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigationBar(navigationController)
         profileImagePicker.delegate = self
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: .UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: .UIKeyboardWillHide, object: nil)
-        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismissKeyboardAction)))
     }
     
-    //# Save any changes in the info in the local storage
+    //# Save any changes in the profile in Realm
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-    }
-    
-    func setPlaceholderProfileImage() {
-        let row = genderPickerView.selectedRow(inComponent: 0)
-        guard let profileImage = profileImageButton.backgroundImage(for: .normal) else {
-            print(Constants.ErrorMessages.noProfilePlaceholder)
-            return
-        }
-        if profileImage == #imageLiteral(resourceName: "Male") || profileImage == #imageLiteral(resourceName: "Female") {
-            profileImageButton.setBackgroundImage(UIImage(named: Constants.UIElements.genders[row]), for: .normal)
-            nameTextField.placeholder = Constants.UIElements.placeholderNames[row]
-        }
-    }
-    
-    //# Keyboard events and handling
-    
-    func keyboardWillShow(_ notification:Notification) {
-        if view.frame.origin.y >= 0 && !nameTextField.isFirstResponder {
-            view.frame.origin.y -= getKeyboardHeight(notification)
-        }
-    }
-    
-    func keyboardWillHide(_ notification:Notification) {
-        if view.frame.origin.y < 0  {
-            view.frame.origin.y += getKeyboardHeight(notification)
-        }
-    }
-    
-    func getKeyboardHeight(_ notification:Notification) -> CGFloat {
-        let userInfo = notification.userInfo
-        let keyboardSize = userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue
-        return keyboardSize.cgRectValue.height
-    }
-    
-    func dismissKeyboardAction() {
-        view.endEditing(true)
     }
     
     @IBAction func imagePickerAction() {
@@ -77,20 +39,25 @@ final class ProfileController: UIViewController {
         present(profileImagePicker, animated: true)
     }
 
-    @IBAction func pickGenderAction() {
-        dismissKeyboardAction()
-        genderViewAnimation(showingPicker: true)
+    @IBAction func pickerAction(_ sender: UIButton) {
+        pickerKind = sender.tag
+        pickerView.reloadAllComponents()
+        pickerViewAnimation(showingPicker: true)
     }
     
     @IBAction func okButton() {
-        setPlaceholderProfileImage()
-        genderButton.setTitle(Constants.UIElements.genders[genderPickerView.selectedRow(inComponent: 0)], for: .normal)
-        genderViewAnimation(showingPicker: false)
-    }
-    
-    private func genderViewAnimation(showingPicker: Bool) {
-        genderVerticalLayoutConstraint.constant = showingPicker ? 0 : 1000
-        UIView.animate(withDuration: Constants.UIElements.animationDuration, animations: { self.view.layoutIfNeeded() }
-        )
+        switch pickerKind {
+            case Constants.pickerKind.gender.rawValue:
+                setPlaceholderProfileImage()
+                genderButton.setTitle(Constants.UIElements.genders[pickerView.selectedRow(inComponent: 0)], for: .normal)
+                break
+            case Constants.pickerKind.age.rawValue:
+                break
+            case Constants.pickerKind.weight.rawValue:
+                break
+            default: // height picker
+                break
+        }
+        pickerViewAnimation(showingPicker: false)
     }
 }
