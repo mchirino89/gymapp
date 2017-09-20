@@ -314,7 +314,7 @@
                                 </userDefinedRuntimeAttributes>
                             </visualEffectView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="RxU-GT-UD1">
-                                <rect key="frame" x="127" y="318" width="120" height="31"/>
+                                <rect key="frame" x="127.5" y="318" width="120" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="jHj-Zx-JyA"/>
                                 </constraints>
@@ -392,7 +392,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="fle-ty-KFZ">
-                                <rect key="frame" x="168.5" y="169.5" width="37" height="37"/>
+                                <rect key="frame" x="169" y="169.5" width="37" height="37"/>
                                 <color key="color" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="French Press (skullcrusher) SZ-bar" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="CBC-Xc-Q2C">
@@ -433,7 +433,7 @@
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qef-cw-YBP">
                                 <rect key="frame" x="0.0" y="503.5" width="375" height="141.5"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="CS2-Cl-xQf">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="142"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="141.5"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZ1-3G-Cue">
@@ -771,7 +771,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Szk-bo-NFQ">
-                                        <rect key="frame" x="0.0" y="69" width="375" height="69.5"/>
+                                        <rect key="frame" x="0.0" y="69" width="375" height="69"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Age" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGK-P3-92Y">
                                                 <rect key="frame" x="0.0" y="23.5" width="187.5" height="22.5"/>
@@ -793,7 +793,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MEL-CZ-w29">
-                                        <rect key="frame" x="0.0" y="138.5" width="375" height="69"/>
+                                        <rect key="frame" x="0.0" y="138" width="375" height="69.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Weight" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUe-tn-t1S">
                                                 <rect key="frame" x="0.0" y="23.5" width="187.5" height="22.5"/>

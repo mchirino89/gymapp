@@ -6,4 +6,5 @@ target 'GymApp' do
   pod 'JSONHelper'
   pod 'Moya'
   pod 'RealmSwift'
+  pod 'Material'
 end
