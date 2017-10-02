@@ -32,7 +32,3 @@ The goal of this app a very simple one: make working out *EASY*, you don't need 
 ## Credits
 
 iOS developer [Mauricio Chirino](https://www.linkedin.com/in/mauriciochirino/)
-
-## License
-
-It'll be a public project only during udacity's review. It's not intended as an open source project
