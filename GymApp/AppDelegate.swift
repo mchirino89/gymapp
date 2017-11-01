@@ -18,6 +18,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         preFillRealm()
         return true
     }
-
 }
 
