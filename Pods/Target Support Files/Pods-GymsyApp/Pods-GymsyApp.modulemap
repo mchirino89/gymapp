@@ -1,0 +1,6 @@
+framework module Pods_GymsyApp {
+  umbrella header "Pods-GymsyApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
