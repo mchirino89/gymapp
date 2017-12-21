@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="efE-5b-2gS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="efE-5b-2gS">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,7 +21,7 @@
         <!--Root tab-->
         <scene sceneID="j3I-L1-SEg">
             <objects>
-                <tabBarController id="efE-5b-2gS" userLabel="Root tab" customClass="TabsController" customModule="GymApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="efE-5b-2gS" userLabel="Root tab" customClass="TabsController" customModule="GymsyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" itemPositioning="centered" id="Z9b-K5-95m">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
@@ -68,7 +68,7 @@
         <!--Muscles-->
         <scene sceneID="71b-Gu-XLC">
             <objects>
-                <viewController id="w88-78-r6J" userLabel="Muscles" customClass="ExerciseController" customModule="GymApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="w88-78-r6J" userLabel="Muscles" customClass="ExerciseController" customModule="GymsyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Q2f-AX-QQS"/>
                         <viewControllerLayoutGuide type="bottom" id="cZU-eQ-YJI"/>
@@ -91,7 +91,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="detailCell" id="gl5-aR-YW3" customClass="ListViewCell" customModule="GymApp" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="detailCell" id="gl5-aR-YW3" customClass="ListViewCell" customModule="GymsyApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="155" height="146"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -217,7 +217,7 @@
         <!--Listing-->
         <scene sceneID="2Uf-f1-4Xz">
             <objects>
-                <viewController id="BCO-RW-R6g" userLabel="Listing" customClass="ExerciseController" customModule="GymApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BCO-RW-R6g" userLabel="Listing" customClass="ExerciseController" customModule="GymsyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Dkf-dA-1ar"/>
                         <viewControllerLayoutGuide type="bottom" id="Tme-oT-Dvp"/>
@@ -245,7 +245,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="detailCell" id="3wX-Ie-63M" customClass="ListViewCell" customModule="GymApp" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="detailCell" id="3wX-Ie-63M" customClass="ListViewCell" customModule="GymsyApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="175" height="159"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -373,7 +373,7 @@
         <!--Detailed-->
         <scene sceneID="XLx-ko-tyI">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="MBB-fV-NY0" userLabel="Detailed" customClass="DetailController" customModule="GymApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="MBB-fV-NY0" userLabel="Detailed" customClass="DetailController" customModule="GymsyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="495-6f-cNS"/>
                         <viewControllerLayoutGuide type="bottom" id="dFH-kJ-oTE"/>
@@ -494,7 +494,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </visualEffectView>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vZU-5I-hvP" customClass="ButtonStyle" customModule="GymApp" customModuleProvider="target">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vZU-5I-hvP" customClass="ButtonStyle" customModule="GymsyApp" customModuleProvider="target">
                                 <rect key="frame" x="305" y="595" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="vZU-5I-hvP" secondAttribute="height" multiplier="1:1" id="FPS-al-r0W"/>
@@ -603,7 +603,7 @@
         <!--Routine view-->
         <scene sceneID="TgR-M3-Zi3">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="YDn-r9-EWD" userLabel="Routine view" customClass="RoutineController" customModule="GymApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="YDn-r9-EWD" userLabel="Routine view" customClass="RoutineController" customModule="GymsyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fog-tC-Aj1"/>
                         <viewControllerLayoutGuide type="bottom" id="hdS-2z-6kV"/>
@@ -616,7 +616,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationWidth="0.0" reuseIdentifier="routineCell" rowHeight="230" id="Zf1-Dg-0w8" customClass="RoutineViewCell" customModule="GymApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationWidth="0.0" reuseIdentifier="routineCell" rowHeight="230" id="Zf1-Dg-0w8" customClass="RoutineViewCell" customModule="GymsyApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="230"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zf1-Dg-0w8" id="G51-VM-ANy">
@@ -707,7 +707,7 @@
         <!--Profile view-->
         <scene sceneID="Efn-RS-HN2">
             <objects>
-                <viewController id="uJf-lP-LZH" userLabel="Profile view" customClass="ProfileController" customModule="GymApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="uJf-lP-LZH" userLabel="Profile view" customClass="ProfileController" customModule="GymsyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ckk-eR-wL9"/>
                         <viewControllerLayoutGuide type="bottom" id="UtV-rc-I2T"/>

@@ -6,5 +6,4 @@ target 'GymsyApp' do
   pod 'JSONHelper'
   pod 'Moya'
   pod 'RealmSwift'
-  pod 'Material'
 end

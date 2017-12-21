@@ -17,7 +17,7 @@ DerivedData
 !default.perspectivev3
 xcuserdata
 Resources/
-
+Pods/
 ## Other
 *.xccheckout
 *.moved-aside
@@ -34,5 +34,5 @@ Resources/
 # you should judge for yourself, the pros and cons are mentioned at:
 # http://guides.cocoapods.org/using/using-cocoapods.html#should-i-ignore-the-pods-directory-in-source-control
 #
-GymApp.xcworkspace
+GymsyApp.xcworkspace
 Podfile.lock
