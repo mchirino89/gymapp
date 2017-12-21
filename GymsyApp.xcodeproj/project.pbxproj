@@ -1,0 +1,621 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2213F7491F5DE54600213D31 /* RoutineViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2213F7481F5DE54600213D31 /* RoutineViewCell.swift */; };
+		2213F74B1F5DE5CC00213D31 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2213F74A1F5DE5CC00213D31 /* TableView.swift */; };
+		2213F74E1F5DECA800213D31 /* CollectionListingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2213F74D1F5DECA800213D31 /* CollectionListingController.swift */; };
+		2213F7521F5EE0F100213D31 /* TextArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2213F7511F5EE0F100213D31 /* TextArea.swift */; };
+		2213F7561F5EF56600213D31 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2213F7551F5EF56600213D31 /* ButtonStyle.swift */; };
+		2213F75A1F6097A500213D31 /* Definitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2213F7591F6097A500213D31 /* Definitions.swift */; };
+		2213F75C1F6099B500213D31 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2213F75B1F6099B500213D31 /* Config.swift */; };
+		2213F7601F60A23200213D31 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2213F75F1F60A23200213D31 /* Singleton.swift */; };
+		2213F7621F616F9100213D31 /* ResultDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2213F7611F616F9100213D31 /* ResultDetails.swift */; };
+		2213F7641F6175A600213D31 /* ResultList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2213F7631F6175A600213D31 /* ResultList.swift */; };
+		2213F7661F61853900213D31 /* ExerciseDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2213F7651F61853900213D31 /* ExerciseDetails.swift */; };
+		222B44B21F4F8341008E17A8 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222B44B11F4F8341008E17A8 /* ProfileController.swift */; };
+		222B44B61F4F9A1A008E17A8 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222B44B51F4F9A1A008E17A8 /* DetailController.swift */; };
+		222FF4D01F62E6600011A523 /* ExercisesImages.json in Resources */ = {isa = PBXBuildFile; fileRef = 222FF4CF1F62E6600011A523 /* ExercisesImages.json */; };
+		222FF4DA1F6480500011A523 /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222FF4D91F6480500011A523 /* Routine.swift */; };
+		222FF4DC1F64859A0011A523 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222FF4DB1F64859A0011A523 /* Exercise.swift */; };
+		222FF4DE1F6486820011A523 /* Muscle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222FF4DD1F6486820011A523 /* Muscle.swift */; };
+		222FF4E11F64A58A0011A523 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222FF4E01F64A58A0011A523 /* Settings.swift */; };
+		222FF4E31F664DF00011A523 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222FF4E21F664DF00011A523 /* Profile.swift */; };
+		222FF4E51F6715490011A523 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222FF4E41F6715490011A523 /* TextField.swift */; };
+		2254D1EF1F4D9DE800B450E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2254D1EE1F4D9DE800B450E5 /* AppDelegate.swift */; };
+		2254D1F11F4D9DE800B450E5 /* ExerciseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2254D1F01F4D9DE800B450E5 /* ExerciseController.swift */; };
+		2254D1F41F4D9DE800B450E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2254D1F21F4D9DE800B450E5 /* Main.storyboard */; };
+		2254D1F91F4D9DE800B450E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2254D1F71F4D9DE800B450E5 /* LaunchScreen.storyboard */; };
+		225E1FC81F557122000217C3 /* TabsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225E1FC71F557122000217C3 /* TabsController.swift */; };
+		22638C701F4E39B600079818 /* ListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22638C6F1F4E39B600079818 /* ListViewCell.swift */; };
+		22638C721F4E42AC00079818 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22638C711F4E42AC00079818 /* Constants.swift */; };
+		22638C771F4E7CB900079818 /* RoutineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22638C761F4E7CB900079818 /* RoutineController.swift */; };
+		228529BA1F5313FA00F9DFD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 228529B91F5313FA00F9DFD9 /* Assets.xcassets */; };
+		228529BF1F534E8600F9DFD9 /* Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228529BE1F534E8600F9DFD9 /* Picker.swift */; };
+		228529C11F53AEFF00F9DFD9 /* ProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228529C01F53AEFF00F9DFD9 /* ProfileImage.swift */; };
+		CD8764E7C2AB785005D2FD85 /* Pods_GymApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69A6B931EF179A21EC452B37 /* Pods_GymApp.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1589CA062CD932DCF7340299 /* Pods-GymApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GymApp/Pods-GymApp.debug.xcconfig"; sourceTree = "<group>"; };
+		2213F7481F5DE54600213D31 /* RoutineViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutineViewCell.swift; sourceTree = "<group>"; };
+		2213F74A1F5DE5CC00213D31 /* TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
+		2213F74D1F5DECA800213D31 /* CollectionListingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionListingController.swift; sourceTree = "<group>"; };
+		2213F7511F5EE0F100213D31 /* TextArea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextArea.swift; sourceTree = "<group>"; };
+		2213F7551F5EF56600213D31 /* ButtonStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
+		2213F7591F6097A500213D31 /* Definitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Definitions.swift; sourceTree = "<group>"; };
+		2213F75B1F6099B500213D31 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		2213F75F1F60A23200213D31 /* Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
+		2213F7611F616F9100213D31 /* ResultDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultDetails.swift; sourceTree = "<group>"; };
+		2213F7631F6175A600213D31 /* ResultList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultList.swift; sourceTree = "<group>"; };
+		2213F7651F61853900213D31 /* ExerciseDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseDetails.swift; sourceTree = "<group>"; };
+		222B44B11F4F8341008E17A8 /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		222B44B51F4F9A1A008E17A8 /* DetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
+		222FF4CF1F62E6600011A523 /* ExercisesImages.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ExercisesImages.json; sourceTree = "<group>"; };
+		222FF4D91F6480500011A523 /* Routine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routine.swift; sourceTree = "<group>"; };
+		222FF4DB1F64859A0011A523 /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		222FF4DD1F6486820011A523 /* Muscle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Muscle.swift; sourceTree = "<group>"; };
+		222FF4E01F64A58A0011A523 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		222FF4E21F664DF00011A523 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		222FF4E41F6715490011A523 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		2254D1EB1F4D9DE800B450E5 /* GymsyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymsyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2254D1EE1F4D9DE800B450E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2254D1F01F4D9DE800B450E5 /* ExerciseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseController.swift; sourceTree = "<group>"; };
+		2254D1F31F4D9DE800B450E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2254D1F81F4D9DE800B450E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2254D1FA1F4D9DE800B450E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		225E1FC71F557122000217C3 /* TabsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabsController.swift; sourceTree = "<group>"; };
+		22638C6F1F4E39B600079818 /* ListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewCell.swift; sourceTree = "<group>"; };
+		22638C711F4E42AC00079818 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		22638C761F4E7CB900079818 /* RoutineController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutineController.swift; sourceTree = "<group>"; };
+		228529B91F5313FA00F9DFD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		228529BE1F534E8600F9DFD9 /* Picker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Picker.swift; sourceTree = "<group>"; };
+		228529C01F53AEFF00F9DFD9 /* ProfileImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileImage.swift; sourceTree = "<group>"; };
+		69A6B931EF179A21EC452B37 /* Pods_GymApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GymApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B348DB9CDAA1BBD84B0B507A /* Pods-GymApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-GymApp/Pods-GymApp.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2254D1E81F4D9DE800B450E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD8764E7C2AB785005D2FD85 /* Pods_GymApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2213F74C1F5DE5EB00213D31 /* Routine */ = {
+			isa = PBXGroup;
+			children = (
+				22638C761F4E7CB900079818 /* RoutineController.swift */,
+				2213F74A1F5DE5CC00213D31 /* TableView.swift */,
+			);
+			name = Routine;
+			sourceTree = "<group>";
+		};
+		2213F74F1F5DED1500213D31 /* Exercise */ = {
+			isa = PBXGroup;
+			children = (
+				2254D1F01F4D9DE800B450E5 /* ExerciseController.swift */,
+				2213F74D1F5DECA800213D31 /* CollectionListingController.swift */,
+			);
+			name = Exercise;
+			sourceTree = "<group>";
+		};
+		2213F7501F5EDDF400213D31 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				222B44B51F4F9A1A008E17A8 /* DetailController.swift */,
+				2213F7511F5EE0F100213D31 /* TextArea.swift */,
+			);
+			name = Details;
+			sourceTree = "<group>";
+		};
+		2213F7531F5EF4FD00213D31 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				22638C6F1F4E39B600079818 /* ListViewCell.swift */,
+				2213F7481F5DE54600213D31 /* RoutineViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		2213F7541F5EF50900213D31 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				2254D1F21F4D9DE800B450E5 /* Main.storyboard */,
+				2254D1F71F4D9DE800B450E5 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		2213F7571F60972500213D31 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				2213F75D1F60A20B00213D31 /* Moya */,
+				2213F7581F60978500213D31 /* Models */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		2213F7581F60978500213D31 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				222FF4CF1F62E6600011A523 /* ExercisesImages.json */,
+				2213F7631F6175A600213D31 /* ResultList.swift */,
+				2213F7611F616F9100213D31 /* ResultDetails.swift */,
+				2213F7651F61853900213D31 /* ExerciseDetails.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		2213F75D1F60A20B00213D31 /* Moya */ = {
+			isa = PBXGroup;
+			children = (
+				2213F7591F6097A500213D31 /* Definitions.swift */,
+				2213F75B1F6099B500213D31 /* Config.swift */,
+			);
+			name = Moya;
+			sourceTree = "<group>";
+		};
+		222FF4D81F6480350011A523 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				222FF4E01F64A58A0011A523 /* Settings.swift */,
+				222FF4DF1F64A5720011A523 /* Models */,
+			);
+			name = Realm;
+			sourceTree = "<group>";
+		};
+		222FF4DF1F64A5720011A523 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				222FF4DB1F64859A0011A523 /* Exercise.swift */,
+				222FF4DD1F6486820011A523 /* Muscle.swift */,
+				222FF4D91F6480500011A523 /* Routine.swift */,
+				222FF4E21F664DF00011A523 /* Profile.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		2254D1E21F4D9DE800B450E5 = {
+			isa = PBXGroup;
+			children = (
+				2254D1ED1F4D9DE800B450E5 /* GymsyApp */,
+				2254D1EC1F4D9DE800B450E5 /* Products */,
+				DB6BDFECE62B1537A583C8B2 /* Pods */,
+				5DBAA7A69E0C6E7E91D9F1F1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2254D1EC1F4D9DE800B450E5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2254D1EB1F4D9DE800B450E5 /* GymsyApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2254D1ED1F4D9DE800B450E5 /* GymsyApp */ = {
+			isa = PBXGroup;
+			children = (
+				2254D1EE1F4D9DE800B450E5 /* AppDelegate.swift */,
+				22638C7A1F4F81A100079818 /* Controllers */,
+				22638C731F4E492D00079818 /* Config */,
+				2213F7571F60972500213D31 /* Network */,
+				222FF4D81F6480350011A523 /* Realm */,
+				22638C6E1F4E38E000079818 /* UI */,
+			);
+			path = GymsyApp;
+			sourceTree = "<group>";
+		};
+		22638C6E1F4E38E000079818 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				228529B91F5313FA00F9DFD9 /* Assets.xcassets */,
+				2213F7551F5EF56600213D31 /* ButtonStyle.swift */,
+				2213F7531F5EF4FD00213D31 /* Cells */,
+				2213F7541F5EF50900213D31 /* Storyboards */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		22638C731F4E492D00079818 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				2254D1FA1F4D9DE800B450E5 /* Info.plist */,
+				22638C711F4E42AC00079818 /* Constants.swift */,
+				2213F75F1F60A23200213D31 /* Singleton.swift */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
+		22638C7A1F4F81A100079818 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				225E1FC71F557122000217C3 /* TabsController.swift */,
+				2213F74F1F5DED1500213D31 /* Exercise */,
+				2213F74C1F5DE5EB00213D31 /* Routine */,
+				228529BB1F534E2700F9DFD9 /* Profile */,
+				2213F7501F5EDDF400213D31 /* Details */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		228529BB1F534E2700F9DFD9 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				222B44B11F4F8341008E17A8 /* ProfileController.swift */,
+				228529BE1F534E8600F9DFD9 /* Picker.swift */,
+				228529C01F53AEFF00F9DFD9 /* ProfileImage.swift */,
+				222FF4E41F6715490011A523 /* TextField.swift */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		5DBAA7A69E0C6E7E91D9F1F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				69A6B931EF179A21EC452B37 /* Pods_GymApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB6BDFECE62B1537A583C8B2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1589CA062CD932DCF7340299 /* Pods-GymApp.debug.xcconfig */,
+				B348DB9CDAA1BBD84B0B507A /* Pods-GymApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2254D1EA1F4D9DE800B450E5 /* GymsyApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2254D1FD1F4D9DE800B450E5 /* Build configuration list for PBXNativeTarget "GymsyApp" */;
+			buildPhases = (
+				A4BCEC2DECFFE84626C39CFC /* [CP] Check Pods Manifest.lock */,
+				2254D1E71F4D9DE800B450E5 /* Sources */,
+				2254D1E81F4D9DE800B450E5 /* Frameworks */,
+				2254D1E91F4D9DE800B450E5 /* Resources */,
+				0F41D2ACE65093FC347700B4 /* [CP] Embed Pods Frameworks */,
+				E0E8BDCE9B2FBF7154DB415D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GymsyApp;
+			productName = GymApp;
+			productReference = 2254D1EB1F4D9DE800B450E5 /* GymsyApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2254D1E31F4D9DE800B450E5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = 3CodeGeeks;
+				TargetAttributes = {
+					2254D1EA1F4D9DE800B450E5 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = F7CXK2PKWD;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 2254D1E61F4D9DE800B450E5 /* Build configuration list for PBXProject "GymsyApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2254D1E21F4D9DE800B450E5;
+			productRefGroup = 2254D1EC1F4D9DE800B450E5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2254D1EA1F4D9DE800B450E5 /* GymsyApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2254D1E91F4D9DE800B450E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2254D1F91F4D9DE800B450E5 /* LaunchScreen.storyboard in Resources */,
+				222FF4D01F62E6600011A523 /* ExercisesImages.json in Resources */,
+				228529BA1F5313FA00F9DFD9 /* Assets.xcassets in Resources */,
+				2254D1F41F4D9DE800B450E5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0F41D2ACE65093FC347700B4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GymApp/Pods-GymApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/JSONHelper/JSONHelper.framework",
+				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSONHelper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GymApp/Pods-GymApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4BCEC2DECFFE84626C39CFC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GymApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0E8BDCE9B2FBF7154DB415D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GymApp/Pods-GymApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2254D1E71F4D9DE800B450E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2213F75A1F6097A500213D31 /* Definitions.swift in Sources */,
+				22638C771F4E7CB900079818 /* RoutineController.swift in Sources */,
+				2213F7601F60A23200213D31 /* Singleton.swift in Sources */,
+				222FF4E31F664DF00011A523 /* Profile.swift in Sources */,
+				2213F7621F616F9100213D31 /* ResultDetails.swift in Sources */,
+				2213F7641F6175A600213D31 /* ResultList.swift in Sources */,
+				222B44B61F4F9A1A008E17A8 /* DetailController.swift in Sources */,
+				2213F7661F61853900213D31 /* ExerciseDetails.swift in Sources */,
+				222FF4DE1F6486820011A523 /* Muscle.swift in Sources */,
+				2213F74E1F5DECA800213D31 /* CollectionListingController.swift in Sources */,
+				22638C701F4E39B600079818 /* ListViewCell.swift in Sources */,
+				222FF4DC1F64859A0011A523 /* Exercise.swift in Sources */,
+				228529C11F53AEFF00F9DFD9 /* ProfileImage.swift in Sources */,
+				22638C721F4E42AC00079818 /* Constants.swift in Sources */,
+				2213F75C1F6099B500213D31 /* Config.swift in Sources */,
+				222FF4E51F6715490011A523 /* TextField.swift in Sources */,
+				2213F7491F5DE54600213D31 /* RoutineViewCell.swift in Sources */,
+				222FF4DA1F6480500011A523 /* Routine.swift in Sources */,
+				2213F7521F5EE0F100213D31 /* TextArea.swift in Sources */,
+				2254D1F11F4D9DE800B450E5 /* ExerciseController.swift in Sources */,
+				2213F7561F5EF56600213D31 /* ButtonStyle.swift in Sources */,
+				2254D1EF1F4D9DE800B450E5 /* AppDelegate.swift in Sources */,
+				225E1FC81F557122000217C3 /* TabsController.swift in Sources */,
+				222B44B21F4F8341008E17A8 /* ProfileController.swift in Sources */,
+				2213F74B1F5DE5CC00213D31 /* TableView.swift in Sources */,
+				222FF4E11F64A58A0011A523 /* Settings.swift in Sources */,
+				228529BF1F534E8600F9DFD9 /* Picker.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2254D1F21F4D9DE800B450E5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2254D1F31F4D9DE800B450E5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2254D1F71F4D9DE800B450E5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2254D1F81F4D9DE800B450E5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2254D1FB1F4D9DE800B450E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2254D1FC1F4D9DE800B450E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2254D1FE1F4D9DE800B450E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1589CA062CD932DCF7340299 /* Pods-GymApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F7CXK2PKWD;
+				INFOPLIST_FILE = GymsyApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.3codegeeks.GymsyApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		2254D1FF1F4D9DE800B450E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B348DB9CDAA1BBD84B0B507A /* Pods-GymApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F7CXK2PKWD;
+				INFOPLIST_FILE = GymsyApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.3codegeeks.GymsyApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2254D1E61F4D9DE800B450E5 /* Build configuration list for PBXProject "GymsyApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2254D1FB1F4D9DE800B450E5 /* Debug */,
+				2254D1FC1F4D9DE800B450E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2254D1FD1F4D9DE800B450E5 /* Build configuration list for PBXNativeTarget "GymsyApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2254D1FE1F4D9DE800B450E5 /* Debug */,
+				2254D1FF1F4D9DE800B450E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2254D1E31F4D9DE800B450E5 /* Project object */;
+}
