@@ -26,7 +26,7 @@ final class DetailController: UIViewController {
     
     var exerciseId:Int = 0
     var exerciseName:String = ""
-    var exerciseInfo:ExerciseDetails?
+    var exerciseInfo:ExerciseDetail?
     var exerciseImageDictionary:ResultList?
     var exerciseImages:[UIImage] = []
     
@@ -48,20 +48,27 @@ final class DetailController: UIViewController {
         viewLoader(true)
         DispatchQueue.global(qos: .userInteractive).async { [weak self] in
             guard let view = self else { return }
-            JSONResponse(kindOfService: .exerciseDetails(id: view.exerciseId), completion: { (JSONdata) in
-                guard let parsedData = JSONdata else {
-                    // make visible "load again" button
+            JSONResponseData(kindOfService: .exerciseDetails(id: view.exerciseId), completion: {
+                (JSONdata) in
+
+                guard let data = JSONdata else {
                     view.reloadButton(isShowing: true)
                     view.viewLoader(false)
                     return
                 }
-                view.exerciseInfo <-- parsedData
-                DispatchQueue.main.async {
-                    view.categoryLabel.text? += view.exerciseInfo!.category!.name!
-                    view.exerciseDescriptionTextView.text = view.exerciseInfo?.description
-                    view.mainMuscleLabel.text? += view.makeListSentence(list: view.exerciseInfo?.muscles?.result)
-                    view.secondaryMusclesLabel.text? += view.makeListSentence(list: view.exerciseInfo?.secondaryMuscles?.result)
-                    view.equipmentLabel.text? += view.makeListSentence(list: view.exerciseInfo?.equipment?.result)
+                do {
+                    let parsedData = try Singleton.decoder.decode(ExerciseDetail.self, from: data)
+                    view.exerciseInfo = parsedData
+                    DispatchQueue.main.async {
+                        view.categoryLabel.text? += (view.exerciseInfo!.category?.name)!
+                        view.exerciseDescriptionTextView.text = view.exerciseInfo?.description.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
+                        view.mainMuscleLabel.text? += view.makeListSentence(list: view.exerciseInfo?.mainMuscles)
+                        view.secondaryMusclesLabel.text? += view.makeListSentence(list: view.exerciseInfo?.secondaryMuscles)
+                        view.equipmentLabel.text? += view.makeListSentence(list: view.exerciseInfo?.equipment)
+                        view.viewLoader(false)
+                    }
+                } catch {
+                    view.reloadButton(isShowing: true)
                     view.viewLoader(false)
                 }
             })
@@ -73,15 +80,15 @@ final class DetailController: UIViewController {
         navigationItem.rightBarButtonItem?.tintColor = isShowing ? UIColor.white : UIColor.clear
     }
     
-    private func makeListSentence(list: [ResultDetails]?) -> String {
+    private func makeListSentence(list: [Result]?) -> String {
         guard let response = list else { return "" }
         switch response.count {
         case 0:
             return Constants.UIElements.nonApplicable
         case 1:
-            return response.first!.name!
+            return response.first!.name
         case 2:
-            return response.first!.name! + Constants.UIElements.connector + response.last!.name!
+            return response.first!.name + Constants.UIElements.connector + response.last!.name
         default:
             var currentIndex = 0
             var sentence = ""
@@ -90,9 +97,9 @@ final class DetailController: UIViewController {
                     return
                 }
                 currentIndex += 1
-                sentence.append(word.name! + ", ")
+                sentence.append(word.name + ", ")
             }
-            return sentence + Constants.UIElements.connector + response.last!.name!
+            return sentence + Constants.UIElements.connector + response.last!.name
         }
     }
     

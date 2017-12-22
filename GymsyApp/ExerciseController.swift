@@ -65,8 +65,7 @@ final class ExerciseController: UIViewController {
                     return
                 }
                 do {
-                    let decoder = JSONDecoder()
-                    let parsedData = try decoder.decode(Listing.self, from: data)
+                    let parsedData = try Singleton.decoder.decode(Listing.self, from: data)
                     view.itemsDataSource = parsedData
                     DispatchQueue.main.async {
                         view.refreshList()

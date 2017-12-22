@@ -14,5 +14,8 @@ final class Singleton {
     static let imageCache = NSCache<NSString, NSData>()
     static var dataSource:Realm!
     static var selectedRoutine:Results<Exercise>?
-    private init() {}
+    static let decoder = JSONDecoder()
+    private init() {
+        
+    }
 }

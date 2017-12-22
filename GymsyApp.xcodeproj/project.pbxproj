@@ -37,7 +37,7 @@
 		228529BA1F5313FA00F9DFD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 228529B91F5313FA00F9DFD9 /* Assets.xcassets */; };
 		228529BF1F534E8600F9DFD9 /* Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228529BE1F534E8600F9DFD9 /* Picker.swift */; };
 		228529C11F53AEFF00F9DFD9 /* ProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228529C01F53AEFF00F9DFD9 /* ProfileImage.swift */; };
-		717378951FED44B3006F28A0 /* Lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717378941FED44B3006F28A0 /* Lists.swift */; };
+		717378951FED44B3006F28A0 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717378941FED44B3006F28A0 /* Models.swift */; };
 		942F6A3B721905B606A53BE9 /* Pods_GymsyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA2D9F47DDF5F2B955494A7C /* Pods_GymsyApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,7 +74,7 @@
 		228529B91F5313FA00F9DFD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		228529BE1F534E8600F9DFD9 /* Picker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Picker.swift; sourceTree = "<group>"; };
 		228529C01F53AEFF00F9DFD9 /* ProfileImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileImage.swift; sourceTree = "<group>"; };
-		717378941FED44B3006F28A0 /* Lists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lists.swift; sourceTree = "<group>"; };
+		717378941FED44B3006F28A0 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		AA2D9F47DDF5F2B955494A7C /* Pods_GymsyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GymsyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD1691D4208E8C233669F2F6 /* Pods-GymsyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymsyApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GymsyApp/Pods-GymsyApp.debug.xcconfig"; sourceTree = "<group>"; };
 		CF0D98458C0ACB0ACFE7D59A /* Pods-GymsyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymsyApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-GymsyApp/Pods-GymsyApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -141,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				2213F75B1F6099B500213D31 /* Config.swift */,
+				717378941FED44B3006F28A0 /* Models.swift */,
 				2213F7581F60978500213D31 /* Models */,
 			);
 			name = Network;
@@ -150,7 +151,6 @@
 			isa = PBXGroup;
 			children = (
 				222FF4CF1F62E6600011A523 /* ExercisesImages.json */,
-				717378941FED44B3006F28A0 /* Lists.swift */,
 				2213F7631F6175A600213D31 /* ResultList.swift */,
 				2213F7611F616F9100213D31 /* ResultDetails.swift */,
 				2213F7651F61853900213D31 /* ExerciseDetails.swift */,
@@ -437,7 +437,7 @@
 				2213F74B1F5DE5CC00213D31 /* TableView.swift in Sources */,
 				222FF4E11F64A58A0011A523 /* Settings.swift in Sources */,
 				228529BF1F534E8600F9DFD9 /* Picker.swift in Sources */,
-				717378951FED44B3006F28A0 /* Lists.swift in Sources */,
+				717378951FED44B3006F28A0 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
