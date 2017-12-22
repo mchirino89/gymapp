@@ -12,7 +12,6 @@
 		2213F74E1F5DECA800213D31 /* CollectionListingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2213F74D1F5DECA800213D31 /* CollectionListingController.swift */; };
 		2213F7521F5EE0F100213D31 /* TextArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2213F7511F5EE0F100213D31 /* TextArea.swift */; };
 		2213F7561F5EF56600213D31 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2213F7551F5EF56600213D31 /* ButtonStyle.swift */; };
-		2213F75A1F6097A500213D31 /* Definitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2213F7591F6097A500213D31 /* Definitions.swift */; };
 		2213F75C1F6099B500213D31 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2213F75B1F6099B500213D31 /* Config.swift */; };
 		2213F7601F60A23200213D31 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2213F75F1F60A23200213D31 /* Singleton.swift */; };
 		2213F7621F616F9100213D31 /* ResultDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2213F7611F616F9100213D31 /* ResultDetails.swift */; };
@@ -47,7 +46,6 @@
 		2213F74D1F5DECA800213D31 /* CollectionListingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionListingController.swift; sourceTree = "<group>"; };
 		2213F7511F5EE0F100213D31 /* TextArea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextArea.swift; sourceTree = "<group>"; };
 		2213F7551F5EF56600213D31 /* ButtonStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
-		2213F7591F6097A500213D31 /* Definitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Definitions.swift; sourceTree = "<group>"; };
 		2213F75B1F6099B500213D31 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		2213F75F1F60A23200213D31 /* Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 		2213F7611F616F9100213D31 /* ResultDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultDetails.swift; sourceTree = "<group>"; };
@@ -140,7 +138,7 @@
 		2213F7571F60972500213D31 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				2213F75D1F60A20B00213D31 /* Moya */,
+				2213F75B1F6099B500213D31 /* Config.swift */,
 				2213F7581F60978500213D31 /* Models */,
 			);
 			name = Network;
@@ -155,15 +153,6 @@
 				2213F7651F61853900213D31 /* ExerciseDetails.swift */,
 			);
 			name = Models;
-			sourceTree = "<group>";
-		};
-		2213F75D1F60A20B00213D31 /* Moya */ = {
-			isa = PBXGroup;
-			children = (
-				2213F7591F6097A500213D31 /* Definitions.swift */,
-				2213F75B1F6099B500213D31 /* Config.swift */,
-			);
-			name = Moya;
 			sourceTree = "<group>";
 		};
 		222FF4D81F6480350011A523 /* Realm */ = {
@@ -297,7 +286,7 @@
 			dependencies = (
 			);
 			name = GymsyApp;
-			productName = GymApp;
+			productName = GymsyApp;
 			productReference = 2254D1EB1F4D9DE800B450E5 /* GymsyApp.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -419,7 +408,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2213F75A1F6097A500213D31 /* Definitions.swift in Sources */,
 				22638C771F4E7CB900079818 /* RoutineController.swift in Sources */,
 				2213F7601F60A23200213D31 /* Singleton.swift in Sources */,
 				222FF4E31F664DF00011A523 /* Profile.swift in Sources */,

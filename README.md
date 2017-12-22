@@ -1,4 +1,4 @@
-# GymApp
+# GymsyApp
 
 This app gets exercises information from [wger.de](https://wger.de/api/v2/) API and organize them in a very friendly way so it's really simple to start working out. Capstone final Udacity nanodegree project.
 
