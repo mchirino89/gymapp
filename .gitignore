@@ -17,7 +17,7 @@ DerivedData
 !default.perspectivev3
 xcuserdata
 Resources/
-Pods/
+
 ## Other
 *.xccheckout
 *.moved-aside
