@@ -18,9 +18,9 @@ final class ExerciseController: UIViewController {
     @IBOutlet weak var loadAgainButton: UIButton!
     
     var muscleGroupList = 0
-    var dataId:Int = 0
-    var viewTitle:String?
-    var itemsDataSource:ResultList?
+    var dataId: Int = 0
+    var viewTitle: String?
+    var itemsDataSource: Listing?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,16 +57,23 @@ final class ExerciseController: UIViewController {
         viewLoader(true)
         DispatchQueue.global(qos: .userInteractive).async { [weak self] _ in
             guard let view = self else { return }
-            JSONResponse(kindOfService: view.muscleGroupList == 0 ? .muscleGroup : .exerciseGroup(id: view.dataId), completion: { (JSONdata) in
-                guard let parsedData = JSONdata else {
-                    // make visible "load again" button
+            JSONResponseData(kindOfService: view.muscleGroupList == 0 ? .muscleGroup : .exerciseGroup(id: view.dataId), completion: {
+                (JSONdata) in
+                guard let data = JSONdata else {
                     view.loadAgainButton.isHidden = false
                     view.viewLoader(false)
                     return
                 }
-                view.itemsDataSource <-- parsedData
-                DispatchQueue.main.async {
-                    view.refreshList()
+                do {
+                    let decoder = JSONDecoder()
+                    let parsedData = try decoder.decode(Listing.self, from: data)
+                    view.itemsDataSource = parsedData
+                    DispatchQueue.main.async {
+                        view.refreshList()
+                    }
+                } catch {
+                    view.loadAgainButton.isHidden = false
+                    view.viewLoader(false)
                 }
             })
         }

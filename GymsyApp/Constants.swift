@@ -200,6 +200,34 @@ func JSONResponse(kindOfService: Services, completion: @escaping (_ response: An
     })
 }
 
+func JSONResponseData(kindOfService: Services, completion: @escaping (_ response: Data?) ->()) {
+    Singleton.provider.request(kindOfService, completion: { data in
+        //        print(kindOfService.baseURL.absoluteString + kindOfService.path)
+        switch data {
+        case let .success(moyaResponse):
+            do {
+                let _ = try moyaResponse.filterSuccessfulStatusCodes()
+                do {
+                    let JSONdata = try moyaResponse.mapString().data(using: .utf8)
+                    completion(JSONdata)
+                    print("\(kindOfService.path) loaded")
+                } catch {
+                    print("Something went wrong mapping \(kindOfService.path) JSON request")
+                    print(data.debugDescription)
+                    print("Error code: ", moyaResponse.statusCode)
+                    failureInConnectionAlert(invalidCompletion: completion)
+                }
+            } catch {
+                print("Something went wrong on \(kindOfService.path) request, code: ", data.value!.statusCode)
+                failureInConnectionAlert(invalidCompletion: completion)
+            }
+        case let .failure(error):
+            print(error.localizedDescription)
+            failureInConnectionAlert(invalidCompletion: completion)
+        }
+    })
+}
+
 func showLoadingButton() {
     
 }
@@ -214,5 +242,16 @@ private func failureInConnectionAlert(invalidCompletion: ((AnyObject?) -> Void))
     } else {
         print("Impossible to access current view controller")
     }
-    
+}
+
+private func failureInConnectionAlert(invalidCompletion: ((Data?) -> Void)) {
+    if var topController = UIApplication.shared.keyWindow?.rootViewController {
+        while let presentedViewController = topController.presentedViewController {
+            topController = presentedViewController
+        }
+        invalidCompletion(nil)
+        topController.present(getPopupAlert(message: Constants.ErrorMessages.internetConnection), animated: true)
+    } else {
+        print("Impossible to access current view controller")
+    }
 }
