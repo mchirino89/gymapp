@@ -3,7 +3,6 @@ platform :ios, '10.0'
 
 target 'GymsyApp' do
   use_frameworks!
-  pod 'JSONHelper'
   pod 'Moya'
   pod 'RealmSwift'
 end

@@ -14,12 +14,8 @@
 		2213F7561F5EF56600213D31 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2213F7551F5EF56600213D31 /* ButtonStyle.swift */; };
 		2213F75C1F6099B500213D31 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2213F75B1F6099B500213D31 /* Config.swift */; };
 		2213F7601F60A23200213D31 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2213F75F1F60A23200213D31 /* Singleton.swift */; };
-		2213F7621F616F9100213D31 /* ResultDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2213F7611F616F9100213D31 /* ResultDetails.swift */; };
-		2213F7641F6175A600213D31 /* ResultList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2213F7631F6175A600213D31 /* ResultList.swift */; };
-		2213F7661F61853900213D31 /* ExerciseDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2213F7651F61853900213D31 /* ExerciseDetails.swift */; };
 		222B44B21F4F8341008E17A8 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222B44B11F4F8341008E17A8 /* ProfileController.swift */; };
 		222B44B61F4F9A1A008E17A8 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222B44B51F4F9A1A008E17A8 /* DetailController.swift */; };
-		222FF4D01F62E6600011A523 /* ExercisesImages.json in Resources */ = {isa = PBXBuildFile; fileRef = 222FF4CF1F62E6600011A523 /* ExercisesImages.json */; };
 		222FF4DA1F6480500011A523 /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222FF4D91F6480500011A523 /* Routine.swift */; };
 		222FF4DC1F64859A0011A523 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222FF4DB1F64859A0011A523 /* Exercise.swift */; };
 		222FF4DE1F6486820011A523 /* Muscle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222FF4DD1F6486820011A523 /* Muscle.swift */; };
@@ -49,12 +45,8 @@
 		2213F7551F5EF56600213D31 /* ButtonStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 		2213F75B1F6099B500213D31 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		2213F75F1F60A23200213D31 /* Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
-		2213F7611F616F9100213D31 /* ResultDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultDetails.swift; sourceTree = "<group>"; };
-		2213F7631F6175A600213D31 /* ResultList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultList.swift; sourceTree = "<group>"; };
-		2213F7651F61853900213D31 /* ExerciseDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseDetails.swift; sourceTree = "<group>"; };
 		222B44B11F4F8341008E17A8 /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		222B44B51F4F9A1A008E17A8 /* DetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
-		222FF4CF1F62E6600011A523 /* ExercisesImages.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ExercisesImages.json; sourceTree = "<group>"; };
 		222FF4D91F6480500011A523 /* Routine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routine.swift; sourceTree = "<group>"; };
 		222FF4DB1F64859A0011A523 /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		222FF4DD1F6486820011A523 /* Muscle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Muscle.swift; sourceTree = "<group>"; };
@@ -142,20 +134,8 @@
 			children = (
 				2213F75B1F6099B500213D31 /* Config.swift */,
 				717378941FED44B3006F28A0 /* Models.swift */,
-				2213F7581F60978500213D31 /* Models */,
 			);
 			name = Network;
-			sourceTree = "<group>";
-		};
-		2213F7581F60978500213D31 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				222FF4CF1F62E6600011A523 /* ExercisesImages.json */,
-				2213F7631F6175A600213D31 /* ResultList.swift */,
-				2213F7611F616F9100213D31 /* ResultDetails.swift */,
-				2213F7651F61853900213D31 /* ExerciseDetails.swift */,
-			);
-			name = Models;
 			sourceTree = "<group>";
 		};
 		222FF4D81F6480350011A523 /* Realm */ = {
@@ -334,7 +314,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2254D1F91F4D9DE800B450E5 /* LaunchScreen.storyboard in Resources */,
-				222FF4D01F62E6600011A523 /* ExercisesImages.json in Resources */,
 				228529BA1F5313FA00F9DFD9 /* Assets.xcassets in Resources */,
 				2254D1F41F4D9DE800B450E5 /* Main.storyboard in Resources */,
 			);
@@ -351,7 +330,6 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-GymsyApp/Pods-GymsyApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/JSONHelper/JSONHelper.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
@@ -360,7 +338,6 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSONHelper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
@@ -414,10 +391,7 @@
 				22638C771F4E7CB900079818 /* RoutineController.swift in Sources */,
 				2213F7601F60A23200213D31 /* Singleton.swift in Sources */,
 				222FF4E31F664DF00011A523 /* Profile.swift in Sources */,
-				2213F7621F616F9100213D31 /* ResultDetails.swift in Sources */,
-				2213F7641F6175A600213D31 /* ResultList.swift in Sources */,
 				222B44B61F4F9A1A008E17A8 /* DetailController.swift in Sources */,
-				2213F7661F61853900213D31 /* ExerciseDetails.swift in Sources */,
 				222FF4DE1F6486820011A523 /* Muscle.swift in Sources */,
 				2213F74E1F5DECA800213D31 /* CollectionListingController.swift in Sources */,
 				22638C701F4E39B600079818 /* ListViewCell.swift in Sources */,

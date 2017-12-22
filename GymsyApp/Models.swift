@@ -31,6 +31,5 @@ struct ExerciseDetail: Codable {
         case mainMuscles = "muscles"
         case secondaryMuscles = "muscles_secondary"
     }
-//    description = description.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
 }
 
