@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import JSONHelper
 
 final class ExerciseController: UIViewController {
     
