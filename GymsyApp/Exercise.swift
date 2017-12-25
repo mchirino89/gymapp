@@ -9,14 +9,14 @@
 import RealmSwift
 
 class Exercise: Object {
-    dynamic var id = 0
-    dynamic var name = ""
-    dynamic var category = ""
-    dynamic var primaryMuscle = ""
-    dynamic var secondaryMuscke = ""
-    dynamic var equipment = ""
-    dynamic var legend = ""
-    dynamic var belongsTo: Routine?
+    @objc dynamic var id = 0
+    @objc dynamic var name = ""
+    @objc dynamic var category = ""
+    @objc dynamic var primaryMuscle = ""
+    @objc dynamic var secondaryMuscke = ""
+    @objc dynamic var equipment = ""
+    @objc dynamic var legend = ""
+    @objc dynamic var belongsTo: Routine?
 //    let belongsTo = LinkingObjects(fromType: Routine.self, property: "exercises")
     
     convenience init(id: Int, name: String) {

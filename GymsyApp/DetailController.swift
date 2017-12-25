@@ -38,7 +38,7 @@ final class DetailController: UIViewController {
         loadDetails()
     }
     
-    func rightButtonAction(sender: UIBarButtonItem) {
+    @objc func rightButtonAction(sender: UIBarButtonItem) {
         loadDetails()
     }
     

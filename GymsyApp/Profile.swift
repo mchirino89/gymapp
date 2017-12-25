@@ -9,13 +9,13 @@
 import RealmSwift
 
 class Profile: Object {
-    dynamic var userId = 1
-    dynamic var image:Data?
-    dynamic var name:String?
-    dynamic var gender:String?
-    dynamic var age:String?
-    dynamic var weight:String?
-    dynamic var height:String?
+    @objc dynamic var userId = 1
+    @objc dynamic var image:Data?
+    @objc dynamic var name:String?
+    @objc dynamic var gender:String?
+    @objc dynamic var age:String?
+    @objc dynamic var weight:String?
+    @objc dynamic var height:String?
     
     override static func primaryKey() -> String? {
         return "userId"

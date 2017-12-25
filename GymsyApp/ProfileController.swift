@@ -82,7 +82,7 @@ final class ProfileController: UIViewController {
         }
     }
     
-    func dismissKeyboardAction() {
+    @objc func dismissKeyboardAction() {
         view.endEditing(true)
     }
     

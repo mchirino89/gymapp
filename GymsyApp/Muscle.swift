@@ -9,8 +9,8 @@
 import RealmSwift
 
 class Muscle: Object {
-    dynamic var id = 0
-    dynamic var name = ""
+    @objc dynamic var id = 0
+    @objc dynamic var name = ""
     let exercises = List<Exercise>()
     
     convenience init(id: Int, name: String) {
