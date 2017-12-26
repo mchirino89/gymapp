@@ -54,7 +54,7 @@ final class ExerciseController: UIViewController {
     private func loadList() {
         loadAgainButton.isHidden = true
         viewLoader(true)
-        DispatchQueue.global(qos: .userInteractive).async { [weak self] _ in
+        DispatchQueue.global(qos: .userInteractive).async { [weak self] in
             guard let view = self else { return }
             JSONResponseData(kindOfService: view.muscleGroupList == 0 ? .muscleGroup : .exerciseGroup(id: view.dataId), completion: {
                 (JSONdata) in
