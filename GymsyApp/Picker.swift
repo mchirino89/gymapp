@@ -34,7 +34,7 @@ extension ProfileController: UIPickerViewDelegate, UIPickerViewDataSource {
         if pickerLabel == nil {
             pickerLabel = UILabel()
         }
-        pickerLabel?.font = UIFont(name: Constants.UIElements.appFont, size: CGFloat(Constants.UIElements.regularFontSize))
+        pickerLabel?.font = UIFont(name: Constants.UIElements.appFont, size: Constants.UIElements.regularFontSize)
         pickerLabel?.textColor = UIColor.white
         pickerLabel?.textAlignment = .center
         switch pickerKind {

@@ -80,7 +80,7 @@ struct Constants {
         static let genders = ["Male", "Female"]
         static let placeholderNames = ["John Doe", "Jane Doe"]
         static let appFont = "Copperplate"
-        static let regularFontSize = 25
+        static let regularFontSize:CGFloat = 25
         static let animationDuration = 0.3
         static let exerciseGIF = 2
         static let exerciseGenericTag = "General exercise"
