@@ -34,6 +34,11 @@ final class DetailController: UIViewController {
         title = Constants.DetailView.title
         exerciseNameLabel.text = exerciseName
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(rightButtonAction(sender:)))
+        for child in view.subviews {
+            if let labelView:UILabel = child as? UILabel {
+                adaptFontSize(adaptiveLabel: labelView)
+            }
+        }
         readJSONlist()
         loadDetails()
     }
@@ -71,6 +76,15 @@ final class DetailController: UIViewController {
                     view.viewLoader(false)
                 }
             })
+        }
+    }
+
+    private func adaptFontSize(adaptiveLabel: UILabel) {
+        if #available(iOS 11.0, *) {
+            adaptiveLabel.font = UIFontMetrics.default.scaledFont(for: UIFont(name: Constants.UIElements.appFont, size: Constants.UIElements.regularFontSize)!)
+        } else {
+            adaptiveLabel.font = UIFont.preferredFont(forTextStyle: .body)
+            adaptiveLabel.adjustsFontForContentSizeCategory = true
         }
     }
     
