@@ -214,10 +214,10 @@
             </objects>
             <point key="canvasLocation" x="-1677.5999999999999" y="-459.22038980509751"/>
         </scene>
-        <!--Listing-->
+        <!--ExerciseController-->
         <scene sceneID="2Uf-f1-4Xz">
             <objects>
-                <viewController id="BCO-RW-R6g" userLabel="Listing" customClass="ExerciseController" customModule="GymsyApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BCO-RW-R6g" userLabel="ExerciseController" customClass="ExerciseController" customModule="GymsyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Dkf-dA-1ar"/>
                         <viewControllerLayoutGuide type="bottom" id="Tme-oT-Dvp"/>
