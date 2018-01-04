@@ -33,6 +33,7 @@
 		228529BA1F5313FA00F9DFD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 228529B91F5313FA00F9DFD9 /* Assets.xcassets */; };
 		228529BF1F534E8600F9DFD9 /* Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228529BE1F534E8600F9DFD9 /* Picker.swift */; };
 		228529C11F53AEFF00F9DFD9 /* ProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228529C01F53AEFF00F9DFD9 /* ProfileImage.swift */; };
+		7153DD381FFE357A00ACE81D /* AppStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7153DD371FFE357A00ACE81D /* AppStoryboard.swift */; };
 		717378951FED44B3006F28A0 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717378941FED44B3006F28A0 /* Models.swift */; };
 		942F6A3B721905B606A53BE9 /* Pods_GymsyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA2D9F47DDF5F2B955494A7C /* Pods_GymsyApp.framework */; };
 /* End PBXBuildFile section */
@@ -66,6 +67,7 @@
 		228529B91F5313FA00F9DFD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		228529BE1F534E8600F9DFD9 /* Picker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Picker.swift; sourceTree = "<group>"; };
 		228529C01F53AEFF00F9DFD9 /* ProfileImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileImage.swift; sourceTree = "<group>"; };
+		7153DD371FFE357A00ACE81D /* AppStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoryboard.swift; sourceTree = "<group>"; };
 		717378941FED44B3006F28A0 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		AA2D9F47DDF5F2B955494A7C /* Pods_GymsyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GymsyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD1691D4208E8C233669F2F6 /* Pods-GymsyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymsyApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GymsyApp/Pods-GymsyApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				2254D1FA1F4D9DE800B450E5 /* Info.plist */,
 				22638C711F4E42AC00079818 /* Constants.swift */,
 				2213F75F1F60A23200213D31 /* Singleton.swift */,
+				7153DD371FFE357A00ACE81D /* AppStoryboard.swift */,
 			);
 			name = Config;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 				222FF4E31F664DF00011A523 /* Profile.swift in Sources */,
 				222B44B61F4F9A1A008E17A8 /* DetailController.swift in Sources */,
 				222FF4DE1F6486820011A523 /* Muscle.swift in Sources */,
+				7153DD381FFE357A00ACE81D /* AppStoryboard.swift in Sources */,
 				2213F74E1F5DECA800213D31 /* CollectionListingController.swift in Sources */,
 				22638C701F4E39B600079818 /* ListViewCell.swift in Sources */,
 				222FF4DC1F64859A0011A523 /* Exercise.swift in Sources */,
