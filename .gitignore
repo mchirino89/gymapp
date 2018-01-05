@@ -17,6 +17,7 @@ DerivedData
 !default.perspectivev3
 xcuserdata
 Resources/
+_config.yml # Sublime text theme configuration
 
 ## Other
 *.xccheckout
