@@ -86,80 +86,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2213F74C1F5DE5EB00213D31 /* Routine */ = {
-			isa = PBXGroup;
-			children = (
-				22638C761F4E7CB900079818 /* RoutineController.swift */,
-				2213F74A1F5DE5CC00213D31 /* TableView.swift */,
-			);
-			name = Routine;
-			sourceTree = "<group>";
-		};
-		2213F74F1F5DED1500213D31 /* Exercise */ = {
-			isa = PBXGroup;
-			children = (
-				2254D1F01F4D9DE800B450E5 /* ExerciseController.swift */,
-				2213F74D1F5DECA800213D31 /* CollectionListingController.swift */,
-			);
-			name = Exercise;
-			sourceTree = "<group>";
-		};
-		2213F7501F5EDDF400213D31 /* Details */ = {
-			isa = PBXGroup;
-			children = (
-				222B44B51F4F9A1A008E17A8 /* DetailController.swift */,
-				2213F7511F5EE0F100213D31 /* TextArea.swift */,
-			);
-			name = Details;
-			sourceTree = "<group>";
-		};
-		2213F7531F5EF4FD00213D31 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				22638C6F1F4E39B600079818 /* ListViewCell.swift */,
-				2213F7481F5DE54600213D31 /* RoutineViewCell.swift */,
-			);
-			name = Cells;
-			sourceTree = "<group>";
-		};
-		2213F7541F5EF50900213D31 /* Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				2254D1F21F4D9DE800B450E5 /* Main.storyboard */,
-				2254D1F71F4D9DE800B450E5 /* LaunchScreen.storyboard */,
-			);
-			name = Storyboards;
-			sourceTree = "<group>";
-		};
-		2213F7571F60972500213D31 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				2213F75B1F6099B500213D31 /* Config.swift */,
-				717378941FED44B3006F28A0 /* Models.swift */,
-			);
-			name = Network;
-			sourceTree = "<group>";
-		};
-		222FF4D81F6480350011A523 /* Realm */ = {
-			isa = PBXGroup;
-			children = (
-				222FF4E01F64A58A0011A523 /* Settings.swift */,
-				222FF4DF1F64A5720011A523 /* Models */,
-			);
-			name = Realm;
-			sourceTree = "<group>";
-		};
-		222FF4DF1F64A5720011A523 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				222FF4DB1F64859A0011A523 /* Exercise.swift */,
-				222FF4DD1F6486820011A523 /* Muscle.swift */,
-				222FF4D91F6480500011A523 /* Routine.swift */,
-				222FF4E21F664DF00011A523 /* Profile.swift */,
-			);
-			name = Models;
-			sourceTree = "<group>";
-		};
 		2254D1E21F4D9DE800B450E5 = {
 			isa = PBXGroup;
 			children = (
@@ -182,58 +108,14 @@
 			isa = PBXGroup;
 			children = (
 				2254D1EE1F4D9DE800B450E5 /* AppDelegate.swift */,
-				22638C7A1F4F81A100079818 /* Controllers */,
-				22638C731F4E492D00079818 /* Config */,
-				2213F7571F60972500213D31 /* Network */,
-				222FF4D81F6480350011A523 /* Realm */,
-				22638C6E1F4E38E000079818 /* UI */,
+				2254D1FA1F4D9DE800B450E5 /* Info.plist */,
+				7153DD411FFF894D00ACE81D /* Config */,
+				7153DD3C1FFF884B00ACE81D /* Controllers */,
+				7153DD451FFF8AD900ACE81D /* Network */,
+				7153DD471FFF8AFD00ACE81D /* Realm */,
+				7153DD4A1FFF8B5900ACE81D /* UI */,
 			);
 			path = GymsyApp;
-			sourceTree = "<group>";
-		};
-		22638C6E1F4E38E000079818 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				228529B91F5313FA00F9DFD9 /* Assets.xcassets */,
-				2213F7551F5EF56600213D31 /* ButtonStyle.swift */,
-				2213F7531F5EF4FD00213D31 /* Cells */,
-				2213F7541F5EF50900213D31 /* Storyboards */,
-			);
-			name = UI;
-			sourceTree = "<group>";
-		};
-		22638C731F4E492D00079818 /* Config */ = {
-			isa = PBXGroup;
-			children = (
-				2254D1FA1F4D9DE800B450E5 /* Info.plist */,
-				22638C711F4E42AC00079818 /* Constants.swift */,
-				2213F75F1F60A23200213D31 /* Singleton.swift */,
-				7153DD371FFE357A00ACE81D /* AppStoryboard.swift */,
-			);
-			name = Config;
-			sourceTree = "<group>";
-		};
-		22638C7A1F4F81A100079818 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				225E1FC71F557122000217C3 /* TabsController.swift */,
-				2213F74F1F5DED1500213D31 /* Exercise */,
-				2213F74C1F5DE5EB00213D31 /* Routine */,
-				228529BB1F534E2700F9DFD9 /* Profile */,
-				2213F7501F5EDDF400213D31 /* Details */,
-			);
-			name = Controllers;
-			sourceTree = "<group>";
-		};
-		228529BB1F534E2700F9DFD9 /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				222B44B11F4F8341008E17A8 /* ProfileController.swift */,
-				228529BE1F534E8600F9DFD9 /* Picker.swift */,
-				228529C01F53AEFF00F9DFD9 /* ProfileImage.swift */,
-				222FF4E41F6715490011A523 /* TextField.swift */,
-			);
-			name = Profile;
 			sourceTree = "<group>";
 		};
 		5DBAA7A69E0C6E7E91D9F1F1 /* Frameworks */ = {
@@ -242,6 +124,132 @@
 				AA2D9F47DDF5F2B955494A7C /* Pods_GymsyApp.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7153DD3C1FFF884B00ACE81D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				225E1FC71F557122000217C3 /* TabsController.swift */,
+				7153DD3D1FFF887900ACE81D /* Exercise */,
+				7153DD3E1FFF889500ACE81D /* Routine */,
+				7153DD3F1FFF88C000ACE81D /* Profile */,
+				7153DD401FFF88EE00ACE81D /* Details */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		7153DD3D1FFF887900ACE81D /* Exercise */ = {
+			isa = PBXGroup;
+			children = (
+				2254D1F01F4D9DE800B450E5 /* ExerciseController.swift */,
+				2213F74D1F5DECA800213D31 /* CollectionListingController.swift */,
+			);
+			path = Exercise;
+			sourceTree = "<group>";
+		};
+		7153DD3E1FFF889500ACE81D /* Routine */ = {
+			isa = PBXGroup;
+			children = (
+				22638C761F4E7CB900079818 /* RoutineController.swift */,
+				2213F74A1F5DE5CC00213D31 /* TableView.swift */,
+			);
+			path = Routine;
+			sourceTree = "<group>";
+		};
+		7153DD3F1FFF88C000ACE81D /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				222B44B11F4F8341008E17A8 /* ProfileController.swift */,
+				228529BE1F534E8600F9DFD9 /* Picker.swift */,
+				228529C01F53AEFF00F9DFD9 /* ProfileImage.swift */,
+				222FF4E41F6715490011A523 /* TextField.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		7153DD401FFF88EE00ACE81D /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				222B44B51F4F9A1A008E17A8 /* DetailController.swift */,
+				2213F7511F5EE0F100213D31 /* TextArea.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		7153DD411FFF894D00ACE81D /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				22638C711F4E42AC00079818 /* Constants.swift */,
+				2213F75F1F60A23200213D31 /* Singleton.swift */,
+				7153DD371FFE357A00ACE81D /* AppStoryboard.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		7153DD451FFF8AD900ACE81D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				2213F75B1F6099B500213D31 /* Config.swift */,
+				717378941FED44B3006F28A0 /* Models.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		7153DD471FFF8AFD00ACE81D /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				222FF4E01F64A58A0011A523 /* Settings.swift */,
+				7153DD491FFF8B3000ACE81D /* Models */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		7153DD491FFF8B3000ACE81D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				222FF4DB1F64859A0011A523 /* Exercise.swift */,
+				222FF4DD1F6486820011A523 /* Muscle.swift */,
+				222FF4D91F6480500011A523 /* Routine.swift */,
+				222FF4E21F664DF00011A523 /* Profile.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7153DD4A1FFF8B5900ACE81D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				228529B91F5313FA00F9DFD9 /* Assets.xcassets */,
+				7153DD4D1FFF8BB300ACE81D /* Styling */,
+				7153DD4C1FFF8B8A00ACE81D /* Storyboards */,
+				7153DD4B1FFF8B8400ACE81D /* Cells */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		7153DD4B1FFF8B8400ACE81D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				22638C6F1F4E39B600079818 /* ListViewCell.swift */,
+				2213F7481F5DE54600213D31 /* RoutineViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		7153DD4C1FFF8B8A00ACE81D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				2254D1F21F4D9DE800B450E5 /* Main.storyboard */,
+				2254D1F71F4D9DE800B450E5 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		7153DD4D1FFF8BB300ACE81D /* Styling */ = {
+			isa = PBXGroup;
+			children = (
+				2213F7551F5EF56600213D31 /* ButtonStyle.swift */,
+			);
+			path = Styling;
 			sourceTree = "<group>";
 		};
 		DB6BDFECE62B1537A583C8B2 /* Pods */ = {
