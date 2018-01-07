@@ -38,6 +38,7 @@
 		715DD8FB2002932C00412A7F /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715DD8FA2002932C00412A7F /* Helper.swift */; };
 		715DD8FE200296D700412A7F /* Exercises.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 715DD8FC200296D700412A7F /* Exercises.storyboard */; };
 		717378951FED44B3006F28A0 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717378941FED44B3006F28A0 /* Models.swift */; };
+		718853522002A24A002A1E33 /* SHA1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718853512002A249002A1E33 /* SHA1.swift */; };
 		942F6A3B721905B606A53BE9 /* Pods_GymsyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA2D9F47DDF5F2B955494A7C /* Pods_GymsyApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		715DD8FA2002932C00412A7F /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		715DD8FD200296D700412A7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Exercises.storyboard; sourceTree = "<group>"; };
 		717378941FED44B3006F28A0 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		718853512002A249002A1E33 /* SHA1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHA1.swift; sourceTree = "<group>"; };
 		AA2D9F47DDF5F2B955494A7C /* Pods_GymsyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GymsyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD1691D4208E8C233669F2F6 /* Pods-GymsyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymsyApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GymsyApp/Pods-GymsyApp.debug.xcconfig"; sourceTree = "<group>"; };
 		CF0D98458C0ACB0ACFE7D59A /* Pods-GymsyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymsyApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-GymsyApp/Pods-GymsyApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 			children = (
 				7153DD371FFE357A00ACE81D /* AppStoryboard.swift */,
 				22638C711F4E42AC00079818 /* Constants.swift */,
+				718853512002A249002A1E33 /* SHA1.swift */,
 				715DD8FA2002932C00412A7F /* Helper.swift */,
 				2213F75F1F60A23200213D31 /* Singleton.swift */,
 			);
@@ -434,6 +437,7 @@
 				222B44B21F4F8341008E17A8 /* ProfileController.swift in Sources */,
 				2213F74B1F5DE5CC00213D31 /* TableView.swift in Sources */,
 				222FF4E11F64A58A0011A523 /* Settings.swift in Sources */,
+				718853522002A24A002A1E33 /* SHA1.swift in Sources */,
 				715DD8FB2002932C00412A7F /* Helper.swift in Sources */,
 				228529BF1F534E8600F9DFD9 /* Picker.swift in Sources */,
 				717378951FED44B3006F28A0 /* Models.swift in Sources */,
