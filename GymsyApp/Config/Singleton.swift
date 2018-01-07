@@ -15,7 +15,5 @@ final class Singleton {
     static var dataSource:Realm!
     static var selectedRoutine:Results<Exercise>?
     static let decoder = JSONDecoder()
-    private init() {
-        
-    }
+    private init() {}
 }
