@@ -36,6 +36,7 @@
 		7153DD381FFE357A00ACE81D /* AppStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7153DD371FFE357A00ACE81D /* AppStoryboard.swift */; };
 		7153DD5B1FFF952800ACE81D /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7153DD591FFF952800ACE81D /* Profile.storyboard */; };
 		715DD8FB2002932C00412A7F /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715DD8FA2002932C00412A7F /* Helper.swift */; };
+		715DD8FE200296D700412A7F /* Exercises.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 715DD8FC200296D700412A7F /* Exercises.storyboard */; };
 		717378951FED44B3006F28A0 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717378941FED44B3006F28A0 /* Models.swift */; };
 		942F6A3B721905B606A53BE9 /* Pods_GymsyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA2D9F47DDF5F2B955494A7C /* Pods_GymsyApp.framework */; };
 /* End PBXBuildFile section */
@@ -72,6 +73,7 @@
 		7153DD371FFE357A00ACE81D /* AppStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoryboard.swift; sourceTree = "<group>"; };
 		7153DD5A1FFF952800ACE81D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
 		715DD8FA2002932C00412A7F /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		715DD8FD200296D700412A7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Exercises.storyboard; sourceTree = "<group>"; };
 		717378941FED44B3006F28A0 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		AA2D9F47DDF5F2B955494A7C /* Pods_GymsyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GymsyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD1691D4208E8C233669F2F6 /* Pods-GymsyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymsyApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GymsyApp/Pods-GymsyApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 			children = (
 				2254D1F71F4D9DE800B450E5 /* LaunchScreen.storyboard */,
 				2254D1F21F4D9DE800B450E5 /* Main.storyboard */,
+				715DD8FC200296D700412A7F /* Exercises.storyboard */,
 				7153DD591FFF952800ACE81D /* Profile.storyboard */,
 			);
 			path = Storyboards;
@@ -335,6 +338,7 @@
 				228529BA1F5313FA00F9DFD9 /* Assets.xcassets in Resources */,
 				7153DD5B1FFF952800ACE81D /* Profile.storyboard in Resources */,
 				2254D1F41F4D9DE800B450E5 /* Main.storyboard in Resources */,
+				715DD8FE200296D700412A7F /* Exercises.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +465,14 @@
 				7153DD5A1FFF952800ACE81D /* Base */,
 			);
 			name = Profile.storyboard;
+			sourceTree = "<group>";
+		};
+		715DD8FC200296D700412A7F /* Exercises.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				715DD8FD200296D700412A7F /* Base */,
+			);
+			name = Exercises.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
