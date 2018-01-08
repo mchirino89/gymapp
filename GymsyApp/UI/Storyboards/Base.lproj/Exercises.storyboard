@@ -21,7 +21,7 @@
         <!--Muscles-->
         <scene sceneID="71b-Gu-XLC">
             <objects>
-                <viewController storyboardIdentifier="UIViewController-w88-78-r6J" id="w88-78-r6J" userLabel="Muscles" customClass="ExerciseController" customModule="GymsyApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="listingViews" id="w88-78-r6J" userLabel="Muscles" customClass="ExerciseController" customModule="GymsyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Q2f-AX-QQS"/>
                         <viewControllerLayoutGuide type="bottom" id="cZU-eQ-YJI"/>
@@ -170,7 +170,7 @@
         <!--ExerciseController-->
         <scene sceneID="2Uf-f1-4Xz">
             <objects>
-                <viewController storyboardIdentifier="UIViewController-BCO-RW-R6g" id="BCO-RW-R6g" userLabel="ExerciseController" customClass="ExerciseController" customModule="GymsyApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="exercisesView" id="BCO-RW-R6g" userLabel="ExerciseController" customClass="ExerciseController" customModule="GymsyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Dkf-dA-1ar"/>
                         <viewControllerLayoutGuide type="bottom" id="Tme-oT-Dvp"/>

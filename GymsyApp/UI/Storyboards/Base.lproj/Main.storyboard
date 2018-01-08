@@ -200,20 +200,20 @@
             </objects>
             <point key="canvasLocation" x="1075" y="-1278"/>
         </scene>
-        <!--UIViewController-w88-78-r6J-->
+        <!--listingViews-->
         <scene sceneID="7mi-dn-t90">
             <objects>
-                <viewControllerPlaceholder storyboardName="Exercises" referencedIdentifier="UIViewController-w88-78-r6J" id="tYY-hc-ElO" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Exercises" referencedIdentifier="listingViews" id="tYY-hc-ElO" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="c0m-Ev-fqq"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zLe-kb-Pj4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1190" y="-2780"/>
+            <point key="canvasLocation" x="1101" y="-2780"/>
         </scene>
-        <!--UIViewController-BCO-RW-R6g-->
+        <!--exercisesView-->
         <scene sceneID="HMg-7e-Tp6">
             <objects>
-                <viewControllerPlaceholder storyboardName="Exercises" referencedIdentifier="UIViewController-BCO-RW-R6g" id="tUq-qY-JmR" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Exercises" referencedIdentifier="exercisesView" id="tUq-qY-JmR" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="omK-xJ-tWW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2126" y="-2084"/>
