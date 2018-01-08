@@ -20,7 +20,7 @@ final class ProfileController: UIViewController {
     @IBOutlet weak var pickerVerticalLayoutConstraint: NSLayoutConstraint!
     
     let profileImagePicker = UIImagePickerController()
-    var pickerKind = 0
+    var pickerKind = Constants.pickerKind.gender
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -94,21 +94,21 @@ final class ProfileController: UIViewController {
 
     @IBAction func pickerAction(_ sender: UIButton) {
         dismissKeyboardAction()
-        pickerKind = sender.tag
+        pickerKind = Constants.pickerKind(rawValue: sender.tag)!
         pickerView.reloadAllComponents()
         pickerViewAnimation(showingPicker: true)
     }
     
     @IBAction func okButton() {
         switch pickerKind {
-            case Constants.pickerKind.gender.rawValue:
+            case Constants.pickerKind.gender:
                 setPlaceholderProfileImage()
                 genderButton.setTitle(Constants.UIElements.genders[pickerView.selectedRow(inComponent: 0)], for: .normal)
                 break
-            case Constants.pickerKind.age.rawValue:
+            case Constants.pickerKind.age:
                 ageButton.setTitle(getPickerLabel(row: pickerView.selectedRow(inComponent: 0)), for: .normal)
                 break
-            case Constants.pickerKind.weight.rawValue:
+            case Constants.pickerKind.weight:
                 weightButton.setTitle(getPickerLabel(row: pickerView.selectedRow(inComponent: 0)), for: .normal)
                 break
             default: // height picker
