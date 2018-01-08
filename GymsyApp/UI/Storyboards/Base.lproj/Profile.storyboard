@@ -67,30 +67,8 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4wM-Hr-Mbq">
                                 <rect key="frame" x="0.0" y="335.5" width="375" height="331.5"/>
                                 <subviews>
-                                    <stackView opaque="NO" tag="1" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KGV-iw-INa">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="83"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Gender" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rRP-6k-AXh">
-                                                <rect key="frame" x="0.0" y="30" width="187.5" height="22.5"/>
-                                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6LI-lx-nau">
-                                                <rect key="frame" x="187.5" y="24" width="187.5" height="35"/>
-                                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
-                                                <state key="normal" title="Your gender">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="pickerAction:" destination="uJf-lP-LZH" eventType="touchUpInside" id="1cN-kG-ZAl"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Szk-bo-NFQ">
-                                        <rect key="frame" x="0.0" y="83" width="375" height="83"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="83"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Age" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGK-P3-92Y">
                                                 <rect key="frame" x="0.0" y="30" width="187.5" height="22.5"/>
@@ -111,30 +89,30 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MEL-CZ-w29">
-                                        <rect key="frame" x="0.0" y="166" width="375" height="82.5"/>
+                                    <stackView opaque="NO" tag="1" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KGV-iw-INa">
+                                        <rect key="frame" x="0.0" y="83" width="375" height="83"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Weight" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUe-tn-t1S">
-                                                <rect key="frame" x="0.0" y="30.5" width="187.5" height="22.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Gender" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rRP-6k-AXh">
+                                                <rect key="frame" x="0.0" y="30" width="187.5" height="22.5"/>
                                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bhn-ei-bfC">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6LI-lx-nau">
                                                 <rect key="frame" x="187.5" y="24" width="187.5" height="35"/>
                                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
-                                                <state key="normal" title="Your weight">
+                                                <state key="normal" title="Your gender">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="pickerAction:" destination="uJf-lP-LZH" eventType="touchUpInside" id="A5b-g3-Na1"/>
+                                                    <action selector="pickerAction:" destination="uJf-lP-LZH" eventType="touchUpInside" id="1cN-kG-ZAl"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="idi-W3-nbS">
-                                        <rect key="frame" x="0.0" y="248.5" width="375" height="83"/>
+                                        <rect key="frame" x="0.0" y="166" width="375" height="82.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Height" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="do8-0E-e0M">
                                                 <rect key="frame" x="0.0" y="30.5" width="187.5" height="22.5"/>
@@ -151,6 +129,28 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="pickerAction:" destination="uJf-lP-LZH" eventType="touchUpInside" id="DHD-eQ-4D7"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MEL-CZ-w29">
+                                        <rect key="frame" x="0.0" y="248.5" width="375" height="83"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Weight" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUe-tn-t1S">
+                                                <rect key="frame" x="0.0" y="30.5" width="187.5" height="22.5"/>
+                                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bhn-ei-bfC">
+                                                <rect key="frame" x="187.5" y="24" width="187.5" height="35"/>
+                                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
+                                                <state key="normal" title="Your weight">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="pickerAction:" destination="uJf-lP-LZH" eventType="touchUpInside" id="A5b-g3-Na1"/>
                                                 </connections>
                                             </button>
                                         </subviews>

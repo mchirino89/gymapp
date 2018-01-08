@@ -61,17 +61,17 @@ final class ProfileController: UIViewController {
         if profileImage != #imageLiteral(resourceName: "Male") && profileImage != #imageLiteral(resourceName: "Female") {
             updateProfile.image = UIImageJPEGRepresentation(profileImageButton.currentImage!, 1)
         }
-        if genderButton.currentTitle != Constants.UIElements.genderPlaceholder {
-            updateProfile.gender = genderButton.currentTitle
-        }
         if ageButton.currentTitle != Constants.UIElements.agePlaceholder {
             updateProfile.age = ageButton.currentTitle
         }
-        if weightButton.currentTitle != Constants.UIElements.weightPlaceholder {
-            updateProfile.weight = weightButton.currentTitle
+        if genderButton.currentTitle != Constants.UIElements.genderPlaceholder {
+            updateProfile.gender = genderButton.currentTitle
         }
         if heightButton.currentTitle != Constants.UIElements.heightPlaceholder {
             updateProfile.height = heightButton.currentTitle
+        }
+        if weightButton.currentTitle != Constants.UIElements.weightPlaceholder {
+            updateProfile.weight = weightButton.currentTitle
         }
         do {
             try Singleton.dataSource.write {
@@ -101,12 +101,12 @@ final class ProfileController: UIViewController {
     
     @IBAction func okButton() {
         switch pickerKind {
+            case Constants.pickerKind.age:
+                ageButton.setTitle(getPickerLabel(row: pickerView.selectedRow(inComponent: 0)), for: .normal)
+                break
             case Constants.pickerKind.gender:
                 setPlaceholderProfileImage()
                 genderButton.setTitle(Constants.UIElements.genders[pickerView.selectedRow(inComponent: 0)], for: .normal)
-                break
-            case Constants.pickerKind.age:
-                ageButton.setTitle(getPickerLabel(row: pickerView.selectedRow(inComponent: 0)), for: .normal)
                 break
             case Constants.pickerKind.weight:
                 weightButton.setTitle(getPickerLabel(row: pickerView.selectedRow(inComponent: 0)), for: .normal)
