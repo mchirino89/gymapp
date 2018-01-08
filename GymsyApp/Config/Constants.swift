@@ -28,6 +28,10 @@ struct Constants {
         case numeric = 10
     }
     
+    enum listingResult: Int {
+        case muscles, exercises, routine
+    }
+    
     struct APIConfiguration {
         static let rootURL = "https://wger.de/api/v2"
     }

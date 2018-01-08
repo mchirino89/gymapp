@@ -16,7 +16,7 @@ final class ExerciseController: UIViewController {
     @IBOutlet weak var exerciseTagLabel: UILabel?
     @IBOutlet weak var loadAgainButton: UIButton!
     
-    var muscleGroupList = 0
+    var muscleGroupList = Constants.listingResult.muscles
     var dataId: Int = 0
     var viewTitle: String?
     var itemsDataSource: Listing?
@@ -26,7 +26,7 @@ final class ExerciseController: UIViewController {
         setCollectionLayout()
         setNavigationBar(navigationController)
         customBackButton(navigationItem)
-        muscleGroupList < 2 ? loadList() : viewLoader(false)
+        muscleGroupList == .routine ? viewLoader(false) : loadList()
         guard let exerciseTag = exerciseTagLabel else { return }
         exerciseTag.text = "For: \(viewTitle ?? Constants.UIElements.exerciseGenericTag)"
         title = Constants.ExerciseView.title
@@ -36,7 +36,7 @@ final class ExerciseController: UIViewController {
         // From muscles to exercises per muscle
         if segue.destination.isKind(of: ExerciseController.self) {
             guard let destination = segue.destination as? ExerciseController, let sentParameters = sender as? [Any] else { return }
-            destination.muscleGroupList = 1
+            destination.muscleGroupList = .exercises
             destination.dataId = sentParameters.first as? Int ?? 0
             destination.viewTitle = sentParameters.last as? String
         } else { // From exercises per muscle to exercise details
@@ -56,7 +56,7 @@ final class ExerciseController: UIViewController {
         viewLoader(true)
         DispatchQueue.global(qos: .userInteractive).async { [weak self] in
             guard let view = self else { return }
-            JSONResponseData(kindOfService: view.muscleGroupList == 0 ? .muscleGroup : .exerciseGroup(id: view.dataId), completion: {
+            JSONResponseData(kindOfService: view.muscleGroupList == Constants.listingResult.muscles ? .muscleGroup : .exerciseGroup(id: view.dataId), completion: {
                 (JSONdata) in
                 guard let data = JSONdata else {
                     view.loadAgainButton.isHidden = false

@@ -20,13 +20,13 @@ extension ExerciseController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return muscleGroupList < 2 ? (itemsDataSource?.results?.count ?? 0) : (Singleton.selectedRoutine?.count ?? 0)
+        return muscleGroupList != .routine ? (itemsDataSource?.results?.count ?? 0) : (Singleton.selectedRoutine?.count ?? 0)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.Storyboard.cellId, for: indexPath) as! ListViewCell
         // Cell can refer either to a muscle group (abs, arms, legs, etc) or a specific exercise for a previous selected muscle group/routine (squat, push press, crunches, etc)
-        if muscleGroupList < 2 {
+        if muscleGroupList != .routine {
             cell.setDetailLabelWithAnimation(itemsDataSource!.results![indexPath.row].name, itemsDataSource!.results![indexPath.row].id)
         } else {
             cell.setDetailLabelWithAnimation(Singleton.selectedRoutine![indexPath.row].name, Singleton.selectedRoutine![indexPath.row].id)
@@ -36,6 +36,8 @@ extension ExerciseController: UICollectionViewDataSource, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as! ListViewCell
-        performSegue(withIdentifier: muscleGroupList == 0 ? Constants.Storyboard.exerciseListSegue : Constants.Storyboard.exerciseDetailSegue, sender: [cell.referenceId as Any, cell.detailLabel.text as Any])
+        let detailsInfo = [cell.referenceId as Any, cell.detailLabel.text as Any]
+        let destinationName = muscleGroupList == Constants.listingResult.muscles ? Constants.Storyboard.exerciseListSegue : Constants.Storyboard.exerciseDetailSegue
+        performSegue(withIdentifier: destinationName, sender: detailsInfo)
     }
 }
