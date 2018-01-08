@@ -70,3 +70,28 @@ private func failureInConnectionAlert(invalidCompletion: ((Data?) -> Void)) {
         print("Impossible to access current view controller")
     }
 }
+
+private func generateRandomKey() -> String {
+    let start = DispatchTime.now()
+    var randomString = ""
+    for _ in 1...16  {
+        var randomCharacter: Character?
+        if let gottenCharacter = UnicodeScalar(alphanumerical(randomChance())) {
+            randomCharacter = Character(gottenCharacter)
+        } else {
+            randomCharacter = Character("-")
+        }
+        randomString.append(randomChance() ? String(randomCharacter!).uppercased() : String(randomCharacter!).lowercased())
+    }
+    let end = DispatchTime.now()
+    print("Elapsed time: \(end.uptimeNanoseconds - start.uptimeNanoseconds)")
+    return randomString
+}
+
+private func alphanumerical(_ pairNumber: Bool) -> Int {
+    return pairNumber ? Int(arc4random_uniform(Constants.randomKind.alphabetic.rawValue)) + 65 : Int(arc4random_uniform(Constants.randomKind.numeric.rawValue)) + 48
+}
+
+private func randomChance() -> Bool {
+    return arc4random() % 2 == 0
+}

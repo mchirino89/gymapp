@@ -23,6 +23,11 @@ struct Constants {
         case height
     }
     
+    enum randomKind: UInt32 {
+        case alphabetic = 26
+        case numeric = 10
+    }
+    
     struct APIConfiguration {
         static let rootURL = "https://wger.de/api/v2"
     }
