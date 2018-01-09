@@ -36,7 +36,7 @@ func JSONResponseData(kindOfService: Services, completion: @escaping (_ response
     Singleton.provider.request(kindOfService, completion: { data in
         print(kindOfService.baseURL.absoluteString + kindOfService.path)
         switch data {
-        case let .success(moyaResponse):
+        case .success(let moyaResponse):
             do {
                 let _ = try moyaResponse.filterSuccessfulStatusCodes()
                 do {
@@ -73,7 +73,6 @@ private func failureInConnectionAlert(invalidCompletion: ((Data?) -> Void)) {
 }
 
 private func generateRandomKey() -> String {
-    let start = DispatchTime.now()
     var randomString = ""
     for _ in 1...16  {
         var randomCharacter: Character?
@@ -84,8 +83,6 @@ private func generateRandomKey() -> String {
         }
         randomString.append(randomChance() ? String(randomCharacter!).uppercased() : String(randomCharacter!).lowercased())
     }
-    let end = DispatchTime.now()
-    print("Elapsed time: \(end.uptimeNanoseconds - start.uptimeNanoseconds)")
     return randomString
 }
 
