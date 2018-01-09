@@ -12,12 +12,12 @@ extension ProfileController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
 //        print("Component \(component) for picker kind: \(pickerKind)")
-        switch pickerKind {
-            case Constants.pickerKind.gender:
+        switch pickerType {
+            case pickerKind.gender:
                 return Constants.UIElements.genders.count
-            case Constants.pickerKind.age:
+            case pickerKind.age:
                 return Constants.Units.topAge - Constants.Units.minAge
-            case Constants.pickerKind.weight:
+            case pickerKind.weight:
                 return Constants.Units.topWeight - Constants.Units.minWeight
             default: // height picker
                 return component == 0 ? Constants.Units.topFootHeight - Constants.Units.minFootHeight : 10
@@ -26,7 +26,7 @@ extension ProfileController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     // Only height picker will have two components
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return pickerKind == Constants.pickerKind.height ? 2 : 1
+        return pickerType == pickerKind.height ? 2 : 1
     }
     
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
@@ -37,12 +37,12 @@ extension ProfileController: UIPickerViewDelegate, UIPickerViewDataSource {
         pickerLabel?.font = UIFont(name: Constants.UIElements.appFont, size: Constants.UIElements.regularFontSize)
         pickerLabel?.textColor = UIColor.white
         pickerLabel?.textAlignment = .center
-        switch pickerKind {
-            case Constants.pickerKind.gender:
+        switch pickerType {
+            case pickerKind.gender:
                 pickerLabel?.text = Constants.UIElements.genders[row]
                 break
-            case Constants.pickerKind.age,
-                 Constants.pickerKind.weight:
+            case pickerKind.age,
+                 pickerKind.weight:
                 pickerLabel?.text = getPickerLabel(row: row)
                 break
             default: // height picker
@@ -70,10 +70,10 @@ extension ProfileController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func getPickerLabel(row: Int, component: Int = 0, shorten: Bool = false) -> String {
-        switch pickerKind {
-            case Constants.pickerKind.age:
+        switch pickerType {
+            case pickerKind.age:
                 return String(Constants.Units.minAge + row) + Constants.Units.age
-            case Constants.pickerKind.weight:
+            case pickerKind.weight:
                 return String(Constants.Units.minWeight + row) + Constants.Units.weight
             default: // height picker
                 if shorten == false {

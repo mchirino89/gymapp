@@ -8,20 +8,30 @@
 
 import CoreGraphics.CGFunction
 
+enum ParameterKey {
+    static let accessKey = "X-AccessKey"
+    static let randomKey = "X-RandomKey"
+}
+
+enum ParameterValue {
+    static let accessKey = "29d0b2b249f06558b877f365cb57bc5ef824b355"
+    static let randomKey = "16541135"
+}
+
+enum kindOfResult: Int {
+    case mainMuscle = 1
+    case secondaryMuscles
+    case equipment
+}
+
+enum pickerKind: Int {
+    case gender = 1
+    case age
+    case weight
+    case height
+}
+
 struct Constants {
-    
-    enum kindOfResult: Int {
-        case mainMuscle = 1
-        case secondaryMuscles
-        case equipment
-    }
-    
-    enum pickerKind: Int {
-        case gender = 1
-        case age
-        case weight
-        case height
-    }
     
     enum randomKind: UInt32 {
         case alphabetic = 26
@@ -51,16 +61,6 @@ struct Constants {
         static let category = "category"
         
         static let userID = "id_user"
-    }
-    
-    enum ParametersKey: String {
-        case accessKey = "X-AccessKey"
-        case randomKey = "X-RandomKey"
-    }
-    
-    enum ParametersValue: String {
-        case accessKey = "29d0b2b249f06558b877f365cb57bc5ef824b355"
-        case randomKey = "16541135"
     }
     
     struct ParameterValue {

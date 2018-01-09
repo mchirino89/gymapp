@@ -32,8 +32,8 @@ extension Services: TargetType {
 //    }
     
     var headers: [String: String]? {
-        return [Constants.ParametersKey.accessKey.rawValue: Constants.ParametersValue.accessKey.rawValue,
-                Constants.ParametersKey.randomKey.rawValue: Constants.ParametersValue.randomKey.rawValue]
+        return [ParameterKey.accessKey: ParameterValue.accessKey,
+                ParameterKey.randomKey: ParameterValue.randomKey]
     }
     
 //    var baseURL: URL { return URL(string: Constants.APIConfiguration.rootURL)! }
