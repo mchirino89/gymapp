@@ -32,21 +32,46 @@ struct Constants {
         case muscles, exercises, routine
     }
     
+    enum API: String {
+        case development = "https://stage.gymsyapp.com/api/v1/"
+        case APIKeyUser = "b327e1a950bc2c22498c6e84f904e95fa2536853"
+    }
+    
     struct APIConfiguration {
         static let rootURL = "https://wger.de/api/v2"
+        static let development = "https://stage.gymsyapp.com/api/v1/"
+        static let APIKeyUser = "b327e1a950bc2c22498c6e84f904e95fa2536853"
     }
     
     struct ParameterKey {
         static let contentType = "Content-type"
+        
         static let status = "status"
         static let language = "language"
         static let category = "category"
+        
+        static let userID = "id_user"
+    }
+    
+    enum ParametersKey: String {
+        case accessKey = "X-AccessKey"
+        case randomKey = "X-RandomKey"
+    }
+    
+    enum ParametersValue: String {
+        case accessKey = "29d0b2b249f06558b877f365cb57bc5ef824b355"
+        case randomKey = "16541135"
     }
     
     struct ParameterValue {
         static let contentType = "application/json"
         static let status = 2
         static let language = 2
+        
+        enum Language: String {
+            case english = "EN"
+            case spanish = "ES"
+        }
     }
     
     struct JSONResponseKey {
@@ -73,6 +98,10 @@ struct Constants {
         static let exerciseDetails = "/exerciseinfo/"
         static let exerciseImage = "/exerciseimage/"
         static let exerciseImageSize = "/thumbnails"
+    }
+    
+    enum Endpoints: String {
+        case category
     }
     
     struct Storyboard {

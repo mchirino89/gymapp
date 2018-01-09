@@ -9,6 +9,7 @@
 import Moya
 
 enum Services {
+    case categories
     case muscleGroup
     case exerciseGroup(id: Int)
     case exerciseDetails(id: Int)
@@ -18,22 +19,30 @@ extension Services: TargetType {
     /// The type of HTTP task to be performed.
     var task: Task {
         switch self {
-        case .muscleGroup, .exerciseDetails(_):
+        case .muscleGroup, .categories, .exerciseDetails(_):
             return .requestPlain
         case .exerciseGroup(let id):
             return .requestParameters(parameters: [Constants.ParameterKey.language: Constants.ParameterValue.language, Constants.ParameterKey.status: Constants.ParameterValue.status, Constants.ParameterKey.category: id], encoding: URLEncoding.queryString)
         }
     }
 
+//    var headers: [String: String]? {
+//        return [Constants.ParameterKey.contentType:
+//                Constants.ParameterValue.contentType]
+//    }
+    
     var headers: [String: String]? {
-        return [Constants.ParameterKey.contentType:
-                Constants.ParameterValue.contentType]
+        return [Constants.ParametersKey.accessKey.rawValue: Constants.ParametersValue.accessKey.rawValue,
+                Constants.ParametersKey.randomKey.rawValue: Constants.ParametersValue.randomKey.rawValue]
     }
     
-    var baseURL: URL { return URL(string: Constants.APIConfiguration.rootURL)! }
+//    var baseURL: URL { return URL(string: Constants.APIConfiguration.rootURL)! }
+    var baseURL: URL { return URL(string: Constants.APIConfiguration.development)! }
     
     var path: String {
         switch self {
+        case .categories:
+            return Constants.Endpoints.category.rawValue
         case .muscleGroup:
             return Constants.Path.exerciseGroup
         case .exerciseGroup(_):

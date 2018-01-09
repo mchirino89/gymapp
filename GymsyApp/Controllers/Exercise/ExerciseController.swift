@@ -54,27 +54,40 @@ final class ExerciseController: UIViewController {
     private func loadList() {
         loadAgainButton.isHidden = true
         viewLoader(true)
-        DispatchQueue.global(qos: .userInteractive).async { [weak self] in
-            guard let view = self else { return }
-            JSONResponseData(kindOfService: view.muscleGroupList == Constants.listingResult.muscles ? .muscleGroup : .exerciseGroup(id: view.dataId), completion: {
+        
+        DispatchQueue.global(qos: .userInteractive).async {
+//            [weak self] in
+//            guard let view = self else { return }
+            JSONResponseData(kindOfService: .categories, completion: {
                 (JSONdata) in
-                guard let data = JSONdata else {
-                    view.loadAgainButton.isHidden = false
-                    view.viewLoader(false)
-                    return
-                }
-                do {
-                    let parsedData = try Singleton.decoder.decode(Listing.self, from: data)
-                    view.itemsDataSource = parsedData
-                    DispatchQueue.main.async {
-                        view.refreshList()
-                    }
-                } catch {
-                    view.loadAgainButton.isHidden = false
-                    view.viewLoader(false)
+                DispatchQueue.main.async {
+                    print(JSONdata ?? "No way to print this raw data")
                 }
             })
+            
         }
+        
+//        DispatchQueue.global(qos: .userInteractive).async { [weak self] in
+//            guard let view = self else { return }
+//            JSONResponseData(kindOfService: view.muscleGroupList == Constants.listingResult.muscles ? .muscleGroup : .exerciseGroup(id: view.dataId), completion: {
+//                (JSONdata) in
+//                guard let data = JSONdata else {
+//                    view.loadAgainButton.isHidden = false
+//                    view.viewLoader(false)
+//                    return
+//                }
+//                do {
+//                    let parsedData = try Singleton.decoder.decode(Listing.self, from: data)
+//                    view.itemsDataSource = parsedData
+//                    DispatchQueue.main.async {
+//                        view.refreshList()
+//                    }
+//                } catch {
+//                    view.loadAgainButton.isHidden = false
+//                    view.viewLoader(false)
+//                }
+//            })
+//        }
     }
     
     // Refreshes collection view after API response
