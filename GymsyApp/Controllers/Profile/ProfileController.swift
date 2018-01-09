@@ -101,14 +101,14 @@ final class ProfileController: UIViewController {
     
     @IBAction func okButton() {
         switch pickerKind {
-            case Constants.pickerKind.age:
+            case .age:
                 ageButton.setTitle(getPickerLabel(row: pickerView.selectedRow(inComponent: 0)), for: .normal)
                 break
-            case Constants.pickerKind.gender:
+            case .gender:
                 setPlaceholderProfileImage()
                 genderButton.setTitle(Constants.UIElements.genders[pickerView.selectedRow(inComponent: 0)], for: .normal)
                 break
-            case Constants.pickerKind.weight:
+            case .weight:
                 weightButton.setTitle(getPickerLabel(row: pickerView.selectedRow(inComponent: 0)), for: .normal)
                 break
             default: // height picker
