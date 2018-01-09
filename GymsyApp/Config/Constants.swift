@@ -53,25 +53,25 @@ enum Constants {
         static let userID = "id_user"
     }
     
-    enum ParametersKey: String {
-        case accessKey = "X-AccessKey"
-        case randomKey = "X-RandomKey"
+    enum ParametersKey {
+        static let accessKey = "X-AccessKey"
+        static let randomKey = "X-RandomKey"
     }
     
-    enum ParametersValue: String {
-        case accessKey = "29d0b2b249f06558b877f365cb57bc5ef824b355"
-        case randomKey = "16541135"
+    enum ParametersValue {
+        static let accessKey = "29d0b2b249f06558b877f365cb57bc5ef824b355"
+        static let randomKey = "16541135"
+        
+        enum Language {
+            static let english = "EN"
+            static let spanish = "ES"
+        }
     }
     
     enum ParameterValue {
         static let contentType = "application/json"
         static let status = 2
         static let language = 2
-        
-        enum Language: String {
-            case english = "EN"
-            case spanish = "ES"
-        }
     }
     
     enum JSONResponseKey {
@@ -100,8 +100,8 @@ enum Constants {
         static let exerciseImageSize = "/thumbnails"
     }
     
-    enum Endpoints: String {
-        case category
+    enum Endpoints {
+        static let category = "category"
     }
     
     enum Storyboard {

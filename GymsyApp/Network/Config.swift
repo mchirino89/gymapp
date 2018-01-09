@@ -32,8 +32,8 @@ extension Services: TargetType {
 //    }
     
     var headers: [String: String]? {
-        return [Constants.ParametersKey.accessKey.rawValue: Constants.ParametersValue.accessKey.rawValue,
-                Constants.ParametersKey.randomKey.rawValue: Constants.ParametersValue.randomKey.rawValue]
+        return [Constants.ParametersKey.accessKey: Constants.ParametersValue.accessKey,
+                Constants.ParametersKey.randomKey: Constants.ParametersValue.randomKey]
     }
     
 //    var baseURL: URL { return URL(string: Constants.APIConfiguration.rootURL)! }
@@ -42,7 +42,7 @@ extension Services: TargetType {
     var path: String {
         switch self {
         case .categories:
-            return Constants.Endpoints.category.rawValue
+            return Constants.Endpoints.category
         case .muscleGroup:
             return Constants.Path.exerciseGroup
         case .exerciseGroup(_):
