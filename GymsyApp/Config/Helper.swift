@@ -87,7 +87,7 @@ private func generateRandomKey() -> String {
 }
 
 private func alphanumerical(_ pairNumber: Bool) -> Int {
-    return pairNumber ? Int(arc4random_uniform(Constants.randomKind.alphabetic.rawValue)) + 65 : Int(arc4random_uniform(Constants.randomKind.numeric.rawValue)) + 48
+    return pairNumber ? Int(arc4random_uniform(Constants.randomKind.alphabetic)) + 65 : Int(arc4random_uniform(Constants.randomKind.numeric)) + 48
 }
 
 private func randomChance() -> Bool {

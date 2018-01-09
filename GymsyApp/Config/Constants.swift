@@ -23,9 +23,9 @@ enum Constants {
         case height
     }
     
-    enum randomKind: UInt32 {
-        case alphabetic = 26
-        case numeric = 10
+    enum randomKind {
+        static let alphabetic: UInt32 = 26
+        static let numeric: UInt32 = 10
     }
     
     enum listingResult: Int {
