@@ -8,7 +8,7 @@
 
 import CoreGraphics.CGFunction
 
-struct Constants {
+enum Constants {
     
     enum kindOfResult: Int {
         case mainMuscle = 1
@@ -37,13 +37,13 @@ struct Constants {
         case APIKeyUser = "b327e1a950bc2c22498c6e84f904e95fa2536853"
     }
     
-    struct APIConfiguration {
+    enum APIConfiguration {
         static let rootURL = "https://wger.de/api/v2"
         static let development = "https://stage.gymsyapp.com/api/v1/"
         static let APIKeyUser = "b327e1a950bc2c22498c6e84f904e95fa2536853"
     }
     
-    struct ParameterKey {
+    enum ParameterKey {
         static let contentType = "Content-type"
         
         static let status = "status"
@@ -63,7 +63,7 @@ struct Constants {
         case randomKey = "16541135"
     }
     
-    struct ParameterValue {
+    enum ParameterValue {
         static let contentType = "application/json"
         static let status = 2
         static let language = 2
@@ -74,15 +74,15 @@ struct Constants {
         }
     }
     
-    struct JSONResponseKey {
+    enum JSONResponseKey {
         static let results = "results"
         
-        struct exerciseCategory {
+        enum exerciseCategory {
             static let id = "id"
             static let name = "name"
         }
         
-        struct exercises {
+        enum exercises {
             static let description = "description"
             static let mainMuscle = "muscles"
             static let secondaryMuscles = "muscles_secondary"
@@ -92,7 +92,7 @@ struct Constants {
         }
     }
     
-    struct Path {
+    enum Path {
         static let exerciseGroup = "/exercisecategory"
         static let exerciseList = "/exercise"
         static let exerciseDetails = "/exerciseinfo/"
@@ -104,7 +104,7 @@ struct Constants {
         case category
     }
     
-    struct Storyboard {
+    enum Storyboard {
         static let cellId = "detailCell"
         static let exerciseListSegue = "muscleDetailsSegue"
         static let exerciseDetailSegue = "specificDetailSegue"
@@ -112,7 +112,7 @@ struct Constants {
         static let routineCell = "routineCell"
     }
     
-    struct UIElements {
+    enum UIElements {
         static let title = "Gym App"
         static let genders = ["Male", "Female"]
         static let placeholderNames = ["John Doe", "Jane Doe"]
@@ -130,7 +130,7 @@ struct Constants {
         static let reloadButton = "Refresh"
     }
     
-    struct Units {
+    enum Units {
         static let topAge = 100
         static let minAge = 18
         static let topWeight = 301
@@ -145,7 +145,7 @@ struct Constants {
         static let inchSh = " in"
     }
     
-    struct ErrorMessages {
+    enum ErrorMessages {
         static let internetConnection = "It seems you don't have an active internet connection right now. Make sure you do before you try again please"
         static let parsingJSON = "Could not parse the data as JSON: "
         static let noData = "No data was returned by the request!"
@@ -161,27 +161,27 @@ struct Constants {
         static let invalidUserInfo = "Unable to retrieved previously stored user data"
     }
     
-    struct UIMessages {
+    enum UIMessages {
         static let affirmative = "Yes"
         static let negative = "No"
     }
     
-    struct Utilities {
-        struct JSON {
+    enum Utilities {
+        enum JSON {
             static let fileName = "ExercisesImages"
             static let fileExtension = "json"
         }
     }
     
-    struct MuscleView {
+    enum MuscleView {
         static let title = "Muscles"
     }
     
-    struct ExerciseView {
+    enum ExerciseView {
         static let title = "Exercises"
     }
     
-    struct DetailView {
+    enum DetailView {
         static let title = "Details"
     }
 }
