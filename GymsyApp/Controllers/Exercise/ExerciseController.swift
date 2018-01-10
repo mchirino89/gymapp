@@ -65,7 +65,6 @@ final class ExerciseController: UIViewController {
                     return
                 }
                 do {
-                    print(data)
                     Singleton.decoder.dateDecodingStrategy = .formatted(customDate)
                     let parsedData = try Singleton.decoder.decode([Result].self, from: data)
                     view.itemsDataSource = parsedData
@@ -79,28 +78,6 @@ final class ExerciseController: UIViewController {
                 }
             })
         }
-        
-//        DispatchQueue.global(qos: .userInteractive).async { [weak self] in
-//            guard let view = self else { return }
-//            JSONResponseData(kindOfService: view.muscleGroupList == Constants.listingResult.muscles ? .muscleGroup : .exerciseGroup(id: view.dataId), completion: {
-//                (JSONdata) in
-//                guard let data = JSONdata else {
-//                    view.loadAgainButton.isHidden = false
-//                    view.viewLoader(false)
-//                    return
-//                }
-//                do {
-//                    let parsedData = try Singleton.decoder.decode(Listing.self, from: data)
-//                    view.itemsDataSource = parsedData
-//                    DispatchQueue.main.async {
-//                        view.refreshList()
-//                    }
-//                } catch {
-//                    view.loadAgainButton.isHidden = false
-//                    view.viewLoader(false)
-//                }
-//            })
-//        }
     }
     
     // Refreshes collection view after API response
