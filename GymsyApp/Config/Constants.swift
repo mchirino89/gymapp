@@ -101,7 +101,7 @@ enum Constants {
     }
     
     enum Endpoints {
-        static let category = "category"
+        static let categories = "category"
     }
     
     enum Storyboard {

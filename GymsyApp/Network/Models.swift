@@ -9,8 +9,17 @@
 import Foundation
 
 struct Result: Codable {
-    let id: Int
+    let id: String
     let name: String
+    let created: Date?
+    let updated: Date?
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case name
+        case created = "created_at"
+        case updated = "updated_at"
+    }
 }
 
 struct Listing: Codable {

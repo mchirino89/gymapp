@@ -121,15 +121,15 @@ final class DetailController: UIViewController {
             if let file = Bundle.main.url(forResource: Constants.Utilities.JSON.fileName, withExtension: Constants.Utilities.JSON.fileExtension) {
                 let data = try Data(contentsOf: file)
                 exerciseImageDictionary = try Singleton.decoder.decode(Listing.self, from: data)
-                let imagesForExercise = exerciseImageDictionary?.results?
-                    .filter({ $0.id == exerciseId })
-                    .map {
-                        setExerciseImage(sourceURL: $0.name)
-                }
-                if imagesForExercise!.isEmpty {
-                    exerciseImageView.image = #imageLiteral(resourceName: "dumbbell")
-                    imageActivityIndicator.stopAnimating()
-                }
+//                let imagesForExercise = exerciseImageDictionary?.results?
+//                    .filter({ $0.id == exerciseId })
+//                    .map {
+//                        setExerciseImage(sourceURL: $0.name)
+//                }
+//                if imagesForExercise!.isEmpty {
+//                    exerciseImageView.image = #imageLiteral(resourceName: "dumbbell")
+//                    imageActivityIndicator.stopAnimating()
+//                }
             } else {
                 print(Constants.ErrorMessages.noJSONfile)
             }

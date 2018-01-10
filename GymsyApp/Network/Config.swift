@@ -42,7 +42,7 @@ extension Services: TargetType {
     var path: String {
         switch self {
         case .categories:
-            return Constants.Endpoints.category
+            return Constants.Endpoints.categories
         case .muscleGroup:
             return Constants.Path.exerciseGroup
         case .exerciseGroup(_):

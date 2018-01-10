@@ -9,6 +9,12 @@
 import UIKit
 import Moya
 
+let customDate: DateFormatter = {
+    let formatter = DateFormatter()
+    formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+    return formatter
+}()
+
 func setNavigationBar(_ navigationController: UINavigationController?) {
     navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
     navigationController?.navigationBar.shadowImage = UIImage()
@@ -34,7 +40,7 @@ func questionPopup(title: String, message: String, style: UIAlertControllerStyle
 
 func JSONResponseData(kindOfService: Services, completion: @escaping (_ response: Data?) ->()) {
     Singleton.provider.request(kindOfService, completion: { data in
-        print(kindOfService.baseURL.absoluteString + kindOfService.path)
+//        print(kindOfService.baseURL.absoluteString + kindOfService.path)
         switch data {
         case .success(let moyaResponse):
             do {

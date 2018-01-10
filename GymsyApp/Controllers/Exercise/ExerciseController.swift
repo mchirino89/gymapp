@@ -19,7 +19,7 @@ final class ExerciseController: UIViewController {
     var muscleGroupList = Constants.listingResult.muscles
     var dataId: Int = 0
     var viewTitle: String?
-    var itemsDataSource: Listing?
+    var itemsDataSource: [Result]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,16 +55,29 @@ final class ExerciseController: UIViewController {
         loadAgainButton.isHidden = true
         viewLoader(true)
         
-        DispatchQueue.global(qos: .userInteractive).async {
-//            [weak self] in
-//            guard let view = self else { return }
+        DispatchQueue.global(qos: .userInteractive).async { [weak self] in
+            guard let view = self else { return }
             JSONResponseData(kindOfService: .categories, completion: {
                 (JSONdata) in
-                DispatchQueue.main.async {
-                    print(JSONdata ?? "No way to print this raw data")
+                guard let data = JSONdata else {
+                    view.loadAgainButton.isHidden = false
+                    view.viewLoader(false)
+                    return
+                }
+                do {
+                    print(data)
+                    Singleton.decoder.dateDecodingStrategy = .formatted(customDate)
+                    let parsedData = try Singleton.decoder.decode([Result].self, from: data)
+                    view.itemsDataSource = parsedData
+                    DispatchQueue.main.async {
+                        view.refreshList()
+                    }
+                } catch let error {
+                    print(error.localizedDescription)
+                    view.loadAgainButton.isHidden = false
+                    view.viewLoader(false)
                 }
             })
-            
         }
         
 //        DispatchQueue.global(qos: .userInteractive).async { [weak self] in
