@@ -68,6 +68,7 @@ final class ExerciseController: UIViewController {
                     Singleton.decoder.dateDecodingStrategy = .formatted(customDate)
                     let parsedData = try Singleton.decoder.decode([Result].self, from: data)
                     view.itemsDataSource = parsedData
+                    view.itemsDataSource?.sort(by: { (A, B) -> Bool in return A.name < B.name })
                     DispatchQueue.main.async {
                         view.refreshList()
                     }
