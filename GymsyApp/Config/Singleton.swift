@@ -15,6 +15,6 @@ final class Singleton {
     static let provider = MoyaProvider<Services>()
     static var selectedRoutine: Results<Exercise>?
     static var dataSource: Realm!
-    static var appsLanguage = 0
+    static var appsLanguage = Constants.ParametersValue.language.english
     private init() { }
 }

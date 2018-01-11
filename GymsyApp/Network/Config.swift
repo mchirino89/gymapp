@@ -24,7 +24,7 @@ extension Services: TargetType {
             case .exerciseGroup(let id):
                 return .requestParameters(parameters: [Constants.ParameterKey.language: Constants.ParameterValue.language, Constants.ParameterKey.status: Constants.ParameterValue.status, Constants.ParameterKey.category: id], encoding: URLEncoding.queryString)
             default:
-                return .requestParameters(parameters: [Constants.ParametersKey.language: Constants.ParametersValue.Language[Singleton.appsLanguage]], encoding: URLEncoding.queryString)
+                return .requestParameters(parameters: [Constants.ParametersKey.language: Singleton.appsLanguage.rawValue], encoding: URLEncoding.queryString)
         }
     }
 
