@@ -56,13 +56,16 @@ enum Constants {
     enum ParametersKey {
         static let accessKey = "X-AccessKey"
         static let randomKey = "X-RandomKey"
-        static let language = "Language"
+        static let language = "language"
     }
     
     enum ParametersValue {
         static let accessKey = "29d0b2b249f06558b877f365cb57bc5ef824b355"
         static let randomKey = "16541135"
-        static let Language = ["EN", "ES"]
+        enum language: String {
+            case english = "EN"
+            case spanish = "ES"
+        }
     }
     
     enum ParameterValue {
