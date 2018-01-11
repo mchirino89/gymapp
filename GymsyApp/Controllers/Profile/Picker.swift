@@ -14,13 +14,13 @@ extension ProfileController: UIPickerViewDelegate, UIPickerViewDataSource {
 //        print("Component \(component) for picker kind: \(pickerKind)")
         switch pickerKind {
             case .gender:
-                return Constants.UIElements.genders.count
+                return Constants.uiElements.genders.count
             case .age:
-                return Constants.Units.topAge - Constants.Units.minAge
+                return Constants.units.topAge - Constants.units.minAge
             case .weight:
-                return Constants.Units.topWeight - Constants.Units.minWeight
+                return Constants.units.topWeight - Constants.units.minWeight
             default: // height picker
-                return component == 0 ? Constants.Units.topFootHeight - Constants.Units.minFootHeight : 10
+                return component == 0 ? Constants.units.topFootHeight - Constants.units.minFootHeight : 10
         }
     }
     
@@ -34,12 +34,12 @@ extension ProfileController: UIPickerViewDelegate, UIPickerViewDataSource {
         if pickerLabel == nil {
             pickerLabel = UILabel()
         }
-        pickerLabel?.font = UIFont(name: Constants.UIElements.appFont, size: Constants.UIElements.regularFontSize)
+        pickerLabel?.font = UIFont(name: Constants.uiElements.appFont, size: Constants.uiElements.regularFontSize)
         pickerLabel?.textColor = UIColor.white
         pickerLabel?.textAlignment = .center
         switch pickerKind {
             case .gender:
-                pickerLabel?.text = Constants.UIElements.genders[row]
+                pickerLabel?.text = Constants.uiElements.genders[row]
                 break
             case .age, .weight:
                 pickerLabel?.text = getPickerLabel(row: row)
@@ -52,33 +52,33 @@ extension ProfileController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func pickerViewAnimation(showingPicker: Bool) {
         pickerVerticalLayoutConstraint.constant = showingPicker ? 0 : 1000
-        UIView.animate(withDuration: Constants.UIElements.animationDuration, animations: { self.view.layoutIfNeeded() }
+        UIView.animate(withDuration: Constants.uiElements.animationDuration, animations: { self.view.layoutIfNeeded() }
         )
     }
     
     func setPlaceholderProfileImage() {
         let row = pickerView.selectedRow(inComponent: 0)
         guard let profileImage = profileImageButton.backgroundImage(for: .normal) else {
-            print(Constants.ErrorMessages.noProfilePlaceholder)
+            print(Constants.errorMessages.noProfilePlaceholder)
             return
         }
         if profileImage == #imageLiteral(resourceName: "Male") || profileImage == #imageLiteral(resourceName: "Female") {
-            profileImageButton.setBackgroundImage(UIImage(named: Constants.UIElements.genders[row]), for: .normal)
-            nameTextField.placeholder = Constants.UIElements.placeholderNames[row]
+            profileImageButton.setBackgroundImage(UIImage(named: Constants.uiElements.genders[row]), for: .normal)
+            nameTextField.placeholder = Constants.uiElements.placeholderNames[row]
         }
     }
     
     func getPickerLabel(row: Int, component: Int = 0, shorten: Bool = false) -> String {
         switch pickerKind {
             case .age:
-                return String(Constants.Units.minAge + row) + Constants.Units.age
+                return String(Constants.units.minAge + row) + Constants.units.age
             case .weight:
-                return String(Constants.Units.minWeight + row) + Constants.Units.weight
+                return String(Constants.units.minWeight + row) + Constants.units.weight
             default: // height picker
                 if shorten == false {
-                    return component == 0 ? String(Constants.Units.minFootHeight + row) + Constants.Units.height : String(row + 1) + Constants.Units.inch
+                    return component == 0 ? String(Constants.units.minFootHeight + row) + Constants.units.height : String(row + 1) + Constants.units.inch
                 }
-                return component == 0 ? String(Constants.Units.minFootHeight + row) + Constants.Units.heightSh : String(row + 1) + Constants.Units.inchSh
+                return component == 0 ? String(Constants.units.minFootHeight + row) + Constants.units.heightSh : String(row + 1) + Constants.units.inchSh
         }
     }
 }

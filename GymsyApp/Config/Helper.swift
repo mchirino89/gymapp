@@ -24,7 +24,7 @@ func customBackButton(_ navigationItem: UINavigationItem) {
     navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 }
 
-func getPopupAlert(message: String, title: String = Constants.ErrorMessages.popupTitle, buttonText: String = Constants.ErrorMessages.popupButton) -> UIAlertController {
+func getPopupAlert(message: String, title: String = Constants.errorMessages.popupTitle, buttonText: String = Constants.errorMessages.popupButton) -> UIAlertController {
     let popupAlert = UIAlertController(title: title, message: message, preferredStyle: .alert)
     popupAlert.addAction(UIAlertAction(title: buttonText, style: .default))
     return popupAlert
@@ -32,9 +32,9 @@ func getPopupAlert(message: String, title: String = Constants.ErrorMessages.popu
 
 func questionPopup(title: String, message: String, style: UIAlertControllerStyle, afirmativeAction: ((UIAlertAction) -> Void)?) -> UIAlertController {
     let questionAlert = UIAlertController(title: title, message: message, preferredStyle: style)
-    let logOutAction = UIAlertAction(title: Constants.UIMessages.affirmative, style: .destructive, handler: afirmativeAction)
+    let logOutAction = UIAlertAction(title: Constants.uiMessages.affirmative, style: .destructive, handler: afirmativeAction)
     questionAlert.addAction(logOutAction)
-    questionAlert.addAction(UIAlertAction(title: Constants.UIMessages.negative, style: .default))
+    questionAlert.addAction(UIAlertAction(title: Constants.uiMessages.negative, style: .default))
     return questionAlert
 }
 
@@ -73,7 +73,7 @@ private func failureInConnectionAlert(invalidCompletion: ((Data?) -> Void)) {
             topController = presentedViewController
         }
         invalidCompletion(nil)
-        topController.present(getPopupAlert(message: Constants.ErrorMessages.internetConnection), animated: true)
+        topController.present(getPopupAlert(message: Constants.errorMessages.internetConnection), animated: true)
     } else {
         print("Impossible to access current view controller")
     }

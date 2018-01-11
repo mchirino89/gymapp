@@ -15,8 +15,8 @@ extension RoutineController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Storyboard.routineCell) as? RoutineViewCell else {
-            return UITableViewCell(style: .default, reuseIdentifier: Constants.Storyboard.routineCell)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.storyboard.routineCell) as? RoutineViewCell else {
+            return UITableViewCell(style: .default, reuseIdentifier: Constants.storyboard.routineCell)
         }
         cell.routineLabel.text = routineDataSource[indexPath.row].name
         cell.backgroundImageView.image = UIImage(named: routineDataSource[indexPath.row].imageName)
@@ -28,6 +28,6 @@ extension RoutineController: UITableViewDelegate, UITableViewDataSource {
         guard let routineCell = tableView.cellForRow(at: indexPath) as? RoutineViewCell else { return }
         // Get all exercise that belongs to this routine via a predicate call to the realm database
         Singleton.selectedRoutine = Singleton.dataSource.objects(Exercise.self).filter("belongsTo == %@", routineDataSource[indexPath.row])
-        performSegue(withIdentifier: Constants.Storyboard.routineDetailSegue, sender: [routineCell.idForRoutine as Any, routineCell.routineLabel.text as Any])
+        performSegue(withIdentifier: Constants.storyboard.routineDetailSegue, sender: [routineCell.idForRoutine as Any, routineCell.routineLabel.text as Any])
     }
 }

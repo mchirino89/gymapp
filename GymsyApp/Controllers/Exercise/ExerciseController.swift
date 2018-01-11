@@ -28,8 +28,8 @@ final class ExerciseController: UIViewController {
         customBackButton(navigationItem)
         muscleGroupList == .routine ? viewLoader(false) : loadList()
         guard let exerciseTag = exerciseTagLabel else { return }
-        exerciseTag.text = "For: \(viewTitle ?? Constants.UIElements.exerciseGenericTag)"
-        title = Constants.ExerciseView.title
+        exerciseTag.text = "For: \(viewTitle ?? Constants.uiElements.exerciseGenericTag)"
+        title = Constants.exerciseView.title
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -42,7 +42,7 @@ final class ExerciseController: UIViewController {
         } else { // From exercises per muscle to exercise details
             guard let destination = segue.destination as? DetailController, let sentParameters = sender as? [Any] else { return }
             destination.exerciseId = (sentParameters.first as? Int) ?? 0
-            destination.exerciseName = (sentParameters.last as? String) ?? Constants.UIElements.exerciseGenericTag
+            destination.exerciseName = (sentParameters.last as? String) ?? Constants.uiElements.exerciseGenericTag
         }
     }
     
@@ -81,7 +81,7 @@ final class ExerciseController: UIViewController {
         }
     }
     
-    // Refreshes collection view after API response
+    // Refreshes collection view after api response
     private func refreshList() {
         listCollectionView.reloadData()
         viewLoader(false)

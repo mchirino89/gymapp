@@ -16,7 +16,7 @@ extension ProfileController: UIImagePickerControllerDelegate, UINavigationContro
             profileImageButton.setImage(UIImage(data: UIImageJPEGRepresentation(pickedImage, 0.45)!), for: .normal)
             profileImageButton.setBackgroundImage(nil, for: .normal)
         } else {
-            print(Constants.ErrorMessages.wrongImageFormat)
+            print(Constants.errorMessages.wrongImageFormat)
         }
         dismiss(animated: true)
     }

@@ -15,7 +15,7 @@ class TabsController: UITabBarController {
         if let firstTab = tabBar.items?.first {
             customizeItem(item: firstTab)
         } else {
-            print(Constants.ErrorMessages.tabItemError)
+            print(Constants.errorMessages.tabItemError)
         }
     }
     

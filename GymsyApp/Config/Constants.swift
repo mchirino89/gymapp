@@ -32,15 +32,15 @@ enum Constants {
         case muscles, exercises, routine
     }
     
-    enum API: String {
+    enum api: String {
         case development = "https://stage.gymsyapp.com/api/v1/"
-        case APIKeyUser = "b327e1a950bc2c22498c6e84f904e95fa2536853"
+        case apiKeyUser = "b327e1a950bc2c22498c6e84f904e95fa2536853"
     }
     
-    enum APIConfiguration {
+    enum apiConfiguration {
         static let rootURL = "https://wger.de/api/v2"
         static let development = "https://stage.gymsyapp.com/api/v1/"
-        static let APIKeyUser = "b327e1a950bc2c22498c6e84f904e95fa2536853"
+        static let apiKeyUser = "b327e1a950bc2c22498c6e84f904e95fa2536853"
     }
     
     enum language: String {
@@ -48,7 +48,7 @@ enum Constants {
         case spanish = "ES"
     }
     
-    enum ParameterKey {
+    enum parameterKey {
         static let contentType = "Content-type"
         
         static let status = "status"
@@ -58,24 +58,24 @@ enum Constants {
         static let userID = "id_user"
     }
     
-    enum ParametersKey {
+    enum parametersKey {
         static let accessKey = "X-AccessKey"
         static let randomKey = "X-RandomKey"
         static let language = "language"
     }
     
-    enum ParametersValue {
+    enum parametersValue {
         static let accessKey = "29d0b2b249f06558b877f365cb57bc5ef824b355"
         static let randomKey = "16541135"
     }
     
-    enum ParameterValue {
+    enum parameterValue {
         static let contentType = "application/json"
         static let status = 2
         static let language = 2
     }
     
-    enum JSONResponseKey {
+    enum jsonResponseKey {
         static let results = "results"
         
         enum exerciseCategory {
@@ -93,7 +93,7 @@ enum Constants {
         }
     }
     
-    enum Path {
+    enum path {
         static let exerciseGroup = "/exercisecategory"
         static let exerciseList = "/exercise"
         static let exerciseDetails = "/exerciseinfo/"
@@ -101,11 +101,11 @@ enum Constants {
         static let exerciseImageSize = "/thumbnails"
     }
     
-    enum Endpoints {
+    enum endPoints {
         static let categories = "category"
     }
     
-    enum Storyboard {
+    enum storyboard {
         static let cellId = "detailCell"
         static let exerciseListSegue = "muscleDetailsSegue"
         static let exerciseDetailSegue = "specificDetailSegue"
@@ -113,7 +113,7 @@ enum Constants {
         static let routineCell = "routineCell"
     }
     
-    enum UIElements {
+    enum uiElements {
         static let title = "Gym App"
         static let genders = ["Male", "Female"]
         static let placeholderNames = ["John Doe", "Jane Doe"]
@@ -131,7 +131,7 @@ enum Constants {
         static let reloadButton = "Refresh"
     }
     
-    enum Units {
+    enum units {
         static let topAge = 100
         static let minAge = 18
         static let topWeight = 301
@@ -146,7 +146,7 @@ enum Constants {
         static let inchSh = " in"
     }
     
-    enum ErrorMessages {
+    enum errorMessages {
         static let internetConnection = "It seems you don't have an active internet connection right now. Make sure you do before you try again please"
         static let parsingJSON = "Could not parse the data as JSON: "
         static let noData = "No data was returned by the request!"
@@ -162,27 +162,27 @@ enum Constants {
         static let invalidUserInfo = "Unable to retrieved previously stored user data"
     }
     
-    enum UIMessages {
+    enum uiMessages {
         static let affirmative = "Yes"
         static let negative = "No"
     }
     
-    enum Utilities {
-        enum JSON {
+    enum utilities {
+        enum json {
             static let fileName = "ExercisesImages"
             static let fileExtension = "json"
         }
     }
     
-    enum MuscleView {
+    enum muscleView {
         static let title = "Training"
     }
     
-    enum ExerciseView {
+    enum exerciseView {
         static let title = "Exercises"
     }
     
-    enum DetailView {
+    enum detailView {
         static let title = "Details"
     }
 }

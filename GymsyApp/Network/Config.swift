@@ -22,35 +22,35 @@ extension Services: TargetType {
             case .muscleGroup, .exerciseDetails(_):
                 return .requestPlain
             case .exerciseGroup(let id):
-                return .requestParameters(parameters: [Constants.ParameterKey.language: Constants.ParameterValue.language, Constants.ParameterKey.status: Constants.ParameterValue.status, Constants.ParameterKey.category: id], encoding: URLEncoding.queryString)
+                return .requestParameters(parameters: [Constants.parameterKey.language: Constants.parameterValue.language, Constants.parameterKey.status: Constants.parameterValue.status, Constants.parameterKey.category: id], encoding: URLEncoding.queryString)
             default:
-                return .requestParameters(parameters: [Constants.ParametersKey.language: Singleton.appsLanguage.rawValue], encoding: URLEncoding.queryString)
+                return .requestParameters(parameters: [Constants.parametersKey.language: Singleton.appsLanguage.rawValue], encoding: URLEncoding.queryString)
         }
     }
 
 //    var headers: [String: String]? {
-//        return [Constants.ParameterKey.contentType:
-//                Constants.ParameterValue.contentType]
+//        return [Constants.parameterKey.contentType:
+//                Constants.parameterValue.contentType]
 //    }
     
     var headers: [String: String]? {
-        return [Constants.ParametersKey.accessKey: Constants.ParametersValue.accessKey,
-                Constants.ParametersKey.randomKey: Constants.ParametersValue.randomKey]
+        return [Constants.parametersKey.accessKey: Constants.parametersValue.accessKey,
+                Constants.parametersKey.randomKey: Constants.parametersValue.randomKey]
     }
     
-//    var baseURL: URL { return URL(string: Constants.APIConfiguration.rootURL)! }
-    var baseURL: URL { return URL(string: Constants.APIConfiguration.development)! }
+//    var baseURL: URL { return URL(string: Constants.apiConfiguration.rootURL)! }
+    var baseURL: URL { return URL(string: Constants.apiConfiguration.development)! }
     
     var path: String {
         switch self {
         case .categories:
-            return Constants.Endpoints.categories
+            return Constants.endPoints.categories
         case .muscleGroup:
-            return Constants.Path.exerciseGroup
+            return Constants.path.exerciseGroup
         case .exerciseGroup(_):
-            return Constants.Path.exerciseList
+            return Constants.path.exerciseList
         case .exerciseDetails(let id):
-            return Constants.Path.exerciseDetails + String(id)
+            return Constants.path.exerciseDetails + String(id)
         }
     }
     

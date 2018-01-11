@@ -31,7 +31,7 @@ final class DetailController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = Constants.DetailView.title
+        title = Constants.detailView.title
         exerciseNameLabel.text = exerciseName
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(rightButtonAction(sender:)))
         for child in view.subviews {
@@ -81,7 +81,7 @@ final class DetailController: UIViewController {
 
     private func adaptFontSize(adaptiveLabel: UILabel) {
         if #available(iOS 11.0, *) {
-            adaptiveLabel.font = UIFontMetrics.default.scaledFont(for: UIFont(name: Constants.UIElements.appFont, size: Constants.UIElements.regularFontSize)!)
+            adaptiveLabel.font = UIFontMetrics.default.scaledFont(for: UIFont(name: Constants.uiElements.appFont, size: Constants.uiElements.regularFontSize)!)
         } else {
             adaptiveLabel.font = UIFont.preferredFont(forTextStyle: .body)
             adaptiveLabel.adjustsFontForContentSizeCategory = true
@@ -97,11 +97,11 @@ final class DetailController: UIViewController {
         guard let response = list else { return "" }
         switch response.count {
         case 0:
-            return Constants.UIElements.nonApplicable
+            return Constants.uiElements.nonApplicable
         case 1:
             return response.first!.name
         case 2:
-            return response.first!.name + Constants.UIElements.connector + response.last!.name
+            return response.first!.name + Constants.uiElements.connector + response.last!.name
         default:
             var currentIndex = 0
             var sentence = ""
@@ -112,13 +112,13 @@ final class DetailController: UIViewController {
                 currentIndex += 1
                 sentence.append(word.name + ", ")
             }
-            return sentence + Constants.UIElements.connector + response.last!.name
+            return sentence + Constants.uiElements.connector + response.last!.name
         }
     }
     
     private func readJSONlist() {
         do {
-            if let file = Bundle.main.url(forResource: Constants.Utilities.JSON.fileName, withExtension: Constants.Utilities.JSON.fileExtension) {
+            if let file = Bundle.main.url(forResource: Constants.utilities.json.fileName, withExtension: Constants.utilities.json.fileExtension) {
                 let data = try Data(contentsOf: file)
                 exerciseImageDictionary = try Singleton.decoder.decode(Listing.self, from: data)
 //                let imagesForExercise = exerciseImageDictionary?.results?
@@ -131,7 +131,7 @@ final class DetailController: UIViewController {
 //                    imageActivityIndicator.stopAnimating()
 //                }
             } else {
-                print(Constants.ErrorMessages.noJSONfile)
+                print(Constants.errorMessages.noJSONfile)
             }
         } catch {
             print(error.localizedDescription)
@@ -145,13 +145,13 @@ final class DetailController: UIViewController {
                 imageRequest.responseData(completionHandler: { [weak self] (requestData) in
                     guard let view = self else { return }
                     guard let imageData = requestData.data else {
-                        print(Constants.ErrorMessages.noImage)
+                        print(Constants.errorMessages.noImage)
                         return
                     }
                     view.exerciseImages.append(UIImage(data: imageData)!)
                     view.exerciseImageView.backgroundColor = UIColor.white
                     Singleton.imageCache.setObject(imageData as NSData, forKey: sourceURL as NSString)
-                    view.generateExerciseGIF(Constants.UIElements.exerciseGIF)
+                    view.generateExerciseGIF(Constants.uiElements.exerciseGIF)
                 }).resume()
             } else {
                 setDumbbellPlaceholder()
@@ -159,7 +159,7 @@ final class DetailController: UIViewController {
             return
         }
         exerciseImages.append(UIImage(data: storedImage as Data)!)
-        generateExerciseGIF(Constants.UIElements.exerciseGIF)
+        generateExerciseGIF(Constants.uiElements.exerciseGIF)
     }
     
     // Hides/Shows vissual effect + activity indicator view

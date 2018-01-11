@@ -23,7 +23,7 @@ enum AppStoryboard : String {
         guard let scene = instance.instantiateViewController(withIdentifier: storyboardID) as? T else {
             fatalError("""
 
-                ViewController with identifier \(storyboardID) not found in \(self.rawValue) Storyboard.
+                ViewController with identifier \(storyboardID) not found in \(self.rawValue) storyboard.
                 Function : \(function)
                 Line Number : \(line)
                 File : \(file)

@@ -30,7 +30,7 @@ final class ProfileController: UIViewController {
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismissKeyboardAction)))
         if !userProfile.isEmpty {
             guard let userInfo = userProfile.first else {
-                print(Constants.ErrorMessages.invalidUserInfo)
+                print(Constants.errorMessages.invalidUserInfo)
                 return
             }
             nameTextField.text = userInfo.name
@@ -61,16 +61,16 @@ final class ProfileController: UIViewController {
         if profileImage != #imageLiteral(resourceName: "Male") && profileImage != #imageLiteral(resourceName: "Female") {
             updateProfile.image = UIImageJPEGRepresentation(profileImageButton.currentImage!, 1)
         }
-        if ageButton.currentTitle != Constants.UIElements.agePlaceholder {
+        if ageButton.currentTitle != Constants.uiElements.agePlaceholder {
             updateProfile.age = ageButton.currentTitle
         }
-        if genderButton.currentTitle != Constants.UIElements.genderPlaceholder {
+        if genderButton.currentTitle != Constants.uiElements.genderPlaceholder {
             updateProfile.gender = genderButton.currentTitle
         }
-        if heightButton.currentTitle != Constants.UIElements.heightPlaceholder {
+        if heightButton.currentTitle != Constants.uiElements.heightPlaceholder {
             updateProfile.height = heightButton.currentTitle
         }
-        if weightButton.currentTitle != Constants.UIElements.weightPlaceholder {
+        if weightButton.currentTitle != Constants.uiElements.weightPlaceholder {
             updateProfile.weight = weightButton.currentTitle
         }
         do {
@@ -106,7 +106,7 @@ final class ProfileController: UIViewController {
                 break
             case .gender:
                 setPlaceholderProfileImage()
-                genderButton.setTitle(Constants.UIElements.genders[pickerView.selectedRow(inComponent: 0)], for: .normal)
+                genderButton.setTitle(Constants.uiElements.genders[pickerView.selectedRow(inComponent: 0)], for: .normal)
                 break
             case .weight:
                 weightButton.setTitle(getPickerLabel(row: pickerView.selectedRow(inComponent: 0)), for: .normal)
