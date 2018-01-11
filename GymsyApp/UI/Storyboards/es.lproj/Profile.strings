@@ -1,0 +1,36 @@
+
+/* Class = "UITextField"; placeholder = "Your name"; ObjectID = "0fs-ve-xnX"; */
+"0fs-ve-xnX.placeholder" = "Tu nombre";
+
+/* Class = "UIButton"; normalTitle = "Ok"; ObjectID = "65z-GZ-Hor"; */
+"65z-GZ-Hor.normalTitle" = "Ok";
+
+/* Class = "UIButton"; normalTitle = "Your gender"; ObjectID = "6LI-lx-nau"; */
+"6LI-lx-nau.normalTitle" = "Tu género";
+
+/* Class = "UIButton"; normalTitle = "Your weight"; ObjectID = "Bhn-ei-bfC"; */
+"Bhn-ei-bfC.normalTitle" = "Tu peso";
+
+/* Class = "UIButton"; normalTitle = "Your age"; ObjectID = "Krv-sb-QPv"; */
+"Krv-sb-QPv.normalTitle" = "Tu edad";
+
+/* Class = "UINavigationItem"; title = "Profile"; ObjectID = "MHm-rH-QUs"; */
+"MHm-rH-QUs.title" = "Perfil";
+
+/* Class = "UIButton"; normalTitle = "Tap here to pick your profile picture"; ObjectID = "dcI-8K-Us8"; */
+"dcI-8K-Us8.normalTitle" = "Presiona aquí para elegir tu foto de perfil";
+
+/* Class = "UILabel"; text = "Height"; ObjectID = "do8-0E-e0M"; */
+"do8-0E-e0M.text" = "Altura";
+
+/* Class = "UILabel"; text = "Gender"; ObjectID = "rRP-6k-AXh"; */
+"rRP-6k-AXh.text" = "Género";
+
+/* Class = "UIButton"; normalTitle = "Your height"; ObjectID = "wCx-Tg-0P0"; */
+"wCx-Tg-0P0.normalTitle" = "Tu estatura";
+
+/* Class = "UILabel"; text = "Age"; ObjectID = "wGK-P3-92Y"; */
+"wGK-P3-92Y.text" = "Edad";
+
+/* Class = "UILabel"; text = "Weight"; ObjectID = "xUe-tn-t1S"; */
+"xUe-tn-t1S.text" = "Peso";

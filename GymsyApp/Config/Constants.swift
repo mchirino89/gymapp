@@ -175,7 +175,7 @@ enum Constants {
     }
     
     enum MuscleView {
-        static let title = "Muscles"
+        static let title = "Training"
     }
     
     enum ExerciseView {
