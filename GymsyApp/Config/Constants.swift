@@ -43,6 +43,11 @@ enum Constants {
         static let APIKeyUser = "b327e1a950bc2c22498c6e84f904e95fa2536853"
     }
     
+    enum language: String {
+        case english = "EN"
+        case spanish = "ES"
+    }
+    
     enum ParameterKey {
         static let contentType = "Content-type"
         
@@ -62,10 +67,6 @@ enum Constants {
     enum ParametersValue {
         static let accessKey = "29d0b2b249f06558b877f365cb57bc5ef824b355"
         static let randomKey = "16541135"
-        enum language: String {
-            case english = "EN"
-            case spanish = "ES"
-        }
     }
     
     enum ParameterValue {

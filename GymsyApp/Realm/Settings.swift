@@ -12,7 +12,6 @@ func preFillRealm() {
     do {
 //        removeRealm()
         Singleton.dataSource = try Realm()
-        print("Allocating memory for realm file")
         let exercisesForRoutine = [
             ["Bench press", "Cable cross over", "Fly with cable", "Side to side push up", "Bent over barbell row", "Deadlifts", "Chin-ups", "Straight-arm pull down", "Butterfly reverse", "Facepull"],
             ["Hip raise, lying", "Prone scapular retraction - Arms at side", "Side dumbbell trunk flexion", "V-Bar Pulldown", "Rowing T-Bar", "Barbell ab rollout", "Hollow hold", "L hold", "Plank", "Splinter sit-ups"],
@@ -62,10 +61,10 @@ func preFillRealm() {
 func removeRealm() {
     let realmURL = Realm.Configuration.defaultConfiguration.fileURL!
     let realmURLs = [
-        realmURL,
-        realmURL.appendingPathExtension("lock"),
-        realmURL.appendingPathExtension("note"),
-        realmURL.appendingPathExtension("management")
+        realmURL
+//        realmURL.appendingPathExtension("lock"),
+//        realmURL.appendingPathExtension("note"),
+//        realmURL.appendingPathExtension("management")
     ]
     for URL in realmURLs {
         do {

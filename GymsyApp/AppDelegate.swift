@@ -16,6 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         UIApplication.shared.statusBarStyle = .lightContent
         preFillRealm()
+        guard let devicesLanguage: String = Locale.preferredLanguages.first?.uppercased()
+            else { return true }
+        print(devicesLanguage)
+        Singleton.appsLanguage = devicesLanguage.contains(Constants.language.spanish.rawValue) ? .spanish : .english
         return true
     }
 }
