@@ -19,10 +19,12 @@ extension Services: TargetType {
     /// The type of HTTP task to be performed.
     var task: Task {
         switch self {
-        case .muscleGroup, .categories, .exerciseDetails(_):
-            return .requestPlain
-        case .exerciseGroup(let id):
-            return .requestParameters(parameters: [Constants.ParameterKey.language: Constants.ParameterValue.language, Constants.ParameterKey.status: Constants.ParameterValue.status, Constants.ParameterKey.category: id], encoding: URLEncoding.queryString)
+            case .muscleGroup, .exerciseDetails(_):
+                return .requestPlain
+            case .exerciseGroup(let id):
+                return .requestParameters(parameters: [Constants.ParameterKey.language: Constants.ParameterValue.language, Constants.ParameterKey.status: Constants.ParameterValue.status, Constants.ParameterKey.category: id], encoding: URLEncoding.queryString)
+            default:
+                return .requestParameters(parameters: [Constants.ParametersKey.language: Constants.ParametersValue.Language[Singleton.appsLanguage]], encoding: URLEncoding.queryString)
         }
     }
 

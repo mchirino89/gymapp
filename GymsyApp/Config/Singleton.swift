@@ -10,10 +10,11 @@ import Moya
 import RealmSwift
 
 final class Singleton {
-    static let provider = MoyaProvider<Services>()
-    static let imageCache = NSCache<NSString, NSData>()
-    static var dataSource:Realm!
-    static var selectedRoutine:Results<Exercise>?
     static let decoder = JSONDecoder()
+    static let imageCache = NSCache<NSString, NSData>()
+    static let provider = MoyaProvider<Services>()
+    static var selectedRoutine: Results<Exercise>?
+    static var dataSource: Realm!
+    static var appsLanguage = 0
     private init() { }
 }
