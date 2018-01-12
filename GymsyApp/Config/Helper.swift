@@ -41,7 +41,7 @@ func questionPopup(title: String, message: String, style: UIAlertControllerStyle
 func JSONResponseData(kindOfService: Services, completion: @escaping (_ response: Data?) ->()) {
     Singleton.provider.request(kindOfService, completion: { data in
         print(kindOfService.baseURL.absoluteString + kindOfService.path)
-        print(kindOfService.task)
+//        print(kindOfService.task)
         switch data {
         case .success(let moyaResponse):
             do {
