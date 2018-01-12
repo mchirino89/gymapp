@@ -10,6 +10,14 @@ import CoreGraphics.CGFunction
 
 enum Constants {
     
+    enum file: String {
+        case dictionary = "Dictionary"
+    }
+    
+    enum typeOfExtension: String {
+        case plist
+    }
+    
     enum kindOfResult: Int {
         case mainMuscle = 1
         case secondaryMuscles

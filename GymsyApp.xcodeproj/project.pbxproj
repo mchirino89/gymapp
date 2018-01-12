@@ -41,6 +41,7 @@
 		71F443582009341C00D13780 /* Localizator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F443572009341C00D13780 /* Localizator.swift */; };
 		71F4435C200943C900D13780 /* Dictionary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71F4435E200943C900D13780 /* Dictionary.plist */; };
 		71F443622009453900D13780 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71F443602009453900D13780 /* LaunchScreen.storyboard */; };
+		71F443672009470100D13780 /* Index.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F443662009470100D13780 /* Index.swift */; };
 		942F6A3B721905B606A53BE9 /* Pods_GymsyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA2D9F47DDF5F2B955494A7C /* Pods_GymsyApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,8 +81,9 @@
 		718853512002A249002A1E33 /* SHA1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHA1.swift; sourceTree = "<group>"; };
 		71F443572009341C00D13780 /* Localizator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizator.swift; sourceTree = "<group>"; };
 		71F4435D200943C900D13780 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/Dictionary.plist; sourceTree = "<group>"; };
-		71F4435F200943CD00D13780 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = es; path = es.lproj/Dictionary.plist; sourceTree = "<group>"; };
-		71F443612009453900D13780 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		71F44365200945FA00D13780 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		71F443662009470100D13780 /* Index.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Index.swift; sourceTree = "<group>"; };
+		71F44368200957FD00D13780 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = es; path = es.lproj/Dictionary.plist; sourceTree = "<group>"; };
 		AA2D9F47DDF5F2B955494A7C /* Pods_GymsyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GymsyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD1691D4208E8C233669F2F6 /* Pods-GymsyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymsyApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GymsyApp/Pods-GymsyApp.debug.xcconfig"; sourceTree = "<group>"; };
 		CF0D98458C0ACB0ACFE7D59A /* Pods-GymsyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymsyApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-GymsyApp/Pods-GymsyApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -273,8 +275,9 @@
 		71F443592009436600D13780 /* Localization */ = {
 			isa = PBXGroup;
 			children = (
-				71F443572009341C00D13780 /* Localizator.swift */,
 				71F4435E200943C900D13780 /* Dictionary.plist */,
+				71F443662009470100D13780 /* Index.swift */,
+				71F443572009341C00D13780 /* Localizator.swift */,
 			);
 			path = Localization;
 			sourceTree = "<group>";
@@ -448,6 +451,7 @@
 				2213F7491F5DE54600213D31 /* RoutineViewCell.swift in Sources */,
 				222FF4DA1F6480500011A523 /* Routine.swift in Sources */,
 				2213F7521F5EE0F100213D31 /* TextArea.swift in Sources */,
+				71F443672009470100D13780 /* Index.swift in Sources */,
 				2254D1F11F4D9DE800B450E5 /* ExerciseController.swift in Sources */,
 				2213F7561F5EF56600213D31 /* ButtonStyle.swift in Sources */,
 				2254D1EF1F4D9DE800B450E5 /* AppDelegate.swift in Sources */,
@@ -493,7 +497,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				71F4435D200943C900D13780 /* en */,
-				71F4435F200943CD00D13780 /* es */,
+				71F44368200957FD00D13780 /* es */,
 			);
 			name = Dictionary.plist;
 			sourceTree = "<group>";
@@ -501,7 +505,7 @@
 		71F443602009453900D13780 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				71F443612009453900D13780 /* Base */,
+				71F44365200945FA00D13780 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

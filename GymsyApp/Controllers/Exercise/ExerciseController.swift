@@ -27,9 +27,9 @@ final class ExerciseController: UIViewController {
         setNavigationBar(navigationController)
         customBackButton(navigationItem)
         muscleGroupList == .routine ? viewLoader(false) : loadList()
+        title = Index.trainingTitle.rawValue.localized
         guard let exerciseTag = exerciseTagLabel else { return }
         exerciseTag.text = "For: \(viewTitle ?? Constants.uiElements.exerciseGenericTag)"
-        title = Constants.exerciseView.title
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
