@@ -18,7 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         preFillRealm()
         guard let devicesLanguage: String = Locale.preferredLanguages.first?.uppercased()
             else { return true }
-        print(devicesLanguage)
         Singleton.appsLanguage = devicesLanguage.contains(Constants.language.spanish.rawValue) ? .spanish : .english
         return true
     }

@@ -11,7 +11,7 @@ import Moya
 
 let customDate: DateFormatter = {
     let formatter = DateFormatter()
-    formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+    formatter.dateFormat = Constants.units.dateFormat
     return formatter
 }()
 
@@ -42,7 +42,7 @@ func JSONResponseData(kindOfService: Services, completion: @escaping (_ response
     Singleton.provider.request(kindOfService, completion: { data in
 //        print(kindOfService.baseURL.absoluteString + kindOfService.path)
 //        print(kindOfService.task)
-        switch data {
+    switch data {
         case .success(let moyaResponse):
             do {
                 let _ = try moyaResponse.filterSuccessfulStatusCodes()
@@ -73,7 +73,8 @@ private func failureInConnectionAlert(invalidCompletion: ((Data?) -> Void)) {
             topController = presentedViewController
         }
         invalidCompletion(nil)
-        topController.present(getPopupAlert(message: Constants.errorMessages.internetConnection), animated: true)
+//        topController.present(getPopupAlert(message: Constants.errorMessages.internetConnection), animated: true)
+        topController.present(getPopupAlert(message: Index.errorMessages.internetConnection.rawValue.localized), animated: true)
     } else {
         print("Impossible to access current view controller")
     }

@@ -152,6 +152,7 @@ enum Constants {
         static let inch = " inches"
         static let heightSh = " ft "
         static let inchSh = " in"
+        static let dateFormat = "yyyy-MM-dd HH:mm:ss"
     }
     
     enum errorMessages {
