@@ -74,7 +74,8 @@ private func failureInConnectionAlert(invalidCompletion: ((Data?) -> Void)) {
         }
         invalidCompletion(nil)
 //        topController.present(getPopupAlert(message: Constants.errorMessages.internetConnection), animated: true)
-        topController.present(getPopupAlert(message: Index.errorMessages.internetConnection.rawValue.localized), animated: true)
+//        Index.trainingTitle.
+        topController.present(getPopupAlert(message: Constants.errorMessages.internetConnection), animated: true)
     } else {
         print("Impossible to access current view controller")
     }
